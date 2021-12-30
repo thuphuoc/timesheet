@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20211230 23:13:53.627">
+<suite id="s1" name="Department" source="B:\Auto_Company\timesheet\testsuites\department.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>zone12</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone12=admin</arg>
+</arguments>
+<assign>
+<var>${dict_username}</var>
+</assign>
+<msg timestamp="20211230 23:13:53.870" level="INFO">${dict_username} = {'zone12': 'admin'}</msg>
+<status status="PASS" starttime="20211230 23:13:53.870" endtime="20211230 23:13:53.871"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone12=123456</arg>
+</arguments>
+<assign>
+<var>${dict_password}</var>
+</assign>
+<msg timestamp="20211230 23:13:53.871" level="INFO">${dict_password} = {'zone12': '123456'}</msg>
+<status status="PASS" starttime="20211230 23:13:53.871" endtime="20211230 23:13:53.871"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone12=testz12</arg>
+</arguments>
+<assign>
+<var>${dict_retailer}</var>
+</assign>
+<msg timestamp="20211230 23:13:53.871" level="INFO">${dict_retailer} = {'zone12': 'testz12'}</msg>
+<status status="PASS" starttime="20211230 23:13:53.871" endtime="20211230 23:13:53.871"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_username}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20211230 23:13:53.871" level="INFO">${username} = admin</msg>
+<status status="PASS" starttime="20211230 23:13:53.871" endtime="20211230 23:13:53.871"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_password}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20211230 23:13:53.872" level="INFO">${password} = 123456</msg>
+<status status="PASS" starttime="20211230 23:13:53.872" endtime="20211230 23:13:53.872"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_retailer}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${retailer}</var>
+</assign>
+<msg timestamp="20211230 23:13:53.872" level="INFO">${retailer} = testz12</msg>
+<status status="PASS" starttime="20211230 23:13:53.872" endtime="20211230 23:13:53.872"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20211230 23:13:53.873" level="INFO">${username} = admin</msg>
+<status status="PASS" starttime="20211230 23:13:53.872" endtime="20211230 23:13:53.873"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20211230 23:13:53.873" level="INFO">${password} = 123456</msg>
+<status status="PASS" starttime="20211230 23:13:53.873" endtime="20211230 23:13:53.873"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${retailer}</arg>
+<arg>${retailer}</arg>
+</arguments>
+<msg timestamp="20211230 23:13:53.873" level="INFO">${retailer} = testz12</msg>
+<status status="PASS" starttime="20211230 23:13:53.873" endtime="20211230 23:13:53.873"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20211230 23:13:53.874" level="INFO">${header} = {'retailer': 'testz12', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20211230 23:13:53.873" endtime="20211230 23:13:53.874"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>UserName=${username}</arg>
+<arg>Password=${password}</arg>
+</arguments>
+<assign>
+<var>${data_saleLogin}</var>
+</assign>
+<msg timestamp="20211230 23:13:53.874" level="INFO">${data_saleLogin} = {'UserName': 'admin', 'Password': '123456'}</msg>
+<status status="PASS" starttime="20211230 23:13:53.874" endtime="20211230 23:13:53.874"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>sessionLogin</arg>
+<arg>${url_saleLogin}</arg>
+</arguments>
+<msg timestamp="20211230 23:13:53.874" level="INFO">Creating Session using : alias=sessionLogin, url=https://testz12.kiotviet.vn/api, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20211230 23:13:53.874" endtime="20211230 23:13:53.875"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>sessionLogin</arg>
+<arg>${enp_saleLogin}</arg>
+<arg>${header}</arg>
+<arg>${data_saleLogin}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.351" level="INFO">Post Request using : alias=sessionLogin, uri=/auth/salelogin, data=&lt;empty&gt;, headers=None, files=None, allow_redirects=True </msg>
+<msg timestamp="20211230 23:13:54.352" level="INFO">c:\users\phuoc\appdata\local\programs\python\python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'testz12.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20211230 23:13:54.355" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20211230 23:13:53.875" endtime="20211230 23:13:54.355"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.BearerToken</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.413" level="INFO">${result} = ['eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0MDg4MDgzMywiZXhwIjoxNjQzMzAwMDMzLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiX...</msg>
+<status status="PASS" starttime="20211230 23:13:54.357" endtime="20211230 23:13:54.413"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${lenght}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.414" level="INFO">Length is 1</msg>
+<msg timestamp="20211230 23:13:54.414" level="INFO">${lenght} = 1</msg>
+<status status="PASS" starttime="20211230 23:13:54.413" endtime="20211230 23:13:54.414"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.414" level="INFO">${result} = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0MDg4MDgzMywiZXhwIjoxNjQzMzAwMDMzLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSw...</msg>
+<status status="PASS" starttime="20211230 23:13:54.414" endtime="20211230 23:13:54.414"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${lenght}==0</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20211230 23:13:54.415" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20211230 23:13:54.415" endtime="20211230 23:13:54.415"></status>
+</kw>
+<status status="PASS" starttime="20211230 23:13:54.414" endtime="20211230 23:13:54.415"></status>
+</kw>
+<msg timestamp="20211230 23:13:54.415" level="INFO">${token} = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0MDg4MDgzMywiZXhwIjoxNjQzMzAwMDMzLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSw...</msg>
+<status status="PASS" starttime="20211230 23:13:54.355" endtime="20211230 23:13:54.415"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>Bearer</arg>
+<arg>${token}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.415" level="INFO">${token} = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0MDg4MDgzMywiZXhwIjoxNjQzMzAwMDMzLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVz...</msg>
+<status status="PASS" starttime="20211230 23:13:54.415" endtime="20211230 23:13:54.415"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.CurrentBranchId</arg>
+</arguments>
+<assign>
+<var>${branchId}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.438" level="INFO">${result} = [302728]</msg>
+<status status="PASS" starttime="20211230 23:13:54.416" endtime="20211230 23:13:54.438"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${lenght}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.438" level="INFO">Length is 1</msg>
+<msg timestamp="20211230 23:13:54.438" level="INFO">${lenght} = 1</msg>
+<status status="PASS" starttime="20211230 23:13:54.438" endtime="20211230 23:13:54.438"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.439" level="INFO">${result} = 302728</msg>
+<status status="PASS" starttime="20211230 23:13:54.438" endtime="20211230 23:13:54.439"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${lenght}==0</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20211230 23:13:54.439" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20211230 23:13:54.439" endtime="20211230 23:13:54.439"></status>
+</kw>
+<status status="PASS" starttime="20211230 23:13:54.439" endtime="20211230 23:13:54.439"></status>
+</kw>
+<msg timestamp="20211230 23:13:54.439" level="INFO">${branchId} = 302728</msg>
+<status status="PASS" starttime="20211230 23:13:54.415" endtime="20211230 23:13:54.439"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${branchId}</arg>
+</arguments>
+<assign>
+<var>${branchId}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.440" level="INFO">${branchId} = 302728</msg>
+<status status="PASS" starttime="20211230 23:13:54.439" endtime="20211230 23:13:54.440"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${branchId}</arg>
+<arg>${branchId}</arg>
+</arguments>
+<msg timestamp="20211230 23:13:54.440" level="INFO">${branchId} = 302728</msg>
+<status status="PASS" starttime="20211230 23:13:54.440" endtime="20211230 23:13:54.440"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+<arg>branchid=${branchId}</arg>
+<arg>Authorization=${token}</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.440" level="INFO">${header} = {'retailer': 'testz12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '302728', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3...</msg>
+<status status="PASS" starttime="20211230 23:13:54.440" endtime="20211230 23:13:54.440"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${header}</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20211230 23:13:54.441" level="INFO">${header} = {'retailer': 'testz12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '302728', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3...</msg>
+<status status="PASS" starttime="20211230 23:13:54.441" endtime="20211230 23:13:54.441"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>session</arg>
+<arg>${url}</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20211230 23:13:54.441" level="INFO">Creating Session using : alias=session, url=https://api-timesheet.kiotviet.vn, headers={'retailer': 'testz12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '302728', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0MDg4MDgzMywiZXhwIjoxNjQzMzAwMDMzLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiI1ZTUyYjc0OWEzMjk0NmMyYjExMTNlYTExMDkzMjBkMCIsImt2dWlkIjoyMzQxNDcsImt2bGFuZyI6ImVuLVVTIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjozMDI3MjgsImt2cmluZGlkIjoxMSwia3ZyY29kZSI6InRlc3R6MTIiLCJrdnJpZCI6NTU5NTUsImt2dXJpZCI6NTU5NTUsImt2cmdpZCI6MTIsInBlcm1zIjoiIn0.g-70fZ1_FsV6H3Y15POf1zpSATMLX3JM2TxwE5vb3Gm-LMbrz5x6CTO_msz09ZnxMzQSOZEVZO2aUlrQLyhW2fE5-DztAa9wXiUS7KhweZCNK0f-37hcHcrH7ZAmEuobuRIgHZN4_YK1a67wSW3pBOnfrKB5TPr9-4uuzYFt0j3fkk4T5TFMnmctZFkMSc8plbrM5ZCYzcACnk3CKyQCifRFyDXUxgnAAkywwLktpu-mPRkRs-B-8cF2gW3Ce524aF56KkFbmOnmc8Ujl9Wgutho_rMoQr6qPXNeRenb3QPf9DRzhZy26_TWfXe45sYOErtdqTupd07qlkYMlgzL1A'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20211230 23:13:54.441" endtime="20211230 23:13:54.441"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>session</arg>
+</arguments>
+<msg timestamp="20211230 23:13:54.442" level="INFO">${session} = session</msg>
+<status status="PASS" starttime="20211230 23:13:54.441" endtime="20211230 23:13:54.442"></status>
+</kw>
+<status status="PASS" starttime="20211230 23:13:53.870" endtime="20211230 23:13:54.442"></status>
+</kw>
+<test id="s1-t1" name="Create department">
+<kw name="Post Request Json" library="share">
+<arguments>
+<arg>${data_department}</arg>
+<arg>department</arg>
+<arg>${enp_department}</arg>
+<arg>Phong1704</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>json.loads($data_func)</arg>
+<arg>json</arg>
+</arguments>
+<assign>
+<var>${data}</var>
+</assign>
+<msg timestamp="20211230 23:13:54.447" level="FAIL">Evaluating expression 'json .loads (RF_VAR_data_func )' failed: JSONDecodeError: Expecting value: line 1 column 24 (char 23)</msg>
+<status status="FAIL" starttime="20211230 23:13:54.443" endtime="20211230 23:13:54.447"></status>
+</kw>
+<status status="FAIL" starttime="20211230 23:13:54.443" endtime="20211230 23:13:54.447"></status>
+</kw>
+<status status="FAIL" starttime="20211230 23:13:54.442" endtime="20211230 23:13:54.447" critical="yes">Evaluating expression 'json .loads (RF_VAR_data_func )' failed: JSONDecodeError: Expecting value: line 1 column 24 (char 23)</status>
+</test>
+<status status="FAIL" starttime="20211230 23:13:53.628" endtime="20211230 23:13:54.449"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Department">Department</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211230 23:13:53.864" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\share.robot': Non-existing setting 'Suite setup'.</msg>
+</errors>
+</robot>
