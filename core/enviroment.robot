@@ -7,6 +7,7 @@ Resource   share.robot
 ***Variables***
 ${url_saleLogin}    https://testz12.kiotviet.vn/api
 ${enp_saleLogin}    /auth/salelogin
+${url}              https://api-timesheet.kiotviet.vn
 
 *** Keywords ***
 Fill enviroment and get token
@@ -34,6 +35,8 @@ Fill enviroment and get token
     ${branchId}   Convert To String    ${branchId}
     Set Global Variable      ${branchId}      ${branchId}
     ${header}   Create Dictionary    retailer=${retailer}    Content-Type=application/json;charset=utf-8    branchid=${branchId}     Authorization=${token}
+    ${headers_not_contenType}   Create Dictionary    retailer=${retailer}    branchid=${branchId}     Authorization=${token}
     Set Global Variable    ${header}    ${header}
-    Create Session    session    ${url}   ${header}
+    Set Global Variable    ${headers_not_contenType}   ${headers_not_contenType}
+    Create Session    session    ${url}   ${headers_not_contenType}
     Set Global Variable    ${session}    session

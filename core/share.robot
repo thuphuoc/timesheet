@@ -2,9 +2,8 @@
 Library   JSONLibrary
 Library  Collections
 Resource  enviroment.robot
-Suite setup  Fill enviroment and get token    zone12
 ***Keywords***
-Format String Use [D0]
+Format String Use [D0] [D1] [D2]
       [Arguments]    ${data_format}   ${list_format}
       ${length}  Get Length    ${list_format}
       :FOR  ${i}  IN RANGE  ${length}
@@ -14,12 +13,16 @@ Format String Use [D0]
       Return From Keyword   ${data_format}
 
 Post Request Json
-    [Arguments]   ${data_func}    ${firstname_data}   ${enpoint}    ${list_format}
-    ${data}=    Evaluate     json.loads($data_func)    json
-    Set To Dictionary   ${data["${firstname_data}"]}    Format String Use [D0]    ${data_func}    ${list_format}
-    ${data_func} =    Evaluate    json.dumps($data)     json
-    ${rep}  Post Request    ${session}    ${endpoint}    ${data_func}
-    Should Be Equal As Strings    ${rep.status_code}     200
+    [Arguments]   ${session}   ${endpoint}    ${data_func}  ${expected_status_code}
+    ${resp}  Post Request    ${session}    ${endpoint}    headers=${header}   data=${data_func}
+    Should Be Equal As Strings    ${resp.status_code}    ${expected_status_code}
+    Log    ${resp.json()}
+
+Post Request Use Formdata
+    [Arguments]   ${session}   ${endpoint}    ${data_func}  ${expected_status_code}
+    ${resp}  Post Request    ${session}    ${endpoint}    ${headers_not_contenType}   files=${data_func}
+    Should Be Equal As Strings    ${resp.status_code}    ${expected_status_code}
+    Log    ${resp.json()}
 
 Get Value From Json KV
     [Arguments]     ${json}   ${json_path}
