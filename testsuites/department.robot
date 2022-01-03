@@ -15,5 +15,6 @@ Create department
     ${random_str}=  Random a String Letter    4
     ${list_format}    Create List    ${random_str}
     ${data}   Format String Use [D0] [D1] [D2]    ${data_department}      ${list_format}
-    ${resp}   Post Request Json    ${session}    ${enp_department}    ${data}   200
+    ${resp}   Post Request Json KV    ${session}    ${enp_department}    ${data}   200
+  
 ***Keywords***
