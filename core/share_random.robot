@@ -17,8 +17,3 @@ Random a String Letter
     [Arguments]   ${number}
     ${random_str}=  Generate Random String  ${number}   [LETTERS]
     Return From Keyword    ${random_str}
-
-Random in list
-    [Arguments]   ${list}
-    ${value}    Evaluate    random.choice(${list})  random
-    Return From Keyword    ${value}

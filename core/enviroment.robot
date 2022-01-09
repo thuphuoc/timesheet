@@ -25,18 +25,22 @@ Fill enviroment and get token
 
 #################################################################
 
-    ${header}   Create Dictionary      retailer=${retailer}    Content-Type=application/json;charset=utf-8
-    ${data_saleLogin}   Create Dictionary    UserName=${username}    Password=${password}
-    Create Session    sessionLogin    ${url_saleLogin}
-    ${resp}   Post Request    sessionLogin    ${enp_saleLogin}   ${header}     ${data_saleLogin}
-    ${token}    Get Value From Json KV    ${resp.json()}   $.BearerToken
-    ${token}    Catenate    Bearer  ${token}
-    ${branchId}    Get Value From Json KV  ${resp.json()}   $.CurrentBranchId
-    ${branchId}   Convert To String    ${branchId}
+    ${header}           Create Dictionary      retailer=${retailer}    Content-Type=application/json;charset=utf-8
+    ${data_saleLogin}   Create Dictionary      UserName=${username}    Password=${password}
+    Create Session      sessionLogin           ${url_saleLogin}
+    ${resp}             Post Request           sessionLogin    ${enp_saleLogin}   ${header}     ${data_saleLogin}
+    ${token}            Get Value From Json KV    ${resp.json()}   $.BearerToken
+    ${token}            Catenate    Bearer  ${token}
+    ${branchId}         Get Value From Json KV    ${resp.json()}   $.CurrentBranchId
+    ${branchId}         Convert To String         ${branchId}
     Set Global Variable      ${branchId}      ${branchId}
+    ${user_login}       Get Value From Json KV     ${resp.json()}    $.UserId
+    Set Global Variable      ${user_login}         ${user_login}
     ${header}   Create Dictionary    retailer=${retailer}    Content-Type=application/json;charset=utf-8    branchid=${branchId}     Authorization=${token}
     ${headers_not_contenType}   Create Dictionary    retailer=${retailer}    branchid=${branchId}     Authorization=${token}
     Set Global Variable    ${header}    ${header}
     Set Global Variable    ${headers_not_contenType}   ${headers_not_contenType}
     Create Session    session    ${url}   ${headers_not_contenType}
     Set Global Variable    ${session}    session
+    ${random_str}=    Random a String Letter    4
+    Set Global Variable    ${random_str}    ${random_str}
