@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220110 22:24:39.996">
+<suite id="s1" name="Testsuites" source="B:\Auto_Company\timsheet\testsuites">
+<suite id="s1-s1" name="Department" source="B:\Auto_Company\timsheet\testsuites\department.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220110 22:24:40.242" endtime="20220110 22:24:40.242"></status>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220110 22:24:40.242" endtime="20220110 22:24:40.242"></status>
+</kw>
+<status status="PASS" starttime="20220110 22:24:40.242" endtime="20220110 22:24:40.258"></status>
+</kw>
+<test id="s1-s1-t1" name="Create department">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258"></status>
+</kw>
+<tags>
+<tag>department</tag>
+</tags>
+<status status="PASS" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Create department duplicate name">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258"></status>
+</kw>
+<tags>
+<tag>department</tag>
+</tags>
+<status status="PASS" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Create department empty name">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258"></status>
+</kw>
+<tags>
+<tag>department</tag>
+</tags>
+<status status="PASS" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Update department">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258"></status>
+</kw>
+<tags>
+<tag>department</tag>
+</tags>
+<status status="PASS" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="Delete department">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258"></status>
+</kw>
+<tags>
+<tag>department</tag>
+</tags>
+<status status="PASS" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220110 22:24:40.024" endtime="20220110 22:24:40.258"></status>
+</suite>
+<status status="PASS" starttime="20220110 22:24:39.996" endtime="20220110 22:24:40.258"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0">department</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="5" fail="0" id="s1-s1" name="Department">Testsuites.Department</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\allowance.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\deduction.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\department.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\employee.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\jobtiltle.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\shift.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\template.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220110 22:24:40.024" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\department.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220110 22:24:40.227" level="ERROR">Error in file 'B:\Auto_Company\timsheet\core\enviroment.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+</errors>
+</robot>
