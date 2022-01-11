@@ -1,97 +1,505 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220110 22:24:39.996">
-<suite id="s1" name="Testsuites" source="B:\Auto_Company\timsheet\testsuites">
-<suite id="s1-s1" name="Department" source="B:\Auto_Company\timsheet\testsuites\department.robot">
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220111 18:06:21.571">
+<suite id="s1" name="Testsuites" source="D:\timesheet\testsuites">
+<suite id="s1-s1" name="Allowance" source="D:\timesheet\testsuites\allowance.robot">
 <kw name="Fill enviroment and get token" library="enviroment" type="setup">
 <arguments>
 <arg>${env}</arg>
 </arguments>
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220110 22:24:40.242" endtime="20220110 22:24:40.242"></status>
+<status status="NOT_RUN" starttime="20220111 18:06:21.764" endtime="20220111 18:06:21.764"></status>
 </kw>
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220110 22:24:40.242" endtime="20220110 22:24:40.242"></status>
+<status status="NOT_RUN" starttime="20220111 18:06:21.764" endtime="20220111 18:06:21.764"></status>
 </kw>
-<status status="PASS" starttime="20220110 22:24:40.242" endtime="20220110 22:24:40.258"></status>
+<status status="PASS" starttime="20220111 18:06:21.764" endtime="20220111 18:06:21.764"></status>
 </kw>
-<test id="s1-s1-t1" name="Create department">
+<test id="s1-s1-t1" name="Create allowance">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258"></status>
+<status status="NOT_RUN" starttime="20220111 18:06:21.765" endtime="20220111 18:06:21.765"></status>
 </kw>
 <tags>
-<tag>department</tag>
+<tag>all</tag>
+<tag>allowance</tag>
 </tags>
-<status status="PASS" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258" critical="yes"></status>
+<status status="PASS" starttime="20220111 18:06:21.764" endtime="20220111 18:06:21.765" critical="yes"></status>
 </test>
-<test id="s1-s1-t2" name="Create department duplicate name">
+<test id="s1-s1-t2" name="Create duplicate allowance">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258"></status>
+<status status="NOT_RUN" starttime="20220111 18:06:21.765" endtime="20220111 18:06:21.765"></status>
 </kw>
 <tags>
-<tag>department</tag>
+<tag>all</tag>
+<tag>allowance</tag>
 </tags>
-<status status="PASS" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258" critical="yes"></status>
+<status status="PASS" starttime="20220111 18:06:21.765" endtime="20220111 18:06:21.765" critical="yes"></status>
 </test>
-<test id="s1-s1-t3" name="Create department empty name">
+<test id="s1-s1-t3" name="Create empty allowance">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258"></status>
+<status status="NOT_RUN" starttime="20220111 18:06:21.766" endtime="20220111 18:06:21.766"></status>
 </kw>
-<tags>
-<tag>department</tag>
-</tags>
-<status status="PASS" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258" critical="yes"></status>
-</test>
-<test id="s1-s1-t4" name="Update department">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258"></status>
+<status status="NOT_RUN" starttime="20220111 18:06:21.766" endtime="20220111 18:06:21.766"></status>
 </kw>
 <tags>
-<tag>department</tag>
+<tag>all</tag>
+<tag>allowance</tag>
 </tags>
-<status status="PASS" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258" critical="yes"></status>
+<status status="PASS" starttime="20220111 18:06:21.765" endtime="20220111 18:06:21.766" critical="yes"></status>
 </test>
-<test id="s1-s1-t5" name="Delete department">
+<test id="s1-s1-t4" name="Delete allowance">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258"></status>
+<status status="NOT_RUN" starttime="20220111 18:06:21.766" endtime="20220111 18:06:21.766"></status>
 </kw>
 <tags>
-<tag>department</tag>
+<tag>all</tag>
+<tag>allowance</tag>
 </tags>
-<status status="PASS" starttime="20220110 22:24:40.258" endtime="20220110 22:24:40.258" critical="yes"></status>
+<status status="PASS" starttime="20220111 18:06:21.766" endtime="20220111 18:06:21.766" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20220110 22:24:40.024" endtime="20220110 22:24:40.258"></status>
+<status status="PASS" starttime="20220111 18:06:21.584" endtime="20220111 18:06:21.766"></status>
 </suite>
-<status status="PASS" starttime="20220110 22:24:39.996" endtime="20220110 22:24:40.258"></status>
+<suite id="s1-s2" name="Deduction" source="D:\timesheet\testsuites\deduction.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.772" endtime="20220111 18:06:21.772"></status>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.772" endtime="20220111 18:06:21.772"></status>
+</kw>
+<status status="PASS" starttime="20220111 18:06:21.772" endtime="20220111 18:06:21.772"></status>
+</kw>
+<test id="s1-s2-t1" name="Create deduction">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.773" endtime="20220111 18:06:21.773"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>deduction</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.772" endtime="20220111 18:06:21.773" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Create duplicate deduction">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.773" endtime="20220111 18:06:21.773"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>deduction</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.773" endtime="20220111 18:06:21.773" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="Create empty deduction">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.773" endtime="20220111 18:06:21.774"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>deduction</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.773" endtime="20220111 18:06:21.774" critical="yes"></status>
+</test>
+<test id="s1-s2-t4" name="Update deduction">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.774" endtime="20220111 18:06:21.774"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>deduction</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.774" endtime="20220111 18:06:21.774" critical="yes"></status>
+</test>
+<test id="s1-s2-t5" name="Delete deduction">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.774" endtime="20220111 18:06:21.774"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>deduction</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.774" endtime="20220111 18:06:21.774" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220111 18:06:21.767" endtime="20220111 18:06:21.775"></status>
+</suite>
+<suite id="s1-s3" name="Department" source="D:\timesheet\testsuites\department.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.781" endtime="20220111 18:06:21.781"></status>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.781" endtime="20220111 18:06:21.781"></status>
+</kw>
+<status status="PASS" starttime="20220111 18:06:21.780" endtime="20220111 18:06:21.781"></status>
+</kw>
+<test id="s1-s3-t1" name="Create department">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.781" endtime="20220111 18:06:21.781"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>department</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.781" endtime="20220111 18:06:21.781" critical="yes"></status>
+</test>
+<test id="s1-s3-t2" name="Create department duplicate name">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.781" endtime="20220111 18:06:21.781"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>department</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.781" endtime="20220111 18:06:21.782" critical="yes"></status>
+</test>
+<test id="s1-s3-t3" name="Create department empty name">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.782" endtime="20220111 18:06:21.782"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>department</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.782" endtime="20220111 18:06:21.782" critical="yes"></status>
+</test>
+<test id="s1-s3-t4" name="Update department">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.782" endtime="20220111 18:06:21.782"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>department</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.782" endtime="20220111 18:06:21.782" critical="yes"></status>
+</test>
+<test id="s1-s3-t5" name="Delete department">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.783" endtime="20220111 18:06:21.783"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>department</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.782" endtime="20220111 18:06:21.783" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220111 18:06:21.775" endtime="20220111 18:06:21.783"></status>
+</suite>
+<suite id="s1-s4" name="Employee" source="D:\timesheet\testsuites\employee.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.789" endtime="20220111 18:06:21.789"></status>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.789" endtime="20220111 18:06:21.789"></status>
+</kw>
+<status status="PASS" starttime="20220111 18:06:21.789" endtime="20220111 18:06:21.789"></status>
+</kw>
+<test id="s1-s4-t1" name="Create employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.790" endtime="20220111 18:06:21.790"></status>
+</kw>
+<doc>Create employee valid</doc>
+<tags>
+<tag>1</tag>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.789" endtime="20220111 18:06:21.790" critical="yes"></status>
+</test>
+<test id="s1-s4-t2" name="Create duplicate employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.790" endtime="20220111 18:06:21.790"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.790" endtime="20220111 18:06:21.790" critical="yes"></status>
+</test>
+<test id="s1-s4-t3" name="Create empty employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.790" endtime="20220111 18:06:21.791"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.790" endtime="20220111 18:06:21.791" critical="yes"></status>
+</test>
+<test id="s1-s4-t4" name="Update employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.791" endtime="20220111 18:06:21.791"></status>
+</kw>
+<tags>
+<tag>2</tag>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.791" endtime="20220111 18:06:21.791" critical="yes"></status>
+</test>
+<test id="s1-s4-t5" name="Get pin code">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.791" endtime="20220111 18:06:21.791"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.791" endtime="20220111 18:06:21.792" critical="yes"></status>
+</test>
+<test id="s1-s4-t6" name="Delete employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.792" endtime="20220111 18:06:21.792"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.792" endtime="20220111 18:06:21.792" critical="yes"></status>
+</test>
+<test id="s1-s4-t7" name="Delete multiple employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.792" endtime="20220111 18:06:21.792"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.792" endtime="20220111 18:06:21.792" critical="yes"></status>
+</test>
+<test id="s1-s4-t8" name="Add work schedule">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.793" endtime="20220111 18:06:21.793"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.792" endtime="20220111 18:06:21.793" critical="yes"></status>
+</test>
+<test id="s1-s4-t9" name="Delete work schedule">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.793" endtime="20220111 18:06:21.793"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.793" endtime="20220111 18:06:21.793" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220111 18:06:21.783" endtime="20220111 18:06:21.793"></status>
+</suite>
+<suite id="s1-s5" name="Jobtiltle" source="D:\timesheet\testsuites\jobtiltle.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.799" endtime="20220111 18:06:21.799"></status>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.800" endtime="20220111 18:06:21.800"></status>
+</kw>
+<status status="PASS" starttime="20220111 18:06:21.799" endtime="20220111 18:06:21.800"></status>
+</kw>
+<test id="s1-s5-t1" name="Create jobtitle">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.800" endtime="20220111 18:06:21.800"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>jobtitle</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.800" endtime="20220111 18:06:21.800" critical="yes"></status>
+</test>
+<test id="s1-s5-t2" name="Create duplicate jobtitle">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.800" endtime="20220111 18:06:21.800"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>Create duplicate jobtitle</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.800" endtime="20220111 18:06:21.800" critical="yes"></status>
+</test>
+<test id="s1-s5-t3" name="Create empty jobtitle">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.801" endtime="20220111 18:06:21.801"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>jobtitle</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.801" endtime="20220111 18:06:21.801" critical="yes"></status>
+</test>
+<test id="s1-s5-t4" name="Update jobtitle">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.801" endtime="20220111 18:06:21.801"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>jobtitle</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.801" endtime="20220111 18:06:21.801" critical="yes"></status>
+</test>
+<test id="s1-s5-t5" name="Delete jobtitle">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.802" endtime="20220111 18:06:21.802"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>jobtitle</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.801" endtime="20220111 18:06:21.802" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220111 18:06:21.794" endtime="20220111 18:06:21.802"></status>
+</suite>
+<suite id="s1-s6" name="Shift" source="D:\timesheet\testsuites\shift.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.808" endtime="20220111 18:06:21.808"></status>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.808" endtime="20220111 18:06:21.808"></status>
+</kw>
+<status status="PASS" starttime="20220111 18:06:21.808" endtime="20220111 18:06:21.808"></status>
+</kw>
+<test id="s1-s6-t1" name="Create shift">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.809" endtime="20220111 18:06:21.809"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>shift</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.808" endtime="20220111 18:06:21.809" critical="yes"></status>
+</test>
+<test id="s1-s6-t2" name="Update shift">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.809" endtime="20220111 18:06:21.809"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>shift</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.809" endtime="20220111 18:06:21.809" critical="yes"></status>
+</test>
+<test id="s1-s6-t3" name="Delete shift">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220111 18:06:21.810" endtime="20220111 18:06:21.810"></status>
+</kw>
+<tags>
+<tag>all</tag>
+<tag>shiftf</tag>
+</tags>
+<status status="PASS" starttime="20220111 18:06:21.809" endtime="20220111 18:06:21.810" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220111 18:06:21.802" endtime="20220111 18:06:21.810"></status>
+</suite>
+<status status="PASS" starttime="20220111 18:06:21.572" endtime="20220111 18:06:21.810"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0">Critical Tests</stat>
-<stat pass="5" fail="0">All Tests</stat>
+<stat pass="31" fail="0">Critical Tests</stat>
+<stat pass="31" fail="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0">1</stat>
+<stat pass="1" fail="0">2</stat>
+<stat pass="31" fail="0">all</stat>
+<stat pass="4" fail="0">allowance</stat>
+<stat pass="1" fail="0">Create duplicate jobtitle</stat>
+<stat pass="5" fail="0">deduction</stat>
 <stat pass="5" fail="0">department</stat>
+<stat pass="9" fail="0">employee</stat>
+<stat pass="4" fail="0">jobtitle</stat>
+<stat pass="2" fail="0">shift</stat>
+<stat pass="1" fail="0">shiftf</stat>
 </tag>
 <suite>
-<stat pass="5" fail="0" id="s1" name="Testsuites">Testsuites</stat>
-<stat pass="5" fail="0" id="s1-s1" name="Department">Testsuites.Department</stat>
+<stat pass="31" fail="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="4" fail="0" id="s1-s1" name="Allowance">Testsuites.Allowance</stat>
+<stat pass="5" fail="0" id="s1-s2" name="Deduction">Testsuites.Deduction</stat>
+<stat pass="5" fail="0" id="s1-s3" name="Department">Testsuites.Department</stat>
+<stat pass="9" fail="0" id="s1-s4" name="Employee">Testsuites.Employee</stat>
+<stat pass="5" fail="0" id="s1-s5" name="Jobtiltle">Testsuites.Jobtiltle</stat>
+<stat pass="3" fail="0" id="s1-s6" name="Shift">Testsuites.Shift</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\allowance.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\deduction.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\department.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\employee.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\jobtiltle.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\shift.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220110 22:24:39.981" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\template.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220110 22:24:40.024" level="ERROR">Error in file 'B:\Auto_Company\timsheet\testsuites\department.robot': Setting variable '' failed: Invalid variable name ''.</msg>
-<msg timestamp="20220110 22:24:40.227" level="ERROR">Error in file 'B:\Auto_Company\timsheet\core\enviroment.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220111 18:06:21.560" level="ERROR">Error in file 'D:\timesheet\testsuites\allowance.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220111 18:06:21.561" level="ERROR">Error in file 'D:\timesheet\testsuites\deduction.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220111 18:06:21.562" level="ERROR">Error in file 'D:\timesheet\testsuites\department.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220111 18:06:21.563" level="ERROR">Error in file 'D:\timesheet\testsuites\employee.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220111 18:06:21.565" level="ERROR">Error in file 'D:\timesheet\testsuites\jobtiltle.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220111 18:06:21.566" level="ERROR">Error in file 'D:\timesheet\testsuites\settingsalary.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220111 18:06:21.566" level="ERROR">Error in file 'D:\timesheet\testsuites\shift.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220111 18:06:21.566" level="ERROR">Error in file 'D:\timesheet\testsuites\template.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220111 18:06:21.584" level="ERROR">Error in file 'D:\timesheet\testsuites\allowance.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220111 18:06:21.751" level="ERROR">Error in file 'D:\timesheet\core\enviroment.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220111 18:06:21.759" level="ERROR">Error in file 'D:\timesheet\core\share.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220111 18:06:21.768" level="ERROR">Error in file 'D:\timesheet\core\enviroment.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220111 18:06:21.775" level="ERROR">Error in file 'D:\timesheet\testsuites\department.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220111 18:06:21.777" level="ERROR">Error in file 'D:\timesheet\core\enviroment.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220111 18:06:21.785" level="ERROR">Error in file 'D:\timesheet\core\enviroment.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220111 18:06:21.794" level="ERROR">Error in file 'D:\timesheet\testsuites\jobtiltle.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220111 18:06:21.795" level="ERROR">Error in file 'D:\timesheet\core\enviroment.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220111 18:06:21.802" level="ERROR">Error in file 'D:\timesheet\testsuites\shift.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220111 18:06:21.804" level="ERROR">Error in file 'D:\timesheet\core\enviroment.robot': Setting variable '' failed: Invalid variable name ''.</msg>
 </errors>
 </robot>

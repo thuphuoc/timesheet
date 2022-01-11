@@ -1,19 +1,19 @@
 ==============================================================================
 Testsuites                                                                    
 ==============================================================================
-Testsuites.Department                                                         
+Testsuites.Jobtiltle                                                          
 ==============================================================================
-Create department                                                     | PASS |
+Create jobtitle                                                       | PASS |
 ------------------------------------------------------------------------------
-Create department duplicate name                                      | PASS |
+Create duplicate jobtitle                                             | PASS |
 ------------------------------------------------------------------------------
-Create department empty name                                          | PASS |
+Create empty jobtitle                                                 | PASS |
 ------------------------------------------------------------------------------
-Update department                                                     | PASS |
+Update jobtitle                                                       | PASS |
 ------------------------------------------------------------------------------
-Delete department                                                     | PASS |
+Delete jobtitle                                                       | PASS |
 ------------------------------------------------------------------------------
-Testsuites.Department                                                 | PASS |
+Testsuites.Jobtiltle                                                  | PASS |
 5 critical tests, 5 passed, 0 failed
 5 tests total, 5 passed, 0 failed
 ==============================================================================
@@ -21,4 +21,4 @@ Testsuites                                                            | PASS |
 5 critical tests, 5 passed, 0 failed
 5 tests total, 5 passed, 0 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.Department\output-20220111-180622.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.Jobtiltle\output-20220111-180622.xml

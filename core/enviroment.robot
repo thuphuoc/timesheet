@@ -44,3 +44,5 @@ Fill enviroment and get token
     Set Global Variable    ${session}    session
     ${random_str}=    Random a String Letter    4
     Set Global Variable    ${random_str}    ${random_str}
+    ${random_number}=     Random a Number   8
+    Set Global Variable    ${random_number}    ${random_number}
