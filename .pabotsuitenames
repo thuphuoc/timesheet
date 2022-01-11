@@ -1,10 +1,5 @@
-datasources:b19c066a2093171b1cbc043cb44de490cf510500
-commandlineoptions:539c37f37b9a882466824f07e05e833c5089e7de
+datasources:f195d5724985a4b9034a075ff5943a02c983e552
+commandlineoptions:f661096fcbe07fe79da5f4945c2c9ab1c83709c5
 suitesfrom:no-suites-from-option
-file:b75a362d5e662cbdbf5d53bd7c326f8d938b4f21
-Testsuites.Employee
-Testsuites.Allowance
-Testsuites.Deduction
-Testsuites.Department
-Testsuites.Jobtiltle
+file:64ec916626d8015edaf24701650b2727c0642ffb
 Testsuites.Shift

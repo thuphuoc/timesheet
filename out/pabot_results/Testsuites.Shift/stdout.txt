@@ -3,19 +3,24 @@ Testsuites
 ==============================================================================
 Testsuites.Shift                                                              
 ==============================================================================
-Create shift                                                          | PASS |
+Format enp shift branch                                               | PASS |
 ------------------------------------------------------------------------------
-Update shift                                                          | PASS |
+Create shift :: Thêm m?i ca làm vi?c                                  | PASS |
 ------------------------------------------------------------------------------
-Delete shift                                                          | FAIL |
-400 != 200
+Create duplicate shift :: Thêm m?i ca làm vi?c trùng tên              | PASS |
 ------------------------------------------------------------------------------
-Testsuites.Shift                                                      | FAIL |
-3 critical tests, 2 passed, 1 failed
-3 tests total, 2 passed, 1 failed
+Create empty shift :: Thêm m?i ca làm vi?c r?ng                       | PASS |
+------------------------------------------------------------------------------
+Update shift :: C?p nh?t ca làm vi?c                                  | PASS |
+------------------------------------------------------------------------------
+Delete shift :: Xóa ca làm vi?c                                       | PASS |
+------------------------------------------------------------------------------
+Testsuites.Shift                                                      | PASS |
+6 critical tests, 6 passed, 0 failed
+6 tests total, 6 passed, 0 failed
 ==============================================================================
-Testsuites                                                            | FAIL |
-3 critical tests, 2 passed, 1 failed
-3 tests total, 2 passed, 1 failed
+Testsuites                                                            | PASS |
+6 critical tests, 6 passed, 0 failed
+6 tests total, 6 passed, 0 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.Shift\output-20220111-180622.xml
+Output:  B:\Auto_Company\timesheet\out\pabot_results\Testsuites.Shift\output-20220111-225836.xml
