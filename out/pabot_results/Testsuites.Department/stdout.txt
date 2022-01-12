@@ -1,0 +1,24 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.Department                                                         
+==============================================================================
+Create department :: Thêm m?i phòng ban                               | PASS |
+------------------------------------------------------------------------------
+Create department duplicate name :: Thêm m?i phòng ban trùng tên      | PASS |
+------------------------------------------------------------------------------
+Create department empty name :: Thêm m?i phòng ban r?ng               | PASS |
+------------------------------------------------------------------------------
+Update department :: C?p nh?t phòng ban                               | PASS |
+------------------------------------------------------------------------------
+Delete department :: Xóa phòng ban                                    | PASS |
+------------------------------------------------------------------------------
+Testsuites.Department                                                 | PASS |
+5 critical tests, 5 passed, 0 failed
+5 tests total, 5 passed, 0 failed
+==============================================================================
+Testsuites                                                            | PASS |
+5 critical tests, 5 passed, 0 failed
+5 tests total, 5 passed, 0 failed
+==============================================================================
+Output:  B:\Auto_Company\timesheet\out\pabot_results\Testsuites.Department\output-20220112-222450.xml

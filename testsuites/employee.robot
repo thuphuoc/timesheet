@@ -6,7 +6,7 @@ Resource   ../core/share.robot
 Resource   ../core/share_random.robot
 Resource   ../core/shift.robot
 Suite setup  Fill enviroment and get token    ${env}
-
+Suite setup  Forma
 ***Variables***
 ${enp_employee}                   /employees
 ${filter_enp_employee}            /employees?skip=0&take=100&OrderByDesc=id&includeFingerPrint=true&BranchIds=[D0]
