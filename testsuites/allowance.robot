@@ -7,8 +7,8 @@ Resource        ../core/share_random.robot
 Suite setup     Fill enviroment and get token    ${env}
 
 *** Variables ***
-${enp_allowance}          /allowance
-${data_allowance}         {"allowance":{"Name":"[D0]","Type":[D1],"Value":[D2],"ValueRatio":0,"IsChecked":true}}
+${enp_allowance}                    /allowance
+${data_allowance}                   {"allowance":{"Name":"[D0]","Type":[D1],"Value":[D2],"ValueRatio":0,"IsChecked":true}}
 
 *** TestCases ***
 Create allowance                    [Tags]   all    allowance

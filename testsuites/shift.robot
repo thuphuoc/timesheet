@@ -16,13 +16,13 @@ ${enp_shift_branch}   /shifts/multiple-branch/orderby-from-to?BranchIds=[D0]&Shi
 Format enp shift branch    [Tags]   all    shift
     ${list_format}         Create List                            ${branchId}
     ${enp_shift_branch}    Format String Use [D0] [D1] [D2]       ${enp_shift_branch}                ${list_format}
-    Set Suite Variable     ${enp_shift_branch}                    ${enp_shift_branch}
+    Set Global Variable    ${enp_shift_branch}                    ${enp_shift_branch}
 
 Create shift               [Tags]   all    shift
     [Documentation]        Thêm mới ca làm việc
     ${list_format}         Create List                            170498  ${random_str}              ${branchId}
     ${data_shift}          Format String Use [D0] [D1] [D2]       ${data_shift}                      ${list_format}
-    ${resp}                Post Request Json KV                   ${session}                         ${enp_shift}              ${data_shift}    200
+    ${resp}                Post Request Json KV                   ${session}                         ${enp_shift}              ${data_shift}            200
     ${mess_expected}       Get Value From Json KV                 ${resp.json()}                     $.message
     Log                    ${resp.json()}
     Should Be Equal        ${mess_expected}                       Tạo ca thành công

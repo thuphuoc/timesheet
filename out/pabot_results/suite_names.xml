@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220112 17:13:03.257">
+<suite id="s1" name="Testsuites" source="D:\timesheet\testsuites">
+<suite id="s1-s1" name="Employee" source="D:\timesheet\testsuites\employee.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220112 17:13:03.448" endtime="20220112 17:13:03.448"></status>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220112 17:13:03.448" endtime="20220112 17:13:03.448"></status>
+</kw>
+<status status="PASS" starttime="20220112 17:13:03.448" endtime="20220112 17:13:03.448"></status>
+</kw>
+<test id="s1-s1-t1" name="Create employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220112 17:13:03.449" endtime="20220112 17:13:03.449"></status>
+</kw>
+<doc>Tạo mới nhân viên và thiết lập lương ko có mẫu lương hợp lệ</doc>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220112 17:13:03.448" endtime="20220112 17:13:03.449" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Create duplicate employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220112 17:13:03.449" endtime="20220112 17:13:03.449"></status>
+</kw>
+<doc>Tạo mới nhân viên trùng mã nhân viên</doc>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220112 17:13:03.449" endtime="20220112 17:13:03.449" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Create empty employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220112 17:13:03.450" endtime="20220112 17:13:03.450"></status>
+</kw>
+<doc>Tạo mới nhân viên để trống trường tên nhân viên</doc>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220112 17:13:03.449" endtime="20220112 17:13:03.450" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Update employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220112 17:13:03.450" endtime="20220112 17:13:03.450"></status>
+</kw>
+<doc>Cập nhật nhân viên</doc>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220112 17:13:03.450" endtime="20220112 17:13:03.450" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="Get pin code">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220112 17:13:03.451" endtime="20220112 17:13:03.451"></status>
+</kw>
+<doc>Láy mã xác nhận cho chấm công gps</doc>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220112 17:13:03.451" endtime="20220112 17:13:03.451" critical="yes"></status>
+</test>
+<test id="s1-s1-t6" name="Delete employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220112 17:13:03.451" endtime="20220112 17:13:03.451"></status>
+</kw>
+<doc>Xóa 1 nhân viên</doc>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220112 17:13:03.451" endtime="20220112 17:13:03.451" critical="yes"></status>
+</test>
+<test id="s1-s1-t7" name="Delete multiple employee">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220112 17:13:03.452" endtime="20220112 17:13:03.452"></status>
+</kw>
+<doc>Xóa nhiều nhân viên cùng 1 lúc</doc>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220112 17:13:03.451" endtime="20220112 17:13:03.452" critical="yes"></status>
+</test>
+<test id="s1-s1-t8" name="Delete work schedule">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220112 17:13:03.452" endtime="20220112 17:13:03.452"></status>
+</kw>
+<doc>Xóa lịch làm việc của nhân viên tại tab lịch làm việc của màn hình nhân viên</doc>
+<tags>
+<tag>all</tag>
+<tag>employee</tag>
+</tags>
+<status status="PASS" starttime="20220112 17:13:03.452" endtime="20220112 17:13:03.453" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220112 17:13:03.270" endtime="20220112 17:13:03.453"></status>
+</suite>
+<status status="PASS" starttime="20220112 17:13:03.259" endtime="20220112 17:13:03.453"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="8" fail="0">all</stat>
+<stat pass="8" fail="0">employee</stat>
+</tag>
+<suite>
+<stat pass="8" fail="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="8" fail="0" id="s1-s1" name="Employee">Testsuites.Employee</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220112 17:13:03.244" level="ERROR">Error in file 'D:\timesheet\testsuites\allowance.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220112 17:13:03.245" level="ERROR">Error in file 'D:\timesheet\testsuites\deduction.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220112 17:13:03.246" level="ERROR">Error in file 'D:\timesheet\testsuites\department.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220112 17:13:03.247" level="ERROR">Error in file 'D:\timesheet\testsuites\employee.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220112 17:13:03.249" level="ERROR">Error in file 'D:\timesheet\testsuites\jobtiltle.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220112 17:13:03.250" level="ERROR">Error in file 'D:\timesheet\testsuites\settingsalary.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220112 17:13:03.250" level="ERROR">Error in file 'D:\timesheet\testsuites\shift.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220112 17:13:03.251" level="ERROR">Error in file 'D:\timesheet\testsuites\template.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220112 17:13:03.433" level="ERROR">Error in file 'D:\timesheet\core\enviroment.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220112 17:13:03.442" level="ERROR">Error in file 'D:\timesheet\core\share.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220112 17:13:03.447" level="ERROR">Error in file 'D:\timesheet\testsuites\employee.robot': Resource file '..\core\shift.robot' does not exist.</msg>
+</errors>
+</robot>

@@ -7,8 +7,8 @@ Resource   ../core/share_random.robot
 Suite setup  Fill enviroment and get token     ${env}
 
 *** Variables ***
-${enp_job}            /employees/job-title
-${data_job}           {"jobTitle":{"id":[D0],"name":"[D1]","isActive":true}}
+${enp_job}                           /employees/job-title
+${data_job}                          {"jobTitle":{"id":[D0],"name":"[D1]","isActive":true}}
 
 *** TestCases ***
 Create jobtitle                       [Tags]   all        jobtitle
