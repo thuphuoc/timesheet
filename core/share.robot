@@ -70,6 +70,11 @@ Update Request KV
     ${resp}                         Put Request                 ${session}                       ${endpoint}                          headers=${header}                   data=${data_func}
     Should Be Equal As Strings      ${resp.status_code}         ${expected_status_code}
     Return From Keyword             ${resp.json()}
+Update Request KVj
+    [Arguments]                     ${session}                  ${endpoint}                      ${expected_status_code}
+    ${resp}                         Put Request                 ${session}                       ${endpoint}                          headers=${header}                
+    Should Be Equal As Strings      ${resp.status_code}         ${expected_status_code}
+    Return From Keyword             ${resp.json()}
 
 Delete Request KV
     [Arguments]                     ${session}                  ${endpoint}                      ${expected_status_code}
