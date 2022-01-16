@@ -30,6 +30,12 @@ Fill enviroment and get token
     ...                                                         zone14= https://api-timesheet.kiotviet.vn
     ...                                                         59902=
     ...                                                         59903=
+    ${dict_url_man}               Create Dictionary             zone5=https://api-man.kiotviet.vn/api
+    ...                                                         zone13=https://api-man.kiotviet.vn/api
+    ...                                                         zone12=https://api-man.kiotviet.vn/api
+    ...                                                         zone14=https://api-man.kiotviet.vn/api
+    ...                                                         59903=
+    ...                                                         59903=
     ${dict_username}              Create Dictionary             zone5=admin             zone13=admin        zone12=admin        zone14=admin        59902=1             59903=1
     ${dict_password}              Create Dictionary             zone5=123               zone13=123          zone12=123          zone14=123          59902=1             59903=1
     ${dict_retailer}              Create Dictionary             zone5=auto5             zone13=auto13       zone12=auto12       zone14=auto14       59902=phuoc902      59903=phuoc903
@@ -40,12 +46,14 @@ Fill enviroment and get token
     ${url_saleLogin}              get From Dictionary           ${dict_url_saleLogin}   ${env}
     ${enp_saleLogin}              get From Dictionary           ${dict_enp_saleLogin}   ${env}
     ${url}                        get From Dictionary           ${dict_url}             ${env}
+    ${url_man}                    get From Dictionary           ${dict_url_man}         ${env}
     Set Global Variable           ${username}                   ${username}
     Set Global Variable           ${password}                   ${password}
     Set Global Variable           ${retailer}                   ${retailer}
     Set Global Variable           ${url_saleLogin}              ${url_saleLogin}
     Set Global Variable           ${enp_saleLogin}              ${enp_saleLogin}
     Set Global Variable           ${url}                        ${url}
+    Set Global Variable           ${url_man}                    ${url_man}
 ############################################################################################################################################################################
 
     ${header}                     Create Dictionary             retailer=${retailer}    Content-Type=application/json;charset=utf-8
@@ -65,7 +73,9 @@ Fill enviroment and get token
     Set Global Variable           ${header}                     ${header}
     Set Global Variable           ${headers_not_contenType}     ${headers_not_contenType}
     Create Session                session    ${url}             ${headers_not_contenType}
+    Create Session                sessionMan                    ${url_man}              ${header}
     Set Global Variable           ${session}                    session
+    Set Global Variable           ${session_man}                sessionMan
     ${random_str}=                Random a String Letter        4
     Set Global Variable           ${random_str}                 ${random_str}
     ${random_number}=             Random a Number               8

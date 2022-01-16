@@ -18,26 +18,26 @@ Create deduction                    [Tags]   all    deduction
 
 Create duplicate deduction          [Tags]  all    deduction
     [Documentation]                 Thêm mới giảm trừ trùng tên
-    ${name}                         Get value in list KV                ${enp_deduction}                    $.result.data..name
+    ${name}                         Get value in list KV                ${session}                          ${enp_deduction}                    $.result.data..name
     ${list_format}                  Create List   123456                ${name}                             0                         10000
     ${data_deduction}               Format String Use [D0] [D1] [D2]    ${data_deduction}                   ${list_format}
-    Create value duplicate_empty    ${enp_deduction}                    ${data_deduction}                   Giảm trừ đã tồn tại trên hệ thống
+    ${resp}                         Create value duplicate_empty        ${session}                          ${enp_deduction}                    ${data_deduction}                   Giảm trừ đã tồn tại trên hệ thống
 
  Create empty deduction             [Tags]   all    deduction
    [Documentation]                 Thêm mới giảm trừ rỗng
    ${list_format}                   Create List    123456    \ \        12000
    ${data_deduction}                Format String Use [D0] [D1] [D2]    ${data_deduction}                   ${list_format}
-   Create value duplicate_empty     ${enp_deduction}                    ${data_deduction}                   Tên giảm trừ không được để trống
+   Create value duplicate_empty     ${session}                          ${enp_deduction}                    ${data_deduction}                   Tên giảm trừ không được để trống
 
 Update deduction                    [Tags]   all    deduction
     [Documentation]                 cập nhật  giảm trừ
-    ${id_deduction}                 Get value in list KV                ${enp_deduction}                    $.result.data..id
+    ${id_deduction}                 Get value in list KV                ${session}                          ${enp_deduction}                    $.result.data..id
     ${list_format}                  Create List                         ${id_deduction}                     Update ${random_str}
     ${data_deduction}               Format String Use [D0] [D1] [D2]    ${data_deduction}                   ${list_format}
     Update Request KV               ${session}                          ${enp_deduction}/${id_deduction}    ${data_deduction}         200
 
 Delete deduction                    [Tags]   all    deduction
     [Documentation]                 Xóa giảm trừ
-    ${id_deduction}                 Get value in list KV                ${enp_deduction}                    $.result.data..id
+    ${id_deduction}                 Get value in list KV                ${session}   ${enp_deduction}       $.result.data..id
     Delete Request KV               ${session}                          ${enp_deduction}/${id_deduction}    200
 *** Keywords ***

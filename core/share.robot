@@ -27,15 +27,16 @@ Get Request from KV
     Return From Keyword             ${resp.json()}
 
 Get value in list KV
-    [Arguments]                     ${enpoint}                  ${json_path}
+    [Arguments]                     ${session}                  ${enpoint}                     ${json_path}
     ${resp}                         Get Request                 ${session}                     ${enpoint}
     log                             ${resp.json()}
     ${list}                         Get Value From Json         ${resp.json()}                 ${json_path}
     ${value}=                       Evaluate                    random.choice($list)           random
     Return From Keyword             ${value}
 
+
 Get detail from id KV
-    [Arguments]                     ${enpoint}                  ${json_path}
+    [Arguments]                     ${session}                  ${enpoint}                  ${json_path}
     ${resp}                         Get Request from KV         ${session}                     ${enpoint}
     ${value}                        Get Value From Json KV      ${resp}                        ${json_path}
     Return From Keyword             ${value}
@@ -53,7 +54,7 @@ Post Request Use Formdata KV
     Return From Keyword             ${resp.json()}
 
 Create value duplicate_empty
-    [Arguments]                     ${endpoint}                 ${data}                         ${mess_err_expected}
+    [Arguments]                      ${session}                 ${endpoint}                     ${data}                         ${mess_err_expected}
     ${resp}                         Post Request Json KV        ${session}                      ${endpoint}                           ${data}                             400
     ${mess_err}                     Get Value From Json KV      ${resp}                         $.errors..message
     Should Be Equal                 ${mess_err}                 ${mess_err_expected}

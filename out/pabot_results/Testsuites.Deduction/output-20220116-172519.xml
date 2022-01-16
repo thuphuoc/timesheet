@@ -1,0 +1,2050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220116 17:25:19.356">
+<suite id="s1" name="Testsuites" source="B:\Auto_Company\timesheet\testsuites">
+<suite id="s1-s1" name="Deduction" source="B:\Auto_Company\timesheet\testsuites\deduction.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://auto5.kiotviet.vn/api</arg>
+<arg>zone13=https://auto13.kiotviet.vn/api</arg>
+<arg>zone12=https://auto12.kiotviet.vn/api</arg>
+<arg>zone14=https://auto14.kiotviet.vn/api</arg>
+<arg>59902=</arg>
+<arg>59903=</arg>
+</arguments>
+<assign>
+<var>${dict_url_saleLogin}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${dict_url_saleLogin} = {'zone5': 'https://auto5.kiotviet.vn/api', 'zone13': 'https://auto13.kiotviet.vn/api', 'zone12': 'https://auto12.kiotviet.vn/api', 'zone14': 'https://auto14.kiotviet.vn/api', '59902': '', '59903': ''}</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=/auth/salelogin</arg>
+<arg>zone13=/auth/salelogin</arg>
+<arg>zone12=/auth/salelogin</arg>
+<arg>zone14=/auth/salelogin</arg>
+<arg>59902=/auth/salelogin</arg>
+<arg>59903=/auth/salelogin</arg>
+</arguments>
+<assign>
+<var>${dict_enp_saleLogin}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${dict_enp_saleLogin} = {'zone5': '/auth/salelogin', 'zone13': '/auth/salelogin', 'zone12': '/auth/salelogin', 'zone14': '/auth/salelogin', '59902': '/auth/salelogin', '59903': '/auth/salelogin'}</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5= https://api-timesheet.kiotviet.vn</arg>
+<arg>zone13= https://api-timesheet.kiotviet.vn</arg>
+<arg>zone12= https://api-timesheet.kiotviet.vn</arg>
+<arg>zone14= https://api-timesheet.kiotviet.vn</arg>
+<arg>59902=</arg>
+<arg>59903=</arg>
+</arguments>
+<assign>
+<var>${dict_url}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${dict_url} = {'zone5': ' https://api-timesheet.kiotviet.vn', 'zone13': ' https://api-timesheet.kiotviet.vn', 'zone12': ' https://api-timesheet.kiotviet.vn', 'zone14': ' https://api-timesheet.kiotviet.vn', '59902':...</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://api-man.kiotviet.vn/api</arg>
+<arg>zone13=https://api-man.kiotviet.vn/api</arg>
+<arg>zone12=https://api-man.kiotviet.vn/api</arg>
+<arg>zone14=https://api-man.kiotviet.vn/api</arg>
+<arg>59903=</arg>
+<arg>59903=</arg>
+</arguments>
+<assign>
+<var>${dict_url_man}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${dict_url_man} = {'zone5': 'https://api-man.kiotviet.vn/api', 'zone13': 'https://api-man.kiotviet.vn/api', 'zone12': 'https://api-man.kiotviet.vn/api', 'zone14': 'https://api-man.kiotviet.vn/api', '59903': ''}</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=admin</arg>
+<arg>zone13=admin</arg>
+<arg>zone12=admin</arg>
+<arg>zone14=admin</arg>
+<arg>59902=1</arg>
+<arg>59903=1</arg>
+</arguments>
+<assign>
+<var>${dict_username}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${dict_username} = {'zone5': 'admin', 'zone13': 'admin', 'zone12': 'admin', 'zone14': 'admin', '59902': '1', '59903': '1'}</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=123</arg>
+<arg>zone13=123</arg>
+<arg>zone12=123</arg>
+<arg>zone14=123</arg>
+<arg>59902=1</arg>
+<arg>59903=1</arg>
+</arguments>
+<assign>
+<var>${dict_password}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${dict_password} = {'zone5': '123', 'zone13': '123', 'zone12': '123', 'zone14': '123', '59902': '1', '59903': '1'}</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=auto5</arg>
+<arg>zone13=auto13</arg>
+<arg>zone12=auto12</arg>
+<arg>zone14=auto14</arg>
+<arg>59902=phuoc902</arg>
+<arg>59903=phuoc903</arg>
+</arguments>
+<assign>
+<var>${dict_retailer}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${dict_retailer} = {'zone5': 'auto5', 'zone13': 'auto13', 'zone12': 'auto12', 'zone14': 'auto14', '59902': 'phuoc902', '59903': 'phuoc903'}</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_username}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${username} = admin</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_password}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${password} = 123</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_retailer}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${retailer}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${retailer} = auto12</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url_saleLogin}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url_saleLogin}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${url_saleLogin} = https://auto12.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_enp_saleLogin}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${enp_saleLogin}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${enp_saleLogin} = /auth/salelogin</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${url} =  https://api-timesheet.kiotviet.vn</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url_man}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url_man}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${url_man} = https://api-man.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${username} = admin</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${password} = 123</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${retailer}</arg>
+<arg>${retailer}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${retailer} = auto12</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url_saleLogin}</arg>
+<arg>${url_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${url_saleLogin} = https://auto12.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${enp_saleLogin}</arg>
+<arg>${enp_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${enp_saleLogin} = /auth/salelogin</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${url} =  https://api-timesheet.kiotviet.vn</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url_man}</arg>
+<arg>${url_man}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${url_man} = https://api-man.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${header} = {'retailer': 'auto12', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>UserName=${username}</arg>
+<arg>Password=${password}</arg>
+</arguments>
+<assign>
+<var>${data_saleLogin}</var>
+</assign>
+<msg timestamp="20220116 17:25:19.737" level="INFO">${data_saleLogin} = {'UserName': 'admin', 'Password': '123'}</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>sessionLogin</arg>
+<arg>${url_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:19.737" level="INFO">Creating Session using : alias=sessionLogin, url=https://auto12.kiotviet.vn/api, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:19.737"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>sessionLogin</arg>
+<arg>${enp_saleLogin}</arg>
+<arg>${header}</arg>
+<arg>${data_saleLogin}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.792" level="INFO">Post Request using : alias=sessionLogin, uri=/auth/salelogin, data=&lt;empty&gt;, headers=None, files=None, allow_redirects=True </msg>
+<msg timestamp="20220116 17:25:25.792" level="INFO">C:\Users\phuoc\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'auto12.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220116 17:25:25.793" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:25.793"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.795" level="INFO">{'UserId': 438680, 'UserName': 'admin', 'SessionId': '9s44v1cNuabUinUcpd1d', 'BearerToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiJmMjA2MTI2MGYzNWI0MDM2YjYzNjg4ZjhhOGVjZGNmMCIsImt2dWlkIjo0Mzg2ODAsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjoxODEyMzUsImt2cmluZGlkIjoxMCwia3ZyY29kZSI6ImF1dG8xMiIsImt2cmlkIjozMzk3NTgsImt2dXJpZCI6MzM5NzU4LCJrdnJnaWQiOjEyLCJwZXJtcyI6IiJ9.GPbQrNSYhxE8Ib-M-e-7K3fHj0esfqv5qef2KFMj396ksK_OSho-lKn_9zRT3gYat4J098cvyD3jMptFrJ6xLQX7uV-5gW1DNv1wT-taUlnRp0K-xYZ4NujrfvHnj7fNFZoMw__7dTjE2NuhrxxUa3FI_OZjDHCBC7h9CWOyx1b9J53wI4Zoo9ca5HgwEibTuy_vdumFHnXYUN7LTjiIDM99eBbmKB94-5eHys2PGeyE8WSjHOGg7ok7sgsTwTW0VksEYuE7EdRhU9KzqpkiBTQSixedl1zT7wI8t0sa7beN1VJ6kpbSWtkNUKAGzpIqPZpcR7SyVWt4UWH6MNNY9Q', 'CurrentBranchId': 181235, 'IsShowNotificationPopupDr': True, 'IsOTPVerifcationRequired': False}</msg>
+<status status="PASS" starttime="20220116 17:25:25.794" endtime="20220116 17:25:25.795"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.BearerToken</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.855" level="INFO">${result} = ['eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiX...</msg>
+<status status="PASS" starttime="20220116 17:25:25.796" endtime="20220116 17:25:25.855"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${lenght}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.856" level="INFO">Length is 1</msg>
+<msg timestamp="20220116 17:25:25.856" level="INFO">${lenght} = 1</msg>
+<status status="PASS" starttime="20220116 17:25:25.856" endtime="20220116 17:25:25.856"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.857" level="INFO">${result} = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSw...</msg>
+<status status="PASS" starttime="20220116 17:25:25.856" endtime="20220116 17:25:25.857"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${lenght}==0</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.857" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:25.857" endtime="20220116 17:25:25.857"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:25.857" endtime="20220116 17:25:25.857"></status>
+</kw>
+<msg timestamp="20220116 17:25:25.858" level="INFO">${token} = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSw...</msg>
+<status status="PASS" starttime="20220116 17:25:25.795" endtime="20220116 17:25:25.858"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>Bearer</arg>
+<arg>${token}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.858" level="INFO">${token} = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVz...</msg>
+<status status="PASS" starttime="20220116 17:25:25.858" endtime="20220116 17:25:25.858"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.CurrentBranchId</arg>
+</arguments>
+<assign>
+<var>${branchId}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.880" level="INFO">${result} = [181235]</msg>
+<status status="PASS" starttime="20220116 17:25:25.859" endtime="20220116 17:25:25.881"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${lenght}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.881" level="INFO">Length is 1</msg>
+<msg timestamp="20220116 17:25:25.881" level="INFO">${lenght} = 1</msg>
+<status status="PASS" starttime="20220116 17:25:25.881" endtime="20220116 17:25:25.881"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.881" level="INFO">${result} = 181235</msg>
+<status status="PASS" starttime="20220116 17:25:25.881" endtime="20220116 17:25:25.881"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${lenght}==0</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.882" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:25.882" endtime="20220116 17:25:25.882"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:25.881" endtime="20220116 17:25:25.882"></status>
+</kw>
+<msg timestamp="20220116 17:25:25.882" level="INFO">${branchId} = 181235</msg>
+<status status="PASS" starttime="20220116 17:25:25.858" endtime="20220116 17:25:25.882"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${branchId}</arg>
+</arguments>
+<assign>
+<var>${branchId}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.882" level="INFO">${branchId} = 181235</msg>
+<status status="PASS" starttime="20220116 17:25:25.882" endtime="20220116 17:25:25.882"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${branchId}</arg>
+<arg>${branchId}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.883" level="INFO">${branchId} = 181235</msg>
+<status status="PASS" starttime="20220116 17:25:25.882" endtime="20220116 17:25:25.883"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.UserId</arg>
+</arguments>
+<assign>
+<var>${user_login}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.905" level="INFO">${result} = [438680]</msg>
+<status status="PASS" starttime="20220116 17:25:25.883" endtime="20220116 17:25:25.905"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${lenght}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.905" level="INFO">Length is 1</msg>
+<msg timestamp="20220116 17:25:25.906" level="INFO">${lenght} = 1</msg>
+<status status="PASS" starttime="20220116 17:25:25.905" endtime="20220116 17:25:25.906"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.906" level="INFO">${result} = 438680</msg>
+<status status="PASS" starttime="20220116 17:25:25.906" endtime="20220116 17:25:25.906"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${lenght}==0</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.906" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:25.906" endtime="20220116 17:25:25.906"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:25.906" endtime="20220116 17:25:25.906"></status>
+</kw>
+<msg timestamp="20220116 17:25:25.907" level="INFO">${user_login} = 438680</msg>
+<status status="PASS" starttime="20220116 17:25:25.883" endtime="20220116 17:25:25.907"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${user_login}</arg>
+<arg>${user_login}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.907" level="INFO">${user_login} = 438680</msg>
+<status status="PASS" starttime="20220116 17:25:25.907" endtime="20220116 17:25:25.907"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+<arg>branchid=${branchId}</arg>
+<arg>Authorization=${token}</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.907" level="INFO">${header} = {'retailer': 'auto12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '181235', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3V...</msg>
+<status status="PASS" starttime="20220116 17:25:25.907" endtime="20220116 17:25:25.907"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>branchid=${branchId}</arg>
+<arg>Authorization=${token}</arg>
+</arguments>
+<assign>
+<var>${headers_not_contenType}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.908" level="INFO">${headers_not_contenType} = {'retailer': 'auto12', 'branchid': '181235', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0N...</msg>
+<status status="PASS" starttime="20220116 17:25:25.908" endtime="20220116 17:25:25.908"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${header}</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.908" level="INFO">${header} = {'retailer': 'auto12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '181235', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3V...</msg>
+<status status="PASS" starttime="20220116 17:25:25.908" endtime="20220116 17:25:25.908"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${headers_not_contenType}</arg>
+<arg>${headers_not_contenType}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.909" level="INFO">${headers_not_contenType} = {'retailer': 'auto12', 'branchid': '181235', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0N...</msg>
+<status status="PASS" starttime="20220116 17:25:25.908" endtime="20220116 17:25:25.909"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>session</arg>
+<arg>${url}</arg>
+<arg>${headers_not_contenType}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.909" level="INFO">Creating Session using : alias=session, url= https://api-timesheet.kiotviet.vn, headers={'retailer': 'auto12', 'branchid': '181235', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiJmMjA2MTI2MGYzNWI0MDM2YjYzNjg4ZjhhOGVjZGNmMCIsImt2dWlkIjo0Mzg2ODAsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjoxODEyMzUsImt2cmluZGlkIjoxMCwia3ZyY29kZSI6ImF1dG8xMiIsImt2cmlkIjozMzk3NTgsImt2dXJpZCI6MzM5NzU4LCJrdnJnaWQiOjEyLCJwZXJtcyI6IiJ9.GPbQrNSYhxE8Ib-M-e-7K3fHj0esfqv5qef2KFMj396ksK_OSho-lKn_9zRT3gYat4J098cvyD3jMptFrJ6xLQX7uV-5gW1DNv1wT-taUlnRp0K-xYZ4NujrfvHnj7fNFZoMw__7dTjE2NuhrxxUa3FI_OZjDHCBC7h9CWOyx1b9J53wI4Zoo9ca5HgwEibTuy_vdumFHnXYUN7LTjiIDM99eBbmKB94-5eHys2PGeyE8WSjHOGg7ok7sgsTwTW0VksEYuE7EdRhU9KzqpkiBTQSixedl1zT7wI8t0sa7beN1VJ6kpbSWtkNUKAGzpIqPZpcR7SyVWt4UWH6MNNY9Q'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220116 17:25:25.909" endtime="20220116 17:25:25.909"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>sessionMan</arg>
+<arg>${url_man}</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.909" level="INFO">Creating Session using : alias=sessionMan, url=https://api-man.kiotviet.vn/api, headers={'retailer': 'auto12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '181235', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiJmMjA2MTI2MGYzNWI0MDM2YjYzNjg4ZjhhOGVjZGNmMCIsImt2dWlkIjo0Mzg2ODAsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjoxODEyMzUsImt2cmluZGlkIjoxMCwia3ZyY29kZSI6ImF1dG8xMiIsImt2cmlkIjozMzk3NTgsImt2dXJpZCI6MzM5NzU4LCJrdnJnaWQiOjEyLCJwZXJtcyI6IiJ9.GPbQrNSYhxE8Ib-M-e-7K3fHj0esfqv5qef2KFMj396ksK_OSho-lKn_9zRT3gYat4J098cvyD3jMptFrJ6xLQX7uV-5gW1DNv1wT-taUlnRp0K-xYZ4NujrfvHnj7fNFZoMw__7dTjE2NuhrxxUa3FI_OZjDHCBC7h9CWOyx1b9J53wI4Zoo9ca5HgwEibTuy_vdumFHnXYUN7LTjiIDM99eBbmKB94-5eHys2PGeyE8WSjHOGg7ok7sgsTwTW0VksEYuE7EdRhU9KzqpkiBTQSixedl1zT7wI8t0sa7beN1VJ6kpbSWtkNUKAGzpIqPZpcR7SyVWt4UWH6MNNY9Q'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220116 17:25:25.909" endtime="20220116 17:25:25.910"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>session</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.910" level="INFO">${session} = session</msg>
+<status status="PASS" starttime="20220116 17:25:25.910" endtime="20220116 17:25:25.911"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${session_man}</arg>
+<arg>sessionMan</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.911" level="INFO">${session_man} = sessionMan</msg>
+<status status="PASS" starttime="20220116 17:25:25.911" endtime="20220116 17:25:25.911"></status>
+</kw>
+<kw name="Random a String Letter" library="share_random">
+<arguments>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${random_str}</var>
+</assign>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_str}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.912" level="INFO">${random_str} = WaiX</msg>
+<status status="PASS" starttime="20220116 17:25:25.912" endtime="20220116 17:25:25.912"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${random_str}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.912" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:25.912" endtime="20220116 17:25:25.912"></status>
+</kw>
+<msg timestamp="20220116 17:25:25.912" level="INFO">${random_str} = WaiX</msg>
+<status status="PASS" starttime="20220116 17:25:25.911" endtime="20220116 17:25:25.912"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${random_str}</arg>
+<arg>${random_str}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.913" level="INFO">${random_str} = WaiX</msg>
+<status status="PASS" starttime="20220116 17:25:25.913" endtime="20220116 17:25:25.913"></status>
+</kw>
+<kw name="Random a Number" library="share_random">
+<arguments>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${random_number}</var>
+</assign>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${random_number}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.913" level="INFO">${random_number} = 80667182</msg>
+<status status="PASS" starttime="20220116 17:25:25.913" endtime="20220116 17:25:25.913"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${random_number}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.913" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:25.913" endtime="20220116 17:25:25.914"></status>
+</kw>
+<msg timestamp="20220116 17:25:25.914" level="INFO">${random_number} = 80667182</msg>
+<status status="PASS" starttime="20220116 17:25:25.913" endtime="20220116 17:25:25.914"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${random_number}</arg>
+<arg>${random_number}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.914" level="INFO">${random_number} = 80667182</msg>
+<status status="PASS" starttime="20220116 17:25:25.914" endtime="20220116 17:25:25.914"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:19.737" endtime="20220116 17:25:25.914"></status>
+</kw>
+<test id="s1-s1-t1" name="Create deduction">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>123456</arg>
+<arg>${random_str}</arg>
+<arg>50000</arg>
+</arguments>
+<assign>
+<var>${list_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.915" level="INFO">${list_format} = ['123456', 'WaiX', '50000']</msg>
+<status status="PASS" starttime="20220116 17:25:25.915" endtime="20220116 17:25:25.915"></status>
+</kw>
+<kw name="Format String Use [D0] [D1] [D2]" library="share">
+<arguments>
+<arg>${data_deduction}</arg>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${data_deduction}</var>
+</assign>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.916" level="INFO">Length is 3</msg>
+<msg timestamp="20220116 17:25:25.916" level="INFO">${length} = 3</msg>
+<status status="PASS" starttime="20220116 17:25:25.916" endtime="20220116 17:25:25.916"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.916" level="INFO">${value_temp} = 123456</msg>
+<status status="PASS" starttime="20220116 17:25:25.916" endtime="20220116 17:25:25.916"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.917" level="INFO">${value_temp} = 123456</msg>
+<status status="PASS" starttime="20220116 17:25:25.917" endtime="20220116 17:25:25.917"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.917" level="INFO">${data_format} = {"deduction":{"id":123456,"name":"[D1]","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType"...</msg>
+<status status="PASS" starttime="20220116 17:25:25.917" endtime="20220116 17:25:25.917"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:25.916" endtime="20220116 17:25:25.917"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.918" level="INFO">${value_temp} = WaiX</msg>
+<status status="PASS" starttime="20220116 17:25:25.917" endtime="20220116 17:25:25.918"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.918" level="INFO">${value_temp} = WaiX</msg>
+<status status="PASS" starttime="20220116 17:25:25.918" endtime="20220116 17:25:25.918"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.918" level="INFO">${data_format} = {"deduction":{"id":123456,"name":"WaiX","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType"...</msg>
+<status status="PASS" starttime="20220116 17:25:25.918" endtime="20220116 17:25:25.918"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:25.917" endtime="20220116 17:25:25.918"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.919" level="INFO">${value_temp} = 50000</msg>
+<status status="PASS" starttime="20220116 17:25:25.918" endtime="20220116 17:25:25.919"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.919" level="INFO">${value_temp} = 50000</msg>
+<status status="PASS" starttime="20220116 17:25:25.919" endtime="20220116 17:25:25.919"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:25.919" level="INFO">${data_format} = {"deduction":{"id":123456,"name":"WaiX","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType"...</msg>
+<status status="PASS" starttime="20220116 17:25:25.919" endtime="20220116 17:25:25.919"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:25.918" endtime="20220116 17:25:25.919"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:25.916" endtime="20220116 17:25:25.919"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${data_format}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:25.920" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:25.920" endtime="20220116 17:25:25.920"></status>
+</kw>
+<msg timestamp="20220116 17:25:25.920" level="INFO">${data_deduction} = {"deduction":{"id":123456,"name":"WaiX","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType"...</msg>
+<status status="PASS" starttime="20220116 17:25:25.916" endtime="20220116 17:25:25.920"></status>
+</kw>
+<kw name="Post Request Json KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_deduction}</arg>
+<arg>${data_deduction}</arg>
+<arg>200</arg>
+</arguments>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_func}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220116 17:25:27.764" level="INFO">Post Request using : alias=session, uri=/deduction, data={"deduction":{"id":123456,"name":"WaiX","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType":1,"deductionRuleName":"Cố định"}}, headers={'retailer': 'auto12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '181235', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiJmMjA2MTI2MGYzNWI0MDM2YjYzNjg4ZjhhOGVjZGNmMCIsImt2dWlkIjo0Mzg2ODAsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjoxODEyMzUsImt2cmluZGlkIjoxMCwia3ZyY29kZSI6ImF1dG8xMiIsImt2cmlkIjozMzk3NTgsImt2dXJpZCI6MzM5NzU4LCJrdnJnaWQiOjEyLCJwZXJtcyI6IiJ9.GPbQrNSYhxE8Ib-M-e-7K3fHj0esfqv5qef2KFMj396ksK_OSho-lKn_9zRT3gYat4J098cvyD3jMptFrJ6xLQX7uV-5gW1DNv1wT-taUlnRp0K-xYZ4NujrfvHnj7fNFZoMw__7dTjE2NuhrxxUa3FI_OZjDHCBC7h9CWOyx1b9J53wI4Zoo9ca5HgwEibTuy_vdumFHnXYUN7LTjiIDM99eBbmKB94-5eHys2PGeyE8WSjHOGg7ok7sgsTwTW0VksEYuE7EdRhU9KzqpkiBTQSixedl1zT7wI8t0sa7beN1VJ6kpbSWtkNUKAGzpIqPZpcR7SyVWt4UWH6MNNY9Q'}, files=None, allow_redirects=True </msg>
+<msg timestamp="20220116 17:25:27.764" level="INFO">C:\Users\phuoc\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220116 17:25:27.764" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:25.920" endtime="20220116 17:25:27.764"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>${expected_status_code}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:27.764" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:27.764" endtime="20220116 17:25:27.764"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:27.764" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:27.764" endtime="20220116 17:25:27.764"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:25.920" endtime="20220116 17:25:27.764"></status>
+</kw>
+<doc>Thêm mới giảm trừ</doc>
+<tags>
+<tag>all</tag>
+<tag>deduction</tag>
+</tags>
+<status status="PASS" starttime="20220116 17:25:25.914" endtime="20220116 17:25:27.764" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Create duplicate deduction">
+<kw name="Get value in list KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_deduction}</arg>
+<arg>$.result.data..name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${enpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.212" level="INFO">Get Request using : alias=session, uri=/deduction, headers=None json=None</msg>
+<msg timestamp="20220116 17:25:28.213" level="INFO">C:\Users\phuoc\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220116 17:25:28.213" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:27.764" endtime="20220116 17:25:28.213"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:28.214" level="INFO">{'result': {'total': 5, 'data': [{'id': 50000000108821, 'name': 'WaiX', 'tenantId': 339758, 'code': 'GT000009', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 60000000012611, 'name': 'Update iWsA', 'tenantId': 339758, 'code': 'GT000001', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 140000000104821, 'name': 'eWXQ', 'tenantId': 339758, 'code': 'GT000004', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 140000000104823, 'name': 'Update wAeq', 'tenantId': 339758, 'code': 'GT000007', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 170000000119424, 'name': 'wAeq', 'tenantId': 339758, 'code': 'GT000008', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}]}, 'message': ''}</msg>
+<status status="PASS" starttime="20220116 17:25:28.213" endtime="20220116 17:25:28.214"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.245" level="INFO">${list} = ['WaiX', 'Update iWsA', 'eWXQ', 'Update wAeq', 'wAeq']</msg>
+<status status="PASS" starttime="20220116 17:25:28.214" endtime="20220116 17:25:28.245"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.choice($list)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.249" level="INFO">${value} = Update iWsA</msg>
+<status status="PASS" starttime="20220116 17:25:28.245" endtime="20220116 17:25:28.249"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:28.249" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:28.249" endtime="20220116 17:25:28.249"></status>
+</kw>
+<msg timestamp="20220116 17:25:28.249" level="INFO">${name} = Update iWsA</msg>
+<status status="PASS" starttime="20220116 17:25:27.764" endtime="20220116 17:25:28.249"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>123456</arg>
+<arg>${name}</arg>
+<arg>0</arg>
+<arg>10000</arg>
+</arguments>
+<assign>
+<var>${list_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.250" level="INFO">${list_format} = ['123456', 'Update iWsA', '0', '10000']</msg>
+<status status="PASS" starttime="20220116 17:25:28.249" endtime="20220116 17:25:28.250"></status>
+</kw>
+<kw name="Format String Use [D0] [D1] [D2]" library="share">
+<arguments>
+<arg>${data_deduction}</arg>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${data_deduction}</var>
+</assign>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.250" level="INFO">Length is 4</msg>
+<msg timestamp="20220116 17:25:28.250" level="INFO">${length} = 4</msg>
+<status status="PASS" starttime="20220116 17:25:28.250" endtime="20220116 17:25:28.250"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.251" level="INFO">${value_temp} = 123456</msg>
+<status status="PASS" starttime="20220116 17:25:28.251" endtime="20220116 17:25:28.251"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.251" level="INFO">${value_temp} = 123456</msg>
+<status status="PASS" starttime="20220116 17:25:28.251" endtime="20220116 17:25:28.251"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.251" level="INFO">${data_format} = {"deduction":{"id":123456,"name":"[D1]","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType"...</msg>
+<status status="PASS" starttime="20220116 17:25:28.251" endtime="20220116 17:25:28.251"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:28.250" endtime="20220116 17:25:28.251"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.252" level="INFO">${value_temp} = Update iWsA</msg>
+<status status="PASS" starttime="20220116 17:25:28.252" endtime="20220116 17:25:28.252"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.252" level="INFO">${value_temp} = Update iWsA</msg>
+<status status="PASS" starttime="20220116 17:25:28.252" endtime="20220116 17:25:28.252"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.252" level="INFO">${data_format} = {"deduction":{"id":123456,"name":"Update iWsA","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"val...</msg>
+<status status="PASS" starttime="20220116 17:25:28.252" endtime="20220116 17:25:28.252"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:28.251" endtime="20220116 17:25:28.252"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.253" level="INFO">${value_temp} = 0</msg>
+<status status="PASS" starttime="20220116 17:25:28.253" endtime="20220116 17:25:28.253"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.253" level="INFO">${value_temp} = 0</msg>
+<status status="PASS" starttime="20220116 17:25:28.253" endtime="20220116 17:25:28.253"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.253" level="INFO">${data_format} = {"deduction":{"id":123456,"name":"Update iWsA","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"val...</msg>
+<status status="PASS" starttime="20220116 17:25:28.253" endtime="20220116 17:25:28.253"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:28.252" endtime="20220116 17:25:28.253"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.254" level="INFO">${value_temp} = 10000</msg>
+<status status="PASS" starttime="20220116 17:25:28.254" endtime="20220116 17:25:28.254"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.254" level="INFO">${value_temp} = 10000</msg>
+<status status="PASS" starttime="20220116 17:25:28.254" endtime="20220116 17:25:28.254"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:28.254" level="INFO">${data_format} = {"deduction":{"id":123456,"name":"Update iWsA","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"val...</msg>
+<status status="PASS" starttime="20220116 17:25:28.254" endtime="20220116 17:25:28.254"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:28.253" endtime="20220116 17:25:28.254"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:28.250" endtime="20220116 17:25:28.254"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${data_format}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:28.255" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:28.255" endtime="20220116 17:25:28.255"></status>
+</kw>
+<msg timestamp="20220116 17:25:28.255" level="INFO">${data_deduction} = {"deduction":{"id":123456,"name":"Update iWsA","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"val...</msg>
+<status status="PASS" starttime="20220116 17:25:28.250" endtime="20220116 17:25:28.255"></status>
+</kw>
+<kw name="Create value duplicate_empty" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_deduction}</arg>
+<arg>${data_deduction}</arg>
+<arg>Giảm trừ đã tồn tại trên hệ thống</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Post Request Json KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+<arg>${data}</arg>
+<arg>400</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_func}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.003" level="INFO">Post Request using : alias=session, uri=/deduction, data={"deduction":{"id":123456,"name":"Update iWsA","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType":1,"deductionRuleName":"Cố định"}}, headers={'retailer': 'auto12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '181235', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiJmMjA2MTI2MGYzNWI0MDM2YjYzNjg4ZjhhOGVjZGNmMCIsImt2dWlkIjo0Mzg2ODAsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjoxODEyMzUsImt2cmluZGlkIjoxMCwia3ZyY29kZSI6ImF1dG8xMiIsImt2cmlkIjozMzk3NTgsImt2dXJpZCI6MzM5NzU4LCJrdnJnaWQiOjEyLCJwZXJtcyI6IiJ9.GPbQrNSYhxE8Ib-M-e-7K3fHj0esfqv5qef2KFMj396ksK_OSho-lKn_9zRT3gYat4J098cvyD3jMptFrJ6xLQX7uV-5gW1DNv1wT-taUlnRp0K-xYZ4NujrfvHnj7fNFZoMw__7dTjE2NuhrxxUa3FI_OZjDHCBC7h9CWOyx1b9J53wI4Zoo9ca5HgwEibTuy_vdumFHnXYUN7LTjiIDM99eBbmKB94-5eHys2PGeyE8WSjHOGg7ok7sgsTwTW0VksEYuE7EdRhU9KzqpkiBTQSixedl1zT7wI8t0sa7beN1VJ6kpbSWtkNUKAGzpIqPZpcR7SyVWt4UWH6MNNY9Q'}, files=None, allow_redirects=True </msg>
+<msg timestamp="20220116 17:25:29.003" level="INFO">C:\Users\phuoc\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220116 17:25:29.003" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:28.256" endtime="20220116 17:25:29.003"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>${expected_status_code}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.004" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:29.004" endtime="20220116 17:25:29.004"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.004" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:29.004" endtime="20220116 17:25:29.004"></status>
+</kw>
+<msg timestamp="20220116 17:25:29.005" level="INFO">${resp} = {'message': 'Có lỗi khi tạo dữ liệu', 'errors': [{'message': 'Giảm trừ đã tồn tại trên hệ thống'}]}</msg>
+<status status="PASS" starttime="20220116 17:25:28.255" endtime="20220116 17:25:29.005"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp}</arg>
+<arg>$.errors..message</arg>
+</arguments>
+<assign>
+<var>${mess_err}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.027" level="INFO">${result} = ['Giảm trừ đã tồn tại trên hệ thống']</msg>
+<status status="PASS" starttime="20220116 17:25:29.005" endtime="20220116 17:25:29.027"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${lenght}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.027" level="INFO">Length is 1</msg>
+<msg timestamp="20220116 17:25:29.027" level="INFO">${lenght} = 1</msg>
+<status status="PASS" starttime="20220116 17:25:29.027" endtime="20220116 17:25:29.027"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.027" level="INFO">${result} = Giảm trừ đã tồn tại trên hệ thống</msg>
+<status status="PASS" starttime="20220116 17:25:29.027" endtime="20220116 17:25:29.027"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${lenght}==0</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.028" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:29.028" endtime="20220116 17:25:29.028"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.027" endtime="20220116 17:25:29.028"></status>
+</kw>
+<msg timestamp="20220116 17:25:29.028" level="INFO">${mess_err} = Giảm trừ đã tồn tại trên hệ thống</msg>
+<status status="PASS" starttime="20220116 17:25:29.005" endtime="20220116 17:25:29.028"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${mess_err}</arg>
+<arg>${mess_err_expected}</arg>
+</arguments>
+<status status="PASS" starttime="20220116 17:25:29.028" endtime="20220116 17:25:29.028"></status>
+</kw>
+<msg timestamp="20220116 17:25:29.028" level="INFO">${resp} = None</msg>
+<status status="PASS" starttime="20220116 17:25:28.255" endtime="20220116 17:25:29.028"></status>
+</kw>
+<doc>Thêm mới giảm trừ trùng tên</doc>
+<tags>
+<tag>all</tag>
+<tag>deduction</tag>
+</tags>
+<status status="PASS" starttime="20220116 17:25:27.764" endtime="20220116 17:25:29.029" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Create empty deduction">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>123456</arg>
+<arg>\ \</arg>
+<arg>12000</arg>
+</arguments>
+<assign>
+<var>${list_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.030" level="INFO">${list_format} = ['123456', ' ', '12000']</msg>
+<status status="PASS" starttime="20220116 17:25:29.030" endtime="20220116 17:25:29.030"></status>
+</kw>
+<kw name="Format String Use [D0] [D1] [D2]" library="share">
+<arguments>
+<arg>${data_deduction}</arg>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${data_deduction}</var>
+</assign>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.030" level="INFO">Length is 3</msg>
+<msg timestamp="20220116 17:25:29.031" level="INFO">${length} = 3</msg>
+<status status="PASS" starttime="20220116 17:25:29.030" endtime="20220116 17:25:29.031"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.031" level="INFO">${value_temp} = 123456</msg>
+<status status="PASS" starttime="20220116 17:25:29.031" endtime="20220116 17:25:29.031"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.031" level="INFO">${value_temp} = 123456</msg>
+<status status="PASS" starttime="20220116 17:25:29.031" endtime="20220116 17:25:29.031"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.032" level="INFO">${data_format} = {"deduction":{"id":123456,"name":"[D1]","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType"...</msg>
+<status status="PASS" starttime="20220116 17:25:29.031" endtime="20220116 17:25:29.032"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.031" endtime="20220116 17:25:29.032"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.032" level="INFO">${value_temp} =  </msg>
+<status status="PASS" starttime="20220116 17:25:29.032" endtime="20220116 17:25:29.032"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.032" level="INFO">${value_temp} =  </msg>
+<status status="PASS" starttime="20220116 17:25:29.032" endtime="20220116 17:25:29.032"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.033" level="INFO">${data_format} = {"deduction":{"id":123456,"name":" ","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType":1,...</msg>
+<status status="PASS" starttime="20220116 17:25:29.032" endtime="20220116 17:25:29.033"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.032" endtime="20220116 17:25:29.033"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.033" level="INFO">${value_temp} = 12000</msg>
+<status status="PASS" starttime="20220116 17:25:29.033" endtime="20220116 17:25:29.033"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.033" level="INFO">${value_temp} = 12000</msg>
+<status status="PASS" starttime="20220116 17:25:29.033" endtime="20220116 17:25:29.033"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.034" level="INFO">${data_format} = {"deduction":{"id":123456,"name":" ","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType":1,...</msg>
+<status status="PASS" starttime="20220116 17:25:29.034" endtime="20220116 17:25:29.034"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.033" endtime="20220116 17:25:29.034"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.031" endtime="20220116 17:25:29.034"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${data_format}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.034" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:29.034" endtime="20220116 17:25:29.034"></status>
+</kw>
+<msg timestamp="20220116 17:25:29.034" level="INFO">${data_deduction} = {"deduction":{"id":123456,"name":" ","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType":1,...</msg>
+<status status="PASS" starttime="20220116 17:25:29.030" endtime="20220116 17:25:29.034"></status>
+</kw>
+<kw name="Create value duplicate_empty" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_deduction}</arg>
+<arg>${data_deduction}</arg>
+<arg>Tên giảm trừ không được để trống</arg>
+</arguments>
+<kw name="Post Request Json KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+<arg>${data}</arg>
+<arg>400</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_func}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.389" level="INFO">Post Request using : alias=session, uri=/deduction, data={"deduction":{"id":123456,"name":" ","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType":1,"deductionRuleName":"Cố định"}}, headers={'retailer': 'auto12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '181235', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiJmMjA2MTI2MGYzNWI0MDM2YjYzNjg4ZjhhOGVjZGNmMCIsImt2dWlkIjo0Mzg2ODAsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjoxODEyMzUsImt2cmluZGlkIjoxMCwia3ZyY29kZSI6ImF1dG8xMiIsImt2cmlkIjozMzk3NTgsImt2dXJpZCI6MzM5NzU4LCJrdnJnaWQiOjEyLCJwZXJtcyI6IiJ9.GPbQrNSYhxE8Ib-M-e-7K3fHj0esfqv5qef2KFMj396ksK_OSho-lKn_9zRT3gYat4J098cvyD3jMptFrJ6xLQX7uV-5gW1DNv1wT-taUlnRp0K-xYZ4NujrfvHnj7fNFZoMw__7dTjE2NuhrxxUa3FI_OZjDHCBC7h9CWOyx1b9J53wI4Zoo9ca5HgwEibTuy_vdumFHnXYUN7LTjiIDM99eBbmKB94-5eHys2PGeyE8WSjHOGg7ok7sgsTwTW0VksEYuE7EdRhU9KzqpkiBTQSixedl1zT7wI8t0sa7beN1VJ6kpbSWtkNUKAGzpIqPZpcR7SyVWt4UWH6MNNY9Q'}, files=None, allow_redirects=True </msg>
+<msg timestamp="20220116 17:25:29.389" level="INFO">C:\Users\phuoc\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220116 17:25:29.390" level="INFO">${resp} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:29.035" endtime="20220116 17:25:29.390"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>${expected_status_code}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.392" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:29.391" endtime="20220116 17:25:29.393"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.394" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:29.393" endtime="20220116 17:25:29.394"></status>
+</kw>
+<msg timestamp="20220116 17:25:29.396" level="INFO">${resp} = {'message': 'Có lỗi khi tạo dữ liệu', 'errors': [{'message': 'Tên giảm trừ không được để trống'}]}</msg>
+<status status="PASS" starttime="20220116 17:25:29.035" endtime="20220116 17:25:29.396"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp}</arg>
+<arg>$.errors..message</arg>
+</arguments>
+<assign>
+<var>${mess_err}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.440" level="INFO">${result} = ['Tên giảm trừ không được để trống']</msg>
+<status status="PASS" starttime="20220116 17:25:29.398" endtime="20220116 17:25:29.440"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${lenght}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.441" level="INFO">Length is 1</msg>
+<msg timestamp="20220116 17:25:29.441" level="INFO">${lenght} = 1</msg>
+<status status="PASS" starttime="20220116 17:25:29.441" endtime="20220116 17:25:29.441"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.441" level="INFO">${result} = Tên giảm trừ không được để trống</msg>
+<status status="PASS" starttime="20220116 17:25:29.441" endtime="20220116 17:25:29.441"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${lenght}==0</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.442" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:29.442" endtime="20220116 17:25:29.442"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.441" endtime="20220116 17:25:29.442"></status>
+</kw>
+<msg timestamp="20220116 17:25:29.442" level="INFO">${mess_err} = Tên giảm trừ không được để trống</msg>
+<status status="PASS" starttime="20220116 17:25:29.396" endtime="20220116 17:25:29.442"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${mess_err}</arg>
+<arg>${mess_err_expected}</arg>
+</arguments>
+<status status="PASS" starttime="20220116 17:25:29.442" endtime="20220116 17:25:29.442"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.034" endtime="20220116 17:25:29.442"></status>
+</kw>
+<doc>Thêm mới giảm trừ rỗng</doc>
+<tags>
+<tag>all</tag>
+<tag>deduction</tag>
+</tags>
+<status status="PASS" starttime="20220116 17:25:29.029" endtime="20220116 17:25:29.442" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Update deduction">
+<kw name="Get value in list KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_deduction}</arg>
+<arg>$.result.data..id</arg>
+</arguments>
+<assign>
+<var>${id_deduction}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${enpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.584" level="INFO">Get Request using : alias=session, uri=/deduction, headers=None json=None</msg>
+<msg timestamp="20220116 17:25:29.584" level="INFO">C:\Users\phuoc\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220116 17:25:29.584" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:29.443" endtime="20220116 17:25:29.584"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.585" level="INFO">{'result': {'total': 5, 'data': [{'id': 50000000108821, 'name': 'WaiX', 'tenantId': 339758, 'code': 'GT000009', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 60000000012611, 'name': 'Update iWsA', 'tenantId': 339758, 'code': 'GT000001', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 140000000104821, 'name': 'eWXQ', 'tenantId': 339758, 'code': 'GT000004', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 140000000104823, 'name': 'Update wAeq', 'tenantId': 339758, 'code': 'GT000007', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 170000000119424, 'name': 'wAeq', 'tenantId': 339758, 'code': 'GT000008', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}]}, 'message': ''}</msg>
+<status status="PASS" starttime="20220116 17:25:29.584" endtime="20220116 17:25:29.585"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.607" level="INFO">${list} = [50000000108821, 60000000012611, 140000000104821, 140000000104823, 170000000119424]</msg>
+<status status="PASS" starttime="20220116 17:25:29.585" endtime="20220116 17:25:29.607"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.choice($list)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.608" level="INFO">${value} = 60000000012611</msg>
+<status status="PASS" starttime="20220116 17:25:29.607" endtime="20220116 17:25:29.608"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.608" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:29.608" endtime="20220116 17:25:29.608"></status>
+</kw>
+<msg timestamp="20220116 17:25:29.608" level="INFO">${id_deduction} = 60000000012611</msg>
+<status status="PASS" starttime="20220116 17:25:29.443" endtime="20220116 17:25:29.608"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${id_deduction}</arg>
+<arg>Update ${random_str}</arg>
+</arguments>
+<assign>
+<var>${list_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.609" level="INFO">${list_format} = [60000000012611, 'Update WaiX']</msg>
+<status status="PASS" starttime="20220116 17:25:29.609" endtime="20220116 17:25:29.609"></status>
+</kw>
+<kw name="Format String Use [D0] [D1] [D2]" library="share">
+<arguments>
+<arg>${data_deduction}</arg>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${data_deduction}</var>
+</assign>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.609" level="INFO">Length is 2</msg>
+<msg timestamp="20220116 17:25:29.609" level="INFO">${length} = 2</msg>
+<status status="PASS" starttime="20220116 17:25:29.609" endtime="20220116 17:25:29.609"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.610" level="INFO">${value_temp} = 60000000012611</msg>
+<status status="PASS" starttime="20220116 17:25:29.610" endtime="20220116 17:25:29.610"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.610" level="INFO">${value_temp} = 60000000012611</msg>
+<status status="PASS" starttime="20220116 17:25:29.610" endtime="20220116 17:25:29.610"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.611" level="INFO">${data_format} = {"deduction":{"id":60000000012611,"name":"[D1]","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"va...</msg>
+<status status="PASS" starttime="20220116 17:25:29.610" endtime="20220116 17:25:29.611"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.610" endtime="20220116 17:25:29.611"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.611" level="INFO">${value_temp} = Update WaiX</msg>
+<status status="PASS" starttime="20220116 17:25:29.611" endtime="20220116 17:25:29.611"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.611" level="INFO">${value_temp} = Update WaiX</msg>
+<status status="PASS" starttime="20220116 17:25:29.611" endtime="20220116 17:25:29.611"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.612" level="INFO">${data_format} = {"deduction":{"id":60000000012611,"name":"Update WaiX","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue...</msg>
+<status status="PASS" starttime="20220116 17:25:29.611" endtime="20220116 17:25:29.612"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.611" endtime="20220116 17:25:29.612"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.610" endtime="20220116 17:25:29.612"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${data_format}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.612" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:29.612" endtime="20220116 17:25:29.612"></status>
+</kw>
+<msg timestamp="20220116 17:25:29.612" level="INFO">${data_deduction} = {"deduction":{"id":60000000012611,"name":"Update WaiX","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue...</msg>
+<status status="PASS" starttime="20220116 17:25:29.609" endtime="20220116 17:25:29.612"></status>
+</kw>
+<kw name="Update Request KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_deduction}/${id_deduction}</arg>
+<arg>${data_deduction}</arg>
+<arg>200</arg>
+</arguments>
+<kw name="Put Request" library="RequestsLibrary">
+<doc>Send a PUT request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_func}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.718" level="INFO">Put Request using : alias=session, uri=/deduction/60000000012611, data={"deduction":{"id":60000000012611,"name":"Update WaiX","valueType":1},"deductionDetail":{"value":13000,"type":"VND","deductionRuleId":0,"deductionTypeId":1,"blockTypeTimeValue":1,"blockTypeMinuteValue":1,"valueType":1,"deductionRuleName":"Cố định"}},                     headers={'retailer': 'auto12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '181235', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo0Mzg2ODAsImlhdCI6MTY0MjMyODcyMCwiZXhwIjoxNjQ0NzQ3OTIwLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiJmMjA2MTI2MGYzNWI0MDM2YjYzNjg4ZjhhOGVjZGNmMCIsImt2dWlkIjo0Mzg2ODAsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjoxODEyMzUsImt2cmluZGlkIjoxMCwia3ZyY29kZSI6ImF1dG8xMiIsImt2cmlkIjozMzk3NTgsImt2dXJpZCI6MzM5NzU4LCJrdnJnaWQiOjEyLCJwZXJtcyI6IiJ9.GPbQrNSYhxE8Ib-M-e-7K3fHj0esfqv5qef2KFMj396ksK_OSho-lKn_9zRT3gYat4J098cvyD3jMptFrJ6xLQX7uV-5gW1DNv1wT-taUlnRp0K-xYZ4NujrfvHnj7fNFZoMw__7dTjE2NuhrxxUa3FI_OZjDHCBC7h9CWOyx1b9J53wI4Zoo9ca5HgwEibTuy_vdumFHnXYUN7LTjiIDM99eBbmKB94-5eHys2PGeyE8WSjHOGg7ok7sgsTwTW0VksEYuE7EdRhU9KzqpkiBTQSixedl1zT7wI8t0sa7beN1VJ6kpbSWtkNUKAGzpIqPZpcR7SyVWt4UWH6MNNY9Q'}, allow_redirects=True </msg>
+<msg timestamp="20220116 17:25:29.718" level="INFO">C:\Users\phuoc\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220116 17:25:29.718" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:29.612" endtime="20220116 17:25:29.718"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>${expected_status_code}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.719" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:29.719" endtime="20220116 17:25:29.719"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.720" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:29.720" endtime="20220116 17:25:29.720"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.612" endtime="20220116 17:25:29.720"></status>
+</kw>
+<doc>cập nhật giảm trừ</doc>
+<tags>
+<tag>all</tag>
+<tag>deduction</tag>
+</tags>
+<status status="PASS" starttime="20220116 17:25:29.443" endtime="20220116 17:25:29.721" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="Delete deduction">
+<kw name="Get value in list KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_deduction}</arg>
+<arg>$.result.data..id</arg>
+</arguments>
+<assign>
+<var>${id_deduction}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${enpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.833" level="INFO">Get Request using : alias=session, uri=/deduction, headers=None json=None</msg>
+<msg timestamp="20220116 17:25:29.833" level="INFO">C:\Users\phuoc\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220116 17:25:29.834" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:29.722" endtime="20220116 17:25:29.834"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.834" level="INFO">{'result': {'total': 5, 'data': [{'id': 50000000108821, 'name': 'WaiX', 'tenantId': 339758, 'code': 'GT000009', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 60000000012611, 'name': 'Update WaiX', 'tenantId': 339758, 'code': 'GT000001', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 140000000104821, 'name': 'eWXQ', 'tenantId': 339758, 'code': 'GT000004', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 140000000104823, 'name': 'Update wAeq', 'tenantId': 339758, 'code': 'GT000007', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}, {'id': 170000000119424, 'name': 'wAeq', 'tenantId': 339758, 'code': 'GT000008', 'isDeleted': False, 'valueType': 1, 'value': 13000.0, 'deductionRuleId': 0, 'deductionTypeId': 1, 'blockTypeTimeValue': 1, 'blockTypeMinuteValue': 1}]}, 'message': ''}</msg>
+<status status="PASS" starttime="20220116 17:25:29.834" endtime="20220116 17:25:29.835"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.878" level="INFO">${list} = [50000000108821, 60000000012611, 140000000104821, 140000000104823, 170000000119424]</msg>
+<status status="PASS" starttime="20220116 17:25:29.835" endtime="20220116 17:25:29.878"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.choice($list)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.880" level="INFO">${value} = 50000000108821</msg>
+<status status="PASS" starttime="20220116 17:25:29.878" endtime="20220116 17:25:29.880"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.880" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:29.880" endtime="20220116 17:25:29.880"></status>
+</kw>
+<msg timestamp="20220116 17:25:29.880" level="INFO">${id_deduction} = 50000000108821</msg>
+<status status="PASS" starttime="20220116 17:25:29.722" endtime="20220116 17:25:29.881"></status>
+</kw>
+<kw name="Delete Request KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_deduction}/${id_deduction}</arg>
+<arg>200</arg>
+</arguments>
+<kw name="Delete Request" library="RequestsLibrary">
+<doc>Send a DELETE request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220116 17:25:29.952" level="INFO">Delete Request using : alias=session, uri=/deduction/50000000108821, data=(),                     headers=None, allow_redirects=True </msg>
+<msg timestamp="20220116 17:25:29.952" level="INFO">C:\Users\phuoc\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220116 17:25:29.952" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:29.881" endtime="20220116 17:25:29.952"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>${expected_status_code}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.952" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220116 17:25:29.952" endtime="20220116 17:25:29.952"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220116 17:25:29.967" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220116 17:25:29.952" endtime="20220116 17:25:29.967"></status>
+</kw>
+<status status="PASS" starttime="20220116 17:25:29.881" endtime="20220116 17:25:29.967"></status>
+</kw>
+<doc>Xóa giảm trừ</doc>
+<tags>
+<tag>all</tag>
+<tag>deduction</tag>
+</tags>
+<status status="PASS" starttime="20220116 17:25:29.721" endtime="20220116 17:25:29.967" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220116 17:25:19.387" endtime="20220116 17:25:29.967"></status>
+</suite>
+<status status="PASS" starttime="20220116 17:25:19.356" endtime="20220116 17:25:29.967"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0">all</stat>
+<stat pass="5" fail="0">deduction</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="5" fail="0" id="s1-s1" name="Deduction">Testsuites.Deduction</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -28,20 +28,20 @@ Create shift               [Tags]   all    shift
 
 Create duplicate shift     [Tags]   all    shift
     [Documentation]        Thêm mới ca làm việc trùng  tên
-    ${name}                Get value in list KV                  ${enp_shift_branch}                $.result..name
+    ${name}                Get value in list KV                  ${session}                         ${enp_shift_branch}                $.result..name
     ${list_format}         Create List   170498                  ${name}                            ${branchId}
     ${data_shift}          Format String Use [D0] [D1] [D2]      ${data_shift}                      ${list_format}
-    ${resp}                Create value duplicate_empty          ${enp_shift}                       ${data_shift}               Tên ca đã tồn tại
+    ${resp}                Create value duplicate_empty          ${session}                         ${enp_shift}                       ${data_shift}               Tên ca đã tồn tại
 
 Create empty shift         [Tags]   all    shift
     [Documentation]        Thêm mới ca làm việc rỗng
     ${list_format}         Create List   170498                  \ \                                ${branchId}
     ${data_shift}          Format String Use [D0] [D1] [D2]      ${data_shift}                      ${list_format}
-    ${resp}                Create value duplicate_empty          ${enp_shift}                       ${data_shift}               Bạn chưa nhập tên ca
+    ${resp}                Create value duplicate_empty          ${session}                         ${enp_shift}                       ${data_shift}               Bạn chưa nhập tên ca
 
 Update shift               [Tags]   all    shift
     [Documentation]        Cập nhật ca làm việc
-    ${id_shift}            Get value in list KV                 ${enp_shift_branch}                 $.result..id
+    ${id_shift}            Get value in list KV                 ${session}                          ${enp_shift_branch}                 $.result..id
     ${list_format}         Create List   ${id_shift}            Update${random_str}                 ${branchId}
     ${data_shift}          Format String Use [D0] [D1] [D2]     ${data_shift}                       ${list_format}
     ${resp}                Update Request KV                    ${session}                          ${enp_shift}/${id_shift}    ${data_shift}             200
@@ -50,8 +50,8 @@ Update shift               [Tags]   all    shift
 # Xóa ca làm việc ko có chi tiết chấm công
 Delete shift               [Tags]   all    shift
     [Documentation]        Xóa ca làm việc
-    ${id_shift}            Get value in list KV                 ${enp_shift_branch}                 $.result..id
-    ${name_shift}          Get detail from id KV                ${enp_shift}/${id_shift}            $.result.name
+    ${id_shift}            Get value in list KV                 ${session}                          ${enp_shift_branch}                 $.result..id
+    ${name_shift}          Get detail from id KV                ${session}                          ${enp_shift}/${id_shift}            $.result.name
     ${resp}                Delete Request                       ${session}                          ${enp_shift}/${id_shift}
     Convert To String      ${resp.status_code}
     Run Keyword If        '${resp.status_code}'=='200'         Log   Đã xóa thành công

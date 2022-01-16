@@ -26,13 +26,13 @@ Create duplicate commission     [Tags]      all        commission
     ${name}                     Get Value From Json KV                ${resp}                 $.result.data..name
     ${list_format}              Create List                           123456                  ${name}
     ${data_commission}          Format String Use [D0] [D1] [D2]      ${data_commission}      ${list_format}
-    ${resp}                     Create value duplicate_empty          ${enp_commission}       ${data_commission}      Tên bảng hoa hồng đã tồn tại trên hệ thống
+    ${resp}                     Create value duplicate_empty          ${session}              ${enp_commission}       ${data_commission}      Tên bảng hoa hồng đã tồn tại trên hệ thống
 
 Create empty commission         [Tags]      all        commission
     [Documentation]             Thêm mới hoa hồng rỗng
     ${list_format}              Create List                           123456                     \ \
     ${data_commission}          Format String Use [D0] [D1] [D2]      ${data_commission}      ${list_format}
-    ${resp}                     Create value duplicate_empty          ${enp_commission}       ${data_commission}       Bạn chưa nhập Tên bảng hoa hồng
+    ${resp}                     Create value duplicate_empty          ${session}              ${enp_commission}       ${data_commission}       Bạn chưa nhập Tên bảng hoa hồng
 
 Update commission               [Tags]      all        commission
     [Documentation]             Cập nhật hoa hồng
