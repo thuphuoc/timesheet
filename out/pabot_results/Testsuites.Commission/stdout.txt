@@ -1,0 +1,24 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.Commission                                                         
+==============================================================================
+Create commission :: Thêm m?i hoa h?ng                                | PASS |
+------------------------------------------------------------------------------
+Create duplicate commission :: Thêm m?i hoa h?ng trùng tên            | PASS |
+------------------------------------------------------------------------------
+Create empty commission :: Thêm m?i hoa h?ng r?ng                     | PASS |
+------------------------------------------------------------------------------
+Update commission :: C?p nh?t hoa h?ng                                | PASS |
+------------------------------------------------------------------------------
+Delete commission :: Xóa hoa h?ng                                     | PASS |
+------------------------------------------------------------------------------
+Testsuites.Commission                                                 | PASS |
+5 critical tests, 5 passed, 0 failed
+5 tests total, 5 passed, 0 failed
+==============================================================================
+Testsuites                                                            | PASS |
+5 critical tests, 5 passed, 0 failed
+5 tests total, 5 passed, 0 failed
+==============================================================================
+Output:  B:\Auto_Company\timesheet\out\pabot_results\Testsuites.Commission\output-20220116-153323.xml

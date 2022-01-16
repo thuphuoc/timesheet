@@ -15,20 +15,20 @@ Create jobtitle                       [Tags]   all        jobtitle
     [Documentation]                   Thêm mới chức danh
     ${list_format}                    Create List         123456              ${random_str}
     ${data}                           Format String Use [D0] [D1] [D2]        ${data_job}               ${list_format}
-    Post Request Json KV              ${session}                              ${enp_job}                ${data}                         200
+    ${resp}                           Post Request Json KV                    ${session}                ${enp_job}                ${data}                         200
 
-Create duplicate jobtitle             [Tags]   all                            Create duplicate jobtitle
+Create duplicate jobtitle             [Tags]   all       jobtitle
     [Documentation]                   Thêm mới chức danh trùng tên
     ${name}                           Get value in list KV                    ${enp_job}                $.result.data..name
     ${list_format}                    Create List                             123456                    ${name}
     ${data_job}                       Format String Use [D0] [D1] [D2]        ${data_job}               ${list_format}
-    Create value duplicate_empty      ${enp_job}                              ${data_job}               Tên chức danh đã tồn tại trên hệ thống
+    ${resp}                           Create value duplicate_empty            ${enp_job}                ${data_job}               Tên chức danh đã tồn tại trên hệ thống
 
 Create empty jobtitle                 [Tags]   all        jobtitle
     [Documentation]                   Thêm mới chức danh rỗng
     ${list_format}                    Create List                             123456                    \ \
     ${data_job}                       Format String Use [D0] [D1] [D2]        ${data_job}               ${list_format}
-    Create value duplicate_empty      ${enp_job}    ${data_job}               Tên chức danh không được để trống
+    ${resp}                           Create value duplicate_empty            ${enp_job}                ${data_job}               Tên chức danh không được để trống
 
 Update jobtitle                       [Tags]   all        jobtitle
     [Documentation]                   Cập nhật chức danh
@@ -38,7 +38,7 @@ Update jobtitle                       [Tags]   all        jobtitle
     ${resp}                           Update Request KV    ${session}         ${enp_job}/${id_job}      ${data}                         200
 
 Delete jobtitle                       [Tags]   all        jobtitle
-   [Documentation]                   Xóa chức danh
+   [Documentation]                    Xóa chức danh
     ${id_job}                         Get value in list KV                    ${enp_job}                $.result.data..id
     Delete Request KV                 ${session}    ${enp_job}/${id_job}      200
 *** Keywords ***

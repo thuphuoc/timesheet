@@ -1,0 +1,32 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.Employee                                                           
+==============================================================================
+Create employee :: T?o m?i nhân viên và thi?t l?p l??ng ko có m?u ... | PASS |
+------------------------------------------------------------------------------
+Create duplicate employee :: T?o m?i nhân viên trùng mã nhân viên     | PASS |
+------------------------------------------------------------------------------
+Create empty employee :: T?o m?i nhân viên ?? tr?ng tr??ng tên nhâ... | PASS |
+------------------------------------------------------------------------------
+Update employee :: C?p nh?t nhân viên                                 | PASS |
+------------------------------------------------------------------------------
+Get pin code :: Láy mã xác nh?n cho ch?m công gps                     | PASS |
+------------------------------------------------------------------------------
+Add work schedule :: Thêm l?ch làm vi?c cho nhân viên t?i MH nhân ... | PASS |
+------------------------------------------------------------------------------
+Delete work schedule :: Xóa l?ch làm vi?c c?a nhân viên t?i tab l?... | PASS |
+------------------------------------------------------------------------------
+Delete employee :: Xóa 1 nhân viên                                    | PASS |
+------------------------------------------------------------------------------
+Delete multiple employee :: Xóa nhi?u nhân viên cùng 1 lúc            | PASS |
+------------------------------------------------------------------------------
+Testsuites.Employee                                                   | PASS |
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
+==============================================================================
+Testsuites                                                            | PASS |
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
+==============================================================================
+Output:  B:\Auto_Company\timesheet\out\pabot_results\Testsuites.Employee\output-20220116-153323.xml

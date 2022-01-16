@@ -24,7 +24,7 @@ Get Value From Json KV
 Get Request from KV
     [Arguments]                     ${session}                  ${endpoint}
     ${resp}                         Get Request                 ${session}    ${endpoint}
-    Return From Keyword             ${resp}
+    Return From Keyword             ${resp.json()}
 
 Get value in list KV
     [Arguments]                     ${enpoint}                  ${json_path}
@@ -35,49 +35,50 @@ Get value in list KV
     Return From Keyword             ${value}
 
 Get detail from id KV
-    [Arguments]                     ${enpoint}    ${id}         ${json_path}
-    ${resp}                         Get Request from KV         ${session}                     ${enpoint}/${id}
-    ${value}                        Get Value From Json KV      ${resp.json()}                 ${json_path}
+    [Arguments]                     ${enpoint}                  ${json_path}
+    ${resp}                         Get Request from KV         ${session}                     ${enpoint}
+    ${value}                        Get Value From Json KV      ${resp}                        ${json_path}
     Return From Keyword             ${value}
 
 Post Request Json KV
     [Arguments]                     ${session}                  ${endpoint}                     ${data_func}                          ${expected_status_code}
     ${resp}                         Post Request                ${session}                      ${endpoint}    headers=${header}      data=${data_func}
     Should Be Equal As Strings      ${resp.status_code}         ${expected_status_code}
-    Return From Keyword             ${resp}
+    Return From Keyword             ${resp.json()}
 
 Post Request Use Formdata KV
     [Arguments]                     ${session}                  ${endpoint}    ${data_func}     ${expected_status_code}
     ${resp}                         Post Request                ${session}    ${endpoint}       ${headers_not_contenType}             files=${data_func}
     Should Be Equal As Strings      ${resp.status_code}         ${expected_status_code}
-    Return From Keyword             ${resp}
+    Return From Keyword             ${resp.json()}
 
 Create value duplicate_empty
-    [Arguments]                     ${endpoint}    ${data}      ${mess_err_expected}
+    [Arguments]                     ${endpoint}                 ${data}                         ${mess_err_expected}
     ${resp}                         Post Request Json KV        ${session}                      ${endpoint}                           ${data}                             400
-    ${mess_err}                     Get Value From Json KV      ${resp.json()}                  $.errors..message
+    ${mess_err}                     Get Value From Json KV      ${resp}                         $.errors..message
     Should Be Equal                 ${mess_err}                 ${mess_err_expected}
-    Return From Keyword             ${resp}
 Update Request KV Use Formdata KV
     [Arguments]                     ${session}                  ${endpoint}    ${data_func}     ${expected_status_code}
     ${resp}                         Put Request                 ${session}    ${endpoint}       headers=${headers_not_contenType}     files=${data_func}
     log  ${resp.json()}
     Should Be Equal As Strings      ${resp.status_code}         ${expected_status_code}
-    Return From Keyword             ${resp}
+    Return From Keyword             ${resp.json()}
 
 Update Request KV
     [Arguments]                     ${session}                  ${endpoint}                      ${data_func}                         ${expected_status_code}
     ${resp}                         Put Request                 ${session}                       ${endpoint}                          headers=${header}                   data=${data_func}
     Should Be Equal As Strings      ${resp.status_code}         ${expected_status_code}
-    Return From Keyword             ${resp}
+    Return From Keyword             ${resp.json()}
 
 Delete Request KV
     [Arguments]                     ${session}                  ${endpoint}                      ${expected_status_code}
     ${resp}                         Delete Request              ${session}                       ${endpoint}
     Should Be Equal As Strings      ${resp.status_code}         ${expected_status_code}
-    Return From Keyword             ${resp}
+    Return From Keyword             ${resp.json()}
 
 Delete Multiple Request KV
-    [Arguments]                     ${session}                  ${endpoint}                     ${data}                               ${expected_status_code}
-    ${resp}                         Post Request                ${session}                      ${endpoint}                           ${header}                         ${data}
-    Should Be Equal As Strings      ${resp.status_code}         ${expected_status_code}
+    [Arguments]                     ${session}                  ${endpoint}                     ${data}                               ${mess_err_expected}
+    ${resp}                         Post Request Json KV        ${session}                      ${endpoint}                           ${data}                           200
+    ${mess_err_resp}                Get Value From Json KV      ${resp}                         $.message
+    Log                             ${mess_err_resp
+    Should Be Equal                 ${mess_err_resp}            ${mess_err_expected}

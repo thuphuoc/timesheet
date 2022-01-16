@@ -37,7 +37,6 @@ Update department                     [Tags]   all  department
     ${list_format}                    Create List                           ${id_department}        Update ${random_str}
     ${data}                           Format String Use [D0] [D1] [D2]      ${data_department}      ${list_format}
     ${resp}                           Update Request KV                     ${session}              ${enp_department}/${id_department}    ${data}        200
-    Log   ${resp}
 
 Delete department                     [Tags]   all  department
   [Documentation]                     Xóa phòng ban

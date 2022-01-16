@@ -23,8 +23,7 @@ Create shift               [Tags]   all    shift
     ${list_format}         Create List                            170498  ${random_str}              ${branchId}
     ${data_shift}          Format String Use [D0] [D1] [D2]       ${data_shift}                      ${list_format}
     ${resp}                Post Request Json KV                   ${session}                         ${enp_shift}              ${data_shift}            200
-    ${mess_expected}       Get Value From Json KV                 ${resp.json()}                     $.message
-    Log                    ${resp.json()}
+    ${mess_expected}       Get Value From Json KV                 ${resp}                            $.message
     Should Be Equal        ${mess_expected}                       Tạo ca thành công
 
 Create duplicate shift     [Tags]   all    shift
@@ -33,14 +32,12 @@ Create duplicate shift     [Tags]   all    shift
     ${list_format}         Create List   170498                  ${name}                            ${branchId}
     ${data_shift}          Format String Use [D0] [D1] [D2]      ${data_shift}                      ${list_format}
     ${resp}                Create value duplicate_empty          ${enp_shift}                       ${data_shift}               Tên ca đã tồn tại
-    Log                    ${resp.json()}
 
 Create empty shift         [Tags]   all    shift
     [Documentation]        Thêm mới ca làm việc rỗng
     ${list_format}         Create List   170498                  \ \                                ${branchId}
     ${data_shift}          Format String Use [D0] [D1] [D2]      ${data_shift}                      ${list_format}
     ${resp}                Create value duplicate_empty          ${enp_shift}                       ${data_shift}               Bạn chưa nhập tên ca
-    Log                    ${resp.json()}
 
 Update shift               [Tags]   all    shift
     [Documentation]        Cập nhật ca làm việc
@@ -48,13 +45,19 @@ Update shift               [Tags]   all    shift
     ${list_format}         Create List   ${id_shift}            Update${random_str}                 ${branchId}
     ${data_shift}          Format String Use [D0] [D1] [D2]     ${data_shift}                       ${list_format}
     ${resp}                Update Request KV                    ${session}                          ${enp_shift}/${id_shift}    ${data_shift}             200
-    Log                    ${resp.json()}
-    ${mess_expected}       Get Value From Json KV               ${resp.json()}                      $.message
+    ${mess_expected}       Get Value From Json KV               ${resp}                             $.message
     Should Be Equal        ${mess_expected}                     Cập nhật ca thành công
 # Xóa ca làm việc ko có chi tiết chấm công
 Delete shift               [Tags]   all    shift
     [Documentation]        Xóa ca làm việc
     ${id_shift}            Get value in list KV                 ${enp_shift_branch}                 $.result..id
-    ${resp}                Delete Request KV                    ${session}                          ${enp_shift}/${id_shift}            200
-    Log                    ${resp.json()}
+    ${name_shift}          Get detail from id KV                ${enp_shift}/${id_shift}            $.result.name
+    ${resp}                Delete Request                       ${session}                          ${enp_shift}/${id_shift}
+    Convert To String      ${resp.status_code}
+    Run Keyword If        '${resp.status_code}'=='200'         Log   Đã xóa thành công
+    ...         ELSE       Delete Request Shift                ${resp.json()}
 *** Keywords ***
+Delete Request Shift
+    [Arguments]            ${resp}
+    ${mess_expected}       Get Value From Json KV               ${resp}                           $..errors..message
+    Log                    ${mess_expected}

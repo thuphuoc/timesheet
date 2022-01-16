@@ -1,5 +1,13 @@
-datasources:3849bcfa7a31271fdf5e5197ff8b196bc267d353
-commandlineoptions:5e54206ba4350b6d7b225eff32be76409583f500
+datasources:9ba64fa60ece7506576b2765b1188eebe093d64a
+commandlineoptions:539c37f37b9a882466824f07e05e833c5089e7de
 suitesfrom:no-suites-from-option
-file:70e6191c3adc3a8466c7a3f70eea61a50cbee3b6
+file:91201bb9da277848d9ed43aa8c1a5f9b9c15caaa
+Testsuites.Employee
+Testsuites.Allowance
+Testsuites.Commission
+Testsuites.Deduction
 Testsuites.Department
+Testsuites.Holiday
+Testsuites.Jobtiltle
+Testsuites.Payrate
+Testsuites.Shift
