@@ -1,0 +1,35 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.NhanVien                                                           
+==============================================================================
+Testsuites.NhanVien.Allowance                                                 
+==============================================================================
+Create allowance :: Thêm m?i ph? c?p                                  | FAIL |
+No keyword with name 'Create Allowance' found.
+------------------------------------------------------------------------------
+Create duplicate allowance :: Thêm m?i ph? c?p trùng tên              | FAIL |
+No keyword with name 'Get name Allowance' found.
+------------------------------------------------------------------------------
+Create empty allowance :: Thêm m?i ph? c?p r?ng                       | FAIL |
+No keyword with name 'Create Allowance' found.
+------------------------------------------------------------------------------
+Update allowance :: Update ph? c?p                                    | FAIL |
+No keyword with name 'Update Allowance' found.
+------------------------------------------------------------------------------
+Testsuites.NhanVien.Allowance                                         | FAIL |
+Suite teardown failed:
+No keyword with name 'Delete Allowance' found.
+
+4 critical tests, 0 passed, 4 failed
+4 tests total, 0 passed, 4 failed
+==============================================================================
+Testsuites.NhanVien                                                   | FAIL |
+4 critical tests, 0 passed, 4 failed
+4 tests total, 0 passed, 4 failed
+==============================================================================
+Testsuites                                                            | FAIL |
+4 critical tests, 0 passed, 4 failed
+4 tests total, 0 passed, 4 failed
+==============================================================================
+Output:  D:\timesheet\out\pabot_results\Testsuites.NhanVien.Allowance\output-20220121-141704.xml
