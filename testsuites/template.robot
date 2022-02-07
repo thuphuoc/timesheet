@@ -1,7 +1,4 @@
 *** Settings ***
-Library   RequestsLibrary
-Library   JSONLibrary
-Library  Collections
 
 *** Variables ***
 

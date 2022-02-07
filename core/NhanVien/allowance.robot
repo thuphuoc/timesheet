@@ -1,7 +1,5 @@
 *** Settings ***
-Resource   share.robot
-Resource   share_random.robot
-
+Resource        ../../core/share/share.robot
 *** Variables ***
 ${data_allowance}                   {"allowance":{"Id":"[D0]","Name":"[D1]","Type":[D2],"Value":[D3],"ValueRatio":0,"IsChecked":true}}
 ${enp_allowance}                    /allowance
@@ -28,20 +26,22 @@ Get Detail Allowance
 Get Random ID Allowance
     ${resp}                         Get Request from KV                   ${session}            ${enp_allowance}
     ${id_allowance}                 Get value in list KV                  ${session}            ${enp_allowance}            $.result.data..id
+    ${name}                         Get value in list KV    ${session}    ${enp_allowance}/${id_allowance}        $.name
     Return From Keyword             ${id_allowance}
 
 Update Allowance
     [Arguments]                     ${name}               ${type}         ${value}
     ${id_allowance}                 Get Random ID Allowance
-    ${list_format}                  Create List                           ${id_allowance}       ${name}       ${type}                   ${value}
+    ${list_format}                  Create List                           ${id_allowance}       ${name}       ${type}             ${value}
     ${data_allowance}               Format String Use [D0] [D1] [D2]      ${data_allowance}     ${list_format}
     ${resp}                         Update Request KV                     ${session}            ${enp_allowance}/${id_allowance}        ${data_allowance}    200
 
-
 Delete Allowance
-    ${id_Allowance}                 Get value in list KV                  ${session}            ${enp_allowance}     $.result.data..id
-    Delete Request KV               ${session}                           ${enp_allowance}/${id_Allowance}             200
+    ${id_allowance}                 Get value in list KV                  ${session}            ${enp_allowance}     $.result.data..id
+    ${name_allowance}               Get value in list KV                  ${session}            ${enp_allowance}/${id_allowance}    $.name
+    Delete Request KV               ${session}                           ${enp_allowance}/${id_allowance}             200
 
 Get Name Allowance
+    [Arguments]
     ${name}       Get value in list KV    ${session}    ${enp_allowance}      $.result.data..name
     Return From Keyword     ${name}

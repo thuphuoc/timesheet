@@ -4,7 +4,7 @@ Library         RequestsLibrary
 Resource        ../../core/share/enviroment.robot
 Resource        ../../core/share/share.robot
 Resource        ../../core/share/share_random.robot
-Resource        ../../core/share/allowance.robot
+Resource        ../../core/nhanvien/allowance.robot
 Suite setup     Fill enviroment and get token    ${env}
 Suite Teardown  Test After
 *** Variables ***
@@ -21,7 +21,6 @@ Create duplicate allowance          [Tags]   all    allowance
     ${resp}                         Create Allowance                      0                     ${name}               ${type_allowance}           ${value_allowance}    400
     ${mess_err}                     Get Value From Json KV              ${resp}                 $.errors..message
     Should Be Equal                 ${mess_err}                         Tên phụ cấp đã tồn tại trên hệ thống
-
 
 Create empty allowance              [Tags]   all    allowance
     [Documentation]                 Thêm mới phụ cấp rỗng

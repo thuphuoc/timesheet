@@ -1,5 +1,5 @@
-datasources:8a6a5487d2ca49bea919a73ff4e6b085c73bdd60
-commandlineoptions:b2e8eeae1f86e458aedb32cfd0197ac59c7d5927
+datasources:56e6b821beacb803941a1d858e1744eb11a7ca19
+commandlineoptions:b5764e0a8fdd101d970eb7c870d50cfaab09f8bd
 suitesfrom:no-suites-from-option
-file:e3bf88bf5bd262f485d618606ffc2b8b96f00c02
-Testsuites.NhanVien.Allowance
+file:454e5df80df88d457c5e64b31e658ece59bfc945
+Testsuites.NhanVien.Payrate

@@ -1,9 +1,9 @@
 *** Settings ***
 Library         JSONLibrary
 Library         RequestsLibrary
-Resource        ../core/enviroment.robot
-Resource        ../core/share.robot
-Resource        ../core/share_random.robot
+Resource   ../../core/share/enviroment.robot
+Resource  ../../core/share/share.robot
+Resource   ../../core/share/share_random.robot
 Suite setup     Fill enviroment and get token    ${env}
 *** Variables ***
 ${enp_paysheet}           /paysheets
@@ -27,13 +27,13 @@ Create paysheet       [Tags]        all    paysheet
     ${id_paysheet}        Get Value From Json KV              ${resp}             $.result.id
     Set Suite Variable    ${id_paysheet}                      ${id_paysheet}
 
-Auto loading paysheet   [Tags]        all    paysheet1
+Auto loading paysheet   [Tags]        all    paysheet
     [Documentation]       Tải lại bảng lương tạm tính
     ${id_paysheet}        Get Id In List Paysheets            ${draft}
     ${code_paysheet}      Get value in list KV                ${session}        ${enp_paysheet}/${id_paysheet}                $.result.code
     ${resp}               Update Request KV    ${session}     ${enp_autoloading}/${id_paysheet}     ${data_auto_load}        200
 
-Cancel paysheet                     [Tags]             all            paysheet1
+Cancel paysheet                     [Tags]             all            paysheet
       [Documentation]     Huỷ bỏ bảng lương tạm tính ko hủy phiếu thanh toán
       ${id_paysheet}      Get Id In List Paysheets            ${draft}
       ${code_paysheet}    Get value in list KV              ${session}        ${enp_paysheet}/${id_paysheet}                $.result.code
@@ -41,7 +41,7 @@ Cancel paysheet                     [Tags]             all            paysheet1
       ${data_cancel_paysheet}     Format String Use [D0] [D1] [D2]    ${data_cancel_paysheet}    ${list_format}
       ${resp}             Update Request KV    ${session}    ${enp_cancel_paysheet}     ${data_cancel_paysheet}    200
 
-Cancel paysheet and cancel payment                    [Tags]             all            paysheet1
+Cancel paysheet and cancel payment                    [Tags]             all            paysheet
       [Documentation]      Huỷ bỏ bảng lương tạm tính và hủy phiếu thanh toán
       ${id_paysheet}        Get value in list KV              ${session}        ${enp_filter_sheets}                          $..data[?(@.totalPayment >0)]..id
       ${code_paysheet}      Get value in list KV              ${session}        ${enp_paysheet}/${id_paysheet}                $.result.code
@@ -49,7 +49,7 @@ Cancel paysheet and cancel payment                    [Tags]             all    
       ${data_cancel_paysheet}     Format String Use [D0] [D1] [D2]    ${data_cancel_paysheet}    ${list_format}
       ${resp}             Update Request KV    ${session}    ${enp_cancel_paysheet}     ${data_cancel_paysheet}    200
 
-pay salary at payroll screen
+Pay salary at payroll screen
       [Documentation]           Thanh toán lương tại màn hình bảng lương
 
 *** Keywords ***

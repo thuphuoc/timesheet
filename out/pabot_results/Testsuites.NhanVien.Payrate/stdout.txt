@@ -1,0 +1,27 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.NhanVien                                                           
+==============================================================================
+Testsuites.NhanVien.Payrate                                                   
+==============================================================================
+Create payRateTemplate :: T?o m?i m?u l??ng có ch?a ph? c?p, gi?m ... | FAIL |
+Variable '${id_payrate}' not found. Did you mean:
+    ${data_payrate}
+------------------------------------------------------------------------------
+Update payRateTemplate :: Update m?u l??ng                            | FAIL |
+Test case contains no keywords.
+------------------------------------------------------------------------------
+Testsuites.NhanVien.Payrate                                           | FAIL |
+2 critical tests, 0 passed, 2 failed
+2 tests total, 0 passed, 2 failed
+==============================================================================
+Testsuites.NhanVien                                                   | FAIL |
+2 critical tests, 0 passed, 2 failed
+2 tests total, 0 passed, 2 failed
+==============================================================================
+Testsuites                                                            | FAIL |
+2 critical tests, 0 passed, 2 failed
+2 tests total, 0 passed, 2 failed
+==============================================================================
+Output:  B:\Auto_Company\timesheet\out\pabot_results\Testsuites.NhanVien.Payrate\output-20220205-101829.xml

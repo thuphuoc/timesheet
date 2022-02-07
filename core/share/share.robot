@@ -39,6 +39,10 @@ Get detail from id KV
     ${resp}                         Get Request from KV         ${session}                     ${enpoint}
     ${value}                        Get Value From Json KV      ${resp}                        ${json_path}
     Return From Keyword             ${value}
+Get mess_expected
+    [Arguments]                     ${resp}   ${json_path}      ${mess_expected}
+    ${mess}                         Get Value From Json KV      ${resp}                        ${json_path}
+    Should Be Equal                 ${mess}                     ${mess_expected}
 
 Post Request Json KV
     [Arguments]                     ${session}                  ${endpoint}                     ${data_func}                          ${expected_status_code}

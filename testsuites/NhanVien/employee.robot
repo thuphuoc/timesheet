@@ -2,9 +2,11 @@
 Library     JSONLibrary
 Library     RequestsLibrary
 Library     Collections
-Resource   ../core/enviroment.robot
-Resource   ../core/share.robot
-Resource   ../core/share_random.robot
+Resource        ../../core/share/enviroment.robot
+Resource        ../../core/share/share.robot
+Resource        ../../core/bangchamcong/shift.robot
+Resource        ../../core/share/share_random.robot
+Resource        ../../core/nhanvien/employee.robot
 Suite setup  Fill enviroment and get token    ${env}
 
 ***Variables***
@@ -13,13 +15,11 @@ ${filter_enp_employee}            /employees?skip=0&take=100&OrderByDesc=id&incl
 ${enp_multiple_employee}          /employees/delete-multiple
 ${enp_pin_code}                   /employees/two-fa-pin?EmployeeId=[D0]&UserId=[D1]
 ${enp_add_work_schedule}          /timesheets
-${enp_delete_work_schedule}       /timesheets/cancelTimeSheet
 ${enp_shift_branch}               /shifts/multiple-branch/orderby-from-to?BranchIds=[D0]&ShiftIds=
 ${enp_get_work_schedule}          /timesheets?skip=0&take=5&OrderByDesc=CreatedDate&employeeId=[D0]&timeSheetStatus=1&isDeleted=false
 ${data_employee}                  {"id":[D0],"code":"[D1]","name":"[D2]","branchId":[D3],"userId":null,"workBranchIds":[[D4]]}
 ${data_mutiple_employee}          {"employeeIds":[[D0],[D1]]}
 ${data_add_work_schedule}         {"TimeSheet":{"startDate":"[D0]","endDate":"[D1]","employeeId":[D2],"isRepeat":true,"hasEndDate":false,"repeatType":1,"repeatEachDay":1,"branchId":[D3],"branchIds":[[D4]],"timeSheetShifts":[{"shiftIds":"[D5]","repeatDaysOfWeek":null}]}}
-${data_del_work_schedule}         {"Id":[D0]}
 ${data_set_salary}         {"salaryPeriod":1,"mainSalaryRuleValue":{"mainSalaryValueDetails":[{"default":[D0],"mainSalaryHolidays":[{"moneyTypes":2,"type":8,"value":[D1],"isApply":true,"sort":2},{"moneyTypes":2,"type":9,"value":[D2],"isApply":true,"sort":3}]}],"type":2},"overtimeSalaryRuleValue":{"overtimeSalaryDays":[{"value":150,"moneyTypes":2,"type":7,"isApply":true,"sort":0},{"value":200,"moneyTypes":2,"type":6,"isApply":true,"sort":1},{"value":200,"moneyTypes":2,"type":0,"isApply":true,"sort":2},{"value":200,"moneyTypes":2,"type":8,"isApply":true,"sort":3},{"value":300,"moneyTypes":2,"type":9,"isApply":true,"sort":4}]}}
 
 *** Test Cases ***
@@ -39,8 +39,8 @@ Create employee                   [Tags]   all    employee
     ${resp}                       Post Request Use Formdata KV            ${session}                ${enp_employee}               ${formdata}            200
     ${id_employee}                Get Value From Json KV                  ${resp}                   $.result.id
     ${code_employee}              Get Value From Json KV                  ${resp}                   $.result.code
-    Set Global Variable           ${code_employee}                        ${code_employee}
-    Set Global Variable           ${id_employee}                          ${id_employee}
+    Set Suite Variable            ${code_employee}                        ${code_employee}
+    Set Suite Variable            ${id_employee}                          ${id_employee}
     ${branchId}                   Convert To Number                       ${branchId}
     Verify input and output       ${code_employee}                        ${random_str}             ${branchId}
 
@@ -71,7 +71,7 @@ Create empty employee             [Tags]   all    employee
 
 Update employee                   [Tags]   all    employee
     [Documentation]               Cập nhật nhân viên
-    ${id_employee}                Get value in list KV                  ${session}                  ${enp_employee}             $.result.data[?(@.id)].id
+    ${id_employee}                Get Random ID Employee
     ${list}                       Create List                           ${id_employee}              UD${random_number}            Update${random_str}       ${branchId}           ${branchId}
     ${data}                       Format String Use [D0] [D1] [D2]                                  ${data_employee}              ${list}
     ${data}                       Evaluate                                                          (None,'${data}')
@@ -80,35 +80,29 @@ Update employee                   [Tags]   all    employee
     ${resp}                       Update Request KV Use Formdata KV                                 ${session}                    ${enp_employee}/${id_employee}    ${formdata}    200
 
 Get pin code                      [Tags]   all    employee
-    [Documentation]               Láy mã xác nhận cho chấm công gps
-    ${EmployeeId}                 Get value in list KV                 ${session}                   ${enp_employee}              $.result.data[?(@.id)].id
-    ${list}                       Create List                          ${EmployeeId}                ${user_login}
+    [Documentation]               Lấy mã xác nhận cho chấm công gps
+    ${id_employee}                Get Random ID Employee
+    ${list}                       Create List                          ${id_employee}                ${user_login}
     ${enp_pin_code}               Format String Use [D0] [D1] [D2]                                  ${enp_pin_code}               ${list}
     ${resp}                       Get Request from KV    ${session}                                 ${enp_pin_code}
 
 Add work schedule                 [Tags]   all    employee
     [Documentation]               Thêm lịch làm việc cho nhân viên tại MH nhân viên
-    ${list_format}                Create List                         ${branchId}
-    ${enp_shift_branch}           Format String Use [D0] [D1] [D2]    ${enp_shift_branch}             ${list_format}
-    ${id_shift}                   Get value in list KV                ${session}                      ${enp_shift_branch}             $.result..id
+    Format enp shift branch
+    ${id_shift}                   Get RanDom ID Shift And Get Name From ID
     ${list_format}                Create List                         12-12-2021                      12-01-2022                    ${id_employee}                ${branchId}     ${branchId}    ${id_shift}
     ${data}                       Format String Use [D0] [D1] [D2]    ${data_add_work_schedule}       ${list_format}
     ${resp}                       Post Request Json KV                ${session}                      ${enp_add_work_schedule}      ${data}                       200
     ${id_work_schedule}           Get Value From Json KV              ${resp}                         $.result.id
     Set Suite Variable            ${id_work_schedule}                 ${id_work_schedule}
-# case: xóa lịch làm việc nhân viên nếu nv lịch làm việc
+# case: xóa lịch làm việc nhân viên nếu nv có lịch làm việc
 Delete work schedule              [Tags]   all    employee1
     [Documentation]               Xóa lịch làm việc của nhân viên tại tab lịch làm việc của màn hình nhân viên
-    ${list_format}                Create List                         ${id_work_schedule}
-    ${data_del_work_schedule}     Format String Use [D0] [D1] [D2]    ${data_del_work_schedule}       ${list_format}
-    ${resp}                       Update Request KV                   ${session}                      ${enp_delete_work_schedule}   ${data_del_work_schedule}       200
-    ${mess_validate}              Get Value From Json KV              ${resp}                         $.message
-    Should Be Equal               ${mess_validate}                    Hủy lịch làm việc thành công
+    Delete work schedule          ${id_work_schedule}
 
 Delete employee                   [Tags]   all    employee
         [Documentation]           Xóa 1 nhân viên
-        ${id_employee}            Get value in list KV                ${session}                        ${enp_employee}                             $.result.data[?(@.id)].id
-        ${code_employee}          Get detail from id KV               ${session}                        ${enp_employee}/${id_employee}              $.result.code
+        ${id_employee}            Get Random ID Employee
         Delete Request KV         ${session}                          ${enp_employee}/${id_employee}    200
 
 Delete multiple employee          [Tags]   all1    employee1

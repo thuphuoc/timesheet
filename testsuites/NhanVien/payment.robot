@@ -1,10 +1,10 @@
 *** Settings ***
 Library     JSONLibrary
 Library     RequestsLibrary
-Resource   ../core/enviroment.robot
-Resource   ../core/share.robot
-Resource   ../core/employee.robot
-Resource   ../core/share_random.robot
+Resource        ../../core/share/enviroment.robot
+Resource        ../../core/share/share.robot
+Resource        ../../core/share/share_random.robot
+Resource        ../../core/nhanvien/employee.robot
 Suite setup  Fill enviroment and get token     ${env}
 
 *** Variables ***
@@ -18,7 +18,6 @@ ${date}                 10/01/2022
 Payment not distributed to payslip   [Tags]             all            payment
       [Documentation]             Thanh toán bằng tiền mặt không phân bổ vào phiếu lương
       ${id_employee}              Get Random ID Employee
-      ${name_employee}            Get Name Employee By Id             ${id_employee}
       ${list_format}              Create List    ${amount}            ${id_employee}          ${method}             ${date}               \ \
       ${data_payment}             Format String Use [D0] [D1] [D2]    ${data_payment}         ${list_format}
       ${resp}                     Post Request Json KV                ${session_man}          ${enp_payment}        ${data_payment}         200

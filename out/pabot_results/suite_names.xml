@@ -1,112 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220121 14:17:03.563">
-<suite id="s1" name="Testsuites" source="D:\timesheet\testsuites">
-<suite id="s1-s1" name="NhanVien" source="D:\timesheet\testsuites\NhanVien">
-<suite id="s1-s1-s1" name="Allowance" source="D:\timesheet\testsuites\NhanVien\allowance.robot">
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220205 10:18:28.914">
+<suite id="s1" name="Testsuites" source="B:\Auto_Company\timesheet\testsuites">
+<suite id="s1-s1" name="NhanVien" source="B:\Auto_Company\timesheet\testsuites\NhanVien">
+<suite id="s1-s1-s1" name="Payrate" source="B:\Auto_Company\timesheet\testsuites\NhanVien\payrate.robot">
 <kw name="Fill enviroment and get token" library="enviroment" type="setup">
 <arguments>
 <arg>${env}</arg>
 </arguments>
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220121 14:17:03.753" endtime="20220121 14:17:03.753"></status>
+<status status="NOT_RUN" starttime="20220205 10:18:29.183" endtime="20220205 10:18:29.183"></status>
 </kw>
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220121 14:17:03.754" endtime="20220121 14:17:03.754"></status>
+<status status="NOT_RUN" starttime="20220205 10:18:29.183" endtime="20220205 10:18:29.183"></status>
 </kw>
-<status status="PASS" starttime="20220121 14:17:03.753" endtime="20220121 14:17:03.754"></status>
+<status status="PASS" starttime="20220205 10:18:29.183" endtime="20220205 10:18:29.183"></status>
 </kw>
-<test id="s1-s1-s1-t1" name="Create allowance">
+<test id="s1-s1-s1-t1" name="Create payRateTemplate">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220121 14:17:03.754" endtime="20220121 14:17:03.754"></status>
+<status status="NOT_RUN" starttime="20220205 10:18:29.184" endtime="20220205 10:18:29.184"></status>
 </kw>
-<doc>Thêm mới phụ cấp</doc>
+<doc>Tạo mới mẫu lương có chứa phụ cấp, giảm trừ, hoa hồng</doc>
 <tags>
 <tag>all</tag>
-<tag>allowance</tag>
+<tag>payrate</tag>
 </tags>
-<status status="PASS" starttime="20220121 14:17:03.754" endtime="20220121 14:17:03.754" critical="yes"></status>
+<status status="PASS" starttime="20220205 10:18:29.183" endtime="20220205 10:18:29.184" critical="yes"></status>
 </test>
-<test id="s1-s1-s1-t2" name="Create duplicate allowance">
-<kw name="No Operation" library="BuiltIn">
-<doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220121 14:17:03.755" endtime="20220121 14:17:03.755"></status>
-</kw>
-<doc>Thêm mới phụ cấp trùng tên</doc>
+<test id="s1-s1-s1-t2" name="Update payRateTemplate">
+<doc>Update mẫu lương</doc>
 <tags>
 <tag>all</tag>
-<tag>allowance</tag>
+<tag>payrate</tag>
 </tags>
-<status status="PASS" starttime="20220121 14:17:03.754" endtime="20220121 14:17:03.755" critical="yes"></status>
+<status status="FAIL" starttime="20220205 10:18:29.184" endtime="20220205 10:18:29.184" critical="yes">Test case contains no keywords.</status>
 </test>
-<test id="s1-s1-s1-t3" name="Create empty allowance">
+<kw name="Phuoc" type="teardown">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220121 14:17:03.755" endtime="20220121 14:17:03.755"></status>
+<status status="NOT_RUN" starttime="20220205 10:18:29.185" endtime="20220205 10:18:29.185"></status>
 </kw>
-<doc>Thêm mới phụ cấp rỗng</doc>
-<tags>
-<tag>all</tag>
-<tag>allowance</tag>
-</tags>
-<status status="PASS" starttime="20220121 14:17:03.755" endtime="20220121 14:17:03.755" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t4" name="Update allowance">
-<kw name="No Operation" library="BuiltIn">
-<doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220121 14:17:03.756" endtime="20220121 14:17:03.756"></status>
+<status status="PASS" starttime="20220205 10:18:29.185" endtime="20220205 10:18:29.185"></status>
 </kw>
-<kw name="No Operation" library="BuiltIn">
-<doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220121 14:17:03.756" endtime="20220121 14:17:03.756"></status>
-</kw>
-<doc>Update phụ cấp</doc>
-<tags>
-<tag>all</tag>
-<tag>allowance</tag>
-</tags>
-<status status="PASS" starttime="20220121 14:17:03.755" endtime="20220121 14:17:03.756" critical="yes"></status>
-</test>
-<kw name="Test After" type="teardown">
-<kw name="No Operation" library="BuiltIn">
-<doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220121 14:17:03.756" endtime="20220121 14:17:03.756"></status>
-</kw>
-<status status="PASS" starttime="20220121 14:17:03.756" endtime="20220121 14:17:03.756"></status>
-</kw>
-<status status="PASS" starttime="20220121 14:17:03.580" endtime="20220121 14:17:03.756"></status>
+<status status="FAIL" starttime="20220205 10:18:28.935" endtime="20220205 10:18:29.185"></status>
 </suite>
-<status status="PASS" starttime="20220121 14:17:03.579" endtime="20220121 14:17:03.757"></status>
+<status status="FAIL" starttime="20220205 10:18:28.933" endtime="20220205 10:18:29.186"></status>
 </suite>
-<status status="PASS" starttime="20220121 14:17:03.564" endtime="20220121 14:17:03.757"></status>
+<status status="FAIL" starttime="20220205 10:18:28.916" endtime="20220205 10:18:29.186"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0">Critical Tests</stat>
-<stat pass="4" fail="0">All Tests</stat>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
 </total>
 <tag>
-<stat pass="4" fail="0">all</stat>
-<stat pass="4" fail="0">allowance</stat>
+<stat pass="1" fail="1">all</stat>
+<stat pass="1" fail="1">payrate</stat>
 </tag>
 <suite>
-<stat pass="4" fail="0" id="s1" name="Testsuites">Testsuites</stat>
-<stat pass="4" fail="0" id="s1-s1" name="NhanVien">Testsuites.NhanVien</stat>
-<stat pass="4" fail="0" id="s1-s1-s1" name="Allowance">Testsuites.NhanVien.Allowance</stat>
+<stat pass="1" fail="1" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="1" fail="1" id="s1-s1" name="NhanVien">Testsuites.NhanVien</stat>
+<stat pass="1" fail="1" id="s1-s1-s1" name="Payrate">Testsuites.NhanVien.Payrate</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220121 14:17:03.539" level="ERROR">Error in file 'D:\timesheet\testsuites\BangChamCong\shift.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220121 14:17:03.546" level="ERROR">Error in file 'D:\timesheet\testsuites\NhanVien\deduction.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220121 14:17:03.548" level="ERROR">Error in file 'D:\timesheet\testsuites\NhanVien\department.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220121 14:17:03.548" level="ERROR">Error in file 'D:\timesheet\testsuites\NhanVien\employee.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220121 14:17:03.551" level="ERROR">Error in file 'D:\timesheet\testsuites\NhanVien\jobtiltle.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220121 14:17:03.552" level="ERROR">Error in file 'D:\timesheet\testsuites\NhanVien\payment.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220121 14:17:03.553" level="ERROR">Error in file 'D:\timesheet\testsuites\NhanVien\payrate.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220121 14:17:03.553" level="ERROR">Error in file 'D:\timesheet\testsuites\template.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220121 14:17:03.746" level="ERROR">Error in file 'D:\timesheet\core\share\share.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220121 14:17:03.753" level="ERROR">Error in file 'D:\timesheet\testsuites\NhanVien\allowance.robot': Resource file '..\..\core\share\allowance.robot' does not exist.</msg>
+<msg timestamp="20220205 10:18:28.887" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\deduction.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220205 10:18:28.889" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\department.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220205 10:18:28.890" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\employee.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220205 10:18:28.893" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\jobtiltle.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220205 10:18:28.895" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\payment.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220205 10:18:28.899" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\template.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220205 10:18:29.163" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\share\share.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220205 10:18:29.173" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\nhanvien\allowance.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220205 10:18:29.176" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\nhanvien\deduction.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220205 10:18:29.178" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\nhanvien\payrate.robot': Non-existing setting 'Suite setup'.</msg>
+<msg timestamp="20220205 10:18:29.178" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\nhanvien\payrate.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220205 10:18:29.179" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\nhanvien\payrate.robot': Setting variable '' failed: Invalid variable name ''.</msg>
 </errors>
 </robot>
