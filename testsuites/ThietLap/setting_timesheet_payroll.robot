@@ -18,7 +18,7 @@ ${lateTimeOT}                 30
 *** TestCases ***
 Setting payroll and timesheet     [Tags]          all           settingpayrollandTS
       [Documentation]             Thiết lập lương và chấm công cho nhân viên
-      ${list_format}              Create List  ${earlyTime}   ${lateTime}   ${earlyTimeOT}     ${lateTimeOT}        ${halfShiftIsActive}         ${halfShiftMaxHour}    ${halfShiftMaxMinute}   ${standardWorkingDay}
+      ${list_format}              Create List                         ${earlyTime}   ${lateTime}   ${earlyTimeOT}     ${lateTimeOT}        ${halfShiftIsActive}         ${halfShiftMaxHour}    ${halfShiftMaxMinute}   ${standardWorkingDay}
       ${data_setting_payroll}     Format String Use [D0] [D1] [D2]    ${data_setting_payroll}      ${list_format}
       ${resp}                     Post Request Json KV                ${session}                   ${enp_setting}         ${data_setting_payroll}    200
 

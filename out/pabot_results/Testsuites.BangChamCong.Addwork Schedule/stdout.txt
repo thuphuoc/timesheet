@@ -1,0 +1,27 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.BangChamCong                                                       
+==============================================================================
+Testsuites.BangChamCong.Addwork Schedule                                      
+==============================================================================
+Add work-schedule repeat has repeat :: ??t l?ch làm vi?c có ngày k... | PASS |
+------------------------------------------------------------------------------
+Add work-schedule repeat has NOT repeat :: ??t l?ch làm vi?c Không... | FAIL |
+400 != 200
+------------------------------------------------------------------------------
+Timekeeping for employees :: Ch?m công cho nhân viên                  | PASS |
+------------------------------------------------------------------------------
+Testsuites.BangChamCong.Addwork Schedule                              | FAIL |
+3 critical tests, 2 passed, 1 failed
+3 tests total, 2 passed, 1 failed
+==============================================================================
+Testsuites.BangChamCong                                               | FAIL |
+3 critical tests, 2 passed, 1 failed
+3 tests total, 2 passed, 1 failed
+==============================================================================
+Testsuites                                                            | FAIL |
+3 critical tests, 2 passed, 1 failed
+3 tests total, 2 passed, 1 failed
+==============================================================================
+Output:  B:\Auto_Company\timesheet\out\pabot_results\Testsuites.BangChamCong.Addwork Schedule\output-20220207-161806.xml

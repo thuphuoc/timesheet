@@ -1,82 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220205 10:18:28.914">
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220207 16:18:05.457">
 <suite id="s1" name="Testsuites" source="B:\Auto_Company\timesheet\testsuites">
-<suite id="s1-s1" name="NhanVien" source="B:\Auto_Company\timesheet\testsuites\NhanVien">
-<suite id="s1-s1-s1" name="Payrate" source="B:\Auto_Company\timesheet\testsuites\NhanVien\payrate.robot">
+<suite id="s1-s1" name="BangChamCong" source="B:\Auto_Company\timesheet\testsuites\BangChamCong">
+<suite id="s1-s1-s1" name="Addwork Schedule" source="B:\Auto_Company\timesheet\testsuites\BangChamCong\addwork_schedule.robot">
 <kw name="Fill enviroment and get token" library="enviroment" type="setup">
 <arguments>
 <arg>${env}</arg>
 </arguments>
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220205 10:18:29.183" endtime="20220205 10:18:29.183"></status>
+<status status="NOT_RUN" starttime="20220207 16:18:05.723" endtime="20220207 16:18:05.723"></status>
 </kw>
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220205 10:18:29.183" endtime="20220205 10:18:29.183"></status>
+<status status="NOT_RUN" starttime="20220207 16:18:05.723" endtime="20220207 16:18:05.723"></status>
 </kw>
-<status status="PASS" starttime="20220205 10:18:29.183" endtime="20220205 10:18:29.183"></status>
+<status status="PASS" starttime="20220207 16:18:05.722" endtime="20220207 16:18:05.723"></status>
 </kw>
-<test id="s1-s1-s1-t1" name="Create payRateTemplate">
+<test id="s1-s1-s1-t1" name="Add work-schedule repeat has repeat">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220205 10:18:29.184" endtime="20220205 10:18:29.184"></status>
+<status status="NOT_RUN" starttime="20220207 16:18:05.724" endtime="20220207 16:18:05.724"></status>
 </kw>
-<doc>Tạo mới mẫu lương có chứa phụ cấp, giảm trừ, hoa hồng</doc>
+<doc>Đặt lịch làm việc có ngày kết thúc tại màn hình chấm công</doc>
 <tags>
+<tag>addschedule</tag>
 <tag>all</tag>
-<tag>payrate</tag>
 </tags>
-<status status="PASS" starttime="20220205 10:18:29.183" endtime="20220205 10:18:29.184" critical="yes"></status>
+<status status="PASS" starttime="20220207 16:18:05.723" endtime="20220207 16:18:05.724" critical="yes"></status>
 </test>
-<test id="s1-s1-s1-t2" name="Update payRateTemplate">
-<doc>Update mẫu lương</doc>
-<tags>
-<tag>all</tag>
-<tag>payrate</tag>
-</tags>
-<status status="FAIL" starttime="20220205 10:18:29.184" endtime="20220205 10:18:29.184" critical="yes">Test case contains no keywords.</status>
-</test>
-<kw name="Phuoc" type="teardown">
+<test id="s1-s1-s1-t2" name="Add work-schedule repeat has NOT repeat">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="NOT_RUN" starttime="20220205 10:18:29.185" endtime="20220205 10:18:29.185"></status>
+<status status="NOT_RUN" starttime="20220207 16:18:05.725" endtime="20220207 16:18:05.725"></status>
 </kw>
-<status status="PASS" starttime="20220205 10:18:29.185" endtime="20220205 10:18:29.185"></status>
+<doc>Đặt lịch làm việc Không giới hạn tại màn hình chấm công</doc>
+<tags>
+<tag>addschedule</tag>
+<tag>all</tag>
+</tags>
+<status status="PASS" starttime="20220207 16:18:05.724" endtime="20220207 16:18:05.725" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Timekeeping for employees">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" starttime="20220207 16:18:05.725" endtime="20220207 16:18:05.725"></status>
 </kw>
-<status status="FAIL" starttime="20220205 10:18:28.935" endtime="20220205 10:18:29.185"></status>
+<doc>Chấm công cho nhân viên</doc>
+<tags>
+<tag>addschedule</tag>
+<tag>all</tag>
+<tag>clocking</tag>
+</tags>
+<status status="PASS" starttime="20220207 16:18:05.725" endtime="20220207 16:18:05.725" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220207 16:18:05.485" endtime="20220207 16:18:05.726"></status>
 </suite>
-<status status="FAIL" starttime="20220205 10:18:28.933" endtime="20220205 10:18:29.186"></status>
+<status status="PASS" starttime="20220207 16:18:05.483" endtime="20220207 16:18:05.726"></status>
 </suite>
-<status status="FAIL" starttime="20220205 10:18:28.916" endtime="20220205 10:18:29.186"></status>
+<status status="PASS" starttime="20220207 16:18:05.459" endtime="20220207 16:18:05.727"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1">Critical Tests</stat>
-<stat pass="1" fail="1">All Tests</stat>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="1">all</stat>
-<stat pass="1" fail="1">payrate</stat>
+<stat pass="3" fail="0">addschedule</stat>
+<stat pass="3" fail="0">all</stat>
+<stat pass="1" fail="0">clocking</stat>
 </tag>
 <suite>
-<stat pass="1" fail="1" id="s1" name="Testsuites">Testsuites</stat>
-<stat pass="1" fail="1" id="s1-s1" name="NhanVien">Testsuites.NhanVien</stat>
-<stat pass="1" fail="1" id="s1-s1-s1" name="Payrate">Testsuites.NhanVien.Payrate</stat>
+<stat pass="3" fail="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="3" fail="0" id="s1-s1" name="BangChamCong">Testsuites.BangChamCong</stat>
+<stat pass="3" fail="0" id="s1-s1-s1" name="Addwork Schedule">Testsuites.BangChamCong.Addwork Schedule</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220205 10:18:28.887" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\deduction.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220205 10:18:28.889" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\department.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220205 10:18:28.890" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\employee.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220205 10:18:28.893" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\jobtiltle.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220205 10:18:28.895" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\payment.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220205 10:18:28.899" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\template.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220205 10:18:29.163" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\share\share.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220205 10:18:29.173" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\nhanvien\allowance.robot': Setting variable '' failed: Invalid variable name ''.</msg>
-<msg timestamp="20220205 10:18:29.176" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\nhanvien\deduction.robot': Setting variable '' failed: Invalid variable name ''.</msg>
-<msg timestamp="20220205 10:18:29.178" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\nhanvien\payrate.robot': Non-existing setting 'Suite setup'.</msg>
-<msg timestamp="20220205 10:18:29.178" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\nhanvien\payrate.robot': Non-existing setting ''.</msg>
-<msg timestamp="20220205 10:18:29.179" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\nhanvien\payrate.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220207 16:18:05.430" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\deduction.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220207 16:18:05.432" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\department.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220207 16:18:05.434" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\employee.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220207 16:18:05.438" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\jobtiltle.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220207 16:18:05.440" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\NhanVien\payment.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220207 16:18:05.443" level="ERROR">Error in file 'B:\Auto_Company\timesheet\testsuites\template.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220207 16:18:05.707" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\share\share.robot': Non-existing setting ''.</msg>
+<msg timestamp="20220207 16:18:05.717" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\bangchamcong\shift.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20220207 16:18:05.719" level="ERROR">Error in file 'B:\Auto_Company\timesheet\core\bangchamcong\addwork_schedule.robot': Setting variable '' failed: Invalid variable name ''.</msg>
 </errors>
 </robot>

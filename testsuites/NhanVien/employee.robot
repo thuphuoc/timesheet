@@ -25,7 +25,7 @@ ${data_set_salary}         {"salaryPeriod":1,"mainSalaryRuleValue":{"mainSalaryV
 *** Test Cases ***
 # Tạo mới nhân viên có thiết lập lương nhưng ko có mẫu lương
 Create employee                   [Tags]   all    employee
-    [Documentation]               Tạo mới nhân viên  và thiết lập lương ko có mẫu lương hợp lệ
+    [Documentation]               Tạo mới nhân viên  và thiết lập lương ko có mẫu lương
     Set Global Variable           ${random_str}                           ${random_str}
     ${list_format}                Create List                             1235698                   NV${random_number}            ${random_str}         ${branchId}           ${branchId}
     ${list_salary}                Create List                             100000                    200                           300
@@ -83,8 +83,8 @@ Get pin code                      [Tags]   all    employee
     [Documentation]               Lấy mã xác nhận cho chấm công gps
     ${id_employee}                Get Random ID Employee
     ${list}                       Create List                          ${id_employee}                ${user_login}
-    ${enp_pin_code}               Format String Use [D0] [D1] [D2]                                  ${enp_pin_code}               ${list}
-    ${resp}                       Get Request from KV    ${session}                                 ${enp_pin_code}
+    ${enp_pin_code}               Format String Use [D0] [D1] [D2]                                   ${enp_pin_code}               ${list}
+    ${resp}                       Get Request from KV                  ${session}                    ${enp_pin_code}
 
 Add work schedule                 [Tags]   all    employee
     [Documentation]               Thêm lịch làm việc cho nhân viên tại MH nhân viên
@@ -127,9 +127,9 @@ Verify input and output
     Verify list input and output                           ${list_input}                     ${list_output}
 
 Verify list input and output
-    [Arguments]     ${list_input}             ${list_output}
-    ${length}       Get Length                ${listinput}
-    :FOR            ${i}    In RANGE          ${length}
-    \               ${value_input}            Get From List       ${listinput}      ${i}
-    \               ${value_output}           Get From List       ${listoutput}     ${i}
-    Should Be Equal                           ${value_input}      ${value_output}
+    [Arguments]       ${list_input}                        ${list_output}
+    ${length}         Get Length                           ${listinput}
+    :FOR              ${i}    In RANGE                     ${length}
+    \                 ${value_input}                       Get From List       ${listinput}      ${i}
+    \                 ${value_output}                      Get From List       ${listoutput}     ${i}
+    Should Be Equal   ${value_input}                       ${value_output}
