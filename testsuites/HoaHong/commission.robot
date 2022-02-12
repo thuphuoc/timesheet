@@ -25,12 +25,12 @@ Create duplicate commission     [Tags]                        all               
     [Documentation]             Thêm mới hoa hồng trùng tên
     ${name}                     Get Random Name Commission
     ${resp}                     Create Commission             123456                   ${name}                 400
-    Get mess_expected    ${resp}    $.errors..message    Tên bảng hoa hồng đã tồn tại trên hệ thống
+    Get Message Expected    ${resp}    $.errors..message    Tên bảng hoa hồng đã tồn tại trên hệ thống
 
 Create empty commission         [Tags]                        all                      commission
     [Documentation]             Thêm mới hoa hồng rỗng
     ${resp}                     Create Commission             123456                   \ \                    400
-    Get mess_expected    ${resp}    $.errors..message    Bạn chưa nhập Tên bảng hoa hồng
+    Get Message Expected    ${resp}    $.errors..message    Bạn chưa nhập Tên bảng hoa hồng
 
 Update commission               [Tags]                        all                     commission
     [Documentation]             Cập nhật hoa hồng

@@ -1,0 +1,22 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.ThietLap                                                           
+==============================================================================
+Testsuites.ThietLap.Setting Timesheet Payroll                                 
+==============================================================================
+Setting payroll and timesheet :: Thi?t l?p l??ng và ch?m công cho ... | PASS |
+------------------------------------------------------------------------------
+Testsuites.ThietLap.Setting Timesheet Payroll                         | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Testsuites.ThietLap                                                   | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Testsuites                                                            | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  D:\timesheet\out\pabot_results\Testsuites.ThietLap.Setting Timesheet Payroll\output-20220212-225342.xml

@@ -915,7 +915,7 @@
 <arguments>
 <arg>${random_str}</arg>
 </arguments>
-<kw name="Get detail from id KV" library="share">
+<kw name="Get Detail From Id KV" library="share">
 <arguments>
 <arg>${enp_employee}</arg>
 <arg>${id_employee}</arg>
@@ -924,7 +924,7 @@
 <assign>
 <var>${name_employee_output}</var>
 </assign>
-<kw name="Get Request from KV" library="share">
+<kw name="Get Request From KV" library="share">
 <arguments>
 <arg>${session}</arg>
 <arg>${enpoint}/${id}</arg>
@@ -1053,7 +1053,7 @@
 <status status="PASS" starttime="20220109 22:23:26.791" endtime="20220109 22:23:27.370" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Create duplicate employee">
-<kw name="Get value in list KV" library="share">
+<kw name="Get Value In List KV" library="share">
 <arguments>
 <arg>${enp_employee}</arg>
 <arg>$.result.data..code</arg>
@@ -1963,7 +1963,7 @@
 <msg timestamp="20220109 22:23:27.987" level="INFO">{'employee': (None, '{"id":230000000016316,"code":"NV001583","name":"RVPA","branchId":302728,"userId":null,"workBranchIds":[302728}')}</msg>
 <status status="PASS" starttime="20220109 22:23:27.986" endtime="20220109 22:23:27.987"></status>
 </kw>
-<kw name="Update Request KV Use Formdata KV" library="share">
+<kw name="Update Request Json KV Use Formdata KV" library="share">
 <arguments>
 <arg>${session}</arg>
 <arg>${enp_employee}/${id_employee}</arg>
@@ -1996,7 +1996,7 @@
 <status status="FAIL" starttime="20220109 22:23:27.975" endtime="20220109 22:23:27.993" critical="yes">AttributeError: 'str' object has no attribute 'items'</status>
 </test>
 <test id="s1-t5" name="Get pin code">
-<kw name="Get value in list KV" library="share">
+<kw name="Get Value In List KV" library="share">
 <arguments>
 <arg>${enp_employee}</arg>
 <arg>$.result.data[0].id</arg>
@@ -2178,7 +2178,7 @@
 <msg timestamp="20220109 22:23:28.198" level="INFO">${enp_pin_code} = /employees/two-fa-pin?EmployeeId=180000000000404&amp;UserId=234147</msg>
 <status status="PASS" starttime="20220109 22:23:28.194" endtime="20220109 22:23:28.198"></status>
 </kw>
-<kw name="Get Request from KV" library="share">
+<kw name="Get Request From KV" library="share">
 <arguments>
 <arg>${session}</arg>
 <arg>${enp_pin_code}</arg>
@@ -2226,7 +2226,7 @@
 <status status="PASS" starttime="20220109 22:23:27.994" endtime="20220109 22:23:28.254" critical="yes"></status>
 </test>
 <test id="s1-t6" name="Delete employee">
-<kw name="Get value in list KV" library="share">
+<kw name="Get Value In List KV" library="share">
 <arguments>
 <arg>${enp_employee}</arg>
 <arg>$.result.data..id</arg>
@@ -2324,7 +2324,7 @@
 <status status="PASS" starttime="20220109 22:23:28.255" endtime="20220109 22:23:28.560" critical="yes"></status>
 </test>
 <test id="s1-t7" name="Delete multiple employee">
-<kw name="Get value in list KV" library="share">
+<kw name="Get Value In List KV" library="share">
 <arguments>
 <arg>${enp_employee}</arg>
 <arg>$.result.data..id</arg>
@@ -2382,7 +2382,7 @@
 <msg timestamp="20220109 22:23:28.757" level="INFO">${EmployeeId1} = 220000000007916</msg>
 <status status="PASS" starttime="20220109 22:23:28.562" endtime="20220109 22:23:28.757"></status>
 </kw>
-<kw name="Get value in list KV" library="share">
+<kw name="Get Value In List KV" library="share">
 <arguments>
 <arg>${enp_employee}</arg>
 <arg>$.result.data..id</arg>
@@ -2440,7 +2440,7 @@
 <msg timestamp="20220109 22:23:28.896" level="INFO">${EmployeeId2} = 60000001404348</msg>
 <status status="PASS" starttime="20220109 22:23:28.758" endtime="20220109 22:23:28.896"></status>
 </kw>
-<kw name="Get value in list KV" library="share">
+<kw name="Get Value In List KV" library="share">
 <arguments>
 <arg>${enp_employee}</arg>
 <arg>$.result.data..id</arg>

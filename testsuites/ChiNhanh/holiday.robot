@@ -24,18 +24,18 @@ Create duplicate holiday     [Tags]      all        holiday
     [Documentation]             Thêm mới ngày lễ trùng ngày với ngày lễ đã có trước đó
     ${list_format}              Create List                           123456                  ${random_str}                       12/01/2022            12/01/2022
     ${data_holiday}             Format String Use [D0] [D1] [D2]      ${data_holiday}         ${list_format}
-    ${resp}                     Create value duplicate_empty          ${session}              ${enp_holiday}          ${data_holiday}                     Kỳ lễ tết đang trùng ngày với kỳ lễ tết khác.
+    ${resp}                     Create Value Duplicate Emplty          ${session}              ${enp_holiday}          ${data_holiday}                     Kỳ lễ tết đang trùng ngày với kỳ lễ tết khác.
 Create empty holiday         [Tags]      all        holiday
     [Documentation]             Thêm mới ngày lễ rỗng
     ${list_format}              Create List                           123456                  \ \                                 14/01/2022            14/01/2022
     ${data_holiday}             Format String Use [D0] [D1] [D2]      ${data_holiday}         ${list_format}
-    ${resp}                     Create value duplicate_empty          ${session}              ${enp_holiday}          ${data_holiday}                     Bạn chưa nhập Tên kỳ lễ tết
+    ${resp}                     Create Value Duplicate Emplty          ${session}              ${enp_holiday}          ${data_holiday}                     Bạn chưa nhập Tên kỳ lễ tết
 
 Update holiday                  [Tags]      all        holiday
     [Documentation]             Cập nhật ngày lễ
     ${list_format}              Create List                           ${id_holiday}           Update ${random_str}                19/05/2022            19/05/2022
     ${data_holiday}             Format String Use [D0] [D1] [D2]      ${data_holiday}         ${list_format}
-    ${resp}                     Update Request KV                     ${session}              ${enp_holiday}/${id_holiday}        ${data_holiday}       200
+    ${resp}                     Update Request Json KV                     ${session}              ${enp_holiday}/${id_holiday}        ${data_holiday}       200
 
 Delete holiday               [Tags]      all        holiday
     [Documentation]             Xóa ngày lễ

@@ -26,15 +26,15 @@ Format Enp PayRateTemplate
 
 Get ID And Name PayRateTemplate
     ${enp_list_payrate}     Format Enp PayRateTemplate
-    ${id_payrate}           Get value in list KV     ${session}      ${enp_list_payrate}   $..id
-    ${name_payrate}         Get value in list KV     ${session}      ${enp_payrate}/${id_payrate}   $..name
+    ${id_payrate}           Get Value In List KV     ${session}      ${enp_list_payrate}   $..id
+    ${name_payrate}         Get Value In List KV     ${session}      ${enp_payrate}/${id_payrate}   $..name
     Return From Keyword     ${id_payrate}
 
 Update PayRateTemplate
     [Arguments]             ${id_payrate}           ${name}     ${id_Allowance}     ${id_Deduction}
     ${list_format}          Create List                         ${id_payrate}       Update ${name}    ${id_Allowance}       ${id_Deduction}     ${branchId}
     ${data_payrate}         Format String Use [D0] [D1] [D2]    ${data_payrate}     ${list_format}
-    ${resp}                 Update Request KV    ${session}     ${enp_payrate}/${id_payrate}   ${data_payrate}    200
+    ${resp}                 Update Request Json KV    ${session}     ${enp_payrate}/${id_payrate}   ${data_payrate}    200
     Return From Keyword     ${resp}
 
 Delete PayRateTemplate

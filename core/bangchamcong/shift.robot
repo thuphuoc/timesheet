@@ -12,34 +12,35 @@ Format enp shift branch
     Set Global Variable    ${enp_shift_branch}                    ${enp_shift_branch}
 
 Get RanDom ID Shift And Get Name From ID
-    ${id_shift}           Get value in list KV      ${session}    ${enp_shift_branch}                $..id
-    ${name_shift}         Get value in list KV      ${session}    ${enp_shift}/${id_shift}           $..name
+    ${id_shift}           Get Value In List KV      ${session}    ${enp_shift_branch}                $..id
+    ${name_shift}         Get Detail From Id KV     ${session}    ${enp_shift}/${id_shift}           $..name
     Return From Keyword   ${id_shift}
 
-Create shift
-    [Arguments]            ${id}                                  ${name}           ${branch_id}     ${expected_statusCode}
-    ${list_format}         Create List                            ${id}             ${name}          ${branch_id}
-    ${data_shift}          Format String Use [D0] [D1] [D2]       ${data_shift}     ${list_format}
-    ${resp}                Post Request Json KV                   ${session}        ${enp_shift}     ${data_shift}            ${expected_statusCode}
+Create Shift
+    [Arguments]            ${id}                                  ${name}                            ${branch_id}       ${expected_statusCode}
+    ${list_format}         Create List                            ${id}                              ${name}            ${branch_id}
+    ${data_shift}          Format String Use [D0] [D1] [D2]       ${data_shift}                      ${list_format}
+    ${resp}                Post Request Json KV                   ${session}                         ${enp_shift}       ${data_shift}          ${expected_statusCode}
     Log                    ${resp}
     Return From Keyword    ${resp}
 
-Update shift
-    ${id_shift}            Get value in list KV                 ${session}                          ${enp_shift_branch}             $.result..id
+Update Shift
+    ${id_shift}            Get Value In List KV                 ${session}                          ${enp_shift_branch}                       $.result..id
+    ${name_shift}          Get Detail From Id KV                ${session}                          ${enp_shift}/${id_shift}                  $.result.name
     ${list_format}         Create List   ${id_shift}            Update${random_str}                 ${branchId}
     ${data_shift}          Format String Use [D0] [D1] [D2]     ${data_shift}                       ${list_format}
-    ${resp}                Update Request KV                    ${session}                          ${enp_shift}/${id_shift}          ${data_shift}           200
+    ${resp}                Update Request Json KV               ${session}                          ${enp_shift}/${id_shift}                  ${data_shift}           200
     Return From Keyword    ${resp}
-# Xóa ca làm việc ko có chi tiết chấm công
+
 Delete Shift
-    ${id_shift}            Get value in list KV                 ${session}                          ${enp_shift_branch}                 $.result..id
-    ${name_shift}          Get detail from id KV                ${session}                          ${enp_shift}/${id_shift}            $.result.name
+    ${id_shift}            Get Value In List KV                 ${session}                          ${enp_shift_branch}                       $.result..id
+    ${name_shift}          Get Detail From Id KV                ${session}                          ${enp_shift}/${id_shift}                  $.result.name
     ${resp}                Delete Request                       ${session}                          ${enp_shift}/${id_shift}
     Convert To String      ${resp.status_code}
-    Run Keyword If        '${resp.status_code}'=='200'          Log   Đã xóa thành công
+    Run Keyword If        '${resp.status_code}'=='200'          Log                                 Đã xóa thành công
     ...         ELSE       Delete Request Shift                 ${resp.json()}
 
 Delete Request Shift
     [Arguments]            ${resp}
-    ${mess_expected}       Get Value From Json KV               ${resp}                           $..errors..message
+    ${mess_expected}       Get Value From Json KV               ${resp}                            $..errors..message
     Log                    ${mess_expected}

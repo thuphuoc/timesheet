@@ -27,29 +27,29 @@ Create Commission
     Set Suite Variable          ${id_commmission}                     ${id_commmission}
 
 Get Random ID Commission
-    ${id_commmission}           Get value in list KV    ${session}    ${enp_commission}                    $.result.data..id
+    ${id_commmission}           Get Value In List KV    ${session}    ${enp_commission}                    $.result.data..id
     Return From Keyword         ${id_commmission}
 
 Get Id Category Product
-    ${id_category}              Get value in list KV    ${session_man}    ${enp_category}       $..Id
+    ${id_category}              Get Value In List KV    ${session_man}    ${enp_category}       $..Id
     Return From Keyword         ${id_category}
 
 Get Random Name Commission
-    ${name_commmission}         Get value in list KV    ${session}    ${enp_commission}                    $.result.data..name
+    ${name_commmission}         Get Value In List KV    ${session}    ${enp_commission}                    $.result.data..name
     Return From Keyword         ${name_commmission}
 
 Get Random a Product In a Commission
     [Arguments]                 ${id_commmission}
     ${list_format}              Create List             ${id_commmission}
     ${enp_product_in_commission}    Format String Use [D0] [D1] [D2]    ${enp_product_in_commission}         ${list_format}
-    ${id_product}               Get value in list KV    ${session_man}    ${enp_product_in_commission}       $..Id
+    ${id_product}               Get Value In List KV    ${session_man}    ${enp_product_in_commission}       $..Id
     Return From Keyword         ${id_product}
 
 Update Commission
     ${id_commmission}     Get Random ID Commission
     ${list_format}        Create List                         ${id_commmission}      Update ${random_str}
     ${data_commission}    Format String Use [D0] [D1] [D2]    ${data_commission}     ${list_format}
-    ${resp}               Update Request KV    ${session}     ${enp_commission}      ${data_commission}    200
+    ${resp}               Update Request Json KV    ${session}     ${enp_commission}      ${data_commission}    200
     ${mess_expected}      Get Value From Json KV              ${resp}                $.message
     Should Be Equal       ${mess_expected}                    Cập nhật hoa hồng thành công
 
@@ -57,12 +57,12 @@ Get RanDom a Product From Category
     ${CategoryId}         Get Id Category Product
     ${list_format}        Create List    ${branchId}          ${CategoryId}
     ${enp_product}        Format String Use [D0] [D1] [D2]    ${enp_product}        ${list_format}
-    ${id_product}         Get value in list KV                ${session_man}        ${enp_product}      $..Id
+    ${id_product}         Get Value In List KV                ${session_man}        ${enp_product}      $..Id
     Return From Keyword   ${id_product}
 
 Get Code Product From ID
     [Arguments]          ${id_product}
-    ${code_product}      Get value in list KV    ${session_man}    ${enp_get_product}/${id_product}    $.Code
+    ${code_product}      Get Value In List KV    ${session_man}    ${enp_get_product}/${id_product}    $.Code
     Return From Keyword  ${code_product}
 
 Add Product Into Commission
@@ -74,7 +74,7 @@ Add Product Into Commission
 
 Get Name Category From Id
     [Arguments]          ${id_category}
-    ${name_category}      Get value in list KV    ${session_man}    ${enp_category}/${id_category}          $..Name
+    ${name_category}      Get Value In List KV    ${session_man}    ${enp_category}/${id_category}          $..Name
     Return From Keyword    ${name_category}
 
 Add Category Of Product Into Commission
@@ -88,7 +88,7 @@ Update The Roses For Each Product Sold
     [Arguments]           ${id_product}      ${id_commmission}      ${id_commmission}       ${value}             ${is_update_all}
     ${list_format}        Create List        ${id_product}       ${id_commmission}       ${id_commmission}       ${value}    ${is_update_all}
     ${data_product_sold}  Format String Use [D0] [D1] [D2]       ${data_product_sold}    ${list_format}
-    ${resp}               Update Request KV    ${session}        ${enp_product_sold}     ${data_product_sold}    200
+    ${resp}               Update Request Json KV    ${session}        ${enp_product_sold}     ${data_product_sold}    200
     Return From Keyword   ${resp}
 
 Delete Commission

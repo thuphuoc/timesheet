@@ -19,26 +19,26 @@ Create jobtitle                       [Tags]   all        jobtitle
 
 Create duplicate jobtitle             [Tags]   all       jobtitle
     [Documentation]                   Thêm mới chức danh trùng tên
-    ${name}                           Get value in list KV                    ${session}                ${enp_job}                $.result.data..name
+    ${name}                           Get Value In List KV                    ${session}                ${enp_job}                $.result.data..name
     ${list_format}                    Create List                             123456                    ${name}
     ${data_job}                       Format String Use [D0] [D1] [D2]        ${data_job}               ${list_format}
-    ${resp}                           Create value duplicate_empty            ${session}                ${enp_job}                ${data_job}               Tên chức danh đã tồn tại trên hệ thống
+    ${resp}                           Create Value Duplicate Emplty            ${session}                ${enp_job}                ${data_job}               Tên chức danh đã tồn tại trên hệ thống
 
 Create empty jobtitle                 [Tags]   all        jobtitle
     [Documentation]                   Thêm mới chức danh rỗng
     ${list_format}                    Create List                             123456                    \ \
     ${data_job}                       Format String Use [D0] [D1] [D2]        ${data_job}               ${list_format}
-    ${resp}                           Create value duplicate_empty            ${session}                ${enp_job}                ${data_job}               Tên chức danh không được để trống
+    ${resp}                           Create Value Duplicate Emplty            ${session}                ${enp_job}                ${data_job}               Tên chức danh không được để trống
 
 Update jobtitle                       [Tags]   all        jobtitle
     [Documentation]                   Cập nhật chức danh
-    ${id_job}                         Get value in list KV                    ${session}                ${enp_job}                $.result.data..id
+    ${id_job}                         Get Value In List KV                    ${session}                ${enp_job}                $.result.data..id
     ${list_format}                    Create List     ${id_job}               Update ${random_str}
     ${data}                           Format String Use [D0] [D1] [D2]        ${data_job}               ${list_format}
-    ${resp}                           Update Request KV    ${session}         ${enp_job}/${id_job}      ${data}                         200
+    ${resp}                           Update Request Json KV    ${session}         ${enp_job}/${id_job}      ${data}                         200
 
 Delete jobtitle                       [Tags]   all        jobtitle
    [Documentation]                    Xóa chức danh
-    ${id_job}                         Get value in list KV                    ${session}                ${enp_job}                $.result.data..id
+    ${id_job}                         Get Value In List KV                    ${session}                ${enp_job}                $.result.data..id
     Delete Request KV                 ${session}    ${enp_job}/${id_job}      200
 *** Keywords ***

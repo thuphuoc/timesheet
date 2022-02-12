@@ -19,9 +19,9 @@ Format enp_user_branch      [Tags]       all     permission
 
 Add permission timesheet      [Tags]    all     permission
     [Documentation]         Thêm quyền timesheet cho user
-    ${id_user}              Get value in list KV                  ${session_man}          ${enp_user_branch}      $..Id
+    ${id_user}              Get Value In List KV                  ${session_man}          ${enp_user_branch}      $..Id
     ${name_user}            Get Name User    ${id_user}
-    ${id_role}              Get value in list KV                  ${session_man}          ${enp_role}             $..Id
+    ${id_role}              Get Value In List KV                  ${session_man}          ${enp_role}             $..Id
     ${list_format_enp}      Create List                           ${id_user}
     ${enp_add_perm_user}    Format String Use [D0] [D1] [D2]      ${enp_add_perm_user}    ${list_format_enp}
     ${list_format}          Create List                           ${id_user}              ${branchId}             ${id_role}
@@ -30,5 +30,5 @@ Add permission timesheet      [Tags]    all     permission
 *** Keywords ***
 Get Name User
     [Arguments]             ${id_user}
-    ${name_user}            Get value in list KV     ${session_man}     ${enp_user}/${id_user}    $.UserName
+    ${name_user}            Get Value In List KV     ${session_man}     ${enp_user}/${id_user}    $.UserName
     Return From Keyword     ${name_user}

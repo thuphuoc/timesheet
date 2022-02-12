@@ -6,8 +6,8 @@ ${data_deduction}                   {"deduction":{"id":[D0],"name":"[D1]","value
 
 *** Keywords ***
 Get Random ID Deduction
-    ${id_Deduction}               Get value in list KV    ${session}    ${enp_deduction}    $.result.data..id
-    ${name_deduction}             Get value in list KV     ${session}    ${enp_deduction}/${id_Deduction}   $.name
+    ${id_Deduction}               Get Value In List KV    ${session}    ${enp_deduction}    $.result.data..id
+    ${name_deduction}             Get Value In List KV     ${session}    ${enp_deduction}/${id_Deduction}   $.name
     Return From Keyword           ${id_Deduction}
 
 Create Deduction
@@ -29,10 +29,10 @@ Update Deduction
     ${id_Deduction}               Get Random ID Deduction
     ${list_format}                Create List     ${id_Deduction}                ${name}               ${valueType}    ${value}   ${type}           ${deductionRuleId}            ${deductionTypeId}
     ${data_deduction}             Format String Use [D0] [D1] [D2]      ${data_deduction}    ${list_format}
-    ${resp}                       Update Request KV    ${session}    ${enp_deduction}/${id_Deduction}    ${data_deduction}      200
+    ${resp}                       Update Request Json KV    ${session}    ${enp_deduction}/${id_Deduction}    ${data_deduction}      200
 
 Get Name Deduction
-    ${name}                       Get value in list KV    ${session}    ${enp_deduction}      $.result.data..name
+    ${name}                       Get Value In List KV    ${session}    ${enp_deduction}      $.result.data..name
     Return From Keyword           ${name}
 
 Delete deduction

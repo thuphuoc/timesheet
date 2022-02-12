@@ -21,16 +21,18 @@ Update The Roses For All Product :: C?p nh?t T?T C? m?c áp d?ng ho... | PASS |
 ------------------------------------------------------------------------------
 Update The Roses For A Product :: C?p nh?t m?c áp d?ng hoa h?ng ch... | PASS |
 ------------------------------------------------------------------------------
+Delete commission :: Xóa hoa h?ng                                     | PASS |
+------------------------------------------------------------------------------
 Testsuites.HoaHong.Commission                                         | PASS |
-8 critical tests, 8 passed, 0 failed
-8 tests total, 8 passed, 0 failed
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
 ==============================================================================
 Testsuites.HoaHong                                                    | PASS |
-8 critical tests, 8 passed, 0 failed
-8 tests total, 8 passed, 0 failed
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
 ==============================================================================
 Testsuites                                                            | PASS |
-8 critical tests, 8 passed, 0 failed
-8 tests total, 8 passed, 0 failed
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.HoaHong.Commission\output-20220212-152910.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.HoaHong.Commission\output-20220212-225338.xml

@@ -36,33 +36,33 @@ Timekeeping check IN- OUT for employees   [Tags]        all      addschedule   c
       [Documentation]       Chấm công VÀO và RA cho nhân viên
       ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
-      ${name_shift}         Get value in list KV              ${session}        ${enp_shift}/${id_shift}           $..name
+      ${name_shift}         Get Value In List KV              ${session}        ${enp_shift}/${id_shift}           $..name
       ${startTime}          Get StartTime From Id Clocking    ${id_clocking}
       ${endTime}            Get EndTime From Id Clocking      ${id_clocking}
       ${id_employee}        Get employeeId From Id Clocking   ${id_clocking}
-      ${name_employee}      Get value in list KV              ${session}        ${enp_employee}/${id_employee}     $..name
+      ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
       Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}        ${checkedInDate}   ${checkedOutDate}
 
 Timekeeping check IN for employees   [Tags]        all      addschedule   clocking
       [Documentation]       Chỉ chấm công VÀO cho nhân viên
       ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
-      ${name_shift}         Get value in list KV              ${session}        ${enp_shift}/${id_shift}           $..name
+      ${name_shift}         Get Value In List KV              ${session}        ${enp_shift}/${id_shift}           $..name
       ${startTime}          Get StartTime From Id Clocking    ${id_clocking}
       ${endTime}            Get EndTime From Id Clocking      ${id_clocking}
       ${id_employee}        Get employeeId From Id Clocking   ${id_clocking}
-      ${name_employee}      Get value in list KV              ${session}        ${enp_employee}/${id_employee}     $..name
+      ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
       Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}     ${checkedInDate}   \ \
 
 Timekeeping check OUT for employees   [Tags]        all      addschedule   clocking
       [Documentation]       Chỉ chấm công RA cho nhân viên
       ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
-      ${name_shift}         Get value in list KV              ${session}        ${enp_shift}/${id_shift}           $..name
+      ${name_shift}         Get Value In List KV              ${session}        ${enp_shift}/${id_shift}           $..name
       ${startTime}          Get StartTime From Id Clocking    ${id_clocking}
       ${endTime}            Get EndTime From Id Clocking      ${id_clocking}
       ${id_employee}        Get employeeId From Id Clocking   ${id_clocking}
-      ${name_employee}      Get value in list KV              ${session}        ${enp_employee}/${id_employee}     $..name
+      ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
       Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}     \ \  ${checkedOutDate}
 
 

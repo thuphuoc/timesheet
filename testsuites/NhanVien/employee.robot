@@ -46,7 +46,7 @@ Create employee                   [Tags]   all    employee
 
 Create duplicate employee         [Tags]   all    employee
     [Documentation]               Tạo mới nhân viên trùng mã nhân viên
-    ${code_employee}              Get value in list KV                    ${session}                ${enp_employee}           $.result.data..code
+    ${code_employee}              Get Value In List KV                    ${session}                ${enp_employee}           $.result.data..code
     ${list_format}                Create List                             1235698                   ${code_employee}               ${random_str}        ${branchId}           ${branchId}
     ${data}                       Format String Use [D0] [D1] [D2]        ${data_employee}          ${list_format}
     ${data}                       Evaluate                                (None,'${data}')
@@ -77,14 +77,14 @@ Update employee                   [Tags]   all    employee
     ${data}                       Evaluate                                                          (None,'${data}')
     ${formdata}                   Create Dictionary                     employee=${data}
     Log                           ${formdata}
-    ${resp}                       Update Request KV Use Formdata KV                                 ${session}                    ${enp_employee}/${id_employee}    ${formdata}    200
+    ${resp}                       Update Request Json KV Use Formdata KV                                 ${session}                    ${enp_employee}/${id_employee}    ${formdata}    200
 
 Get pin code                      [Tags]   all    employee
     [Documentation]               Lấy mã xác nhận cho chấm công gps
     ${id_employee}                Get Random ID Employee
     ${list}                       Create List                          ${id_employee}                ${user_login}
     ${enp_pin_code}               Format String Use [D0] [D1] [D2]                                   ${enp_pin_code}               ${list}
-    ${resp}                       Get Request from KV                  ${session}                    ${enp_pin_code}
+    ${resp}                       Get Request From KV                  ${session}                    ${enp_pin_code}
 
 Add work schedule                 [Tags]   all    employee
     [Documentation]               Thêm lịch làm việc cho nhân viên tại MH nhân viên
@@ -107,10 +107,10 @@ Delete employee                   [Tags]   all    employee
 
 Delete multiple employee          [Tags]   all1    employee1
     [Documentation]               Xóa nhiều nhân viên cùng 1 lúc
-    ${EmployeeId1}                Get value in list KV                ${session}                      ${enp_employee}                 $.result.data[?(@.id)].id
-    ${code_employee1}             Get detail from id KV               ${session}                      ${enp_employee}/${EmployeeId1}  $.result.code
-    ${EmployeeId2}                Get value in list KV                ${session}                      ${enp_employee}                 $.result.data[?(@.id)].id
-    ${code_employee2}             Get detail from id KV               ${session}                      ${enp_employee}/${EmployeeId2}  $.result.code
+    ${EmployeeId1}                Get Value In List KV                ${session}                      ${enp_employee}                 $.result.data[?(@.id)].id
+    ${code_employee1}             Get Detail From Id KV               ${session}                      ${enp_employee}/${EmployeeId1}  $.result.code
+    ${EmployeeId2}                Get Value In List KV                ${session}                      ${enp_employee}                 $.result.data[?(@.id)].id
+    ${code_employee2}             Get Detail From Id KV               ${session}                      ${enp_employee}/${EmployeeId2}  $.result.code
     ${list}                       Create List                         ${EmployeeId1}                  ${EmployeeId2}
     ${data_mutiple_employee}      Format String Use [D0] [D1] [D2]    ${data_mutiple_employee}        ${list}
     ${resp}                       Delete Multiple Request KV          ${session}                      ${enp_multiple_employee}        ${data_mutiple_employee}    Xóa nhân viên thành công
@@ -118,9 +118,9 @@ Delete multiple employee          [Tags]   all1    employee1
 ***Keywords***
 Verify input and output
     [Arguments]         ${code_input}                      ${name_input}                     ${branch_input}
-    ${code_output}      Get detail from id KV              ${session}                        ${enp_employee}/${id_employee}    $.result.code
-    ${name_output}      Get detail from id KV              ${session}                        ${enp_employee}/${id_employee}    $.result.name
-    ${branch_output}    Get detail from id KV              ${session}                        ${enp_employee}/${id_employee}    $.result.branchId
+    ${code_output}      Get Detail From Id KV              ${session}                        ${enp_employee}/${id_employee}    $.result.code
+    ${name_output}      Get Detail From Id KV              ${session}                        ${enp_employee}/${id_employee}    $.result.name
+    ${branch_output}    Get Detail From Id KV              ${session}                        ${enp_employee}/${id_employee}    $.result.branchId
     ${branch_output}    Convert To Number                  ${branch_output}
     ${list_input}       Create List                        ${code_input}                     ${name_input}                ${branch_input}
     ${list_output}      Create List                        ${code_output}                    ${name_output}               ${branch_output}
