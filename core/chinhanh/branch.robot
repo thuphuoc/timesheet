@@ -1,6 +1,6 @@
 *** Settings ***
-Resource  ../../core/share/share.robot
-Resource   ../../core/share/share_random.robot
+Resource  ../../core/Share/share.robot
+Resource   ../../core/Share/share_random.robot
 *** Variables ***
 ${enp_branch_active}        /branchs?format=json&Includes=Permissions&Includes=Retailer&$inlinecount=allpages&$top=15&$filter=LimitAccess+eq+false
 ${enp_branch}               /branchs
@@ -25,7 +25,7 @@ Create Branch
     ${list_format}            Create List     ${name}               ${phonenumber}           ${address}
     ${data_create_branch}     Format String Use [D0] [D1] [D2]      ${data_create_branch}    ${list_format}
     ${resp}       Post Request Json KV    ${session_man}    ${enp_branch}    ${data_create_branch}    200
-    Return From Keyword     ${resp} 
+    Return From Keyword     ${resp}
 
 Update working date of branch
     [Arguments]       ${name}    ${date1}      ${date2}     ${date3}     ${date4}     ${date5}            ${date6}

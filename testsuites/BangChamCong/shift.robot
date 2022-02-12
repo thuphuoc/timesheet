@@ -1,9 +1,9 @@
 *** Settings ***
 Library     JSONLibrary
 Library     RequestsLibrary
-Resource   ../../core/share/enviroment.robot
-Resource  ../../core/share/share.robot
-Resource   ../../core/share/share_random.robot
+Resource   ../../core/Share/enviroment.robot
+Resource  ../../core/Share/share.robot
+Resource   ../../core/Share/share_random.robot
 Resource   ../../core/bangchamcong/shift.robot
 Suite setup  Fill enviroment and get token    ${env}
 *** Variables ***

@@ -7,7 +7,7 @@ Library     RequestsLibrary
 Resource        ../../core/share/enviroment.robot
 Resource        ../../core/share/share.robot
 Resource        ../../core/share/share_random.robot
-Resource        ../../core/chinhanh/branch.robot
+Resource        ../../core/ChiNhanh/branch.robot
 Suite setup  Fill enviroment and get token    ${env}
 *** Variables ***
 ${name}          Chi nhanh

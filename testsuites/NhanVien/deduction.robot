@@ -39,7 +39,7 @@ Create deduction by %             [Tags]   all    deduction
     ${id}                     Random a Number    8
     ${resp}                   Create Deduction                ${id}      GT Phần trăm ${random_str}    2    5   % Tổng thu nhập    1     2      200
 
-Create duplicate deduction    [Tags]  all    deductions
+Create duplicate deduction    [Tags]  all    deduction
     [Documentation]           Thêm mới giảm trừ trùng tên
     ${name}                   Get Name Deduction
     ${id}                     Random a Number    8

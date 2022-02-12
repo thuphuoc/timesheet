@@ -1,5 +1,5 @@
 *** Settings ***
-Resource  ../../core/share/share.robot
+Resource  ../../core/Share/share.robot
 Resource    shift.robot
 *** Variables ***
 ${enp_timekeeping}        /clockings/get-clocking-multiple-branch-for-calendar?StartTime=[D0]&EndTime=[D1]&BranchIds=[D2]&ClockingStatusExtension=[D3]

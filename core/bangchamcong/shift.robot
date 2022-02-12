@@ -1,5 +1,5 @@
 *** Settings ***
-Resource  ../../core/share/share.robot
+Resource  ../../core/Share/share.robot
 *** Variables ***
 ${data_shift}         {"shift":{"id":[D0],"name":"[D1]","from":420,"to":660,"isActive":true,"branchId":[D2],"checkInBefore":240,"checkOutAfter":840}}
 ${enp_shift}          /shifts

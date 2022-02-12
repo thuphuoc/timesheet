@@ -1,5 +1,5 @@
 ***Settings***
-Resource  ../../core/share/share.robot
+Resource  ../../core/Share/share.robot
 ***Variables***
 ${enp_delete_work_schedule}       /timesheets/cancelTimeSheet
 ${data_del_work_schedule}         {"Id":[D0]}

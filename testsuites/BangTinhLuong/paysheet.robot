@@ -1,9 +1,9 @@
 *** Settings ***
 Library         JSONLibrary
 Library         RequestsLibrary
-Resource   ../../core/share/enviroment.robot
-Resource  ../../core/share/share.robot
-Resource   ../../core/share/share_random.robot
+Resource   ../../core/Share/enviroment.robot
+Resource  ../../core/Share/share.robot
+Resource   ../../core/Share/share_random.robot
 Suite setup     Fill enviroment and get token    ${env}
 *** Variables ***
 ${enp_paysheet}           /paysheets
@@ -36,17 +36,17 @@ Auto loading paysheet   [Tags]        all    paysheet
 Cancel paysheet                     [Tags]             all            paysheet
       [Documentation]     Huỷ bỏ bảng lương tạm tính ko hủy phiếu thanh toán
       ${id_paysheet}      Get Id In List Paysheets            ${draft}
-      ${code_paysheet}    Get value in list KV              ${session}        ${enp_paysheet}/${id_paysheet}                $.result.code
+      ${code_paysheet}    Get value in list KV                ${session}        ${enp_paysheet}/${id_paysheet}                $.result.code
       ${list_format}      Create List    ${id_paysheet}       false
-      ${data_cancel_paysheet}     Format String Use [D0] [D1] [D2]    ${data_cancel_paysheet}    ${list_format}
-      ${resp}             Update Request KV    ${session}    ${enp_cancel_paysheet}     ${data_cancel_paysheet}    200
+      ${data_cancel_paysheet}     Format String Use [D0] [D1] [D2]              ${data_cancel_paysheet}    ${list_format}
+      ${resp}             Update Request KV                   ${session}        ${enp_cancel_paysheet}     ${data_cancel_paysheet}    200
 
 Cancel paysheet and cancel payment                    [Tags]             all            paysheet
       [Documentation]      Huỷ bỏ bảng lương tạm tính và hủy phiếu thanh toán
       ${id_paysheet}        Get value in list KV              ${session}        ${enp_filter_sheets}                          $..data[?(@.totalPayment >0)]..id
       ${code_paysheet}      Get value in list KV              ${session}        ${enp_paysheet}/${id_paysheet}                $.result.code
       ${list_format}        Create List    ${id_paysheet}     true
-      ${data_cancel_paysheet}     Format String Use [D0] [D1] [D2]    ${data_cancel_paysheet}    ${list_format}
+      ${data_cancel_paysheet}     Format String Use [D0] [D1] [D2]              ${data_cancel_paysheet}    ${list_format}
       ${resp}             Update Request KV    ${session}    ${enp_cancel_paysheet}     ${data_cancel_paysheet}    200
 
 Pay salary at payroll screen
