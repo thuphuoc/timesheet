@@ -5,23 +5,34 @@ Testsuites.BangChamCong
 ==============================================================================
 Testsuites.BangChamCong.Addwork Schedule                                      
 ==============================================================================
-Add work-schedule repeat has repeat :: ??t l?ch làm vi?c có ngày k... | PASS |
+Add work-schedule repeat has endDate :: ??t l?ch làm vi?c có ngày ... | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
-Add work-schedule repeat has NOT repeat :: ??t l?ch làm vi?c Không... | FAIL |
-400 != 200
+Add work-schedule repeat has NOT endDate :: ??t l?ch làm vi?c Khôn... | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
-Timekeeping for employees :: Ch?m công cho nhân viên                  | PASS |
+Timekeeping check IN- OUT for employees :: Ch?m công VÀO và RA cho... | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
+------------------------------------------------------------------------------
+Timekeeping check IN for employees :: Ch? ch?m công VÀO cho nhân viên | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
+------------------------------------------------------------------------------
+Timekeeping check OUT for employees :: Ch? ch?m công RA cho nhân viên | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
 Testsuites.BangChamCong.Addwork Schedule                              | FAIL |
-3 critical tests, 2 passed, 1 failed
-3 tests total, 2 passed, 1 failed
+Suite teardown failed:
+Variable '${id_work_schedule}' not found.
+
+5 critical tests, 0 passed, 5 failed
+5 tests total, 0 passed, 5 failed
 ==============================================================================
 Testsuites.BangChamCong                                               | FAIL |
-3 critical tests, 2 passed, 1 failed
-3 tests total, 2 passed, 1 failed
+5 critical tests, 0 passed, 5 failed
+5 tests total, 0 passed, 5 failed
 ==============================================================================
 Testsuites                                                            | FAIL |
-3 critical tests, 2 passed, 1 failed
-3 tests total, 2 passed, 1 failed
+5 critical tests, 0 passed, 5 failed
+5 tests total, 0 passed, 5 failed
 ==============================================================================
-Output:  B:\Auto_Company\timesheet\out\pabot_results\Testsuites.BangChamCong.Addwork Schedule\output-20220207-161806.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.BangChamCong.Addwork Schedule\output-20220212-095222.xml

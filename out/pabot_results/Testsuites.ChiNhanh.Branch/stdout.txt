@@ -1,0 +1,25 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.ChiNhanh                                                           
+==============================================================================
+Testsuites.ChiNhanh.Branch                                                    
+==============================================================================
+Create Branch :: Thêm m?i chi nhánh                                   | FAIL |
+420 != 200
+------------------------------------------------------------------------------
+Update working date of branch :: Update ngày làm vi?c c?a chi nhán... | PASS |
+------------------------------------------------------------------------------
+Testsuites.ChiNhanh.Branch                                            | FAIL |
+2 critical tests, 1 passed, 1 failed
+2 tests total, 1 passed, 1 failed
+==============================================================================
+Testsuites.ChiNhanh                                                   | FAIL |
+2 critical tests, 1 passed, 1 failed
+2 tests total, 1 passed, 1 failed
+==============================================================================
+Testsuites                                                            | FAIL |
+2 critical tests, 1 passed, 1 failed
+2 tests total, 1 passed, 1 failed
+==============================================================================
+Output:  D:\timesheet\out\pabot_results\Testsuites.ChiNhanh.Branch\output-20220212-095222.xml

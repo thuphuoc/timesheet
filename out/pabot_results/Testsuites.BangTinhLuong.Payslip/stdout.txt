@@ -1,0 +1,23 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.BangTinhLuong                                                      
+==============================================================================
+Testsuites.BangTinhLuong.Payslip                                              
+==============================================================================
+Delete payslip in paysheet :: Xóa phi?u l??ng trong b?ng l??ng nh?... | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
+------------------------------------------------------------------------------
+Testsuites.BangTinhLuong.Payslip                                      | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Testsuites.BangTinhLuong                                              | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Testsuites                                                            | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Output:  D:\timesheet\out\pabot_results\Testsuites.BangTinhLuong.Payslip\output-20220212-095222.xml
