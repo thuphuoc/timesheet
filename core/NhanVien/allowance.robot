@@ -14,7 +14,7 @@ Create Allowance
 
 Create And Get ID Allowance
     ${id_Allowance}                 Random a Number    8
-    ${resp}                         Create Allowance                       ${id_Allowance}      ${random_str}               1                  20000      200
+    ${resp}                         Create Allowance                       ${id_Allowance}      ${random_str}               1                           20000      200
     ${id_allowance}                 Get Value From Json KV                 ${resp}              $.result.id
     Return From Keyword             ${id_allowance}
 
@@ -26,22 +26,22 @@ Get Detail Allowance
 Get Random ID Allowance
     ${resp}                         Get Request From KV                   ${session}            ${enp_allowance}
     ${id_allowance}                 Get Value In List KV                  ${session}            ${enp_allowance}            $.result.data..id
-    ${name}                         Get Value In List KV    ${session}    ${enp_allowance}/${id_allowance}        $.name
+    ${name}                         Get Value In List KV    ${session}    ${enp_allowance}/${id_allowance}                  $.name
     Return From Keyword             ${id_allowance}
 
 Update Allowance
     [Arguments]                     ${name}               ${type}         ${value}
     ${id_allowance}                 Get Random ID Allowance
-    ${list_format}                  Create List                           ${id_allowance}       ${name}       ${type}             ${value}
+    ${list_format}                  Create List                           ${id_allowance}       ${name}                     ${type}                 ${value}
     ${data_allowance}               Format String Use [D0] [D1] [D2]      ${data_allowance}     ${list_format}
-    ${resp}                         Update Request Json KV                     ${session}            ${enp_allowance}/${id_allowance}        ${data_allowance}    200
+    ${resp}                         Update Request Json KV                ${session}            ${enp_allowance}/${id_allowance}                    ${data_allowance}    200
 
 Delete Allowance
-    ${id_allowance}                 Get Value In List KV                  ${session}            ${enp_allowance}     $.result.data..id
-    ${name_allowance}               Get Value In List KV                  ${session}            ${enp_allowance}/${id_allowance}    $.name
-    Delete Request KV               ${session}                           ${enp_allowance}/${id_allowance}             200
+    ${id_allowance}                 Get Value In List KV                  ${session}            ${enp_allowance}            $.result.data..id
+    ${name_allowance}               Get Value In List KV                  ${session}            ${enp_allowance}/${id_allowance}                    $.name
+    Delete Request KV               ${session}                            ${enp_allowance}/${id_allowance}                  200
 
 Get Name Allowance
     [Arguments]
-    ${name}       Get Value In List KV    ${session}    ${enp_allowance}      $.result.data..name
-    Return From Keyword     ${name}
+    ${name}                         Get Value In List KV                  ${session}            ${enp_allowance}            $.result.data..name
+    Return From Keyword             ${name}

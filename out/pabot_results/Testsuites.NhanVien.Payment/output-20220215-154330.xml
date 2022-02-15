@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220215 15:43:30.947">
+<suite id="s1" name="Testsuites" source="D:\timesheet\testsuites">
+<suite id="s1-s1" name="NhanVien" source="D:\timesheet\testsuites\NhanVien">
+<suite id="s1-s1-s1" name="Payment" source="D:\timesheet\testsuites\NhanVien\payment.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://auto5.kiotviet.vn/api</arg>
+<arg>zone13=https://testz13.kiotviet.vn/api</arg>
+<arg>zone12=https://testz12.kiotviet.vn/api</arg>
+<arg>zone14=https://auto14.kiotviet.vn/api</arg>
+<arg>59902=https://phuoc902.kvpos.com:59302/api</arg>
+<arg>59903=https://phuoc903.kvpos.com:59303/api</arg>
+<arg>fnb15=https://fnb.kiotviet.vn/api</arg>
+</arguments>
+<assign>
+<var>${dict_url_saleLogin}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.173" level="INFO">${dict_url_saleLogin} = {'zone5': 'https://auto5.kiotviet.vn/api', 'zone13': 'https://testz13.kiotviet.vn/api', 'zone12': 'https://testz12.kiotviet.vn/api', 'zone14': 'https://auto14.kiotviet.vn/api', '59902': 'https://phuoc...</msg>
+<status status="PASS" starttime="20220215 15:43:31.172" endtime="20220215 15:43:31.173"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=/auth/salelogin</arg>
+<arg>zone13=/auth/salelogin</arg>
+<arg>zone12=/auth/salelogin</arg>
+<arg>zone14=/auth/salelogin</arg>
+<arg>59902=/auth/salelogin</arg>
+<arg>59903=/auth/salelogin</arg>
+<arg>fnb15=/auth/salelogin</arg>
+</arguments>
+<assign>
+<var>${dict_enp_saleLogin}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.173" level="INFO">${dict_enp_saleLogin} = {'zone5': '/auth/salelogin', 'zone13': '/auth/salelogin', 'zone12': '/auth/salelogin', 'zone14': '/auth/salelogin', '59902': '/auth/salelogin', '59903': '/auth/salelogin', 'fnb15': '/auth/salelogin'}</msg>
+<status status="PASS" starttime="20220215 15:43:31.173" endtime="20220215 15:43:31.173"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone13=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone12=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone14=https://api-timesheet.kiotviet.vn</arg>
+<arg>59902=https://kvpos.com:55002</arg>
+<arg>59903=https://kvpos.com:55003</arg>
+<arg>fnb15=https://api-fnbtimesheet.kiotviet.vn</arg>
+</arguments>
+<assign>
+<var>${dict_url}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.173" level="INFO">${dict_url} = {'zone5': 'https://api-timesheet.kiotviet.vn', 'zone13': 'https://api-timesheet.kiotviet.vn', 'zone12': 'https://api-timesheet.kiotviet.vn', 'zone14': 'https://api-timesheet.kiotviet.vn', '59902': 'ht...</msg>
+<status status="PASS" starttime="20220215 15:43:31.173" endtime="20220215 15:43:31.173"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://api-man.kiotviet.vn/api</arg>
+<arg>zone13=https://api-man.kiotviet.vn/api</arg>
+<arg>zone12=https://api-man.kiotviet.vn/api</arg>
+<arg>zone14=https://api-man.kiotviet.vn/api</arg>
+<arg>59902=https://kvpos.com:59932/api</arg>
+<arg>59903=https://kvpos.com:59933/api</arg>
+<arg>fnb15=https://fnb.kiotviet.vn/api</arg>
+</arguments>
+<assign>
+<var>${dict_url_man}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.175" level="INFO">${dict_url_man} = {'zone5': 'https://api-man.kiotviet.vn/api', 'zone13': 'https://api-man.kiotviet.vn/api', 'zone12': 'https://api-man.kiotviet.vn/api', 'zone14': 'https://api-man.kiotviet.vn/api', '59902': 'https://kv...</msg>
+<status status="PASS" starttime="20220215 15:43:31.173" endtime="20220215 15:43:31.175"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=admin</arg>
+<arg>zone13=admin</arg>
+<arg>zone12=admin</arg>
+<arg>zone14=admin</arg>
+<arg>59902=1</arg>
+<arg>59903=1</arg>
+<arg>fnb15=admin</arg>
+</arguments>
+<assign>
+<var>${dict_username}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.175" level="INFO">${dict_username} = {'zone5': 'admin', 'zone13': 'admin', 'zone12': 'admin', 'zone14': 'admin', '59902': '1', '59903': '1', 'fnb15': 'admin'}</msg>
+<status status="PASS" starttime="20220215 15:43:31.175" endtime="20220215 15:43:31.175"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=123</arg>
+<arg>zone13=123456</arg>
+<arg>zone12=123456</arg>
+<arg>zone14=123</arg>
+<arg>59902=1</arg>
+<arg>59903=1</arg>
+<arg>fnb15=123</arg>
+</arguments>
+<assign>
+<var>${dict_password}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.175" level="INFO">${dict_password} = {'zone5': '123', 'zone13': '123456', 'zone12': '123456', 'zone14': '123', '59902': '1', '59903': '1', 'fnb15': '123'}</msg>
+<status status="PASS" starttime="20220215 15:43:31.175" endtime="20220215 15:43:31.175"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=auto5</arg>
+<arg>zone13=testz13</arg>
+<arg>zone12=testz12</arg>
+<arg>zone14=auto14</arg>
+<arg>59902=phuoc902</arg>
+<arg>59903=phuoc903</arg>
+<arg>fnb15=testfnbz15a</arg>
+</arguments>
+<assign>
+<var>${dict_retailer}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.175" level="INFO">${dict_retailer} = {'zone5': 'auto5', 'zone13': 'testz13', 'zone12': 'testz12', 'zone14': 'auto14', '59902': 'phuoc902', '59903': 'phuoc903', 'fnb15': 'testfnbz15a'}</msg>
+<status status="PASS" starttime="20220215 15:43:31.175" endtime="20220215 15:43:31.175"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_username}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.175" level="INFO">${username} = admin</msg>
+<status status="PASS" starttime="20220215 15:43:31.175" endtime="20220215 15:43:31.175"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_password}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.176" level="INFO">${password} = 123456</msg>
+<status status="PASS" starttime="20220215 15:43:31.176" endtime="20220215 15:43:31.176"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_retailer}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${retailer}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.176" level="INFO">${retailer} = testz12</msg>
+<status status="PASS" starttime="20220215 15:43:31.176" endtime="20220215 15:43:31.176"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url_saleLogin}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url_saleLogin}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.177" level="INFO">${url_saleLogin} = https://testz12.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220215 15:43:31.177" endtime="20220215 15:43:31.177"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_enp_saleLogin}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${enp_saleLogin}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.177" level="INFO">${enp_saleLogin} = /auth/salelogin</msg>
+<status status="PASS" starttime="20220215 15:43:31.177" endtime="20220215 15:43:31.177"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.177" level="INFO">${url} = https://api-timesheet.kiotviet.vn</msg>
+<status status="PASS" starttime="20220215 15:43:31.177" endtime="20220215 15:43:31.177"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url_man}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url_man}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.178" level="INFO">${url_man} = https://api-man.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220215 15:43:31.178" endtime="20220215 15:43:31.178"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.178" level="INFO">${username} = admin</msg>
+<status status="PASS" starttime="20220215 15:43:31.178" endtime="20220215 15:43:31.178"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.178" level="INFO">${password} = 123456</msg>
+<status status="PASS" starttime="20220215 15:43:31.178" endtime="20220215 15:43:31.178"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${retailer}</arg>
+<arg>${retailer}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.179" level="INFO">${retailer} = testz12</msg>
+<status status="PASS" starttime="20220215 15:43:31.178" endtime="20220215 15:43:31.179"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url_saleLogin}</arg>
+<arg>${url_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.179" level="INFO">${url_saleLogin} = https://testz12.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220215 15:43:31.179" endtime="20220215 15:43:31.179"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${enp_saleLogin}</arg>
+<arg>${enp_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.180" level="INFO">${enp_saleLogin} = /auth/salelogin</msg>
+<status status="PASS" starttime="20220215 15:43:31.179" endtime="20220215 15:43:31.180"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.180" level="INFO">${url} = https://api-timesheet.kiotviet.vn</msg>
+<status status="PASS" starttime="20220215 15:43:31.180" endtime="20220215 15:43:31.180"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url_man}</arg>
+<arg>${url_man}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.181" level="INFO">${url_man} = https://api-man.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220215 15:43:31.180" endtime="20220215 15:43:31.181"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.181" level="INFO">${header} = {'retailer': 'testz12', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20220215 15:43:31.181" endtime="20220215 15:43:31.181"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>UserName=${username}</arg>
+<arg>Password=${password}</arg>
+</arguments>
+<assign>
+<var>${data_saleLogin}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.182" level="INFO">${data_saleLogin} = {'UserName': 'admin', 'Password': '123456'}</msg>
+<status status="PASS" starttime="20220215 15:43:31.181" endtime="20220215 15:43:31.182"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>sessionLogin</arg>
+<arg>${url_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.182" level="INFO">Creating Session using : alias=sessionLogin, url=https://testz12.kiotviet.vn/api, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220215 15:43:31.182" endtime="20220215 15:43:31.183"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>sessionLogin</arg>
+<arg>${enp_saleLogin}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_saleLogin}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.716" level="INFO">Post Request using : alias=sessionLogin, uri=/auth/salelogin, data={"UserName": "admin", "Password": "123456"}, headers={'retailer': 'testz12', 'Content-Type': 'application/json;charset=utf-8'}, files=None, allow_redirects=True </msg>
+<msg timestamp="20220215 15:43:31.716" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'testz12.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220215 15:43:31.716" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220215 15:43:31.183" endtime="20220215 15:43:31.716"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.717" level="INFO">{'UserId': 234147, 'UserName': 'admin', 'SessionId': 'I0i8D4jdKr4TEXtdrlFU', 'BearerToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0NDkxNDYxMiwiZXhwIjoxNjQ3MzMzODEyLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiIwOTgyZmM4MzRlMTM0YTYzODZlZjUyMzc5YTlkNzM3OSIsImt2dWlkIjoyMzQxNDcsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjo4NzQwMSwia3ZyaW5kaWQiOjExLCJrdnJjb2RlIjoidGVzdHoxMiIsImt2cmlkIjo1NTk1NSwia3Z1cmlkIjo1NTk1NSwia3ZyZ2lkIjoxMiwicGVybXMiOiIifQ.vxRq_2FwL9ad3rng4NKDVjGga0WTBF1cT1I99NZo-1juJkbXy2eXRgutDu_FzoxnufAxlIvw5eLgXZ93tngwEVHfmvg6fA058bCkFTYB-FsnuymaLotsdABa67-3vHwBRIDaCyQtR19wZ6bjrPgXK0D2zVPYfzt3U7r8HZ61zF8LWp6OT1BA2lL40lr9VeLFCP6ufygVJ9uoC_tIamHag7IE-ZxXEV-VM3FHclkB3feQTP89RV7B8HoVCdd5wfyUCyAC5UlPRS428ZxY1flD_F1azAeAuNuKJ4XSPiz5gZOWW5nJvlsfpr-kmJvJG_3Pn3MIK3aopftJa04gzo3TWg', 'CurrentBranchId': 87401, 'IsShowNotificationPopupDr': True, 'IsOTPVerifcationRequired': False}</msg>
+<status status="PASS" starttime="20220215 15:43:31.717" endtime="20220215 15:43:31.717"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.BearerToken</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.737" level="INFO">${result} = ['eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0NDkxNDYxMiwiZXhwIjoxNjQ3MzMzODEyLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiX...</msg>
+<status status="PASS" starttime="20220215 15:43:31.717" endtime="20220215 15:43:31.737"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${lenght}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.737" level="INFO">Length is 1</msg>
+<msg timestamp="20220215 15:43:31.737" level="INFO">${lenght} = 1</msg>
+<status status="PASS" starttime="20220215 15:43:31.737" endtime="20220215 15:43:31.737"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.738" level="INFO">${result} = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0NDkxNDYxMiwiZXhwIjoxNjQ3MzMzODEyLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSw...</msg>
+<status status="PASS" starttime="20220215 15:43:31.737" endtime="20220215 15:43:31.738"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${lenght}==0</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.738" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:31.738" endtime="20220215 15:43:31.738"></status>
+</kw>
+<status status="PASS" starttime="20220215 15:43:31.738" endtime="20220215 15:43:31.738"></status>
+</kw>
+<msg timestamp="20220215 15:43:31.738" level="INFO">${token} = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0NDkxNDYxMiwiZXhwIjoxNjQ3MzMzODEyLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSw...</msg>
+<status status="PASS" starttime="20220215 15:43:31.717" endtime="20220215 15:43:31.738"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>Bearer</arg>
+<arg>${token}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.738" level="INFO">${token} = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0NDkxNDYxMiwiZXhwIjoxNjQ3MzMzODEyLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVz...</msg>
+<status status="PASS" starttime="20220215 15:43:31.738" endtime="20220215 15:43:31.738"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.CurrentBranchId</arg>
+</arguments>
+<assign>
+<var>${branchId}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.756" level="INFO">${result} = [87401]</msg>
+<status status="PASS" starttime="20220215 15:43:31.739" endtime="20220215 15:43:31.756"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${lenght}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.757" level="INFO">Length is 1</msg>
+<msg timestamp="20220215 15:43:31.757" level="INFO">${lenght} = 1</msg>
+<status status="PASS" starttime="20220215 15:43:31.757" endtime="20220215 15:43:31.757"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.757" level="INFO">${result} = 87401</msg>
+<status status="PASS" starttime="20220215 15:43:31.757" endtime="20220215 15:43:31.757"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${lenght}==0</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.759" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:31.759" endtime="20220215 15:43:31.760"></status>
+</kw>
+<status status="PASS" starttime="20220215 15:43:31.758" endtime="20220215 15:43:31.760"></status>
+</kw>
+<msg timestamp="20220215 15:43:31.760" level="INFO">${branchId} = 87401</msg>
+<status status="PASS" starttime="20220215 15:43:31.738" endtime="20220215 15:43:31.760"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${branchId}</arg>
+</arguments>
+<assign>
+<var>${branchId}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.760" level="INFO">${branchId} = 87401</msg>
+<status status="PASS" starttime="20220215 15:43:31.760" endtime="20220215 15:43:31.760"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${branchId}</arg>
+<arg>${branchId}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.761" level="INFO">${branchId} = 87401</msg>
+<status status="PASS" starttime="20220215 15:43:31.760" endtime="20220215 15:43:31.761"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.UserId</arg>
+</arguments>
+<assign>
+<var>${user_login}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.784" level="INFO">${result} = [234147]</msg>
+<status status="PASS" starttime="20220215 15:43:31.761" endtime="20220215 15:43:31.784"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${lenght}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.784" level="INFO">Length is 1</msg>
+<msg timestamp="20220215 15:43:31.785" level="INFO">${lenght} = 1</msg>
+<status status="PASS" starttime="20220215 15:43:31.784" endtime="20220215 15:43:31.785"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.785" level="INFO">${result} = 234147</msg>
+<status status="PASS" starttime="20220215 15:43:31.785" endtime="20220215 15:43:31.785"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${lenght}==0</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.787" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:31.787" endtime="20220215 15:43:31.787"></status>
+</kw>
+<status status="PASS" starttime="20220215 15:43:31.786" endtime="20220215 15:43:31.787"></status>
+</kw>
+<msg timestamp="20220215 15:43:31.787" level="INFO">${user_login} = 234147</msg>
+<status status="PASS" starttime="20220215 15:43:31.761" endtime="20220215 15:43:31.787"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${user_login}</arg>
+<arg>${user_login}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.787" level="INFO">${user_login} = 234147</msg>
+<status status="PASS" starttime="20220215 15:43:31.787" endtime="20220215 15:43:31.788"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+<arg>branchid=${branchId}</arg>
+<arg>Authorization=${token}</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.788" level="INFO">${header} = {'retailer': 'testz12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '87401', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3V...</msg>
+<status status="PASS" starttime="20220215 15:43:31.788" endtime="20220215 15:43:31.788"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>branchid=${branchId}</arg>
+<arg>Authorization=${token}</arg>
+</arguments>
+<assign>
+<var>${headers_not_contenType}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.789" level="INFO">${headers_not_contenType} = {'retailer': 'testz12', 'branchid': '87401', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0NDkxNDYxMiwiZXhwIjoxNjQ3M...</msg>
+<status status="PASS" starttime="20220215 15:43:31.788" endtime="20220215 15:43:31.789"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${header}</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.789" level="INFO">${header} = {'retailer': 'testz12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '87401', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3V...</msg>
+<status status="PASS" starttime="20220215 15:43:31.789" endtime="20220215 15:43:31.789"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${headers_not_contenType}</arg>
+<arg>${headers_not_contenType}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.789" level="INFO">${headers_not_contenType} = {'retailer': 'testz12', 'branchid': '87401', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0NDkxNDYxMiwiZXhwIjoxNjQ3M...</msg>
+<status status="PASS" starttime="20220215 15:43:31.789" endtime="20220215 15:43:31.790"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>session</arg>
+<arg>${url}</arg>
+<arg>${headers_not_contenType}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.790" level="INFO">Creating Session using : alias=session, url=https://api-timesheet.kiotviet.vn, headers={'retailer': 'testz12', 'branchid': '87401', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0NDkxNDYxMiwiZXhwIjoxNjQ3MzMzODEyLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiIwOTgyZmM4MzRlMTM0YTYzODZlZjUyMzc5YTlkNzM3OSIsImt2dWlkIjoyMzQxNDcsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjo4NzQwMSwia3ZyaW5kaWQiOjExLCJrdnJjb2RlIjoidGVzdHoxMiIsImt2cmlkIjo1NTk1NSwia3Z1cmlkIjo1NTk1NSwia3ZyZ2lkIjoxMiwicGVybXMiOiIifQ.vxRq_2FwL9ad3rng4NKDVjGga0WTBF1cT1I99NZo-1juJkbXy2eXRgutDu_FzoxnufAxlIvw5eLgXZ93tngwEVHfmvg6fA058bCkFTYB-FsnuymaLotsdABa67-3vHwBRIDaCyQtR19wZ6bjrPgXK0D2zVPYfzt3U7r8HZ61zF8LWp6OT1BA2lL40lr9VeLFCP6ufygVJ9uoC_tIamHag7IE-ZxXEV-VM3FHclkB3feQTP89RV7B8HoVCdd5wfyUCyAC5UlPRS428ZxY1flD_F1azAeAuNuKJ4XSPiz5gZOWW5nJvlsfpr-kmJvJG_3Pn3MIK3aopftJa04gzo3TWg'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220215 15:43:31.790" endtime="20220215 15:43:31.790"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>sessionMan</arg>
+<arg>${url_man}</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.790" level="INFO">Creating Session using : alias=sessionMan, url=https://api-man.kiotviet.vn/api, headers={'retailer': 'testz12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '87401', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0NDkxNDYxMiwiZXhwIjoxNjQ3MzMzODEyLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiIwOTgyZmM4MzRlMTM0YTYzODZlZjUyMzc5YTlkNzM3OSIsImt2dWlkIjoyMzQxNDcsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjo4NzQwMSwia3ZyaW5kaWQiOjExLCJrdnJjb2RlIjoidGVzdHoxMiIsImt2cmlkIjo1NTk1NSwia3Z1cmlkIjo1NTk1NSwia3ZyZ2lkIjoxMiwicGVybXMiOiIifQ.vxRq_2FwL9ad3rng4NKDVjGga0WTBF1cT1I99NZo-1juJkbXy2eXRgutDu_FzoxnufAxlIvw5eLgXZ93tngwEVHfmvg6fA058bCkFTYB-FsnuymaLotsdABa67-3vHwBRIDaCyQtR19wZ6bjrPgXK0D2zVPYfzt3U7r8HZ61zF8LWp6OT1BA2lL40lr9VeLFCP6ufygVJ9uoC_tIamHag7IE-ZxXEV-VM3FHclkB3feQTP89RV7B8HoVCdd5wfyUCyAC5UlPRS428ZxY1flD_F1azAeAuNuKJ4XSPiz5gZOWW5nJvlsfpr-kmJvJG_3Pn3MIK3aopftJa04gzo3TWg'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220215 15:43:31.790" endtime="20220215 15:43:31.790"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>session</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.792" level="INFO">${session} = session</msg>
+<status status="PASS" starttime="20220215 15:43:31.791" endtime="20220215 15:43:31.792"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${session_man}</arg>
+<arg>sessionMan</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.793" level="INFO">${session_man} = sessionMan</msg>
+<status status="PASS" starttime="20220215 15:43:31.792" endtime="20220215 15:43:31.793"></status>
+</kw>
+<kw name="Random a String Letter" library="share_random">
+<arguments>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${random_str}</var>
+</assign>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_str}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.796" level="INFO">${random_str} = GgHU</msg>
+<status status="PASS" starttime="20220215 15:43:31.794" endtime="20220215 15:43:31.796"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${random_str}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.797" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:31.797" endtime="20220215 15:43:31.797"></status>
+</kw>
+<msg timestamp="20220215 15:43:31.797" level="INFO">${random_str} = GgHU</msg>
+<status status="PASS" starttime="20220215 15:43:31.793" endtime="20220215 15:43:31.797"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${random_str}</arg>
+<arg>${random_str}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.798" level="INFO">${random_str} = GgHU</msg>
+<status status="PASS" starttime="20220215 15:43:31.797" endtime="20220215 15:43:31.798"></status>
+</kw>
+<kw name="Random a Number" library="share_random">
+<arguments>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${random_number}</var>
+</assign>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${random_number}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.799" level="INFO">${random_number} = 45211767</msg>
+<status status="PASS" starttime="20220215 15:43:31.799" endtime="20220215 15:43:31.799"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${random_number}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.799" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:31.799" endtime="20220215 15:43:31.799"></status>
+</kw>
+<msg timestamp="20220215 15:43:31.800" level="INFO">${random_number} = 45211767</msg>
+<status status="PASS" starttime="20220215 15:43:31.798" endtime="20220215 15:43:31.800"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${random_number}</arg>
+<arg>${random_number}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.800" level="INFO">${random_number} = 45211767</msg>
+<status status="PASS" starttime="20220215 15:43:31.800" endtime="20220215 15:43:31.800"></status>
+</kw>
+<status status="PASS" starttime="20220215 15:43:31.171" endtime="20220215 15:43:31.800"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="Payment not distributed to payslip">
+<kw name="Get Random ID Employee" library="employee">
+<assign>
+<var>${id_employee}</var>
+</assign>
+<kw name="Get Value In List KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_employee}</arg>
+<arg>$.result.data[?(@.id)].id</arg>
+</arguments>
+<assign>
+<var>${id_employee}</var>
+</assign>
+<kw name="Get Request From KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.938" level="INFO">Get Request using : alias=session, uri=/employees, headers=None json=None</msg>
+<msg timestamp="20220215 15:43:31.938" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220215 15:43:31.938" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220215 15:43:31.802" endtime="20220215 15:43:31.938"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.939" level="INFO">{'result': {'total': 27, 'data': [{'id': 160000000213727, 'code': 'NV000103', 'name': '111', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-17T09:14:17.6200000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366494, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 160000000213727}]}, {'id': 180000000000405, 'code': 'NV000058', 'name': '3333333', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'identityKeyClocking': '72396B3C315C440C34F4FB66FE228378F560EE6A64718901DF63C714DB80C467', 'tenantId': 55955, 'branchId': 87401, 'createdBy': 234147, 'createdDate': '2021-03-01T15:27:24.9970000', 'modifiedBy': 234147, 'modifiedDate': '2022-02-10T10:05:31.6050000', 'isDeleted': False, 'secretKeyTakenUserId': 234147, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 140000000215611, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 180000000000405}, {'id': 180000000005705, 'tenantId': 55955, 'branchId': 87401, 'employeeId': 180000000000405}]}, {'id': 160000000213804, 'code': 'NV000108', 'name': 'Phước 4', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-27T16:26:07.4300000', 'modifiedBy': 234147, 'modifiedDate': '2022-02-14T16:30:08.0170000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366504, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 160000000213804}]}, {'id': 140000000106018, 'code': 'NV000110', 'name': 'AA', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-02-10T15:16:23.8100000', 'modifiedBy': 234147, 'modifiedDate': '2022-02-10T15:44:23.8010000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 140000000215621, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 140000000106018}]}, {'id': 80000000135805, 'code': 'NV62963274', 'name': 'IBNZ', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 87401, 'createdBy': 234147, 'createdDate': '2022-02-15T15:43:30.6900000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 80000000177505, 'tenantId': 55955, 'branchId': 87401, 'employeeId': 80000000135805}]}, {'id': 120000000126285, 'code': 'NV86635237', 'name': 'jKzu', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-15T09:48:09.4030000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-15T09:48:10.7440000', 'isDeleted': False, 'secretKeyTakenUserId': 234147, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 100000000191611, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 120000000126285}]}, {'id': 60000000180048, 'code': 'NV000086', 'name': 'kkkk', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 402999, 'createdBy': 234147, 'createdDate': '2021-05-20T08:51:21.2900000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-13T21:48:08.2960000', 'isDeleted': False, 'secretKeyTakenUserId': 234147, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 60000001416350, 'tenantId': 55955, 'branchId': 402999, 'employeeId': 60000000180048}]}, {'id': 150000000109109, 'code': 'NV000113_1', 'name': 'NV000113_1', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-17T09:35:26.2770000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 230000001014630, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 150000000109109}]}, {'id': 40000000002224, 'code': 'NV000020', 'name': 'nv6', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'departmentId': 60000000144302, 'department': {'id': 60000000144302, 'name': 'Phòng 1', 'description': '', 'isActive': True, 'tenantId': 55955, 'createdBy': 234147, 'createdDate': '2021-01-21T09:43:07.3400000', 'isDeleted': False}, 'tenantId': 55955, 'branchId': 87401, 'createdBy': 234147, 'createdDate': '2020-06-30T17:36:46.7230000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-12T22:03:08.0280000', 'isDeleted': False, 'secretKeyTakenUserId': 234147, 'profilePictures': [], 'clockings': [], 'departmentName': 'Phòng 1', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000033501, 'tenantId': 55955, 'branchId': 87401, 'employeeId': 40000000002224}]}, {'id': 160000000213801, 'code': 'NV000105', 'name': 'Phuoc', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-27T14:27:20.9830000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-27T14:29:42.6600000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366501, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 160000000213801}]}, {'id': 160000000213803, 'code': 'NV000107', 'name': 'Phuoc3', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-27T14:46:09.7970000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-27T15:01:50.1290000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366503, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 160000000213803}]}, {'id': 160000000213805, 'code': 'NV000109', 'name': 'Phuoc5', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-27T16:32:16.8770000', 'modifiedBy': 234147, 'modifiedDate': '2022-02-10T15:12:05.5080000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366505, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 160000000213805}]}, {'id': 160000000213901, 'code': 'NV000106', 'name': 'Phươc2', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-27T14:35:01.2970000', 'modifiedBy': 234147, 'modifiedDate': '2022-02-15T15:43:32.5560000', 'isDeleted': False, 'secretKeyTakenUserId': 234147, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366601, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 160000000213901}]}, {'id': 160000000213710, 'code': 'NV89174442', 'name': 'qxsk', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-16T09:01:16.8400000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366473, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 160000000213710}]}, {'id': 160000000213704, 'code': 'NV63500086', 'name': 'rtZE', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-15T22:38:52.9200000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366466, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 160000000213704}]}, {'id': 110000000121585, 'code': 'NV000104', 'name': 'SBD', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-20T11:17:10.8600000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-27T14:23:12.3160000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 230000001023526, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 110000000121585}]}, {'id': 50000000124571, 'code': 'NV000102', 'name': 'testcn2', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 402999, 'createdBy': 234147, 'createdDate': '2021-07-09T16:43:57.4800000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-15T22:33:36.1110000', 'isDeleted': False, 'secretKeyTakenUserId': 234147, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 140000000213467, 'tenantId': 55955, 'branchId': 402999, 'employeeId': 50000000124571}]}, {'id': 160000000005601, 'code': 'NV000007', 'name': 'Tin', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 402876, 'createdBy': 234147, 'createdDate': '2020-02-24T23:56:04.2720000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000142101, 'tenantId': 55955, 'branchId': 402876, 'employeeId': 160000000005601}]}, {'id': 36368, 'code': 'UD04845189', 'name': 'UpdateeaMl', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 87401, 'createdBy': 234147, 'createdDate': '2020-06-30T17:36:20.5500000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-15T20:10:39.4600000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366462, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 36368}]}, {'id': 30000000124351, 'code': 'UD71619774', 'name': 'UpdateESXj', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-13T21:21:04.3070000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-15T22:43:38.3750000', 'isDeleted': False, 'secretKeyTakenUserId': 234147, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 30000000256555, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 30000000124351}]}, {'id': 160000000213707, 'code': 'UD62963274', 'name': 'UpdateIBNZ', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-15T22:42:51.6170000', 'modifiedBy': 234147, 'modifiedDate': '2022-02-15T15:43:31.9670000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 50000000329040, 'tenantId': 55955, 'branchId': 87401, 'employeeId': 160000000213707}]}, {'id': 36257, 'code': 'UD15710512', 'name': 'UpdateqqcE', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 87401, 'createdBy': 234147, 'createdDate': '2020-06-30T17:36:51.2570000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-15T09:45:00.1260000', 'isDeleted': False, 'secretKeyTakenUserId': 234147, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 120000000235474, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 36257}]}, {'id': 90000001072665, 'code': 'UD89174442', 'name': 'Updateqxsk', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-13T22:01:13.0500000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-16T09:01:18.3310000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366418, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 90000001072665}]}, {'id': 160000000213703, 'code': 'UD24162114', 'name': 'UpdateycEw', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-15T22:37:00.3770000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-15T22:43:38.1320000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366465, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 160000000213703}]}, {'id': 60000000001803, 'code': 'UD07554618', 'name': 'UpdateZjgX', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 402841, 'createdBy': 234147, 'createdDate': '2020-02-13T03:11:22.8250000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-16T08:59:57.4660000', 'isDeleted': False, 'secretKeyTakenUserId': 234147, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 120000000235423, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 60000000001803}]}, {'id': 110000000121505, 'code': 'NV24162114', 'name': 'ycEw', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-15T22:43:36.9600000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 100000000191634, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 110000000121505}]}, {'id': 160000000213709, 'code': 'NV07554618', 'name': 'ZjgX', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-16T08:59:55.8830000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 160000000366472, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 160000000213709}]}]}, 'message': ''}</msg>
+<status status="PASS" starttime="20220215 15:43:31.938" endtime="20220215 15:43:31.939"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.939" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220215 15:43:31.939" endtime="20220215 15:43:31.940"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.940" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:31.940" endtime="20220215 15:43:31.940"></status>
+</kw>
+<msg timestamp="20220215 15:43:31.940" level="INFO">${resp} = {'result': {'total': 27, 'data': [{'id': 160000000213727, 'code': 'NV000103', 'name': '111', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'loc...</msg>
+<status status="PASS" starttime="20220215 15:43:31.802" endtime="20220215 15:43:31.941"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.959" level="INFO">${list} = [160000000213727, 180000000000405, 160000000213804, 140000000106018, 80000000135805, 120000000126285, 60000000180048, 150000000109109, 40000000002224, 160000000213801, 160000000213803, 160000000213805...</msg>
+<status status="PASS" starttime="20220215 15:43:31.941" endtime="20220215 15:43:31.959"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.choice($list)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20220215 15:43:31.962" level="INFO">${value} = 110000000121585</msg>
+<status status="PASS" starttime="20220215 15:43:31.959" endtime="20220215 15:43:31.962"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:31.963" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:31.963" endtime="20220215 15:43:31.963"></status>
+</kw>
+<msg timestamp="20220215 15:43:31.963" level="INFO">${id_employee} = 110000000121585</msg>
+<status status="PASS" starttime="20220215 15:43:31.802" endtime="20220215 15:43:31.963"></status>
+</kw>
+<kw name="Get Value In List KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_employee}/${id_employee}</arg>
+<arg>$..code</arg>
+</arguments>
+<assign>
+<var>${code_employee}</var>
+</assign>
+<kw name="Get Request From KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.076" level="INFO">Get Request using : alias=session, uri=/employees/110000000121585, headers=None json=None</msg>
+<msg timestamp="20220215 15:43:32.076" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220215 15:43:32.076" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220215 15:43:31.963" endtime="20220215 15:43:32.076"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:32.077" level="INFO">{'result': {'id': 110000000121585, 'code': 'NV000104', 'name': 'SBD', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 55955, 'branchId': 302728, 'createdBy': 234147, 'createdDate': '2022-01-20T11:17:10.8600000', 'modifiedBy': 234147, 'modifiedDate': '2022-01-27T14:23:12.3160000', 'isDeleted': False, 'clockings': [{'id': 60000005887905, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-03T07:00:00.0000000', 'endTime': '2022-01-03T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-03T07:00:00.0000000', 'checkOutDate': '2022-01-03T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887906, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-04T07:00:00.0000000', 'endTime': '2022-01-04T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-04T07:00:00.0000000', 'checkOutDate': '2022-01-04T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887907, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-05T07:00:00.0000000', 'endTime': '2022-01-05T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-05T07:00:00.0000000', 'checkOutDate': '2022-01-05T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887908, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-06T07:00:00.0000000', 'endTime': '2022-01-06T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-06T07:00:00.0000000', 'checkOutDate': '2022-01-06T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887909, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-07T07:00:00.0000000', 'endTime': '2022-01-07T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-07T07:00:00.0000000', 'checkOutDate': '2022-01-07T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887910, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-10T07:00:00.0000000', 'endTime': '2022-01-10T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-10T07:00:00.0000000', 'checkOutDate': '2022-01-10T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887911, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-12T07:00:00.0000000', 'endTime': '2022-01-12T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-12T07:00:00.0000000', 'checkOutDate': '2022-01-12T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887912, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-13T07:00:00.0000000', 'endTime': '2022-01-13T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-13T07:00:00.0000000', 'checkOutDate': '2022-01-13T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887913, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-14T07:00:00.0000000', 'endTime': '2022-01-14T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-14T07:00:00.0000000', 'checkOutDate': '2022-01-14T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887914, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-17T07:00:00.0000000', 'endTime': '2022-01-17T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-17T07:00:00.0000000', 'checkOutDate': '2022-01-17T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887915, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-18T07:00:00.0000000', 'endTime': '2022-01-18T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-18T07:00:00.0000000', 'checkOutDate': '2022-01-18T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887916, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-19T07:00:00.0000000', 'endTime': '2022-01-19T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-19T07:00:00.0000000', 'checkOutDate': '2022-01-19T11:00:00.0000000', 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887917, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 3, 'startTime': '2022-01-20T07:00:00.0000000', 'endTime': '2022-01-20T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'checkInDate': '2022-01-20T07:25:00.0000000', 'checkOutDate': '2022-01-20T10:23:00.0000000', 'timeIsLate': 20, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 37, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887918, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-01-21T07:00:00.0000000', 'endTime': '2022-01-21T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887919, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-01-24T07:00:00.0000000', 'endTime': '2022-01-24T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887920, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-01-25T07:00:00.0000000', 'endTime': '2022-01-25T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887921, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-01-26T07:00:00.0000000', 'endTime': '2022-01-26T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887922, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-01-27T07:00:00.0000000', 'endTime': '2022-01-27T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887923, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-01-28T07:00:00.0000000', 'endTime': '2022-01-28T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887924, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-01-31T07:00:00.0000000', 'endTime': '2022-01-31T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887925, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-04T07:00:00.0000000', 'endTime': '2022-02-04T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887926, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-07T07:00:00.0000000', 'endTime': '2022-02-07T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887927, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-08T07:00:00.0000000', 'endTime': '2022-02-08T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887928, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-09T07:00:00.0000000', 'endTime': '2022-02-09T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887929, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-10T07:00:00.0000000', 'endTime': '2022-02-10T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887930, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-11T07:00:00.0000000', 'endTime': '2022-02-11T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887931, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-14T07:00:00.0000000', 'endTime': '2022-02-14T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887932, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-15T07:00:00.0000000', 'endTime': '2022-02-15T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887933, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-16T07:00:00.0000000', 'endTime': '2022-02-16T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887934, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-17T07:00:00.0000000', 'endTime': '2022-02-17T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887935, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-18T07:00:00.0000000', 'endTime': '2022-02-18T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887936, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-21T07:00:00.0000000', 'endTime': '2022-02-21T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887937, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-22T07:00:00.0000000', 'endTime': '2022-02-22T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887938, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-23T07:00:00.0000000', 'endTime': '2022-02-23T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887939, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-24T07:00:00.0000000', 'endTime': '2022-02-24T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887940, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-25T07:00:00.0000000', 'endTime': '2022-02-25T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887941, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-02-28T07:00:00.0000000', 'endTime': '2022-02-28T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887942, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-01T07:00:00.0000000', 'endTime': '2022-03-01T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887943, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-02T07:00:00.0000000', 'endTime': '2022-03-02T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887944, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-03T07:00:00.0000000', 'endTime': '2022-03-03T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887945, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-04T07:00:00.0000000', 'endTime': '2022-03-04T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887946, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-07T07:00:00.0000000', 'endTime': '2022-03-07T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887947, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-08T07:00:00.0000000', 'endTime': '2022-03-08T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887948, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-09T07:00:00.0000000', 'endTime': '2022-03-09T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887949, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-10T07:00:00.0000000', 'endTime': '2022-03-10T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887950, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-11T07:00:00.0000000', 'endTime': '2022-03-11T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887951, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-14T07:00:00.0000000', 'endTime': '2022-03-14T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887952, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-15T07:00:00.0000000', 'endTime': '2022-03-15T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887953, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-16T07:00:00.0000000', 'endTime': '2022-03-16T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887954, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-17T07:00:00.0000000', 'endTime': '2022-03-17T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887955, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-18T07:00:00.0000000', 'endTime': '2022-03-18T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887956, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-21T07:00:00.0000000', 'endTime': '2022-03-21T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887957, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-22T07:00:00.0000000', 'endTime': '2022-03-22T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887958, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-23T07:00:00.0000000', 'endTime': '2022-03-23T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887959, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-24T07:00:00.0000000', 'endTime': '2022-03-24T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887960, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-25T07:00:00.0000000', 'endTime': '2022-03-25T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887961, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-28T07:00:00.0000000', 'endTime': '2022-03-28T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887962, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-29T07:00:00.0000000', 'endTime': '2022-03-29T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887963, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-30T07:00:00.0000000', 'endTime': '2022-03-30T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887964, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-03-31T07:00:00.0000000', 'endTime': '2022-03-31T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}, {'id': 60000005887965, 'shiftId': 220000000002249, 'timeSheetId': 220000000023602, 'employeeId': 110000000121585, 'workById': 110000000121585, 'clockingStatus': 1, 'startTime': '2022-04-01T07:00:00.0000000', 'endTime': '2022-04-01T11:00:00.0000000', 'branchId': 302728, 'tenantId': 55955, 'isDeleted': False, 'timeIsLate': 0, 'overTimeBeforeShiftWork': 0, 'timeIsLeaveWorkEarly': 0, 'overTimeAfterShiftWork': 0, 'clockingPaymentStatus': 0}], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'employeeBranches': [{'id': 230000001023526, 'tenantId': 55955, 'branchId': 302728, 'employeeId': 110000000121585}]}, 'message': ''}</msg>
+<status status="PASS" starttime="20220215 15:43:32.076" endtime="20220215 15:43:32.078"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20220215 15:43:32.078" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220215 15:43:32.078" endtime="20220215 15:43:32.078"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:32.079" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:32.078" endtime="20220215 15:43:32.079"></status>
+</kw>
+<msg timestamp="20220215 15:43:32.079" level="INFO">${resp} = {'result': {'id': 110000000121585, 'code': 'NV000104', 'name': 'SBD', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardNa...</msg>
+<status status="PASS" starttime="20220215 15:43:31.963" endtime="20220215 15:43:32.079"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.110" level="INFO">${list} = ['NV000104']</msg>
+<status status="PASS" starttime="20220215 15:43:32.079" endtime="20220215 15:43:32.110"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.choice($list)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.110" level="INFO">${value} = NV000104</msg>
+<status status="PASS" starttime="20220215 15:43:32.110" endtime="20220215 15:43:32.110"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:32.111" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:32.111" endtime="20220215 15:43:32.111"></status>
+</kw>
+<msg timestamp="20220215 15:43:32.111" level="INFO">${code_employee} = NV000104</msg>
+<status status="PASS" starttime="20220215 15:43:31.963" endtime="20220215 15:43:32.111"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${id_employee}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:32.111" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:32.111" endtime="20220215 15:43:32.111"></status>
+</kw>
+<msg timestamp="20220215 15:43:32.111" level="INFO">${id_employee} = 110000000121585</msg>
+<status status="PASS" starttime="20220215 15:43:31.801" endtime="20220215 15:43:32.111"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${amount}</arg>
+<arg>${id_employee}</arg>
+<arg>${method}</arg>
+<arg>${date}</arg>
+<arg>\ \</arg>
+</arguments>
+<assign>
+<var>${list_format}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.111" level="INFO">${list_format} = ['10000', 110000000121585, 'Cash', '10/01/2022', ' ']</msg>
+<status status="PASS" starttime="20220215 15:43:32.111" endtime="20220215 15:43:32.111"></status>
+</kw>
+<kw name="Format String Use [D0] [D1] [D2]" library="share">
+<arguments>
+<arg>${data_payment}</arg>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${data_payment}</var>
+</assign>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.112" level="INFO">Length is 5</msg>
+<msg timestamp="20220215 15:43:32.112" level="INFO">${length} = 5</msg>
+<status status="PASS" starttime="20220215 15:43:32.112" endtime="20220215 15:43:32.112"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.112" level="INFO">${value_temp} = 10000</msg>
+<status status="PASS" starttime="20220215 15:43:32.112" endtime="20220215 15:43:32.112"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.113" level="INFO">${value_temp} = 10000</msg>
+<status status="PASS" starttime="20220215 15:43:32.112" endtime="20220215 15:43:32.113"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.113" level="INFO">${data_format} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":[D1],"Method":"[D2]","TransDate":"[D3]"}],"Paysheets":[[D4]]}</msg>
+<status status="PASS" starttime="20220215 15:43:32.113" endtime="20220215 15:43:32.113"></status>
+</kw>
+<status status="PASS" starttime="20220215 15:43:32.112" endtime="20220215 15:43:32.113"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.113" level="INFO">${value_temp} = 110000000121585</msg>
+<status status="PASS" starttime="20220215 15:43:32.113" endtime="20220215 15:43:32.113"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.113" level="INFO">${value_temp} = 110000000121585</msg>
+<status status="PASS" starttime="20220215 15:43:32.113" endtime="20220215 15:43:32.113"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.114" level="INFO">${data_format} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":110000000121585,"Method":"[D2]","TransDate":"[D3]"}],"Paysheets":[[D4]]}</msg>
+<status status="PASS" starttime="20220215 15:43:32.113" endtime="20220215 15:43:32.114"></status>
+</kw>
+<status status="PASS" starttime="20220215 15:43:32.113" endtime="20220215 15:43:32.114"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.114" level="INFO">${value_temp} = Cash</msg>
+<status status="PASS" starttime="20220215 15:43:32.114" endtime="20220215 15:43:32.114"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.114" level="INFO">${value_temp} = Cash</msg>
+<status status="PASS" starttime="20220215 15:43:32.114" endtime="20220215 15:43:32.114"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.114" level="INFO">${data_format} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":110000000121585,"Method":"Cash","TransDate":"[D3]"}],"Paysheets":[[D4]]}</msg>
+<status status="PASS" starttime="20220215 15:43:32.114" endtime="20220215 15:43:32.114"></status>
+</kw>
+<status status="PASS" starttime="20220215 15:43:32.114" endtime="20220215 15:43:32.115"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.115" level="INFO">${value_temp} = 10/01/2022</msg>
+<status status="PASS" starttime="20220215 15:43:32.115" endtime="20220215 15:43:32.115"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.115" level="INFO">${value_temp} = 10/01/2022</msg>
+<status status="PASS" starttime="20220215 15:43:32.115" endtime="20220215 15:43:32.115"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.115" level="INFO">${data_format} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":110000000121585,"Method":"Cash","TransDate":"10/01/2022"}],"Paysheets":[[D4]]}</msg>
+<status status="PASS" starttime="20220215 15:43:32.115" endtime="20220215 15:43:32.115"></status>
+</kw>
+<status status="PASS" starttime="20220215 15:43:32.115" endtime="20220215 15:43:32.115"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.116" level="INFO">${value_temp} =  </msg>
+<status status="PASS" starttime="20220215 15:43:32.115" endtime="20220215 15:43:32.116"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.116" level="INFO">${value_temp} =  </msg>
+<status status="PASS" starttime="20220215 15:43:32.116" endtime="20220215 15:43:32.116"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.116" level="INFO">${data_format} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":110000000121585,"Method":"Cash","TransDate":"10/01/2022"}],"Paysheets":[ ]}</msg>
+<status status="PASS" starttime="20220215 15:43:32.116" endtime="20220215 15:43:32.116"></status>
+</kw>
+<status status="PASS" starttime="20220215 15:43:32.115" endtime="20220215 15:43:32.116"></status>
+</kw>
+<status status="PASS" starttime="20220215 15:43:32.112" endtime="20220215 15:43:32.116"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${data_format}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:32.116" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:32.116" endtime="20220215 15:43:32.116"></status>
+</kw>
+<msg timestamp="20220215 15:43:32.117" level="INFO">${data_payment} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":110000000121585,"Method":"Cash","TransDate":"10/01/2022"}],"Paysheets":[ ]}</msg>
+<status status="PASS" starttime="20220215 15:43:32.112" endtime="20220215 15:43:32.117"></status>
+</kw>
+<kw name="Post Request Json KV" library="share">
+<arguments>
+<arg>${session_man}</arg>
+<arg>${enp_payment}</arg>
+<arg>${data_payment}</arg>
+<arg>200</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_func}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220215 15:43:32.807" level="INFO">Post Request using : alias=sessionMan, uri=/payslip-payments, data={"PayslipPayments":[{"Amount":10000,"EmployeeId":110000000121585,"Method":"Cash","TransDate":"10/01/2022"}],"Paysheets":[ ]}, headers={'retailer': 'testz12', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '87401', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyMzQxNDcsImlhdCI6MTY0NDkxNDYxMiwiZXhwIjoxNjQ3MzMzODEyLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbIlVzZXIiXSwia3ZzZXMiOiIwOTgyZmM4MzRlMTM0YTYzODZlZjUyMzc5YTlkNzM3OSIsImt2dWlkIjoyMzQxNDcsImt2bGFuZyI6InZpLVZOIiwia3Z1dHlwZSI6MCwia3Z1bGltaXQiOiJGYWxzZSIsImt2dWFkbWluIjoiVHJ1ZSIsImt2dWFjdCI6IlRydWUiLCJrdnVsaW1pdHRyYW5zIjoiRmFsc2UiLCJrdnVzaG93c3VtIjoiVHJ1ZSIsImt2YmlkIjo4NzQwMSwia3ZyaW5kaWQiOjExLCJrdnJjb2RlIjoidGVzdHoxMiIsImt2cmlkIjo1NTk1NSwia3Z1cmlkIjo1NTk1NSwia3ZyZ2lkIjoxMiwicGVybXMiOiIifQ.vxRq_2FwL9ad3rng4NKDVjGga0WTBF1cT1I99NZo-1juJkbXy2eXRgutDu_FzoxnufAxlIvw5eLgXZ93tngwEVHfmvg6fA058bCkFTYB-FsnuymaLotsdABa67-3vHwBRIDaCyQtR19wZ6bjrPgXK0D2zVPYfzt3U7r8HZ61zF8LWp6OT1BA2lL40lr9VeLFCP6ufygVJ9uoC_tIamHag7IE-ZxXEV-VM3FHclkB3feQTP89RV7B8HoVCdd5wfyUCyAC5UlPRS428ZxY1flD_F1azAeAuNuKJ4XSPiz5gZOWW5nJvlsfpr-kmJvJG_3Pn3MIK3aopftJa04gzo3TWg'}, files=None, allow_redirects=True </msg>
+<msg timestamp="20220215 15:43:32.807" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-man.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220215 15:43:32.807" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220215 15:43:32.117" endtime="20220215 15:43:32.807"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:32.808" level="INFO">[{'EmployeeIsDeleted': False, 'PayslipValue': 0, 'PaidValue': 0, 'NeedPayValue': 0, 'TargetCode': 'PCL000072', 'UserName': '', 'EventId': 0, 'EventAction': 0, 'RetryCount': 0, 'Id': 206426, 'Code': 'PCL000072', 'Amount': 10000, 'AmountOriginal': 10000, 'IsAllowcation': False, 'Method': 'Cash', 'RetailerId': 55955, 'BranchId': 87401, 'PayslipId': 0, 'EmployeeId': 110000000121585, 'TransDate': '2022-01-10T00:00:00.0060000+07:00', 'UserId': 234147, 'Status': 0, 'CreatedDate': '2022-02-15T15:43:33.3215555+07:00', 'CreatedBy': 234147}]</msg>
+<status status="PASS" starttime="20220215 15:43:32.807" endtime="20220215 15:43:32.808"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>${expected_status_code}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:32.808" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220215 15:43:32.808" endtime="20220215 15:43:32.808"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220215 15:43:32.808" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220215 15:43:32.808" endtime="20220215 15:43:32.808"></status>
+</kw>
+<msg timestamp="20220215 15:43:32.809" level="INFO">${resp} = [{'EmployeeIsDeleted': False, 'PayslipValue': 0, 'PaidValue': 0, 'NeedPayValue': 0, 'TargetCode': 'PCL000072', 'UserName': '', 'EventId': 0, 'EventAction': 0, 'RetryCount': 0, 'Id': 206426, 'Code': 'P...</msg>
+<status status="PASS" starttime="20220215 15:43:32.117" endtime="20220215 15:43:32.809"></status>
+</kw>
+<doc>Thanh toán bằng tiền mặt không phân bổ vào phiếu lương</doc>
+<tags>
+<tag>all</tag>
+<tag>payment</tag>
+</tags>
+<status status="PASS" starttime="20220215 15:43:31.800" endtime="20220215 15:43:32.809" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220215 15:43:30.970" endtime="20220215 15:43:32.809"></status>
+</suite>
+<status status="PASS" starttime="20220215 15:43:30.969" endtime="20220215 15:43:32.810"></status>
+</suite>
+<status status="PASS" starttime="20220215 15:43:30.948" endtime="20220215 15:43:32.811"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">all</stat>
+<stat pass="1" fail="0">payment</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="1" fail="0" id="s1-s1" name="NhanVien">Testsuites.NhanVien</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Payment">Testsuites.NhanVien.Payment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

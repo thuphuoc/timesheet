@@ -42,11 +42,11 @@ Create employee                   [Tags]   all    employee
     Set Suite Variable            ${code_employee}                        ${code_employee}
     Set Suite Variable            ${id_employee}                          ${id_employee}
     ${branchId}                   Convert To Number                       ${branchId}
-    Verify input and output       ${code_employee}                        ${random_str}             ${branchId}
+    Verify Input And Output Employee                                      ${code_employee}          ${random_str}             ${branchId}
 
 Create duplicate employee         [Tags]   all    employee
     [Documentation]               Tạo mới nhân viên trùng mã nhân viên
-    ${code_employee}              Get Value In List KV                    ${session}                ${enp_employee}           $.result.data..code
+    ${code_employee}              Get Value In List KV                    ${session}                ${enp_employee}               $.result.data..code
     ${list_format}                Create List                             1235698                   ${code_employee}               ${random_str}        ${branchId}           ${branchId}
     ${data}                       Format String Use [D0] [D1] [D2]        ${data_employee}          ${list_format}
     ${data}                       Evaluate                                (None,'${data}')
@@ -77,22 +77,22 @@ Update employee                   [Tags]   all    employee
     ${data}                       Evaluate                                                          (None,'${data}')
     ${formdata}                   Create Dictionary                     employee=${data}
     Log                           ${formdata}
-    ${resp}                       Update Request Json KV Use Formdata KV                                 ${session}                    ${enp_employee}/${id_employee}    ${formdata}    200
+    ${resp}                       Update Request Json KV Use Formdata KV                            ${session}                   ${enp_employee}/${id_employee}    ${formdata}    200
 
 Get pin code                      [Tags]   all    employee
     [Documentation]               Lấy mã xác nhận cho chấm công gps
     ${id_employee}                Get Random ID Employee
     ${list}                       Create List                          ${id_employee}                ${user_login}
-    ${enp_pin_code}               Format String Use [D0] [D1] [D2]                                   ${enp_pin_code}               ${list}
+    ${enp_pin_code}               Format String Use [D0] [D1] [D2]                                   ${enp_pin_code}            ${list}
     ${resp}                       Get Request From KV                  ${session}                    ${enp_pin_code}
 
 Add work schedule                 [Tags]   all    employee
     [Documentation]               Thêm lịch làm việc cho nhân viên tại MH nhân viên
     Format enp shift branch
     ${id_shift}                   Get RanDom ID Shift And Get Name From ID
-    ${list_format}                Create List                         12-12-2021                      12-01-2022                    ${id_employee}                ${branchId}     ${branchId}    ${id_shift}
+    ${list_format}                Create List                         12-12-2021                      12-01-2022                 ${id_employee}                ${branchId}     ${branchId}    ${id_shift}
     ${data}                       Format String Use [D0] [D1] [D2]    ${data_add_work_schedule}       ${list_format}
-    ${resp}                       Post Request Json KV                ${session}                      ${enp_add_work_schedule}      ${data}                       200
+    ${resp}                       Post Request Json KV                ${session}                      ${enp_add_work_schedule}   ${data}                       200
     ${id_work_schedule}           Get Value From Json KV              ${resp}                         $.result.id
     Set Suite Variable            ${id_work_schedule}                 ${id_work_schedule}
 # case: xóa lịch làm việc nhân viên nếu nv có lịch làm việc
@@ -116,20 +116,13 @@ Delete multiple employee          [Tags]   all1    employee1
     ${resp}                       Delete Multiple Request KV          ${session}                      ${enp_multiple_employee}        ${data_mutiple_employee}    Xóa nhân viên thành công
 
 ***Keywords***
-Verify input and output
+Verify Input And Output Employee
     [Arguments]         ${code_input}                      ${name_input}                     ${branch_input}
-    ${code_output}      Get Detail From Id KV              ${session}                        ${enp_employee}/${id_employee}    $.result.code
-    ${name_output}      Get Detail From Id KV              ${session}                        ${enp_employee}/${id_employee}    $.result.name
-    ${branch_output}    Get Detail From Id KV              ${session}                        ${enp_employee}/${id_employee}    $.result.branchId
+    ${resp}             Get Request From KV                ${session}                        ${enp_employee}/${id_employee}
+    ${code_output}      Get Value From Json KV             ${resp}                           $.result.code
+    ${name_output}      Get Value From Json KV             ${resp}                           $.result.name
+    ${branch_output}    Get Value From Json KV             ${resp}                           $.result.branchId
     ${branch_output}    Convert To Number                  ${branch_output}
-    ${list_input}       Create List                        ${code_input}                     ${name_input}                ${branch_input}
-    ${list_output}      Create List                        ${code_output}                    ${name_output}               ${branch_output}
-    Verify list input and output                           ${list_input}                     ${list_output}
-
-Verify list input and output
-    [Arguments]       ${list_input}                        ${list_output}
-    ${length}         Get Length                           ${listinput}
-    :FOR              ${i}    In RANGE                     ${length}
-    \                 ${value_input}                       Get From List       ${listinput}      ${i}
-    \                 ${value_output}                      Get From List       ${listoutput}     ${i}
-    Should Be Equal   ${value_input}                       ${value_output}
+    ${list_input}       Create List                        ${code_input}                     ${name_input}                           ${branch_input}
+    ${list_output}      Create List                        ${code_output}                    ${name_output}                          ${branch_output}
+    Verify List Input And Output                           ${list_input}                     ${list_output}

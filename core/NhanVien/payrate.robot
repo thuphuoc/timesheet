@@ -2,7 +2,6 @@
 Library   RequestsLibrary
 Library   JSONLibrary
 Library  Collections
-Library  DependencyLibrary
 Resource        ../../core/share/enviroment.robot
 Resource        ../../core/share/share.robot
 Resource        ../../core/share/share_random.robot
@@ -17,26 +16,27 @@ Create PayRateTemplate
     [Arguments]             ${id_Allowance}                   ${id_Deduction}
     ${list_format}          Create List                       ${random_number}    MauLuong ${random_str}    ${id_Allowance}       ${id_Deduction}     ${branchId}
     ${data_payrate}         Format String Use [D0] [D1] [D2]  ${data_payrate}     ${list_format}
-    ${resp}                 Post Request Json KV              ${session}          ${enp_payrate}            ${data_payrate}    200
+    ${resp}                 Post Request Json KV              ${session}          ${enp_payrate}            ${data_payrate}       200
     Return From Keyword     ${resp}
+
 Format Enp PayRateTemplate
-    ${list_format}          Create List                         ${branchId}
-    ${enp_list_payrate}     Format String Use [D0] [D1] [D2]    ${enp_list_payrate}    ${list_format}
+    ${list_format}          Create List                       ${branchId}
+    ${enp_list_payrate}     Format String Use [D0] [D1] [D2]  ${enp_list_payrate}    ${list_format}
     Return From Keyword     ${enp_list_payrate}
 
 Get ID And Name PayRateTemplate
     ${enp_list_payrate}     Format Enp PayRateTemplate
-    ${id_payrate}           Get Value In List KV     ${session}      ${enp_list_payrate}   $..id
-    ${name_payrate}         Get Value In List KV     ${session}      ${enp_payrate}/${id_payrate}   $..name
+    ${id_payrate}           Get Value In List KV             ${session}         ${enp_list_payrate}         $..id
+    ${name_payrate}         Get Value In List KV             ${session}         ${enp_payrate}/${id_payrate}   $..name
     Return From Keyword     ${id_payrate}
 
 Update PayRateTemplate
-    [Arguments]             ${id_payrate}           ${name}     ${id_Allowance}     ${id_Deduction}
-    ${list_format}          Create List                         ${id_payrate}       Update ${name}    ${id_Allowance}       ${id_Deduction}     ${branchId}
-    ${data_payrate}         Format String Use [D0] [D1] [D2]    ${data_payrate}     ${list_format}
-    ${resp}                 Update Request Json KV    ${session}     ${enp_payrate}/${id_payrate}   ${data_payrate}    200
+    [Arguments]             ${id_payrate}                    ${name}            ${id_Allowance}             ${id_Deduction}
+    ${list_format}          Create List                      ${id_payrate}      Update ${name}              ${id_Allowance}      ${id_Deduction}     ${branchId}
+    ${data_payrate}         Format String Use [D0] [D1] [D2]  ${data_payrate}   ${list_format}
+    ${resp}                 Update Request Json KV           ${session}         ${enp_payrate}/${id_payrate}   ${data_payrate}   200
     Return From Keyword     ${resp}
 
 Delete PayRateTemplate
     [Arguments]             ${id_payrate}
-    ${resp}                 Delete Request KV    ${session}   ${enp_payrate}/${id_payrate}    200
+    ${resp}                 Delete Request KV                   ${session}      ${enp_payrate}/${id_payrate}                    200

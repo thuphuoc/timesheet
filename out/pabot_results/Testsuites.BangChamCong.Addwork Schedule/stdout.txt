@@ -5,26 +5,39 @@ Testsuites.BangChamCong
 ==============================================================================
 Testsuites.BangChamCong.Addwork Schedule                                      
 ==============================================================================
-Add work-schedule repeat has endDate :: ??t l?ch làm vi?c có ngày ... | PASS |
+Add work-schedule repeat has endDate :: ??t l?ch làm vi?c có ngày ... | FAIL |
+400 != 200
 ------------------------------------------------------------------------------
-Add work-schedule repeat has NOT endDate :: ??t l?ch làm vi?c Khôn... | PASS |
+Add work-schedule repeat has NOT endDate :: ??t l?ch làm vi?c Khôn... | FAIL |
+400 != 200
 ------------------------------------------------------------------------------
 Timekeeping check IN- OUT for employees :: Ch?m công VÀO và RA cho... | PASS |
 ------------------------------------------------------------------------------
-Timekeeping check IN for employees :: Ch? ch?m công VÀO cho nhân viên | PASS |
+Timekeeping check IN for employees :: Ch? ch?m công VÀO cho nhân viên | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
-Timekeeping check OUT for employees :: Ch? ch?m công RA cho nhân viên | PASS |
+Timekeeping check OUT for employees :: Ch? ch?m công RA cho nhân viên | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
-Testsuites.BangChamCong.Addwork Schedule                              | PASS |
-5 critical tests, 5 passed, 0 failed
-5 tests total, 5 passed, 0 failed
+Timekeeping Paid for employees :: Nhân viên NGH? có phép              | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
+------------------------------------------------------------------------------
+Timekeeping Unpaid for employees :: Nhân viên NGH? KO phép            | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
+------------------------------------------------------------------------------
+Testsuites.BangChamCong.Addwork Schedule                              | FAIL |
+Suite teardown failed:
+Variable '${id_work_schedule}' not found.
+
+7 critical tests, 0 passed, 7 failed
+7 tests total, 0 passed, 7 failed
 ==============================================================================
-Testsuites.BangChamCong                                               | PASS |
-5 critical tests, 5 passed, 0 failed
-5 tests total, 5 passed, 0 failed
+Testsuites.BangChamCong                                               | FAIL |
+7 critical tests, 0 passed, 7 failed
+7 tests total, 0 passed, 7 failed
 ==============================================================================
-Testsuites                                                            | PASS |
-5 critical tests, 5 passed, 0 failed
-5 tests total, 5 passed, 0 failed
+Testsuites                                                            | FAIL |
+7 critical tests, 0 passed, 7 failed
+7 tests total, 0 passed, 7 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.BangChamCong.Addwork Schedule\output-20220212-225336.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.BangChamCong.Addwork Schedule\output-20220215-154322.xml

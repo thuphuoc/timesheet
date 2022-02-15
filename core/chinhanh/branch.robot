@@ -1,6 +1,7 @@
 *** Settings ***
 Resource  ../../core/Share/share.robot
 Resource   ../../core/Share/share_random.robot
+Resource   ../../core/Share/enviroment.robot
 *** Variables ***
 ${enp_branch_active}            /branchs?format=json&Includes=Permissions&Includes=Retailer&$inlinecount=allpages&$top=15&$filter=LimitAccess+eq+false
 ${enp_branch}                   /branchs
@@ -12,26 +13,26 @@ Get List Of Active Branch
     Return From Keyword         ${resp.json()}
 
 Get A Branch In Active Branchs
-    ${id_branch}                Get Value In List KV    ${session_man}      ${enp_branch_active}      $.Data[?(@.Id)].Id
+    ${id_branch}                Get Value In List KV    ${session_man}       ${enp_branch_active}      $.Data[?(@.Id)].Id
     Return From Keyword         ${id_branch}
 
 Get Name Branch From Id
-    [Arguments]                 ${id}
-    ${name}                     Get Detail From Id KV   ${session_man}      ${enp_branch}/${id}       $.Name
+    [Arguments]                 ${branchId}
+    ${name}                     Get Detail From Id KV   ${session_man}       ${enp_branch}/${branchId}       $.Name
     Return From Keyword         ${name}
 
 Create Branch
     [Arguments]                 ${name}                 ${phonenumber}       ${address}
-    ${list_format}              Create List             ${name}              ${phonenumber}           ${address}
-    ${data_create_branch}       Format String Use [D0] [D1] [D2]             ${data_create_branch}    ${list_format}
-    ${resp}                     Post Request Json KV    ${session_man}       ${enp_branch}            ${data_create_branch}     200
+    ${list_format}              Create List             ${name}              ${phonenumber}            ${address}
+    ${data_create_branch}       Format String Use [D0] [D1] [D2]             ${data_create_branch}     ${list_format}
+    ${resp}                     Post Request Json KV    ${session_man}       ${enp_branch}             ${data_create_branch}     200
     Return From Keyword         ${resp}
 
 Update working date of branch
-    [Arguments]                 ${name}    ${date1}      ${date2}     ${date3}     ${date4}     ${date5}            ${date6}
+    [Arguments]                 ${name}                 ${date1}            ${date2}                   ${date3}                 ${date4}     ${date5}      ${date6}
     ${id}                       Get A Branch In Active Branchs
-    ${name_from_id}             Get Name Branch From Id    ${id} 
-    ${list_format}              Create List               ${id}       ${name}       ${date1}    ${date2}            ${date3}       ${date4}    ${date5}    ${date6}
-    ${data_update_workingdate}     Format String Use [D0] [D1] [D2]       ${data_update_workingdate}      ${list_format}
-    ${resp}   Post Request Json KV    ${session_man}    ${enp_branch}      ${data_update_workingdate}     200
-    Return From Keyword    ${resp}
+    ${name_from_id}             Get Name Branch From Id    ${id}
+    ${list_format}              Create List                ${id}            ${name}                     ${date1}                ${date2}     ${date3}       ${date4}    ${date5}    ${date6}
+    ${data_update_workingdate}  Format String Use [D0] [D1] [D2]            ${data_update_workingdate}  ${list_format}
+    ${resp}                     Post Request Json KV       ${session_man}   ${enp_branch}               ${data_update_workingdate}           200
+    Return From Keyword         ${resp}

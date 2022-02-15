@@ -24,6 +24,8 @@ Get Value From Json KV
 Get Request From KV
     [Arguments]                     ${session}                  ${endpoint}
     ${resp}                         Get Request                 ${session}                  ${endpoint}
+    Log                             ${resp.json()}
+    Should Be Equal As Strings      ${resp.status_code}         200
     Return From Keyword             ${resp.json()}
 
 Get Value In List KV
@@ -72,8 +74,8 @@ Update Request Json KV Use Formdata KV
     Return From Keyword             ${resp.json()}
 
 Update Request Json KV
-    [Arguments]                     ${session}                  ${endpoint}                      ${data_func}                         ${expected_status_code}
-    ${resp}                         Put Request                 ${session}                       ${endpoint}                          headers=${header}                   data=${data_func}
+    [Arguments]                     ${session}                  ${endpoint}                      ${data_func}       ${expected_status_code}
+    ${resp}                         Put Request                 ${session}                       ${endpoint}        headers=${header}                   data=${data_func}
     Log                             ${resp.json()}
     Should Be Equal As Strings      ${resp.status_code}         ${expected_status_code}
     Return From Keyword             ${resp.json()}
@@ -91,3 +93,11 @@ Delete Multiple Request KV
     ${mess_err_resp}                Get Value From Json KV      ${resp}                       $.message
     Log                             ${mess_err_resp}
     Should Be Equal                 ${mess_err_resp}            ${mess_err_expected}
+
+Verify List Input And Output
+    [Arguments]       ${list_input}                        ${list_output}
+    ${length}         Get Length                           ${listinput}
+    :FOR              ${i}    In RANGE                     ${length}
+    \                 ${value_input}                       Get From List       ${listinput}      ${i}
+    \                 ${value_output}                      Get From List       ${listoutput}     ${i}
+    Should Be Equal   ${value_input}                       ${value_output}
