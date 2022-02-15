@@ -1,20 +1,20 @@
 *** Settings ***
 Resource        ../../core/share/share.robot
 *** Variables ***
-${data_allowance}                   {"allowance":{"Id":"[D0]","Name":"[D1]","Type":[D2],"Value":[D3],"ValueRatio":0,"IsChecked":true}}
+${data_allowance}                   {"allowance":{"Id":"[D0]","Name":"[D1]","Type":[D2],"Value":[D3],"ValueRatio":[D4],"IsChecked":[D5]}}
 ${enp_allowance}                    /allowance
 
 *** Keywords ***
 Create Allowance
-    [Arguments]                     ${id}                                 ${name}               ${type}                   ${value}                      ${expected_statusCode}
-    ${list_format}                  Create List                           ${id}                 ${name}                   ${type}                       ${value}
+    [Arguments]                     ${id}                                 ${name}               ${type}                   ${value}                      ${valueRadio}        ${is_checked}            ${expected_statusCode}
+    ${list_format}                  Create List                           ${id}                 ${name}                   ${type}                       ${value}             ${valueRadio}        ${is_checked}
     ${data_allowance}               Format String Use [D0] [D1] [D2]      ${data_allowance}     ${list_format}
     ${resp}                         Post Request Json KV                  ${session}            ${enp_allowance}          ${data_allowance}             ${expected_statusCode}
     Return From Keyword             ${resp}
 
 Create And Get ID Allowance
     ${id_Allowance}                 Random a Number    8
-    ${resp}                         Create Allowance                       ${id_Allowance}      ${random_str}               1                           20000      200
+    ${resp}                         Create Allowance                       ${id_Allowance}      ${random_str}              3                     2               3        false   200
     ${id_allowance}                 Get Value From Json KV                 ${resp}              $.result.id
     Return From Keyword             ${id_allowance}
 
@@ -30,9 +30,9 @@ Get Random ID Allowance
     Return From Keyword             ${id_allowance}
 
 Update Allowance
-    [Arguments]                     ${name}               ${type}         ${value}
+    [Arguments]                     ${name}               ${type}         ${value}              ${valueRadio}        ${is_checked}
     ${id_allowance}                 Get Random ID Allowance
-    ${list_format}                  Create List                           ${id_allowance}       ${name}                     ${type}                 ${value}
+    ${list_format}                  Create List                           ${id_allowance}       ${name}                     ${type}                 ${value}              ${valueRadio}        ${is_checked}
     ${data_allowance}               Format String Use [D0] [D1] [D2]      ${data_allowance}     ${list_format}
     ${resp}                         Update Request Json KV                ${session}            ${enp_allowance}/${id_allowance}                    ${data_allowance}    200
 

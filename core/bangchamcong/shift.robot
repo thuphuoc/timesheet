@@ -12,7 +12,8 @@ Format enp shift branch
     Set Global Variable    ${enp_shift_branch}                    ${enp_shift_branch}
 
 Get RanDom ID Shift And Get Name From ID
-    ${id_shift}           Get Value In List KV      ${session}    ${enp_shift_branch}                $..id
+# lay id shift dng hoat dong
+    ${id_shift}           Get Value In List KV      ${session}    ${enp_shift_branch}                $..result[?(@.isActive==true)].id
     ${name_shift}         Get Detail From Id KV     ${session}    ${enp_shift}/${id_shift}           $..name
     Return From Keyword   ${id_shift}
 

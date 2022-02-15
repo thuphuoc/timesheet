@@ -5,29 +5,26 @@ Testsuites.BangChamCong
 ==============================================================================
 Testsuites.BangChamCong.Shift                                                 
 ==============================================================================
-Create shift :: Thêm m?i ca làm vi?c                                  | FAIL |
-400 != 200
+Create shift :: Thêm m?i ca làm vi?c                                  | PASS |
 ------------------------------------------------------------------------------
-Create duplicate shift :: Thêm m?i ca làm vi?c trùng tên              | FAIL |
-IndexError: Given index 0 is out of the range 0--1.
+Create duplicate shift :: Thêm m?i ca làm vi?c trùng tên              | PASS |
 ------------------------------------------------------------------------------
-Create empty shift :: Thêm m?i ca làm vi?c r?ng                       | FAIL |
-IndexError: Given index 0 is out of the range 0--1.
+Create empty shift :: Thêm m?i ca làm vi?c r?ng                       | PASS |
 ------------------------------------------------------------------------------
 Update shift :: C?p nh?t ca làm vi?c                                  | PASS |
 ------------------------------------------------------------------------------
 Delete shift :: Xóa ca làm vi?c                                       | PASS |
 ------------------------------------------------------------------------------
-Testsuites.BangChamCong.Shift                                         | FAIL |
-5 critical tests, 2 passed, 3 failed
-5 tests total, 2 passed, 3 failed
+Testsuites.BangChamCong.Shift                                         | PASS |
+5 critical tests, 5 passed, 0 failed
+5 tests total, 5 passed, 0 failed
 ==============================================================================
-Testsuites.BangChamCong                                               | FAIL |
-5 critical tests, 2 passed, 3 failed
-5 tests total, 2 passed, 3 failed
+Testsuites.BangChamCong                                               | PASS |
+5 critical tests, 5 passed, 0 failed
+5 tests total, 5 passed, 0 failed
 ==============================================================================
-Testsuites                                                            | FAIL |
-5 critical tests, 2 passed, 3 failed
-5 tests total, 2 passed, 3 failed
+Testsuites                                                            | PASS |
+5 critical tests, 5 passed, 0 failed
+5 tests total, 5 passed, 0 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.BangChamCong.Shift\output-20220215-154322.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.BangChamCong.Shift\output-20220215-220538.xml

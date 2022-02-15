@@ -13,6 +13,7 @@ Fill enviroment and get token
     ...                                                         zone13=https://testz13.kiotviet.vn/api
     ...                                                         zone12=https://testz12.kiotviet.vn/api
     ...                                                         zone14=https://auto14.kiotviet.vn/api
+    ...                                                         zone1=https://testz1.kiotviet.vn/api
     ...                                                         59902=https://phuoc902.kvpos.com:59302/api
     ...                                                         59903=https://phuoc903.kvpos.com:59303/api
     ...                                                         fnb15=https://fnb.kiotviet.vn/api
@@ -20,6 +21,7 @@ Fill enviroment and get token
     ${dict_enp_saleLogin}         Create Dictionary             zone5=/auth/salelogin
     ...                                                         zone13=/auth/salelogin
     ...                                                         zone12=/auth/salelogin
+    ...                                                         zone1=/auth/salelogin
     ...                                                         zone14=/auth/salelogin
     ...                                                         59902=/auth/salelogin
     ...                                                         59903=/auth/salelogin
@@ -28,6 +30,7 @@ Fill enviroment and get token
     ${dict_url}                   Create Dictionary             zone5=https://api-timesheet.kiotviet.vn
     ...                                                         zone13=https://api-timesheet.kiotviet.vn
     ...                                                         zone12=https://api-timesheet.kiotviet.vn
+    ...                                                         zone1=https://api-timesheet.kiotviet.vn
     ...                                                         zone14=https://api-timesheet.kiotviet.vn
     ...                                                         59902=https://kvpos.com:55002
     ...                                                         59903=https://kvpos.com:55003
@@ -36,18 +39,19 @@ Fill enviroment and get token
     ${dict_url_man}               Create Dictionary             zone5=https://api-man.kiotviet.vn/api
     ...                                                         zone13=https://api-man.kiotviet.vn/api
     ...                                                         zone12=https://api-man.kiotviet.vn/api
+    ...                                                         zone1=https://api-man.kiotviet.vn/api
     ...                                                         zone14=https://api-man.kiotviet.vn/api
     ...                                                         59902=https://kvpos.com:59932/api
     ...                                                         59903=https://kvpos.com:59933/api
     ...                                                         fnb15=https://fnb.kiotviet.vn/api
 
-    ${dict_username}              Create Dictionary             zone5=admin             zone13=admin        zone12=admin        zone14=admin
+    ${dict_username}              Create Dictionary             zone5=admin             zone13=admin        zone12=admin        zone14=admin    zone1=admin
     ...                                                         59902=1                 59903=1
     ...                                                         fnb15=admin
-    ${dict_password}              Create Dictionary             zone5=123               zone13=123456       zone12=123456      zone14=123
+    ${dict_password}              Create Dictionary             zone5=123               zone13=123456       zone12=123456      zone14=123       zone1=123
     ...                                                         59902=1                 59903=1
     ...                                                         fnb15=123
-    ${dict_retailer}              Create Dictionary             zone5=auto5             zone13=testz13      zone12=testz12     zone14=auto14
+    ${dict_retailer}              Create Dictionary             zone5=auto5             zone13=testz13      zone12=testz12     zone14=auto14    zone1=testz1
     ...                                                         59902=phuoc902          59903=phuoc903
     ...                                                         fnb15=testfnbz15a
     ###################################################################################################################################################################################

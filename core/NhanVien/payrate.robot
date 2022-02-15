@@ -5,7 +5,6 @@ Library  Collections
 Resource        ../../core/share/enviroment.robot
 Resource        ../../core/share/share.robot
 Resource        ../../core/share/share_random.robot
-Suite setup     Fill enviroment and get token    ${env}
 
 *** Variables ***
 ${enp_payrate}      /pay-rate-template

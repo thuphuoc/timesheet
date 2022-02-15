@@ -15,24 +15,27 @@ Update commission :: C?p nh?t hoa h?ng                                | PASS |
 ------------------------------------------------------------------------------
 Add Category Of Product Into Commission :: Thêm nhóm hàng hóa vào ... | PASS |
 ------------------------------------------------------------------------------
-Add a product into commission :: Tìm ki?m và thêm 1 hàng hóa vào b... | PASS |
+Add a product into commission :: Tìm ki?m và thêm 1 hàng hóa vào b... | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
-Update The Roses For All Product :: C?p nh?t T?T C? m?c áp d?ng ho... | PASS |
+Update The Roses For All Product :: C?p nh?t T?T C? m?c áp d?ng ho... | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
-Update The Roses For A Product :: C?p nh?t m?c áp d?ng hoa h?ng ch... | PASS |
+Update The Roses For A Product :: C?p nh?t m?c áp d?ng hoa h?ng ch... | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
 Delete commission :: Xóa hoa h?ng                                     | PASS |
 ------------------------------------------------------------------------------
-Testsuites.HoaHong.Commission                                         | PASS |
-9 critical tests, 9 passed, 0 failed
-9 tests total, 9 passed, 0 failed
+Testsuites.HoaHong.Commission                                         | FAIL |
+9 critical tests, 6 passed, 3 failed
+9 tests total, 6 passed, 3 failed
 ==============================================================================
-Testsuites.HoaHong                                                    | PASS |
-9 critical tests, 9 passed, 0 failed
-9 tests total, 9 passed, 0 failed
+Testsuites.HoaHong                                                    | FAIL |
+9 critical tests, 6 passed, 3 failed
+9 tests total, 6 passed, 3 failed
 ==============================================================================
-Testsuites                                                            | PASS |
-9 critical tests, 9 passed, 0 failed
-9 tests total, 9 passed, 0 failed
+Testsuites                                                            | FAIL |
+9 critical tests, 6 passed, 3 failed
+9 tests total, 6 passed, 3 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.HoaHong.Commission\output-20220215-154325.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.HoaHong.Commission\output-20220215-220541.xml

@@ -4,9 +4,9 @@ Resource  ../../core/Share/share.robot
 Resource   ../../core/Share/share_random.robot
 Resource   ../../core/bangchamcong/shift.robot
 Resource   ../../core/bangchamcong/addwork_schedule.robot
-Resource   ../../core/nhanvien/employee.robot
+Resource   ../../core/NhanVien/employee.robot
 Suite setup  Fill enviroment and get token    ${env}
-Suite Teardown  Test After     ${id_work_schedule}
+Suite Teardown  Test After     ${id_work_schedule}      ${id_employee}
 *** Variables ***
 ${startDate}                     2022-02-02
 ${endDate}                       2022-04-30
@@ -20,16 +20,19 @@ ${LeaveOfAbsence}                false
 Add work-schedule repeat has endDate     [Tags]        all       addschedule
       [Documentation]       Đặt lịch làm việc có ngày kết thúc tại màn hình chấm công
       Format enp shift branch
-      ${id_employee}        Get Random ID Employee
+      ${random_number}      Random a Number    6
+      ${id_employee}        Create And Get ID Employee                 1235698           NV${random_number}            ${random_str}         ${branchId}           ${branchId}    100000    300    300
       ${id_shift}           Get RanDom ID Shift And Get Name From ID
       ${resp}               Add Work-schedule Repeat Or Not_Repeate    ${startDate}      ${endDate}       ${id_employee}        true        true   ${branchId}    ${id_shift}
       ${id_work_schedule}   Get Value From Json KV                     ${resp}           $.result[?(@.id)].id
-      Test After            ${id_work_schedule}
+      Set Suite Variable    ${id_employee}                             ${id_employee}
+      Test After            ${id_work_schedule}                        ${id_employee}
 
 Add work-schedule repeat has NOT endDate     [Tags]        all       addschedule
       [Documentation]       Đặt lịch làm việc Không giới hạn tại màn hình chấm công
       Format enp shift branch
-      ${id_employee}        Get Random ID Employee
+      ${random_number}      Random a Number    6
+      ${id_employee}        Create And Get ID Employee    1235698                   NV${random_number}            ${random_str}         ${branchId}           ${branchId}    100000    300    300
       ${id_shift}           Get RanDom ID Shift And Get Name From ID
       ${resp}               Add Work-schedule Repeat Or Not_Repeate    ${startDate}      ${endDate}       ${id_employee}        true        false   ${branchId}    ${id_shift}
       ${id_work_schedule}   Get Value From Json KV    ${resp}          $.result[?(@.id)].id
@@ -92,5 +95,6 @@ Timekeeping Unpaid for employees   [Tags]     all      addschedule      clocking
       Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}        null   null   1     true
 *** Keywords ***
 Test After
-      [Arguments]               ${id_work_schedule}
+      [Arguments]               ${id_work_schedule}           ${id_employee}
       Delete work schedule      ${id_work_schedule}
+      Delete Employee           ${id_employee}

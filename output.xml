@@ -2225,7 +2225,7 @@
 </tags>
 <status status="PASS" starttime="20220109 22:23:27.994" endtime="20220109 22:23:28.254" critical="yes"></status>
 </test>
-<test id="s1-t6" name="Delete employee">
+<test id="s1-t6" name="Delete Employee">
 <kw name="Get Value In List KV" library="share">
 <arguments>
 <arg>${enp_employee}</arg>
