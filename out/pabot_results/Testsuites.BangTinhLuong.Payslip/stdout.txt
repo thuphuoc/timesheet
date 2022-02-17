@@ -1,0 +1,22 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.BangTinhLuong                                                      
+==============================================================================
+Testsuites.BangTinhLuong.Payslip                                              
+==============================================================================
+Delete payslip in paysheet :: Xóa phi?u l??ng trong b?ng l??ng nh?... | PASS |
+------------------------------------------------------------------------------
+Testsuites.BangTinhLuong.Payslip                                      | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Testsuites.BangTinhLuong                                              | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Testsuites                                                            | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  D:\timesheet\out\pabot_results\Testsuites.BangTinhLuong.Payslip\output-20220217-172721.xml

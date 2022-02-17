@@ -1,0 +1,28 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.BangTinhLuong                                                      
+==============================================================================
+Testsuites.BangTinhLuong.Paysheet                                             
+==============================================================================
+Create paysheet :: Thêm m?i b?ng l??ng t?m tính                       | PASS |
+------------------------------------------------------------------------------
+Auto loading paysheet :: T?i l?i b?ng l??ng t?m tính                  | PASS |
+------------------------------------------------------------------------------
+Cancel paysheet :: Hu? b? b?ng l??ng t?m tính ko h?y phi?u thanh toán | PASS |
+------------------------------------------------------------------------------
+Cancel paysheet and cancel payment :: Hu? b? b?ng l??ng t?m tính v... | PASS |
+------------------------------------------------------------------------------
+Testsuites.BangTinhLuong.Paysheet                                     | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
+==============================================================================
+Testsuites.BangTinhLuong                                              | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
+==============================================================================
+Testsuites                                                            | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
+==============================================================================
+Output:  D:\timesheet\out\pabot_results\Testsuites.BangTinhLuong.Paysheet\output-20220217-172721.xml

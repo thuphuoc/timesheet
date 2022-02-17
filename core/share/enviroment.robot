@@ -16,6 +16,7 @@ Fill enviroment and get token
     ...                                                         zone1=https://testz1.kiotviet.vn/api
     ...                                                         59902=https://phuoc902.kvpos.com:59302/api
     ...                                                         59903=https://phuoc903.kvpos.com:59303/api
+    ...                                                         booking=https://bookinghcm.kvpos.com:9009/api
     ...                                                         fnb15=https://fnb.kiotviet.vn/api
 
     ${dict_enp_saleLogin}         Create Dictionary             zone5=/auth/salelogin
@@ -25,6 +26,7 @@ Fill enviroment and get token
     ...                                                         zone14=/auth/salelogin
     ...                                                         59902=/auth/salelogin
     ...                                                         59903=/auth/salelogin
+    ...                                                         booking=/auth/salelogin
     ...                                                         fnb15=/auth/salelogin
 
     ${dict_url}                   Create Dictionary             zone5=https://api-timesheet.kiotviet.vn
@@ -34,6 +36,7 @@ Fill enviroment and get token
     ...                                                         zone14=https://api-timesheet.kiotviet.vn
     ...                                                         59902=https://kvpos.com:55002
     ...                                                         59903=https://kvpos.com:55003
+    ...                                                         booking=https://timesheetapi.kvpos.com:9009
     ...                                                         fnb15=https://api-fnbtimesheet.kiotviet.vn
 
     ${dict_url_man}               Create Dictionary             zone5=https://api-man.kiotviet.vn/api
@@ -43,16 +46,17 @@ Fill enviroment and get token
     ...                                                         zone14=https://api-man.kiotviet.vn/api
     ...                                                         59902=https://kvpos.com:59932/api
     ...                                                         59903=https://kvpos.com:59933/api
+    ...                                                         booking=https://bookinghcm.kvpos.com:9009/api
     ...                                                         fnb15=https://fnb.kiotviet.vn/api
 
     ${dict_username}              Create Dictionary             zone5=admin             zone13=admin        zone12=admin        zone14=admin    zone1=admin
-    ...                                                         59902=1                 59903=1
+    ...                                                         59902=1                 59903=1             booking=1
     ...                                                         fnb15=admin
     ${dict_password}              Create Dictionary             zone5=123               zone13=123456       zone12=123456      zone14=123       zone1=123
-    ...                                                         59902=1                 59903=1
+    ...                                                         59902=1                 59903=1             booking=1
     ...                                                         fnb15=123
     ${dict_retailer}              Create Dictionary             zone5=auto5             zone13=testz13      zone12=testz12     zone14=auto14    zone1=testz1
-    ...                                                         59902=phuoc902          59903=phuoc903
+    ...                                                         59902=phuoc902          59903=phuoc903      booking=autobooking
     ...                                                         fnb15=testfnbz15a
     ###################################################################################################################################################################################
     ${username}                   get From Dictionary           ${dict_username}        ${env}
@@ -69,7 +73,7 @@ Fill enviroment and get token
     Set Global Variable           ${enp_saleLogin}              ${enp_saleLogin}
     Set Global Variable           ${url}                        ${url}
     Set Global Variable           ${url_man}                    ${url_man}
-############################################################################################################################################################################
+#########################################################################################################################################################
 
     ${header}                     Create Dictionary             retailer=${retailer}    Content-Type=application/json;charset=utf-8
     ${data_saleLogin}             Create Dictionary             UserName=${username}    Password=${password}
@@ -78,11 +82,27 @@ Fill enviroment and get token
     Log                           ${resp.json()}
     ${token}                      Get Value From Json KV        ${resp.json()}          $.BearerToken
     ${token}                      Catenate    Bearer            ${token}
-    ${branchId}                   Get Value From Json KV        ${resp.json()}          $.CurrentBranchId
-    ${branchId}                   Convert To String             ${branchId}
-    Set Global Variable           ${branchId}                   ${branchId}
     ${user_login}                 Get Value From Json KV        ${resp.json()}          $.UserId
     Set Global Variable           ${user_login}                 ${user_login}
+    Set Suite Variable            ${token}                      ${token}
+    ${random_str}=                Random a String Letter        4
+    Set Global Variable           ${random_str}                 ${random_str}
+    ${random_number}=             Random a Number               8
+    Set Global Variable           ${random_number}              ${random_number}
+    ${branchId}                   Get Value From Json KV        ${resp.json()}          $.CurrentBranchId
+    Set Global Variable           ${branchId}                   ${branchId}
+    Run Keyword If                '${env}'=='zone12'            Log                     RunRetail
+    ...         ELSE               Run Fnb                      ${resp.json()}
+    Set Header
+#########################################################################################################################################################
+Run Fnb
+    [Arguments]                   ${resp_json}
+    ${branchId}                   Get Value From Json KV        ${resp_json}          $.BranchId
+    Set Suite Variable            ${branchId}                   ${branchId}
+    Return From Keyword           ${branchId}
+########################################################################################################################################################
+Set Header
+    ${branchId}                   Convert To String             ${branchId}
     ${header}                     Create Dictionary             retailer=${retailer}    Content-Type=application/json;charset=utf-8    branchid=${branchId}     Authorization=${token}
     ${headers_not_contenType}     Create Dictionary             retailer=${retailer}    branchid=${branchId}     Authorization=${token}
     Set Global Variable           ${header}                     ${header}
@@ -91,8 +111,4 @@ Fill enviroment and get token
     Create Session                sessionMan                    ${url_man}              ${header}
     Set Global Variable           ${session}                    session
     Set Global Variable           ${session_man}                sessionMan
-    ${random_str}=                Random a String Letter        4
-    Set Global Variable           ${random_str}                 ${random_str}
-    ${random_number}=             Random a Number               8
-    Set Global Variable           ${random_number}              ${random_number}
-    ${name_branch}                Get Name Branch From Id       ${branchId}  
+    ${name_branch}                Get Name Branch From Id       ${branchId}

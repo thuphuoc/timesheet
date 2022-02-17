@@ -18,8 +18,7 @@ Create duplicate shift          [Tags]   all    shift
     [Documentation]             Thêm mới ca làm việc trùng  tên
     Format enp shift branch
     ${name}                     Get Value In List KV                    ${session}          ${enp_shift_branch}     $.result..name
-    Wait Until Keyword Succeeds    3x    2s    Check duplicate shift    ${name}
-
+    
 Create empty shift              [Tags]   all    shift
     [Documentation]             Thêm mới ca làm việc rỗng
     Format enp shift branch

@@ -5,7 +5,7 @@ Resource   ../../core/Share/enviroment.robot
 ***Variables***
 ${data_commission}              {"commission":{"id":[D0],"name":"[D1]","isAllBranch":true,"branchIds":[],"isActive":true}}
 ${enp_commission}               /commission
-${enp_category}                 /categories?IncludeProductNumber=true
+# ${enp_category}                 /categories?IncludeProductNumber=true
 ${enp_add_category}             /commission-details/create-by-category
 ${data_add_category}            {"commissionIds":[D0],"productCategory":{"id":[D1]}}
 ${enp_product}                  /branchs/[D0]/masterproducts?format=json&Includes=ProductAttributes&ForSummaryRow=true&CategoryId=0&AttributeFilter=%5B%5D&ProductTypes=&IsImei=2&IsFormulas=2&IsActive=true&AllowSale=&IsBatchExpireControl=2&ShelvesIds=&TrademarkIds=&StockoutDate=alltime&supplierIds=&take=10&skip=0&page=1&pageSize=10&filter%5Blogic%5D=and
@@ -57,7 +57,6 @@ Update Commission
     Should Be Equal             ${mess_expected}                     Cập nhật hoa hồng thành công
 
 Get RanDom a Product
-    ${CategoryId}               Get Id Category Product
     ${list_format}              Create List                          ${branchId}
     ${enp_product}              Format String Use [D0] [D1] [D2]     ${enp_product}        ${list_format}
     ${id_product}               Get Value In List KV                 ${session_man}        ${enp_product}           $.Data[?(@.Id!=-1)]..Id
