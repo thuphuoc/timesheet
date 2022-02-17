@@ -17,9 +17,10 @@ Format String Use [D0] [D1] [D2]
 Get Value From Json KV
     [Arguments]                     ${resp_json}                ${json_path}
     ${result}                       Get Value From Json         ${resp_json}                ${json_path}
-    ${lenght}                       Get Length                  ${result}
-    ${result}                       Get From List               ${result}    0
-    Run Keyword If                  ${lenght}==0                Return From Keyword         ${0}    ELSE   Return From Keyword   ${result}
+    ${length}                       Get Length                  ${result}
+    ${result}   Run Keyword If      ${length} != 0              Get From List    ${result}  0
+    Run Keyword If                  '${result}'=='None'         Return From Keyword   ${0}  ELSE   Return From Keyword   ${result}
+
 
 Get Request From KV
     [Arguments]                     ${session}                  ${endpoint}

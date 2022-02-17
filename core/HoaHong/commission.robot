@@ -8,8 +8,10 @@ ${enp_commission}               /commission
 ${enp_category}                 /categories?IncludeProductNumber=true
 ${enp_add_category}             /commission-details/create-by-category
 ${data_add_category}            {"commissionIds":[D0],"productCategory":{"id":[D1]}}
-${enp_product}                  /branchs/[D0]/masterproducts?format=json&Includes=ProductAttributes&ForSummaryRow=true&CategoryId=[D1]&AttributeFilter=%5B%5D&ProductTypes=&IsImei=2&IsFormulas=2&IsActive=true&AllowSale=&IsBatchExpireControl=2&ShelvesIds=&TrademarkIds=&StockoutDate=alltime&supplierIds=&take=10&skip=0&page=1&pageSize=10&filter%5Blogic%5D=and
+${enp_product}                  /branchs/[D0]/masterproducts?format=json&Includes=ProductAttributes&ForSummaryRow=true&CategoryId=0&AttributeFilter=%5B%5D&ProductTypes=&IsImei=2&IsFormulas=2&IsActive=true&AllowSale=&IsBatchExpireControl=2&ShelvesIds=&TrademarkIds=&StockoutDate=alltime&supplierIds=&take=10&skip=0&page=1&pageSize=10&filter%5Blogic%5D=and
 ${enp_add_product}              /commission-details/create-by-product
+${enp_del_product}              /commission-details/delete
+${data_del_product}             {"commissionIds":[[D0]],"products":[{"id":[D1]}]}
 ${data_add_product}             {"commissionIds":[D0],"product":{"id":[D1]}}
 ${enp_product_sold}             /commission-details/update-value
 ${data_product_sold}            {"product":{"Id":[D0],"CommissionId":[D1]},"totalCommissionIds":[[D2]],"value":[D3],"valueRatio":null,"isUpdateForAllCommission":[D4]}
@@ -32,6 +34,7 @@ Get Random ID Commission
 
 Get Id Category Product
     ${id_category}              Get Value In List KV                  ${session_man}        ${enp_category}         $..Id
+    Get Name Category From Id   ${id_category}
     Return From Keyword         ${id_category}
 
 Get Random Name Commission
@@ -53,9 +56,9 @@ Update Commission
     ${mess_expected}            Get Value From Json KV               ${resp}                $.message
     Should Be Equal             ${mess_expected}                     Cập nhật hoa hồng thành công
 
-Get RanDom a Product From Category
+Get RanDom a Product
     ${CategoryId}               Get Id Category Product
-    ${list_format}              Create List    ${branchId}           ${CategoryId}
+    ${list_format}              Create List                          ${branchId}
     ${enp_product}              Format String Use [D0] [D1] [D2]     ${enp_product}        ${list_format}
     ${id_product}               Get Value In List KV                 ${session_man}        ${enp_product}           $.Data[?(@.Id!=-1)]..Id
     Return From Keyword         ${id_product}
@@ -70,6 +73,13 @@ Add Product Into Commission
     ${list_format}              Create List                         ${id_commmission}       ${id_product}
     ${data_add_product}         Format String Use [D0] [D1] [D2]    ${data_add_product}     ${list_format}
     ${resp}                     Post Request Json KV                ${session}              ${enp_add_product}    ${data_add_product}       200
+    Return From Keyword         ${resp}
+
+Delete A Product Into Commission
+    [Arguments]                 ${id_commmission}                   ${id_product}
+    ${list_format}              Create List                         ${id_commmission}       ${id_product}
+    ${data_del_product}         Format String Use [D0] [D1] [D2]    ${data_del_product}     ${list_format}
+    ${resp}                     Update Request Json KV              ${session}              ${enp_del_product}    ${data_del_product}       200
     Return From Keyword         ${resp}
 
 Get Name Category From Id

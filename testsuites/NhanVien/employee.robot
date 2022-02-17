@@ -9,10 +9,9 @@ Resource        ../../core/share/share_random.robot
 Resource        ../../core/nhanvien/employee.robot
 Suite setup     Fill enviroment and get token    ${env}
 *** Test Cases ***
-# Tạo mới nhân viên có thiết lập lương nhưng ko có mẫu lương
 Create employee                   [Tags]   all    employee
     [Documentation]               Tạo mới nhân viên  và thiết lập lương ko có mẫu lương
-    ${resp}                       Create Employee     1235698                   NV${random_number}            ${random_str}         ${branchId}           ${branchId}    100000    200    300
+    ${resp}                       Create Employee     1235698           NV${random_number}            ${random_str}         ${branchId}           ${branchId}    100000    200    300
 
 Create duplicate employee         [Tags]   all    employee
     [Documentation]               Tạo mới nhân viên trùng mã nhân viên
@@ -41,7 +40,7 @@ Delete work schedule              [Tags]   all    employee
 
 Delete Employee                   [Tags]   all    employee
     [Documentation]               Xóa 1 nhân viên
-    Get Random ID Employee       
+    Get Random ID Employee
     Delete Request KV             ${session}                          ${enp_employee}/${id_employee}    200
 
 Delete multiple employee          [Tags]   all1    employee1

@@ -95,3 +95,4 @@ Fill enviroment and get token
     Set Global Variable           ${random_str}                 ${random_str}
     ${random_number}=             Random a Number               8
     Set Global Variable           ${random_number}              ${random_number}
+    ${name_branch}                Get Name Branch From Id       ${branchId}  

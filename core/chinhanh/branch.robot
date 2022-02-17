@@ -1,4 +1,7 @@
 *** Settings ***
+Library   JSONLibrary
+Library   Collections
+Library   RequestsLibrary
 Resource  ../../core/Share/share.robot
 Resource   ../../core/Share/share_random.robot
 Resource   ../../core/Share/enviroment.robot
@@ -18,7 +21,9 @@ Get A Branch In Active Branchs
 
 Get Name Branch From Id
     [Arguments]                 ${branchId}
-    ${name}                     Get Detail From Id KV   ${session_man}       ${enp_branch}/${branchId}       $.Name
+    ${resp}                     Get Request               ${session_man}     ${enp_branch}/${branchId}
+    Log                         ${resp.json()}
+    ${name}                     Get Value From Json       ${resp.json()}     $.Name
     Return From Keyword         ${name}
 
 Create Branch

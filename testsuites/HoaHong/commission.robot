@@ -36,19 +36,24 @@ Update commission               [Tags]                      all                 
     [Documentation]             Cập nhật hoa hồng
     Update Commission
 
+Add a product into commission   [Tags]                        all                       commission
+    [Documentation]             Tìm kiếm và thêm 1 hàng hóa vào bảng hoa hồng
+    Log                         ${name_commmission}
+    ${id_product}               Get RanDom a Product
+    Set Suite Variable          ${id_product}                   ${id_product}
+    ${code_product}             Get Code Product From ID                                 ${id_product}
+    ${resp}                     Add Product Into Commission     ${id_commmission}        ${id_product}
+
+Delete a product into commission   [Tags]          all         commission
+    [Documentation]             Xóa 1 hàng hóa đã add vô bảng hoa hồng
+    ${resp}                     Delete A Product Into Commission                        ${id_commmission}        ${id_product}
 
 Add Category Of Product Into Commission    [Tags]                        all            commission
     [Documentation]             Thêm nhóm hàng hóa vào bảng hoa hồng
     Log                         ${name_commmission}
     ${id_category}              Get Id Category Product
+    ${name_category}            Get Name Category From Id                               ${id_category}
     ${resp}                     Add Category Of Product Into Commission                 ${id_commmission}    ${id_category}
-
-Add a product into commission   [Tags]                        all                       commission
-    [Documentation]             Tìm kiếm và thêm 1 hàng hóa vào bảng hoa hồng
-    Log                         ${name_commmission}
-    ${id_product}               Get RanDom a Product From Category
-    ${code_product}             Get Code Product From ID                                ${id_product}
-    ${resp}                     Add Product Into Commission    ${id_commmission}        ${id_product}
 
 Update The Roses For All Product        [Tags]                        all               commission
     [Documentation]             Cập nhật TẤT CẢ mức áp dụng hoa hồng cho CÁC sản phẩm bán ra

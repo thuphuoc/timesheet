@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 3.0.4 (Python 3.8.8 on win32)" generated="20220217 11:08:56.330">
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220217 11:08:42.271">
 <suite id="s1" name="Testsuites" source="D:\timesheet\testsuites">
 <suite id="s1-s1" name="HoaHong" source="D:\timesheet\testsuites\HoaHong">
 <suite id="s1-s1-s1" name="Commission" source="D:\timesheet\testsuites\HoaHong\commission.robot">
@@ -3071,8 +3071,8 @@
 </tags>
 <status status="PASS" starttime="20220217 11:08:45.953" endtime="20220217 11:08:50.790" critical="yes"></status>
 </test>
-<test id="s1-s1-s1-t6" name="Delete A Product Into Commission">
-<kw name="Delete A Product Into Commission" library="commission">
+<test id="s1-s1-s1-t6" name="Delete a product into commission">
+<kw name="Delete a product into commission" library="commission">
 <arguments>
 <arg>${id_commmission}</arg>
 <arg>${id_product}</arg>

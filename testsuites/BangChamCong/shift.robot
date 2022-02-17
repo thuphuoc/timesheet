@@ -18,8 +18,7 @@ Create duplicate shift          [Tags]   all    shift
     [Documentation]             Thêm mới ca làm việc trùng  tên
     Format enp shift branch
     ${name}                     Get Value In List KV                    ${session}          ${enp_shift_branch}     $.result..name
-    ${resp}                     Create shift        ${random_number}    ${name}             ${branchId}             400
-    Get Message Expected        ${resp}             $.errors..message   Tên ca đã tồn tại
+    Wait Until Keyword Succeeds    3x    2s    Check duplicate shift    ${name}
 
 Create empty shift              [Tags]   all    shift
     [Documentation]             Thêm mới ca làm việc rỗng
@@ -37,3 +36,9 @@ Delete shift                    [Tags]   all    shift
     [Documentation]             Xóa ca làm việc
     Format enp shift branch
     Delete Shift
+
+*** Keywords ***
+Check duplicate shift
+    [Arguments]                 ${name}
+    ${resp}                     Create shift        ${random_number}    ${name}             ${branchId}             400
+    Get Message Expected        ${resp}             $.errors..message   Tên ca đã tồn tại

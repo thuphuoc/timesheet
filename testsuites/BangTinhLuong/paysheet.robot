@@ -49,9 +49,6 @@ Cancel paysheet and cancel payment                    [Tags]             all    
       ${data_cancel_paysheet}     Format String Use [D0] [D1] [D2]                      ${data_cancel_paysheet}              ${list_format}
       ${resp}             Update Request Json KV              ${session}                ${enp_cancel_paysheet}               ${data_cancel_paysheet}    200
 
-Pay salary at payroll screen
-      [Documentation]           Thanh toán lương tại màn hình bảng lương
-
 *** Keywords ***
 # Lấy được các trạng thái của bảng lương
 Get Id In List Paysheets
