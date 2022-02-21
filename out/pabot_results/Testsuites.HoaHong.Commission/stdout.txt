@@ -7,34 +7,40 @@ Testsuites.HoaHong.Commission
 ==============================================================================
 Create commission :: Thêm m?i hoa h?ng                                | PASS |
 ------------------------------------------------------------------------------
-Create duplicate commission :: Thêm m?i hoa h?ng trùng tên            | PASS |
+Create duplicate commission :: Thêm m?i hoa h?ng trùng tên            | FAIL |
+400 != 200
 ------------------------------------------------------------------------------
 Create empty commission :: Thêm m?i hoa h?ng r?ng                     | PASS |
 ------------------------------------------------------------------------------
-Update commission :: C?p nh?t hoa h?ng                                | PASS |
+Update commission :: C?p nh?t hoa h?ng                                | FAIL |
+400 != 200
 ------------------------------------------------------------------------------
 Add a product into commission :: Tìm ki?m và thêm 1 hàng hóa vào b... | PASS |
 ------------------------------------------------------------------------------
 Delete a product into commission :: Xóa 1 hàng hóa ?ã add vô b?ng ... | PASS |
 ------------------------------------------------------------------------------
-Add Category Of Product Into Commission :: Thêm nhóm hàng hóa vào ... | PASS |
+Add Category Of Product Into Commission :: Thêm nhóm hàng hóa vào ... | FAIL |
+400 != 200
 ------------------------------------------------------------------------------
-Update The Roses For All Product :: C?p nh?t T?T C? m?c áp d?ng ho... | PASS |
+Update The Roses For All Product :: C?p nh?t T?T C? m?c áp d?ng ho... | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
-Update The Roses For A Product :: C?p nh?t m?c áp d?ng hoa h?ng ch... | PASS |
+Update The Roses For A Product :: C?p nh?t m?c áp d?ng hoa h?ng ch... | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
-Delete commission :: Xóa hoa h?ng                                     | PASS |
+Delete commission :: Xóa hoa h?ng                                     | FAIL |
+400 != 200
 ------------------------------------------------------------------------------
-Testsuites.HoaHong.Commission                                         | PASS |
-10 critical tests, 10 passed, 0 failed
-10 tests total, 10 passed, 0 failed
+Testsuites.HoaHong.Commission                                         | FAIL |
+10 critical tests, 4 passed, 6 failed
+10 tests total, 4 passed, 6 failed
 ==============================================================================
-Testsuites.HoaHong                                                    | PASS |
-10 critical tests, 10 passed, 0 failed
-10 tests total, 10 passed, 0 failed
+Testsuites.HoaHong                                                    | FAIL |
+10 critical tests, 4 passed, 6 failed
+10 tests total, 4 passed, 6 failed
 ==============================================================================
-Testsuites                                                            | PASS |
-10 critical tests, 10 passed, 0 failed
-10 tests total, 10 passed, 0 failed
+Testsuites                                                            | FAIL |
+10 critical tests, 4 passed, 6 failed
+10 tests total, 4 passed, 6 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.HoaHong.Commission\output-20220217-172723.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.HoaHong.Commission\output-20220218-154345.xml

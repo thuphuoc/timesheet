@@ -1,0 +1,1844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220218 15:43:43.884">
+<suite id="s1" name="Testsuites" source="D:\timesheet\testsuites">
+<suite id="s1-s1" name="ChiNhanh" source="D:\timesheet\testsuites\ChiNhanh">
+<suite id="s1-s1-s1" name="Branch" source="D:\timesheet\testsuites\ChiNhanh\branch.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://auto5.kiotviet.vn/api</arg>
+<arg>zone13=https://testz13.kiotviet.vn/api</arg>
+<arg>zone12=https://testz12.kiotviet.vn/api</arg>
+<arg>zone14=https://auto14.kiotviet.vn/api</arg>
+<arg>zone9=https://taphoa.kiotviet.vn/api</arg>
+<arg>zone1=https://testz1.kiotviet.vn/api</arg>
+<arg>59902=https://phuoc902.kvpos.com:59302/api</arg>
+<arg>59903=https://phuoc903.kvpos.com:59303/api</arg>
+<arg>booking=https://bookinghcm.kvpos.com:9009/api</arg>
+<arg>fnb15=https://fnb.kiotviet.vn/api</arg>
+</arguments>
+<assign>
+<var>${dict_url_saleLogin}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.194" level="INFO">${dict_url_saleLogin} = {'zone5': 'https://auto5.kiotviet.vn/api', 'zone13': 'https://testz13.kiotviet.vn/api', 'zone12': 'https://testz12.kiotviet.vn/api', 'zone14': 'https://auto14.kiotviet.vn/api', 'zone9': 'https://tapho...</msg>
+<status status="PASS" starttime="20220218 15:43:44.194" endtime="20220218 15:43:44.194"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=/auth/salelogin</arg>
+<arg>zone13=/auth/salelogin</arg>
+<arg>zone12=/auth/salelogin</arg>
+<arg>zone1=/auth/salelogin</arg>
+<arg>zone14=/auth/salelogin</arg>
+<arg>zone9=/auth/salelogin</arg>
+<arg>59902=/auth/salelogin</arg>
+<arg>59903=/auth/salelogin</arg>
+<arg>booking=/auth/salelogin</arg>
+<arg>fnb15=/auth/salelogin</arg>
+</arguments>
+<assign>
+<var>${dict_enp_saleLogin}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.195" level="INFO">${dict_enp_saleLogin} = {'zone5': '/auth/salelogin', 'zone13': '/auth/salelogin', 'zone12': '/auth/salelogin', 'zone1': '/auth/salelogin', 'zone14': '/auth/salelogin', 'zone9': '/auth/salelogin', '59902': '/auth/salelogin', ...</msg>
+<status status="PASS" starttime="20220218 15:43:44.194" endtime="20220218 15:43:44.195"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone13=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone12=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone1=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone14=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone9=https://api-timesheet2.kiotviet.vn</arg>
+<arg>59902=https://kvpos.com:55002</arg>
+<arg>59903=https://kvpos.com:55003</arg>
+<arg>booking=https://timesheetapi.kvpos.com:9009</arg>
+<arg>fnb15=https://api-fnbtimesheet.kiotviet.vn</arg>
+</arguments>
+<assign>
+<var>${dict_url}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.195" level="INFO">${dict_url} = {'zone5': 'https://api-timesheet.kiotviet.vn', 'zone13': 'https://api-timesheet.kiotviet.vn', 'zone12': 'https://api-timesheet.kiotviet.vn', 'zone1': 'https://api-timesheet.kiotviet.vn', 'zone14': 'ht...</msg>
+<status status="PASS" starttime="20220218 15:43:44.195" endtime="20220218 15:43:44.195"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://api-man.kiotviet.vn/api</arg>
+<arg>zone13=https://api-man.kiotviet.vn/api</arg>
+<arg>zone12=https://api-man.kiotviet.vn/api</arg>
+<arg>zone1=https://api-man.kiotviet.vn/api</arg>
+<arg>zone14=https://api-man.kiotviet.vn/api</arg>
+<arg>zone9=https://api-man3.kiotviet.vn/api</arg>
+<arg>59902=https://kvpos.com:59932/api</arg>
+<arg>59903=https://kvpos.com:59933/api</arg>
+<arg>booking=https://bookinghcm.kvpos.com:9009/api</arg>
+<arg>fnb15=https://fnb.kiotviet.vn/api</arg>
+</arguments>
+<assign>
+<var>${dict_url_man}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.195" level="INFO">${dict_url_man} = {'zone5': 'https://api-man.kiotviet.vn/api', 'zone13': 'https://api-man.kiotviet.vn/api', 'zone12': 'https://api-man.kiotviet.vn/api', 'zone1': 'https://api-man.kiotviet.vn/api', 'zone14': 'https://ap...</msg>
+<status status="PASS" starttime="20220218 15:43:44.195" endtime="20220218 15:43:44.195"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=admin</arg>
+<arg>zone13=admin</arg>
+<arg>zone12=admin</arg>
+<arg>zone14=admin</arg>
+<arg>zone1=admin</arg>
+<arg>zone9=taphoa</arg>
+<arg>59902=1</arg>
+<arg>59903=1</arg>
+<arg>booking=1</arg>
+<arg>fnb15=admin</arg>
+</arguments>
+<assign>
+<var>${dict_username}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.196" level="INFO">${dict_username} = {'zone5': 'admin', 'zone13': 'admin', 'zone12': 'admin', 'zone14': 'admin', 'zone1': 'admin', 'zone9': 'taphoa', '59902': '1', '59903': '1', 'booking': '1', 'fnb15': 'admin'}</msg>
+<status status="PASS" starttime="20220218 15:43:44.195" endtime="20220218 15:43:44.196"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=123</arg>
+<arg>zone13=123456</arg>
+<arg>zone12=123456</arg>
+<arg>zone14=123</arg>
+<arg>zone1=123</arg>
+<arg>zone9=123456</arg>
+<arg>59902=1</arg>
+<arg>59903=1</arg>
+<arg>booking=1</arg>
+<arg>fnb15=123</arg>
+</arguments>
+<assign>
+<var>${dict_password}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.196" level="INFO">${dict_password} = {'zone5': '123', 'zone13': '123456', 'zone12': '123456', 'zone14': '123', 'zone1': '123', 'zone9': '123456', '59902': '1', '59903': '1', 'booking': '1', 'fnb15': '123'}</msg>
+<status status="PASS" starttime="20220218 15:43:44.196" endtime="20220218 15:43:44.196"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=auto5</arg>
+<arg>zone13=testz13</arg>
+<arg>zone12=testz12</arg>
+<arg>zone14=auto14</arg>
+<arg>zone1=testz1</arg>
+<arg>zone9=taphoa</arg>
+<arg>59902=phuoc902</arg>
+<arg>59903=phuoc903</arg>
+<arg>booking=autobooking</arg>
+<arg>fnb15=testfnbz15a</arg>
+</arguments>
+<assign>
+<var>${dict_retailer}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.196" level="INFO">${dict_retailer} = {'zone5': 'auto5', 'zone13': 'testz13', 'zone12': 'testz12', 'zone14': 'auto14', 'zone1': 'testz1', 'zone9': 'taphoa', '59902': 'phuoc902', '59903': 'phuoc903', 'booking': 'autobooking', 'fnb15': 'tes...</msg>
+<status status="PASS" starttime="20220218 15:43:44.196" endtime="20220218 15:43:44.196"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_username}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.196" level="INFO">${username} = taphoa</msg>
+<status status="PASS" starttime="20220218 15:43:44.196" endtime="20220218 15:43:44.197"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_password}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.197" level="INFO">${password} = 123456</msg>
+<status status="PASS" starttime="20220218 15:43:44.197" endtime="20220218 15:43:44.197"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_retailer}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${retailer}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.197" level="INFO">${retailer} = taphoa</msg>
+<status status="PASS" starttime="20220218 15:43:44.197" endtime="20220218 15:43:44.197"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url_saleLogin}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url_saleLogin}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.197" level="INFO">${url_saleLogin} = https://taphoa.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220218 15:43:44.197" endtime="20220218 15:43:44.197"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_enp_saleLogin}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${enp_saleLogin}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.198" level="INFO">${enp_saleLogin} = /auth/salelogin</msg>
+<status status="PASS" starttime="20220218 15:43:44.198" endtime="20220218 15:43:44.198"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.198" level="INFO">${url} = https://api-timesheet2.kiotviet.vn</msg>
+<status status="PASS" starttime="20220218 15:43:44.198" endtime="20220218 15:43:44.198"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url_man}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url_man}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.198" level="INFO">${url_man} = https://api-man3.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220218 15:43:44.198" endtime="20220218 15:43:44.198"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:44.199" level="INFO">${username} = taphoa</msg>
+<status status="PASS" starttime="20220218 15:43:44.198" endtime="20220218 15:43:44.199"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:44.199" level="INFO">${password} = 123456</msg>
+<status status="PASS" starttime="20220218 15:43:44.199" endtime="20220218 15:43:44.199"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${retailer}</arg>
+<arg>${retailer}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:44.199" level="INFO">${retailer} = taphoa</msg>
+<status status="PASS" starttime="20220218 15:43:44.199" endtime="20220218 15:43:44.199"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url_saleLogin}</arg>
+<arg>${url_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:44.199" level="INFO">${url_saleLogin} = https://taphoa.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220218 15:43:44.199" endtime="20220218 15:43:44.199"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${enp_saleLogin}</arg>
+<arg>${enp_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:44.200" level="INFO">${enp_saleLogin} = /auth/salelogin</msg>
+<status status="PASS" starttime="20220218 15:43:44.200" endtime="20220218 15:43:44.200"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:44.200" level="INFO">${url} = https://api-timesheet2.kiotviet.vn</msg>
+<status status="PASS" starttime="20220218 15:43:44.200" endtime="20220218 15:43:44.200"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url_man}</arg>
+<arg>${url_man}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:44.200" level="INFO">${url_man} = https://api-man3.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220218 15:43:44.200" endtime="20220218 15:43:44.200"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.201" level="INFO">${header} = {'retailer': 'taphoa', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20220218 15:43:44.200" endtime="20220218 15:43:44.201"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>UserName=${username}</arg>
+<arg>Password=${password}</arg>
+</arguments>
+<assign>
+<var>${data_saleLogin}</var>
+</assign>
+<msg timestamp="20220218 15:43:44.201" level="INFO">${data_saleLogin} = {'UserName': 'taphoa', 'Password': '123456'}</msg>
+<status status="PASS" starttime="20220218 15:43:44.201" endtime="20220218 15:43:44.201"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>sessionLogin</arg>
+<arg>${url_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:44.201" level="INFO">Creating Session using : alias=sessionLogin, url=https://taphoa.kiotviet.vn/api, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220218 15:43:44.201" endtime="20220218 15:43:44.201"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>sessionLogin</arg>
+<arg>${enp_saleLogin}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_saleLogin}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.086" level="INFO">Post Request using : alias=sessionLogin, uri=/auth/salelogin, data={"UserName": "taphoa", "Password": "123456"}, headers={'retailer': 'taphoa', 'Content-Type': 'application/json;charset=utf-8'}, files=None, allow_redirects=True </msg>
+<msg timestamp="20220218 15:43:45.086" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'taphoa.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-man3.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220218 15:43:45.086" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220218 15:43:44.201" endtime="20220218 15:43:45.086"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.086" level="INFO">{'UserId': 263, 'UserName': 'taphoa', 'SessionId': 'BUT3s7dQod3DWRbBq6ff', 'BearerToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YXBob2EiLCJyb2xlcyI6WyJVc2VyIl0sImt2c2VzIjoiOTFkZjQzNWZkNzA2NDI5NmE2N2FlMjZlYjE2MzBmYjEiLCJrdnVpZCI6MjYzLCJrdmxhbmciOiJ2aS1WTiIsImt2dXR5cGUiOjAsImt2dWxpbWl0IjoiRmFsc2UiLCJrdnVhZG1pbiI6IlRydWUiLCJrdnVhY3QiOiJUcnVlIiwia3Z1bGltaXR0cmFucyI6IkZhbHNlIiwia3Z1c2hvd3N1bSI6IlRydWUiLCJrdmJpZCI6MSwia3ZyaW5kaWQiOjIsImt2cmNvZGUiOiJ0YXBob2EiLCJrdnJpZCI6MTQ5LCJrdnVyaWQiOjE0OSwia3ZyZ2lkIjo5LCJwZXJtcyI6IiJ9.k4ASEzofiJXabdMn41avTTk1e-ZS9cVsg9wtcoNndKgWdcrhsR6cgyEqWPMnW0nHGyHynnuAzt9XBwuau7zyNY2r7p2GXriYUsj-bwj9mQgv9dokkhkd4nrb1RBNeYuQKDp1Z3htlR3FSGmmctVUFWz0r-_SRlFcEmI0y0lofBnYWAIjF5BsPvILozaBIxfc3NxFyBwkrX-sLI1IxXwxCZ6PokRvli0kUTQH0JWpvNT0E-NbYGG8kkmM_jBZeo0mrrUc5UKmjuS9QAqpsF4uMnN2r5q0E0hyeWAqWlNj5N-xZ_SIzGi-_ptTwzN2RCrXrXIVfS4DKQ3XRGwZHgBTag', 'CurrentBranchId': 1, 'IsShowNotificationPopupDr': True, 'IsOTPVerifcationRequired': False}</msg>
+<status status="PASS" starttime="20220218 15:43:45.086" endtime="20220218 15:43:45.086"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.BearerToken</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.109" level="INFO">${result} = ['eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YXBob2EiLCJyb2xlcyI6WyJVc2VyIl0sI...</msg>
+<status status="PASS" starttime="20220218 15:43:45.087" endtime="20220218 15:43:45.109"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.109" level="INFO">Length is 1</msg>
+<msg timestamp="20220218 15:43:45.109" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20220218 15:43:45.109" endtime="20220218 15:43:45.109"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} != 0</arg>
+<arg>Get From List</arg>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20220218 15:43:45.110" endtime="20220218 15:43:45.110"></status>
+</kw>
+<msg timestamp="20220218 15:43:45.110" level="INFO">${result} = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YXBob2EiLCJyb2xlcyI6WyJVc2VyIl0sImt...</msg>
+<status status="PASS" starttime="20220218 15:43:45.109" endtime="20220218 15:43:45.110"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${result}'=='None'</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.110" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:45.110" endtime="20220218 15:43:45.111"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:45.110" endtime="20220218 15:43:45.111"></status>
+</kw>
+<msg timestamp="20220218 15:43:45.111" level="INFO">${token} = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YXBob2EiLCJyb2xlcyI6WyJVc2VyIl0sImt...</msg>
+<status status="PASS" starttime="20220218 15:43:45.087" endtime="20220218 15:43:45.111"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>Bearer</arg>
+<arg>${token}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.111" level="INFO">${token} = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YXBob2EiLCJyb2xlcyI6WyJVc2Vy...</msg>
+<status status="PASS" starttime="20220218 15:43:45.111" endtime="20220218 15:43:45.111"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.UserId</arg>
+</arguments>
+<assign>
+<var>${user_login}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.130" level="INFO">${result} = [263]</msg>
+<status status="PASS" starttime="20220218 15:43:45.111" endtime="20220218 15:43:45.130"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.130" level="INFO">Length is 1</msg>
+<msg timestamp="20220218 15:43:45.130" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20220218 15:43:45.130" endtime="20220218 15:43:45.130"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} != 0</arg>
+<arg>Get From List</arg>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20220218 15:43:45.130" endtime="20220218 15:43:45.131"></status>
+</kw>
+<msg timestamp="20220218 15:43:45.131" level="INFO">${result} = 263</msg>
+<status status="PASS" starttime="20220218 15:43:45.130" endtime="20220218 15:43:45.131"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${result}'=='None'</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.131" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:45.131" endtime="20220218 15:43:45.131"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:45.131" endtime="20220218 15:43:45.131"></status>
+</kw>
+<msg timestamp="20220218 15:43:45.132" level="INFO">${user_login} = 263</msg>
+<status status="PASS" starttime="20220218 15:43:45.111" endtime="20220218 15:43:45.132"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${user_login}</arg>
+<arg>${user_login}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.132" level="INFO">${user_login} = 263</msg>
+<status status="PASS" starttime="20220218 15:43:45.132" endtime="20220218 15:43:45.132"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${token}</arg>
+<arg>${token}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.132" level="INFO">${token} = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YXBob2EiLCJyb2xlcyI6WyJVc2Vy...</msg>
+<status status="PASS" starttime="20220218 15:43:45.132" endtime="20220218 15:43:45.132"></status>
+</kw>
+<kw name="Random a String Letter" library="share_random">
+<arguments>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${random_str}</var>
+</assign>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_str}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.133" level="INFO">${random_str} = fKCz</msg>
+<status status="PASS" starttime="20220218 15:43:45.133" endtime="20220218 15:43:45.133"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${random_str}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.133" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:45.133" endtime="20220218 15:43:45.133"></status>
+</kw>
+<msg timestamp="20220218 15:43:45.133" level="INFO">${random_str} = fKCz</msg>
+<status status="PASS" starttime="20220218 15:43:45.132" endtime="20220218 15:43:45.133"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${random_str}</arg>
+<arg>${random_str}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.133" level="INFO">${random_str} = fKCz</msg>
+<status status="PASS" starttime="20220218 15:43:45.133" endtime="20220218 15:43:45.133"></status>
+</kw>
+<kw name="Random a Number" library="share_random">
+<arguments>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${random_number}</var>
+</assign>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${random_number}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.134" level="INFO">${random_number} = 56743159</msg>
+<status status="PASS" starttime="20220218 15:43:45.134" endtime="20220218 15:43:45.134"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${random_number}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.134" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:45.134" endtime="20220218 15:43:45.134"></status>
+</kw>
+<msg timestamp="20220218 15:43:45.134" level="INFO">${random_number} = 56743159</msg>
+<status status="PASS" starttime="20220218 15:43:45.133" endtime="20220218 15:43:45.134"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${random_number}</arg>
+<arg>${random_number}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.134" level="INFO">${random_number} = 56743159</msg>
+<status status="PASS" starttime="20220218 15:43:45.134" endtime="20220218 15:43:45.134"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.CurrentBranchId</arg>
+</arguments>
+<assign>
+<var>${branchId}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.157" level="INFO">${result} = [1]</msg>
+<status status="PASS" starttime="20220218 15:43:45.135" endtime="20220218 15:43:45.157"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.157" level="INFO">Length is 1</msg>
+<msg timestamp="20220218 15:43:45.157" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20220218 15:43:45.157" endtime="20220218 15:43:45.157"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} != 0</arg>
+<arg>Get From List</arg>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20220218 15:43:45.157" endtime="20220218 15:43:45.157"></status>
+</kw>
+<msg timestamp="20220218 15:43:45.158" level="INFO">${result} = 1</msg>
+<status status="PASS" starttime="20220218 15:43:45.157" endtime="20220218 15:43:45.158"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${result}'=='None'</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.158" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:45.158" endtime="20220218 15:43:45.158"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:45.158" endtime="20220218 15:43:45.158"></status>
+</kw>
+<msg timestamp="20220218 15:43:45.158" level="INFO">${branchId} = 1</msg>
+<status status="PASS" starttime="20220218 15:43:45.134" endtime="20220218 15:43:45.158"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${branchId}</arg>
+<arg>${branchId}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.158" level="INFO">${branchId} = 1</msg>
+<status status="PASS" starttime="20220218 15:43:45.158" endtime="20220218 15:43:45.158"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${env}'=='zone9'</arg>
+<arg>Log</arg>
+<arg>RunRetail</arg>
+<arg>ELSE</arg>
+<arg>Run Fnb</arg>
+<arg>${resp.json()}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>RunRetail</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.159" level="INFO">RunRetail</msg>
+<status status="PASS" starttime="20220218 15:43:45.159" endtime="20220218 15:43:45.159"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:45.159" endtime="20220218 15:43:45.159"></status>
+</kw>
+<kw name="Set Header" library="enviroment">
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${branchId}</arg>
+</arguments>
+<assign>
+<var>${branchId}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.160" level="INFO">${branchId} = 1</msg>
+<status status="PASS" starttime="20220218 15:43:45.159" endtime="20220218 15:43:45.160"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+<arg>branchid=${branchId}</arg>
+<arg>Authorization=${token}</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.160" level="INFO">${header} = {'retailer': 'taphoa', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '1', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoy...</msg>
+<status status="PASS" starttime="20220218 15:43:45.160" endtime="20220218 15:43:45.160"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>branchid=${branchId}</arg>
+<arg>Authorization=${token}</arg>
+</arguments>
+<assign>
+<var>${headers_not_contenType}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.161" level="INFO">${headers_not_contenType} = {'retailer': 'taphoa', 'branchid': '1', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LC...</msg>
+<status status="PASS" starttime="20220218 15:43:45.161" endtime="20220218 15:43:45.161"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${header}</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.161" level="INFO">${header} = {'retailer': 'taphoa', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '1', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoy...</msg>
+<status status="PASS" starttime="20220218 15:43:45.161" endtime="20220218 15:43:45.161"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${headers_not_contenType}</arg>
+<arg>${headers_not_contenType}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.162" level="INFO">${headers_not_contenType} = {'retailer': 'taphoa', 'branchid': '1', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LC...</msg>
+<status status="PASS" starttime="20220218 15:43:45.161" endtime="20220218 15:43:45.162"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>session</arg>
+<arg>${url}</arg>
+<arg>${headers_not_contenType}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.162" level="INFO">Creating Session using : alias=session, url=https://api-timesheet2.kiotviet.vn, headers={'retailer': 'taphoa', 'branchid': '1', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YXBob2EiLCJyb2xlcyI6WyJVc2VyIl0sImt2c2VzIjoiOTFkZjQzNWZkNzA2NDI5NmE2N2FlMjZlYjE2MzBmYjEiLCJrdnVpZCI6MjYzLCJrdmxhbmciOiJ2aS1WTiIsImt2dXR5cGUiOjAsImt2dWxpbWl0IjoiRmFsc2UiLCJrdnVhZG1pbiI6IlRydWUiLCJrdnVhY3QiOiJUcnVlIiwia3Z1bGltaXR0cmFucyI6IkZhbHNlIiwia3Z1c2hvd3N1bSI6IlRydWUiLCJrdmJpZCI6MSwia3ZyaW5kaWQiOjIsImt2cmNvZGUiOiJ0YXBob2EiLCJrdnJpZCI6MTQ5LCJrdnVyaWQiOjE0OSwia3ZyZ2lkIjo5LCJwZXJtcyI6IiJ9.k4ASEzofiJXabdMn41avTTk1e-ZS9cVsg9wtcoNndKgWdcrhsR6cgyEqWPMnW0nHGyHynnuAzt9XBwuau7zyNY2r7p2GXriYUsj-bwj9mQgv9dokkhkd4nrb1RBNeYuQKDp1Z3htlR3FSGmmctVUFWz0r-_SRlFcEmI0y0lofBnYWAIjF5BsPvILozaBIxfc3NxFyBwkrX-sLI1IxXwxCZ6PokRvli0kUTQH0JWpvNT0E-NbYGG8kkmM_jBZeo0mrrUc5UKmjuS9QAqpsF4uMnN2r5q0E0hyeWAqWlNj5N-xZ_SIzGi-_ptTwzN2RCrXrXIVfS4DKQ3XRGwZHgBTag'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220218 15:43:45.162" endtime="20220218 15:43:45.162"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>sessionMan</arg>
+<arg>${url_man}</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.163" level="INFO">Creating Session using : alias=sessionMan, url=https://api-man3.kiotviet.vn/api, headers={'retailer': 'taphoa', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '1', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YXBob2EiLCJyb2xlcyI6WyJVc2VyIl0sImt2c2VzIjoiOTFkZjQzNWZkNzA2NDI5NmE2N2FlMjZlYjE2MzBmYjEiLCJrdnVpZCI6MjYzLCJrdmxhbmciOiJ2aS1WTiIsImt2dXR5cGUiOjAsImt2dWxpbWl0IjoiRmFsc2UiLCJrdnVhZG1pbiI6IlRydWUiLCJrdnVhY3QiOiJUcnVlIiwia3Z1bGltaXR0cmFucyI6IkZhbHNlIiwia3Z1c2hvd3N1bSI6IlRydWUiLCJrdmJpZCI6MSwia3ZyaW5kaWQiOjIsImt2cmNvZGUiOiJ0YXBob2EiLCJrdnJpZCI6MTQ5LCJrdnVyaWQiOjE0OSwia3ZyZ2lkIjo5LCJwZXJtcyI6IiJ9.k4ASEzofiJXabdMn41avTTk1e-ZS9cVsg9wtcoNndKgWdcrhsR6cgyEqWPMnW0nHGyHynnuAzt9XBwuau7zyNY2r7p2GXriYUsj-bwj9mQgv9dokkhkd4nrb1RBNeYuQKDp1Z3htlR3FSGmmctVUFWz0r-_SRlFcEmI0y0lofBnYWAIjF5BsPvILozaBIxfc3NxFyBwkrX-sLI1IxXwxCZ6PokRvli0kUTQH0JWpvNT0E-NbYGG8kkmM_jBZeo0mrrUc5UKmjuS9QAqpsF4uMnN2r5q0E0hyeWAqWlNj5N-xZ_SIzGi-_ptTwzN2RCrXrXIVfS4DKQ3XRGwZHgBTag'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220218 15:43:45.163" endtime="20220218 15:43:45.163"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>session</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.164" level="INFO">${session} = session</msg>
+<status status="PASS" starttime="20220218 15:43:45.163" endtime="20220218 15:43:45.164"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${session_man}</arg>
+<arg>sessionMan</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.164" level="INFO">${session_man} = sessionMan</msg>
+<status status="PASS" starttime="20220218 15:43:45.164" endtime="20220218 15:43:45.164"></status>
+</kw>
+<kw name="Get Name Branch From Id" library="branch">
+<arguments>
+<arg>${branchId}</arg>
+</arguments>
+<assign>
+<var>${name_branch}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session_man}</arg>
+<arg>${enp_branch}/${branchId}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.306" level="INFO">Get Request using : alias=sessionMan, uri=/branchs/1, headers=None json=None</msg>
+<msg timestamp="20220218 15:43:45.306" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-man3.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220218 15:43:45.306" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220218 15:43:45.165" endtime="20220218 15:43:45.306"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.308" level="INFO">{'Id': 1, 'Name': 'CNTT', 'Type': 0, 'Address': '136 BAN CO , PHUONG 3, QUAN 3, TP.HCM', 'Province': 'Hồ Chí Minh', 'District': 'Quận 3', 'ContactNumber': '0976164444', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hồ Chí Minh - Quận 3', 'WardName': 'Phường 01', 'isAcceptBookClosing': True, 'BookClosingDate': '2019-03-31T00:00:00.0000000+07:00', 'GmbStatus': 1, 'GmbLocationName': 'locations/16409336007349460349', 'GmbEmail': 'nguyenluancntt7@gmail.com', 'SubContactNumber': '0315642112', 'ConfirmStatus': 1, 'Orders': [], 'Transfers1': [], 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 0, 'CompareBranchName': 'CNTT', 'StatusGmbValue': 'Chưa đăng ký', 'IsTimeSheetException': False, 'LocationId': 0, 'WardId': 0, 'SyncProductSearchEventId': 0}</msg>
+<status status="PASS" starttime="20220218 15:43:45.307" endtime="20220218 15:43:45.308"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.Name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.348" level="INFO">${name} = ['CNTT']</msg>
+<status status="PASS" starttime="20220218 15:43:45.308" endtime="20220218 15:43:45.348"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.349" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:45.348" endtime="20220218 15:43:45.349"></status>
+</kw>
+<msg timestamp="20220218 15:43:45.349" level="INFO">${name_branch} = ['CNTT']</msg>
+<status status="PASS" starttime="20220218 15:43:45.164" endtime="20220218 15:43:45.349"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:45.159" endtime="20220218 15:43:45.349"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:44.194" endtime="20220218 15:43:45.349"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="Create Branch">
+<kw name="Create Branch" library="branch">
+<arguments>
+<arg>${name} ${random_str}</arg>
+<arg>${phonenumber}</arg>
+<arg>${address}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${phonenumber}</arg>
+<arg>${address}</arg>
+</arguments>
+<assign>
+<var>${list_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.351" level="INFO">${list_format} = ['Chi nhanh fKCz', '0368199698', 'so 1']</msg>
+<status status="PASS" starttime="20220218 15:43:45.350" endtime="20220218 15:43:45.351"></status>
+</kw>
+<kw name="Format String Use [D0] [D1] [D2]" library="share">
+<arguments>
+<arg>${data_create_branch}</arg>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${data_create_branch}</var>
+</assign>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.351" level="INFO">Length is 3</msg>
+<msg timestamp="20220218 15:43:45.351" level="INFO">${length} = 3</msg>
+<status status="PASS" starttime="20220218 15:43:45.351" endtime="20220218 15:43:45.351"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.352" level="INFO">${value_temp} = Chi nhanh fKCz</msg>
+<status status="PASS" starttime="20220218 15:43:45.351" endtime="20220218 15:43:45.352"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.352" level="INFO">${value_temp} = Chi nhanh fKCz</msg>
+<status status="PASS" starttime="20220218 15:43:45.352" endtime="20220218 15:43:45.352"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.352" level="INFO">${data_format} = {"Branch":{"Name":"Chi nhanh fKCz","ContactNumber":"[D1]","Address":"[D2]","LocationName":"Hồ Chí Minh - Thành phố Thủ Đức","WardName":"Phường An Khánh"},"BranchSetting":{"workingDays":[1,2,3,4,5,6]}}</msg>
+<status status="PASS" starttime="20220218 15:43:45.352" endtime="20220218 15:43:45.352"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:45.351" endtime="20220218 15:43:45.352"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.353" level="INFO">${value_temp} = 0368199698</msg>
+<status status="PASS" starttime="20220218 15:43:45.352" endtime="20220218 15:43:45.353"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.353" level="INFO">${value_temp} = 0368199698</msg>
+<status status="PASS" starttime="20220218 15:43:45.353" endtime="20220218 15:43:45.353"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.353" level="INFO">${data_format} = {"Branch":{"Name":"Chi nhanh fKCz","ContactNumber":"0368199698","Address":"[D2]","LocationName":"Hồ Chí Minh - Thành phố Thủ Đức","WardName":"Phường An Khánh"},"BranchSetting":{"workingDays":[1,2,3,4,...</msg>
+<status status="PASS" starttime="20220218 15:43:45.353" endtime="20220218 15:43:45.353"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:45.352" endtime="20220218 15:43:45.353"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.353" level="INFO">${value_temp} = so 1</msg>
+<status status="PASS" starttime="20220218 15:43:45.353" endtime="20220218 15:43:45.354"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.354" level="INFO">${value_temp} = so 1</msg>
+<status status="PASS" starttime="20220218 15:43:45.354" endtime="20220218 15:43:45.354"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:45.354" level="INFO">${data_format} = {"Branch":{"Name":"Chi nhanh fKCz","ContactNumber":"0368199698","Address":"so 1","LocationName":"Hồ Chí Minh - Thành phố Thủ Đức","WardName":"Phường An Khánh"},"BranchSetting":{"workingDays":[1,2,3,4,...</msg>
+<status status="PASS" starttime="20220218 15:43:45.354" endtime="20220218 15:43:45.354"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:45.353" endtime="20220218 15:43:45.354"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:45.351" endtime="20220218 15:43:45.354"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${data_format}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:45.354" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:45.354" endtime="20220218 15:43:45.354"></status>
+</kw>
+<msg timestamp="20220218 15:43:45.354" level="INFO">${data_create_branch} = {"Branch":{"Name":"Chi nhanh fKCz","ContactNumber":"0368199698","Address":"so 1","LocationName":"Hồ Chí Minh - Thành phố Thủ Đức","WardName":"Phường An Khánh"},"BranchSetting":{"workingDays":[1,2,3,4,...</msg>
+<status status="PASS" starttime="20220218 15:43:45.351" endtime="20220218 15:43:45.355"></status>
+</kw>
+<kw name="Post Request Json KV" library="share">
+<arguments>
+<arg>${session_man}</arg>
+<arg>${enp_branch}</arg>
+<arg>${data_create_branch}</arg>
+<arg>200</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_func}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220218 15:43:47.054" level="INFO">Post Request using : alias=sessionMan, uri=/branchs, data={"Branch":{"Name":"Chi nhanh fKCz","ContactNumber":"0368199698","Address":"so 1","LocationName":"Hồ Chí Minh - Thành phố Thủ Đức","WardName":"Phường An Khánh"},"BranchSetting":{"workingDays":[1,2,3,4,5,6]}}, headers={'retailer': 'taphoa', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '1', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YXBob2EiLCJyb2xlcyI6WyJVc2VyIl0sImt2c2VzIjoiOTFkZjQzNWZkNzA2NDI5NmE2N2FlMjZlYjE2MzBmYjEiLCJrdnVpZCI6MjYzLCJrdmxhbmciOiJ2aS1WTiIsImt2dXR5cGUiOjAsImt2dWxpbWl0IjoiRmFsc2UiLCJrdnVhZG1pbiI6IlRydWUiLCJrdnVhY3QiOiJUcnVlIiwia3Z1bGltaXR0cmFucyI6IkZhbHNlIiwia3Z1c2hvd3N1bSI6IlRydWUiLCJrdmJpZCI6MSwia3ZyaW5kaWQiOjIsImt2cmNvZGUiOiJ0YXBob2EiLCJrdnJpZCI6MTQ5LCJrdnVyaWQiOjE0OSwia3ZyZ2lkIjo5LCJwZXJtcyI6IiJ9.k4ASEzofiJXabdMn41avTTk1e-ZS9cVsg9wtcoNndKgWdcrhsR6cgyEqWPMnW0nHGyHynnuAzt9XBwuau7zyNY2r7p2GXriYUsj-bwj9mQgv9dokkhkd4nrb1RBNeYuQKDp1Z3htlR3FSGmmctVUFWz0r-_SRlFcEmI0y0lofBnYWAIjF5BsPvILozaBIxfc3NxFyBwkrX-sLI1IxXwxCZ6PokRvli0kUTQH0JWpvNT0E-NbYGG8kkmM_jBZeo0mrrUc5UKmjuS9QAqpsF4uMnN2r5q0E0hyeWAqWlNj5N-xZ_SIzGi-_ptTwzN2RCrXrXIVfS4DKQ3XRGwZHgBTag'}, files=None, allow_redirects=True </msg>
+<msg timestamp="20220218 15:43:47.054" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-man3.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220218 15:43:47.054" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220218 15:43:45.355" endtime="20220218 15:43:47.054"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.055" level="INFO">{'Id': 200734, 'Name': 'Chi nhanh fKCz', 'Type': 0, 'Address': 'so 1', 'Province': 'Hồ Chí Minh', 'District': 'Thành phố Thủ Đức', 'ContactNumber': '0368199698', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hồ Chí Minh - Thành phố Thủ Đức', 'WardName': 'Phường An Khánh', 'isAcceptBookClosing': False, 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 0, 'CompareBranchName': 'Chi nhanh fKCz', 'StatusGmbValue': 'Chưa đăng ký', 'IsTimeSheetException': False, 'LocationId': 0, 'WardId': 0, 'SyncProductSearchEventId': 0}</msg>
+<status status="PASS" starttime="20220218 15:43:47.054" endtime="20220218 15:43:47.055"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>${expected_status_code}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.055" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220218 15:43:47.055" endtime="20220218 15:43:47.055"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.055" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:47.055" endtime="20220218 15:43:47.055"></status>
+</kw>
+<msg timestamp="20220218 15:43:47.055" level="INFO">${resp} = {'Id': 200734, 'Name': 'Chi nhanh fKCz', 'Type': 0, 'Address': 'so 1', 'Province': 'Hồ Chí Minh', 'District': 'Thành phố Thủ Đức', 'ContactNumber': '0368199698', 'IsActive': True, 'RetailerId': 149, '...</msg>
+<status status="PASS" starttime="20220218 15:43:45.355" endtime="20220218 15:43:47.056"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.056" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:47.056" endtime="20220218 15:43:47.056"></status>
+</kw>
+<msg timestamp="20220218 15:43:47.056" level="INFO">${resp} = {'Id': 200734, 'Name': 'Chi nhanh fKCz', 'Type': 0, 'Address': 'so 1', 'Province': 'Hồ Chí Minh', 'District': 'Thành phố Thủ Đức', 'ContactNumber': '0368199698', 'IsActive': True, 'RetailerId': 149, '...</msg>
+<status status="PASS" starttime="20220218 15:43:45.350" endtime="20220218 15:43:47.056"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp}</arg>
+<arg>$.Id</arg>
+</arguments>
+<assign>
+<var>${id_branch}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220218 15:43:47.083" level="INFO">${result} = [200734]</msg>
+<status status="PASS" starttime="20220218 15:43:47.056" endtime="20220218 15:43:47.083"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220218 15:43:47.084" level="INFO">Length is 1</msg>
+<msg timestamp="20220218 15:43:47.084" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20220218 15:43:47.084" endtime="20220218 15:43:47.084"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} != 0</arg>
+<arg>Get From List</arg>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20220218 15:43:47.084" endtime="20220218 15:43:47.084"></status>
+</kw>
+<msg timestamp="20220218 15:43:47.084" level="INFO">${result} = 200734</msg>
+<status status="PASS" starttime="20220218 15:43:47.084" endtime="20220218 15:43:47.084"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${result}'=='None'</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.085" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:47.085" endtime="20220218 15:43:47.085"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:47.084" endtime="20220218 15:43:47.085"></status>
+</kw>
+<msg timestamp="20220218 15:43:47.085" level="INFO">${id_branch} = 200734</msg>
+<status status="PASS" starttime="20220218 15:43:47.056" endtime="20220218 15:43:47.085"></status>
+</kw>
+<doc>Thêm mới chi nhánh</doc>
+<tags>
+<tag>all</tag>
+<tag>branch</tag>
+</tags>
+<status status="PASS" starttime="20220218 15:43:45.349" endtime="20220218 15:43:47.085" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Update working date of branch">
+<kw name="Update working date of branch" library="branch">
+<arguments>
+<arg>Update ${random_str}</arg>
+<arg>0</arg>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Get A Branch In Active Branchs" library="branch">
+<assign>
+<var>${id}</var>
+</assign>
+<kw name="Get Value In List KV" library="share">
+<arguments>
+<arg>${session_man}</arg>
+<arg>${enp_branch_active}</arg>
+<arg>$.Data[?(@.Id)].Id</arg>
+</arguments>
+<assign>
+<var>${id_branch}</var>
+</assign>
+<kw name="Get Request From KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220218 15:43:47.898" level="INFO">Get Request using : alias=sessionMan, uri=/branchs?format=json&amp;Includes=Permissions&amp;Includes=Retailer&amp;$inlinecount=allpages&amp;$top=15&amp;$filter=LimitAccess+eq+false, headers=None json=None</msg>
+<msg timestamp="20220218 15:43:47.899" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-man3.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220218 15:43:47.899" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220218 15:43:47.090" endtime="20220218 15:43:47.899"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.901" level="INFO">{'TotalInRetailer': 0, 'TotalActiveInRetailer': 0, 'Total': 65, 'Data': [{'Id': 200474, 'Name': '1123', 'Type': 0, 'Address': '1123', 'Province': 'Thái Bình', 'District': 'Huyện Đông Hưng', 'ContactNumber': '0955202102', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Thái Bình - Huyện Đông Hưng', 'WardName': 'Xã Bạch Đằng', 'isAcceptBookClosing': False, 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 4, 'CompareBranchName': '1123', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 633, 'WardId': 4372, 'SyncProductSearchEventId': 0}, {'Id': 200642, 'Name': '122333', 'Type': 0, 'Address': '1', 'Province': 'Hồ Chí Minh', 'District': 'Thành phố Thủ Đức', 'ContactNumber': '0909090909', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'Email': '1@gmail.com', 'LimitAccess': False, 'LocationName': 'Hồ Chí Minh - Thành phố Thủ Đức', 'WardName': 'Phường Thủ Thiêm', 'isAcceptBookClosing': False, 'GmbStatus': 2, 'GmbLocationName': 'locations/2663051542325144893', 'GmbEmail': 'mai.ctn@citigo.com.vn', 'SubContactNumber': '', 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 3, 'CompareBranchName': '122333', 'StatusGmbValue': 'Chờ xác thực', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 349, 'WardId': 11196, 'SyncProductSearchEventId': 0}, {'Id': 161, 'Name': '123', 'Type': 0, 'Address': '1B Yết Kiêu', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'ContactNumber': '0879925555', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 1536, 'LimitAccess': False, 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'isAcceptBookClosing': False, 'BookClosingDate': '2019-04-30T00:00:00.0000000+07:00', 'GmbStatus': 3, 'GmbLocationName': 'locations/3917084279675827101', 'GmbEmail': 'nguyenlehang511@gmail.com', 'SubContactNumber': '0879925556', 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 3, 'CompareBranchName': '123', 'StatusGmbValue': 'Đã xác thực', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 243, 'WardId': 30, 'SyncProductSearchEventId': 0}, {'Id': 164, 'Name': '344 Nguyễn Trãi', 'Type': 0, 'Address': '344 Nguyễn Trãi', 'Province': 'Hà Nội', 'District': 'Quận Thanh Xuân', 'ContactNumber': '0966.650.156', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hà Nội - Quận Thanh Xuân', 'WardName': '', 'isAcceptBookClosing': False, 'BookClosingDate': '2019-12-31T00:00:00.0000000+07:00', 'GmbStatus': 3, 'GmbLocationName': 'locations/12194335520182898575', 'GmbEmail': 'anzin28031995@gmail.com', 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 3, 'CompareBranchName': '344 Nguyễn Trãi', 'StatusGmbValue': 'Đã xác thực', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 0, 'WardId': 0, 'SyncProductSearchEventId': 0}, {'Id': 200331, 'Name': 'a1213', 'Type': 0, 'Address': 'nguyễn ngá', 'Province': 'Hà Nội', 'District': 'Quận Bắc Từ Liêm', 'ContactNumber': '0985362441', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hà Nội - Quận Bắc Từ Liêm', 'WardName': 'Phường Cổ Nhuế 2', 'isAcceptBookClosing': False, 'GmbStatus': 1, 'GmbLocationName': 'locations/6215050638924766805', 'GmbEmail': 'mai.ctn@citigo.com.vn', 'ConfirmStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 3, 'CompareBranchName': 'a1213', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 251, 'WardId': 237, 'SyncProductSearchEventId': 0}, {'Id': 262, 'Name': 'Chi nhánh 12', 'Type': 0, 'Address': 'Hà Nội', 'Province': 'Hà Nội', 'District': 'Quận Hai Bà Trưng', 'ContactNumber': '0375678192', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hà Nội - Quận Hai Bà Trưng', 'WardName': '', 'isAcceptBookClosing': True, 'BookClosingDate': '2019-12-31T00:00:00.0000000+07:00', 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 2, 'CompareBranchName': 'Chi nhánh 12', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 0, 'WardId': 0, 'SyncProductSearchEventId': 0}, {'Id': 200721, 'Name': 'chi nhánh 3478', 'Type': 0, 'Address': 'số 10', 'Province': 'Hồ Chí Minh', 'District': 'Thành phố Thủ Đức', 'ContactNumber': '0368199693', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hồ Chí Minh - Thành phố Thủ Đức', 'WardName': 'Phường An Lợi Đông', 'isAcceptBookClosing': False, 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 0, 'CompareBranchName': 'chi nhánh 3478', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 349, 'WardId': 11195, 'SyncProductSearchEventId': 0}, {'Id': 200733, 'Name': 'Chi nhanh bkux', 'Type': 0, 'Address': 'so 1', 'Province': 'Hồ Chí Minh', 'District': 'Thành phố Thủ Đức', 'ContactNumber': '0368199698', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hồ Chí Minh - Thành phố Thủ Đức', 'WardName': 'Phường An Khánh', 'isAcceptBookClosing': False, 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 0, 'CompareBranchName': 'Chi nhanh bkux', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 349, 'WardId': 11190, 'SyncProductSearchEventId': 0}, {'Id': 200734, 'Name': 'Chi nhanh fKCz', 'Type': 0, 'Address': 'so 1', 'Province': 'Hồ Chí Minh', 'District': 'Thành phố Thủ Đức', 'ContactNumber': '0368199698', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hồ Chí Minh - Thành phố Thủ Đức', 'WardName': 'Phường An Khánh', 'isAcceptBookClosing': False, 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 0, 'CompareBranchName': 'Chi nhanh fKCz', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 349, 'WardId': 11190, 'SyncProductSearchEventId': 0}, {'Id': 200717, 'Name': 'chi nhanh ha noi hue', 'Type': 0, 'Address': '162 chu', 'Province': 'Hồ Chí Minh', 'District': 'Quận 1', 'ContactNumber': '0372381973', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hồ Chí Minh - Quận 1', 'WardName': 'Phường Nguyễn Cư Trinh', 'isAcceptBookClosing': False, 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 1, 'CompareBranchName': 'chi nhanh ha noi hue', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 328, 'WardId': 9225, 'SyncProductSearchEventId': 0}, {'Id': 200542, 'Name': 'chi nhánh thêm mới test', 'Type': 0, 'Address': 'dsdsd', 'Province': 'Tây Ninh', 'District': 'Thành phố Tây Ninh', 'ContactNumber': '0955202111', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Tây Ninh - Thành phố Tây Ninh', 'WardName': 'Phường Ninh Thạnh', 'isAcceptBookClosing': False, 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 3, 'CompareBranchName': 'chi nhánh thêm mới test', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 607, 'WardId': 8787, 'SyncProductSearchEventId': 0}, {'Id': 34, 'Name': 'Chi nhánh trung tâm', 'Code': '1', 'Type': 1, 'Address': '1B yết Kiêu', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'ContactNumber': '0936821280', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 0, 'LimitAccess': False, 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'isAcceptBookClosing': True, 'BookClosingDate': '2021-07-31T00:00:00.0000000+07:00', 'GmbStatus': 1, 'GmbLocationName': 'locations/7761024019917522670', 'GmbEmail': 'loc8meng2@gmail.com', 'SubContactNumber': '', 'ConfirmStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 6, 'CompareBranchName': 'Chi nhánh trung tâm', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 243, 'WardId': 30, 'SyncProductSearchEventId': 0}, {'Id': 176, 'Name': 'chi nhánh trung tâm 2', 'Type': 0, 'Address': '14 khánh thạnh, P. tân phước khánh', 'Province': 'Bình Dương', 'District': 'Thị xã Tân Uyên', 'ContactNumber': '0938561741', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Bình Dương - Thị xã Tân Uyên', 'WardName': 'Phường Tân Phước Khánh', 'isAcceptBookClosing': False, 'BookClosingDate': '2020-07-15T00:00:00.0000000+07:00', 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 3, 'CompareBranchName': 'chi nhánh trung tâm 2', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 68, 'WardId': 8926, 'SyncProductSearchEventId': 0}, {'Id': 200300, 'Name': 'Chi Nhánh Yến', 'Type': 0, 'Address': 'số 1 Nguyễn Du', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'ContactNumber': '0353039147', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'isAcceptBookClosing': True, 'BookClosingDate': '2019-12-31T00:00:00.0000000+07:00', 'GmbStatus': 1, 'GmbLocationName': 'locations/17739538191943630656', 'GmbEmail': 'hong.lt@citigo.com.vn', 'ConfirmStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 3, 'CompareBranchName': 'Chi Nhánh Yến', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 243, 'WardId': 30, 'SyncProductSearchEventId': 0}, {'Id': 200444, 'Name': 'Chi nhánh Yết Kiêu', 'Type': 0, 'Address': '1B Yết Kêu', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'ContactNumber': '0985654125', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'isAcceptBookClosing': False, 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'Retailer': {'SyncProductSearchEventId': 0, 'CrudGuid': '00000000000000000000000000000000', 'Id': 149, 'CompanyName': 'tên shop nè', 'CompanyAddress': '559test 1B yết kiêu', 'Website': '1', 'Phone': '012345678559', 'Fax': 'converted', 'Code': 'taphoa', 'LogoUrl': 'https://cdn-images.kiotviet.vn/taphoa/logo-a201d8344be2493e94ae041243549558', 'IsActive': True, 'IsAdminActive': True, 'GroupId': 9, 'CreatedDate': '2013-05-31T11:14:52.5700000+07:00', 'ModifiedDate': '2021-12-07T18:00:28.7930000+07:00', 'ExpiryDate': '2025-10-18T00:00:00.0000000+07:00', 'UseCustomLogo': True, 'Zone': 'Sài Gòn', 'DateTimeNotify': '2014-01-09T16:21:30.4870000+07:00', 'CreatedBy': 1519, 'ModifiedBy': 12364, 'MakeSampleData': False, 'LatestClearData': '2019-10-30T00:07:46.8900000+07:00', 'IndustryId': 2, 'SignUpType': 'Web Site', 'MaximumProducts': 0, 'MaximumBranchs': 70, 'ContractType': 2, 'LimitKiotMailInMonth': 0, 'ContractDate': '2014-07-01T00:00:00.0000000+07:00', 'LocationName': 'Hà Nội - Quận Hoàn Kiếm', 'Province': 'Hà Nội', 'District': 'Quận Hoàn Kiếm', 'WardName': 'Phường Trần Hưng Đạo', 'MaximumFanpages': 0, 'MaximumSaleChannels': 5, 'Branches': [], 'Customers': [], 'ObjectAccesses': [], 'PriceBooks': [], 'PropertyAccesses': [], 'PurchaseOrders': [], 'PurchasePayments': [], 'PurchaseReturns': [], 'Returns': [], 'StockTakes': [], 'Suppliers': [], 'BankAccounts': [], 'EmailMarketings': [], 'EmailTemplates': [], 'Surcharges': [], 'AdrApplications': [], 'RewardPointCustomerGroups': [], 'SmsEmailTemplates': [], 'ProductSerials': [], 'NotificationSettings': [], 'PartnerDeliveries': [], 'ExpensesOthers': [], 'SaleChannels': [], 'ImportExportFiles': [], 'Devices': [], 'BatchExpires': [], 'WarrantyBranchGroups': [], 'OrderSuppliers': [], 'PriceBookDependencies': [], 'MedicineManufacturers': [], 'AddressBooks': [], 'BranchTakingAddresses': [], 'Patients': [], 'DoctorOffices': [], 'ShippingTasks': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'RetailerRouteOfAdministrations': [], 'UserDevices': [], 'ShippingTaskDetails': [], 'ShippingTaskOrderDetails': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'DeliveryCrossChecks': [], 'SamplePrescriptions': [], 'InvoiceExtraDatas': [], 'ShippingTaskItems': [], 'DeliveryCrossCheckDetails': []}, 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 3, 'CompareBranchName': 'Chi nhánh Yết Kiêu', 'StatusGmbValue': 'Chưa đăng ký', 'TimeSheetBranchSettingWorkingDays': [0, 1, 2, 3, 4, 5, 6], 'IsTimeSheetException': False, 'LocationId': 243, 'WardId': 30, 'SyncProductSearchEventId': 0}], 'Timestamp': '2022-02-18T15:43:47.9970950+07:00'}</msg>
+<status status="PASS" starttime="20220218 15:43:47.899" endtime="20220218 15:43:47.901"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.901" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220218 15:43:47.901" endtime="20220218 15:43:47.901"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.902" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:47.901" endtime="20220218 15:43:47.902"></status>
+</kw>
+<msg timestamp="20220218 15:43:47.903" level="INFO">${resp} = {'TotalInRetailer': 0, 'TotalActiveInRetailer': 0, 'Total': 65, 'Data': [{'Id': 200474, 'Name': '1123', 'Type': 0, 'Address': '1123', 'Province': 'Thái Bình', 'District': 'Huyện Đông Hưng', 'ContactNu...</msg>
+<status status="PASS" starttime="20220218 15:43:47.090" endtime="20220218 15:43:47.903"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20220218 15:43:47.920" level="INFO">${list} = [200474, 200642, 161, 164, 200331, 262, 200721, 200733, 200734, 200717, 200542, 34, 176, 200300, 200444]</msg>
+<status status="PASS" starttime="20220218 15:43:47.903" endtime="20220218 15:43:47.920"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.choice($list)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20220218 15:43:47.923" level="INFO">${value} = 176</msg>
+<status status="PASS" starttime="20220218 15:43:47.920" endtime="20220218 15:43:47.923"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.923" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:47.923" endtime="20220218 15:43:47.923"></status>
+</kw>
+<msg timestamp="20220218 15:43:47.923" level="INFO">${id_branch} = 176</msg>
+<status status="PASS" starttime="20220218 15:43:47.090" endtime="20220218 15:43:47.923"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${id_branch}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.923" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:47.923" endtime="20220218 15:43:47.923"></status>
+</kw>
+<msg timestamp="20220218 15:43:47.923" level="INFO">${id} = 176</msg>
+<status status="PASS" starttime="20220218 15:43:47.089" endtime="20220218 15:43:47.924"></status>
+</kw>
+<kw name="Get Name Branch From Id" library="branch">
+<arguments>
+<arg>${id}</arg>
+</arguments>
+<assign>
+<var>${name_from_id}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session_man}</arg>
+<arg>${enp_branch}/${branchId}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220218 15:43:47.996" level="INFO">Get Request using : alias=sessionMan, uri=/branchs/176, headers=None json=None</msg>
+<msg timestamp="20220218 15:43:47.996" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-man3.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220218 15:43:47.996" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220218 15:43:47.924" endtime="20220218 15:43:47.996"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:47.996" level="INFO">{'Id': 176, 'Name': 'chi nhánh trung tâm 2', 'Type': 0, 'Address': '14 khánh thạnh, P. tân phước khánh', 'Province': 'Bình Dương', 'District': 'Thị xã Tân Uyên', 'ContactNumber': '0938561741', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Bình Dương - Thị xã Tân Uyên', 'WardName': 'Phường Tân Phước Khánh', 'isAcceptBookClosing': False, 'BookClosingDate': '2020-07-15T00:00:00.0000000+07:00', 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 0, 'CompareBranchName': 'chi nhánh trung tâm 2', 'StatusGmbValue': 'Chưa đăng ký', 'IsTimeSheetException': False, 'LocationId': 0, 'WardId': 0, 'SyncProductSearchEventId': 0}</msg>
+<status status="PASS" starttime="20220218 15:43:47.996" endtime="20220218 15:43:47.996"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.Name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.015" level="INFO">${name} = ['chi nhánh trung tâm 2']</msg>
+<status status="PASS" starttime="20220218 15:43:47.997" endtime="20220218 15:43:48.015"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:48.015" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:48.015" endtime="20220218 15:43:48.015"></status>
+</kw>
+<msg timestamp="20220218 15:43:48.015" level="INFO">${name_from_id} = ['chi nhánh trung tâm 2']</msg>
+<status status="PASS" starttime="20220218 15:43:47.924" endtime="20220218 15:43:48.015"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${id}</arg>
+<arg>${name}</arg>
+<arg>${date1}</arg>
+<arg>${date2}</arg>
+<arg>${date3}</arg>
+<arg>${date4}</arg>
+<arg>${date5}</arg>
+<arg>${date6}</arg>
+</arguments>
+<assign>
+<var>${list_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.016" level="INFO">${list_format} = [176, 'Update fKCz', '0', '1', '2', '3', '4', '5']</msg>
+<status status="PASS" starttime="20220218 15:43:48.015" endtime="20220218 15:43:48.016"></status>
+</kw>
+<kw name="Format String Use [D0] [D1] [D2]" library="share">
+<arguments>
+<arg>${data_update_workingdate}</arg>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${data_update_workingdate}</var>
+</assign>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.016" level="INFO">Length is 8</msg>
+<msg timestamp="20220218 15:43:48.016" level="INFO">${length} = 8</msg>
+<status status="PASS" starttime="20220218 15:43:48.016" endtime="20220218 15:43:48.016"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.017" level="INFO">${value_temp} = 176</msg>
+<status status="PASS" starttime="20220218 15:43:48.017" endtime="20220218 15:43:48.017"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.017" level="INFO">${value_temp} = 176</msg>
+<status status="PASS" starttime="20220218 15:43:48.017" endtime="20220218 15:43:48.017"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.017" level="INFO">${data_format} = {"Branch":{"Id":176,"Name":"[D1]","Address":"123","ContactNumber":"0376666666","IsActive":true,"LocationName":"Bà Rịa - Vũng Tàu - Huyện Long Điền","WardName":"Xã Phước Hưng"},"BranchSetting":{"workin...</msg>
+<status status="PASS" starttime="20220218 15:43:48.017" endtime="20220218 15:43:48.017"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:48.017" endtime="20220218 15:43:48.017"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.018" level="INFO">${value_temp} = Update fKCz</msg>
+<status status="PASS" starttime="20220218 15:43:48.018" endtime="20220218 15:43:48.018"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.018" level="INFO">${value_temp} = Update fKCz</msg>
+<status status="PASS" starttime="20220218 15:43:48.018" endtime="20220218 15:43:48.018"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.018" level="INFO">${data_format} = {"Branch":{"Id":176,"Name":"Update fKCz","Address":"123","ContactNumber":"0376666666","IsActive":true,"LocationName":"Bà Rịa - Vũng Tàu - Huyện Long Điền","WardName":"Xã Phước Hưng"},"BranchSetting":{...</msg>
+<status status="PASS" starttime="20220218 15:43:48.018" endtime="20220218 15:43:48.018"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:48.018" endtime="20220218 15:43:48.018"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.019" level="INFO">${value_temp} = 0</msg>
+<status status="PASS" starttime="20220218 15:43:48.019" endtime="20220218 15:43:48.019"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.019" level="INFO">${value_temp} = 0</msg>
+<status status="PASS" starttime="20220218 15:43:48.019" endtime="20220218 15:43:48.019"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.020" level="INFO">${data_format} = {"Branch":{"Id":176,"Name":"Update fKCz","Address":"123","ContactNumber":"0376666666","IsActive":true,"LocationName":"Bà Rịa - Vũng Tàu - Huyện Long Điền","WardName":"Xã Phước Hưng"},"BranchSetting":{...</msg>
+<status status="PASS" starttime="20220218 15:43:48.019" endtime="20220218 15:43:48.020"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:48.019" endtime="20220218 15:43:48.020"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.020" level="INFO">${value_temp} = 1</msg>
+<status status="PASS" starttime="20220218 15:43:48.020" endtime="20220218 15:43:48.020"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.021" level="INFO">${value_temp} = 1</msg>
+<status status="PASS" starttime="20220218 15:43:48.020" endtime="20220218 15:43:48.021"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.021" level="INFO">${data_format} = {"Branch":{"Id":176,"Name":"Update fKCz","Address":"123","ContactNumber":"0376666666","IsActive":true,"LocationName":"Bà Rịa - Vũng Tàu - Huyện Long Điền","WardName":"Xã Phước Hưng"},"BranchSetting":{...</msg>
+<status status="PASS" starttime="20220218 15:43:48.021" endtime="20220218 15:43:48.021"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:48.020" endtime="20220218 15:43:48.021"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.021" level="INFO">${value_temp} = 2</msg>
+<status status="PASS" starttime="20220218 15:43:48.021" endtime="20220218 15:43:48.021"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.022" level="INFO">${value_temp} = 2</msg>
+<status status="PASS" starttime="20220218 15:43:48.021" endtime="20220218 15:43:48.022"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.022" level="INFO">${data_format} = {"Branch":{"Id":176,"Name":"Update fKCz","Address":"123","ContactNumber":"0376666666","IsActive":true,"LocationName":"Bà Rịa - Vũng Tàu - Huyện Long Điền","WardName":"Xã Phước Hưng"},"BranchSetting":{...</msg>
+<status status="PASS" starttime="20220218 15:43:48.022" endtime="20220218 15:43:48.022"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:48.021" endtime="20220218 15:43:48.022"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.022" level="INFO">${value_temp} = 3</msg>
+<status status="PASS" starttime="20220218 15:43:48.022" endtime="20220218 15:43:48.022"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.023" level="INFO">${value_temp} = 3</msg>
+<status status="PASS" starttime="20220218 15:43:48.022" endtime="20220218 15:43:48.023"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.023" level="INFO">${data_format} = {"Branch":{"Id":176,"Name":"Update fKCz","Address":"123","ContactNumber":"0376666666","IsActive":true,"LocationName":"Bà Rịa - Vũng Tàu - Huyện Long Điền","WardName":"Xã Phước Hưng"},"BranchSetting":{...</msg>
+<status status="PASS" starttime="20220218 15:43:48.023" endtime="20220218 15:43:48.023"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:48.022" endtime="20220218 15:43:48.023"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.023" level="INFO">${value_temp} = 4</msg>
+<status status="PASS" starttime="20220218 15:43:48.023" endtime="20220218 15:43:48.023"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.024" level="INFO">${value_temp} = 4</msg>
+<status status="PASS" starttime="20220218 15:43:48.024" endtime="20220218 15:43:48.024"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.024" level="INFO">${data_format} = {"Branch":{"Id":176,"Name":"Update fKCz","Address":"123","ContactNumber":"0376666666","IsActive":true,"LocationName":"Bà Rịa - Vũng Tàu - Huyện Long Điền","WardName":"Xã Phước Hưng"},"BranchSetting":{...</msg>
+<status status="PASS" starttime="20220218 15:43:48.024" endtime="20220218 15:43:48.024"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:48.023" endtime="20220218 15:43:48.024"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.024" level="INFO">${value_temp} = 5</msg>
+<status status="PASS" starttime="20220218 15:43:48.024" endtime="20220218 15:43:48.024"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.025" level="INFO">${value_temp} = 5</msg>
+<status status="PASS" starttime="20220218 15:43:48.024" endtime="20220218 15:43:48.025"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220218 15:43:48.025" level="INFO">${data_format} = {"Branch":{"Id":176,"Name":"Update fKCz","Address":"123","ContactNumber":"0376666666","IsActive":true,"LocationName":"Bà Rịa - Vũng Tàu - Huyện Long Điền","WardName":"Xã Phước Hưng"},"BranchSetting":{...</msg>
+<status status="PASS" starttime="20220218 15:43:48.025" endtime="20220218 15:43:48.025"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:48.024" endtime="20220218 15:43:48.025"></status>
+</kw>
+<status status="PASS" starttime="20220218 15:43:48.016" endtime="20220218 15:43:48.025"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${data_format}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:48.025" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:48.025" endtime="20220218 15:43:48.025"></status>
+</kw>
+<msg timestamp="20220218 15:43:48.025" level="INFO">${data_update_workingdate} = {"Branch":{"Id":176,"Name":"Update fKCz","Address":"123","ContactNumber":"0376666666","IsActive":true,"LocationName":"Bà Rịa - Vũng Tàu - Huyện Long Điền","WardName":"Xã Phước Hưng"},"BranchSetting":{...</msg>
+<status status="PASS" starttime="20220218 15:43:48.016" endtime="20220218 15:43:48.025"></status>
+</kw>
+<kw name="Post Request Json KV" library="share">
+<arguments>
+<arg>${session_man}</arg>
+<arg>${enp_branch}</arg>
+<arg>${data_update_workingdate}</arg>
+<arg>200</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_func}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220218 15:43:49.364" level="INFO">Post Request using : alias=sessionMan, uri=/branchs, data={"Branch":{"Id":176,"Name":"Update fKCz","Address":"123","ContactNumber":"0376666666","IsActive":true,"LocationName":"Bà Rịa - Vũng Tàu - Huyện Long Điền","WardName":"Xã Phước Hưng"},"BranchSetting":{"workingDays":[0,1,2,3,4,5]},"IsAddMore":false,"IsRemove":false,"ApplyFrom":"2022-01-27T08:37:51.164Z"}, headers={'retailer': 'taphoa', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '1', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjoyNjMsImlhdCI6MTY0NTE3MzgyNCwiZXhwIjoxNjQ3NTkzMDI0LCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YXBob2EiLCJyb2xlcyI6WyJVc2VyIl0sImt2c2VzIjoiOTFkZjQzNWZkNzA2NDI5NmE2N2FlMjZlYjE2MzBmYjEiLCJrdnVpZCI6MjYzLCJrdmxhbmciOiJ2aS1WTiIsImt2dXR5cGUiOjAsImt2dWxpbWl0IjoiRmFsc2UiLCJrdnVhZG1pbiI6IlRydWUiLCJrdnVhY3QiOiJUcnVlIiwia3Z1bGltaXR0cmFucyI6IkZhbHNlIiwia3Z1c2hvd3N1bSI6IlRydWUiLCJrdmJpZCI6MSwia3ZyaW5kaWQiOjIsImt2cmNvZGUiOiJ0YXBob2EiLCJrdnJpZCI6MTQ5LCJrdnVyaWQiOjE0OSwia3ZyZ2lkIjo5LCJwZXJtcyI6IiJ9.k4ASEzofiJXabdMn41avTTk1e-ZS9cVsg9wtcoNndKgWdcrhsR6cgyEqWPMnW0nHGyHynnuAzt9XBwuau7zyNY2r7p2GXriYUsj-bwj9mQgv9dokkhkd4nrb1RBNeYuQKDp1Z3htlR3FSGmmctVUFWz0r-_SRlFcEmI0y0lofBnYWAIjF5BsPvILozaBIxfc3NxFyBwkrX-sLI1IxXwxCZ6PokRvli0kUTQH0JWpvNT0E-NbYGG8kkmM_jBZeo0mrrUc5UKmjuS9QAqpsF4uMnN2r5q0E0hyeWAqWlNj5N-xZ_SIzGi-_ptTwzN2RCrXrXIVfS4DKQ3XRGwZHgBTag'}, files=None, allow_redirects=True </msg>
+<msg timestamp="20220218 15:43:49.364" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-man3.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220218 15:43:49.364" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220218 15:43:48.026" endtime="20220218 15:43:49.365"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:49.366" level="INFO">{'Id': 176, 'Name': 'Update fKCz', 'Type': 0, 'Address': '123', 'Province': 'Bà Rịa - Vũng Tàu', 'District': 'Huyện Long Điền', 'ContactNumber': '0376666666', 'IsActive': True, 'RetailerId': 149, 'CreatedBy': 263, 'LimitAccess': False, 'LocationName': 'Bà Rịa - Vũng Tàu - Huyện Long Điền', 'WardName': 'Xã Phước Hưng', 'isAcceptBookClosing': False, 'BookClosingDate': '2020-07-15T00:00:00.0000000+07:00', 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 0, 'CompareBranchName': 'Update fKCz', 'StatusGmbValue': 'Chưa đăng ký', 'IsTimeSheetException': False, 'LocationId': 0, 'WardId': 0, 'SyncProductSearchEventId': 0}</msg>
+<status status="PASS" starttime="20220218 15:43:49.365" endtime="20220218 15:43:49.366"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>${expected_status_code}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:49.367" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220218 15:43:49.366" endtime="20220218 15:43:49.367"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:49.368" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:49.368" endtime="20220218 15:43:49.368"></status>
+</kw>
+<msg timestamp="20220218 15:43:49.369" level="INFO">${resp} = {'Id': 176, 'Name': 'Update fKCz', 'Type': 0, 'Address': '123', 'Province': 'Bà Rịa - Vũng Tàu', 'District': 'Huyện Long Điền', 'ContactNumber': '0376666666', 'IsActive': True, 'RetailerId': 149, 'Cre...</msg>
+<status status="PASS" starttime="20220218 15:43:48.025" endtime="20220218 15:43:49.369"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp}</arg>
+</arguments>
+<msg timestamp="20220218 15:43:49.370" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220218 15:43:49.370" endtime="20220218 15:43:49.370"></status>
+</kw>
+<msg timestamp="20220218 15:43:49.371" level="INFO">${resp} = {'Id': 176, 'Name': 'Update fKCz', 'Type': 0, 'Address': '123', 'Province': 'Bà Rịa - Vũng Tàu', 'District': 'Huyện Long Điền', 'ContactNumber': '0376666666', 'IsActive': True, 'RetailerId': 149, 'Cre...</msg>
+<status status="PASS" starttime="20220218 15:43:47.089" endtime="20220218 15:43:49.371"></status>
+</kw>
+<doc>Update ngày làm việc của chi nhánh đang hoạt động</doc>
+<tags>
+<tag>all</tag>
+<tag>branch</tag>
+</tags>
+<status status="PASS" starttime="20220218 15:43:47.085" endtime="20220218 15:43:49.371" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220218 15:43:43.906" endtime="20220218 15:43:49.372"></status>
+</suite>
+<status status="PASS" starttime="20220218 15:43:43.904" endtime="20220218 15:43:49.375"></status>
+</suite>
+<status status="PASS" starttime="20220218 15:43:43.885" endtime="20220218 15:43:49.377"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0">all</stat>
+<stat pass="2" fail="0">branch</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="2" fail="0" id="s1-s1" name="ChiNhanh">Testsuites.ChiNhanh</stat>
+<stat pass="2" fail="0" id="s1-s1-s1" name="Branch">Testsuites.ChiNhanh.Branch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -5,22 +5,25 @@ Testsuites.NhanVien
 ==============================================================================
 Testsuites.NhanVien.Payrate                                                   
 ==============================================================================
-Create payRateTemplate :: T?o m?i m?u l??ng có ch?a ph? c?p, gi?m ... | PASS |
+Create payRateTemplate :: T?o m?i m?u l??ng có ch?a ph? c?p, gi?m ... | FAIL |
+400 != 200
 ------------------------------------------------------------------------------
 Update payRateTemplate :: Update m?u l??ng                            | PASS |
 ------------------------------------------------------------------------------
-Delete payrateTemplate :: Xóa m?u l??ng v?a t?o                       | PASS |
+Delete payrateTemplate :: Xóa m?u l??ng v?a t?o                       | FAIL |
+Variable '${id_payrate}' not found. Did you mean:
+    ${data_payrate}
 ------------------------------------------------------------------------------
-Testsuites.NhanVien.Payrate                                           | PASS |
-3 critical tests, 3 passed, 0 failed
-3 tests total, 3 passed, 0 failed
+Testsuites.NhanVien.Payrate                                           | FAIL |
+3 critical tests, 1 passed, 2 failed
+3 tests total, 1 passed, 2 failed
 ==============================================================================
-Testsuites.NhanVien                                                   | PASS |
-3 critical tests, 3 passed, 0 failed
-3 tests total, 3 passed, 0 failed
+Testsuites.NhanVien                                                   | FAIL |
+3 critical tests, 1 passed, 2 failed
+3 tests total, 1 passed, 2 failed
 ==============================================================================
-Testsuites                                                            | PASS |
-3 critical tests, 3 passed, 0 failed
-3 tests total, 3 passed, 0 failed
+Testsuites                                                            | FAIL |
+3 critical tests, 1 passed, 2 failed
+3 tests total, 1 passed, 2 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.NhanVien.Payrate\output-20220217-172730.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.NhanVien.Payrate\output-20220218-154350.xml
