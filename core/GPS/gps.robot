@@ -35,7 +35,7 @@ Change QR
     ${list_format}      Create List                         ${id_gps}
     ${enp_change_qr}    Format String Use [D0] [D1] [D2]    ${enp_change_qr}    ${list_format}
     ${resp}             Put Request                         ${session}          ${enp_change_qr}/${id_gps}
-    Return From Keyword                                     ${resp.json()}  
+    Return From Keyword                                     ${resp.json()}
 
 Delete GPS
     [Arguments]         ${id_gps}
