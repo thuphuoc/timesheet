@@ -13,7 +13,7 @@ ${data_create_branch}           {"Branch":{"Name":"[D0]","ContactNumber":"[D1]",
 *** Keywords ***
 Get List Of Active Branch
     ${resp}                     Get Request From KV     ${session_man}       ${enp_branch_active}
-    Return From Keyword         ${resp.json()}
+    Return From Keyword         ${resp}
 
 Get A Branch In Active Branchs
     ${id_branch}                Get Value In List KV    ${session_man}       ${enp_branch_active}      $.Data[?(@.Id)].Id

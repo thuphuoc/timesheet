@@ -1,0 +1,28 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.ChamCongGPS                                                        
+==============================================================================
+Testsuites.ChamCongGPS.Gps                                                    
+==============================================================================
+Create gps :: Thêm m?i gps cho 1 chi nhánh ?? ch?m công b?ng mobile   | PASS |
+------------------------------------------------------------------------------
+Update gps :: Ch?nh s?a gps cho 1 chi nhánh ?? ch?m công b?ng mobile  | PASS |
+------------------------------------------------------------------------------
+Change qr :: ??i mã QR c?a chi nhánh                                  | PASS |
+------------------------------------------------------------------------------
+Delete gps :: Xóa gps c?a 1 chi nhánh                                 | PASS |
+------------------------------------------------------------------------------
+Testsuites.ChamCongGPS.Gps                                            | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
+==============================================================================
+Testsuites.ChamCongGPS                                                | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
+==============================================================================
+Testsuites                                                            | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
+==============================================================================
+Output:  D:\timesheet\out\pabot_results\Testsuites.ChamCongGPS.Gps\output-20220228-135129.xml

@@ -31,13 +31,13 @@ Create paysheet           [Tags]        all    paysheet
 
 Auto loading paysheet     [Tags]        all    paysheet
     [Documentation]       Tải lại bảng lương tạm tính
-    ${resp}               Update Request Json KV              ${session}                ${enp_autoloading}/${id_paysheet}    ${data_auto_load}          200
+    ${resp}               Wait Until Keyword Succeeds         3x                        3                                   Auto loading paysheet
 
 Cancel paysheet           [Tags]             all              paysheet
       [Documentation]     Huỷ bỏ bảng lương tạm tính ko hủy phiếu thanh toán
       ${id_paysheet}      Get Id In List Paysheets            ${draft}
       ${code_paysheet}    Get Value In List KV                ${session}                ${enp_paysheet}/${id_paysheet}       $.result.code
-      ${list_format}      Create List                         ${id_paysheet}       false
+      ${list_format}      Create List                         ${id_paysheet}            false
       ${data_cancel_paysheet}     Format String Use [D0] [D1] [D2]                      ${data_cancel_paysheet}              ${list_format}
       ${resp}             Update Request Json KV              ${session}                ${enp_cancel_paysheet}               ${data_cancel_paysheet}    200
 
@@ -50,7 +50,6 @@ Cancel paysheet and cancel payment                    [Tags]             all    
       ${resp}             Update Request Json KV              ${session}                ${enp_cancel_paysheet}               ${data_cancel_paysheet}    200
 
 *** Keywords ***
-# Lấy được các trạng thái của bảng lương
 Get Id In List Paysheets
     [Arguments]            ${status_paysheet}
     ${list_format}         Create List                         ${branchId}                ${status_paysheet}
@@ -58,3 +57,7 @@ Get Id In List Paysheets
     Set Suite Variable     ${enp_filter_sheets}                ${enp_filter_sheets}
     ${id_paysheet}         Get Value In List KV                ${session}                 ${enp_filter_sheets}           $..data..id
     Return From Keyword    ${id_paysheet}
+
+Auto loading paysheet
+    ${resp}               Update Request Json KV               ${session}                ${enp_autoloading}/${id_paysheet}    ${data_auto_load}          200
+    Return From Keyword    ${resp}

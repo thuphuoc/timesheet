@@ -72,8 +72,8 @@ Timekeeping check OUT for employees   [Tags]        all       addschedule       
       ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
       Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}     null   ${endTime}    ${absenceType}     ${LeaveOfAbsence}
 
-Timekeeping Paid for employees   [Tags]     all      addschedule      clocking
-    [Documentation]       Nhân viên NGHỈ có phép
+Timekeeping Unpaid for employees   [Tags]     all      addschedule      clocking
+    [Documentation]       Nhân viên NGHỈ KO phép
     ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
     ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
     ${name_shift}         Get Value In List KV              ${session}        ${enp_shift}/${id_shift}           $..name
@@ -83,8 +83,8 @@ Timekeeping Paid for employees   [Tags]     all      addschedule      clocking
     ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
     Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}        null   null   2      true
 
-Timekeeping Unpaid for employees   [Tags]     all      addschedule      clocking
-      [Documentation]       Nhân viên NGHỈ KO phép
+Timekeeping Paid for employees   [Tags]     all      addschedule      clocking
+      [Documentation]       Nhân viên Nghỉ có phép
       ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
       ${name_shift}         Get Value In List KV              ${session}        ${enp_shift}/${id_shift}           $..name

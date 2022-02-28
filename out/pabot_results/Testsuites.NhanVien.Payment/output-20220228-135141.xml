@@ -1,0 +1,1565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220228 13:51:41.906">
+<suite id="s1" name="Testsuites" source="D:\timesheet\testsuites">
+<suite id="s1-s1" name="NhanVien" source="D:\timesheet\testsuites\NhanVien">
+<suite id="s1-s1-s1" name="Payment" source="D:\timesheet\testsuites\NhanVien\payment.robot">
+<kw name="Fill enviroment and get token" library="enviroment" type="setup">
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://auto5.kiotviet.vn/api</arg>
+<arg>zone13=https://testz13.kiotviet.vn/api</arg>
+<arg>zone12=https://testz12.kiotviet.vn/api</arg>
+<arg>zone14=https://auto14.kiotviet.vn/api</arg>
+<arg>zone61=https://testz61.kiotviet.vn/api</arg>
+<arg>zone9=https://taphoa.kiotviet.vn/api</arg>
+<arg>zone1=https://testz1.kiotviet.vn/api</arg>
+<arg>zone59902=https://phuoc902.kvpos.com:59302/api</arg>
+<arg>zone59903=https://phuoc903.kvpos.com:59303/api</arg>
+<arg>fnb59508=https://phuoc59508.kvpos.com:59508/api</arg>
+<arg>booking=https://bookinghcm.kvpos.com:9009/api</arg>
+<arg>fnb15=https://fnb.kiotviet.vn/api</arg>
+</arguments>
+<assign>
+<var>${dict_url_saleLogin}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${dict_url_saleLogin} = {'zone5': 'https://auto5.kiotviet.vn/api', 'zone13': 'https://testz13.kiotviet.vn/api', 'zone12': 'https://testz12.kiotviet.vn/api', 'zone14': 'https://auto14.kiotviet.vn/api', 'zone61': 'https://test...</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=/auth/salelogin</arg>
+<arg>zone13=/auth/salelogin</arg>
+<arg>zone12=/auth/salelogin</arg>
+<arg>zone1=/auth/salelogin</arg>
+<arg>zone14=/auth/salelogin</arg>
+<arg>zone61=/auth/salelogin</arg>
+<arg>zone9=/auth/salelogin</arg>
+<arg>zone59902=/auth/salelogin</arg>
+<arg>zone59903=/auth/salelogin</arg>
+<arg>fnb59508=/auth/salelogin</arg>
+<arg>booking=/auth/salelogin</arg>
+<arg>fnb15=/auth/salelogin</arg>
+</arguments>
+<assign>
+<var>${dict_enp_saleLogin}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${dict_enp_saleLogin} = {'zone5': '/auth/salelogin', 'zone13': '/auth/salelogin', 'zone12': '/auth/salelogin', 'zone1': '/auth/salelogin', 'zone14': '/auth/salelogin', 'zone61': '/auth/salelogin', 'zone9': '/auth/salelogin',...</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone13=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone12=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone1=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone14=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone61=https://api-timesheet.kiotviet.vn</arg>
+<arg>zone9=https://api-timesheet2.kiotviet.vn</arg>
+<arg>zone59902=https://kvpos.com:55002</arg>
+<arg>zone59903=https://kvpos.com:55003</arg>
+<arg>fnb59508=https://kvpos.com:55008</arg>
+<arg>booking=https://timesheetapi.kvpos.com:9009</arg>
+<arg>fnb15=https://api-fnbtimesheet.kiotviet.vn</arg>
+</arguments>
+<assign>
+<var>${dict_url}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${dict_url} = {'zone5': 'https://api-timesheet.kiotviet.vn', 'zone13': 'https://api-timesheet.kiotviet.vn', 'zone12': 'https://api-timesheet.kiotviet.vn', 'zone1': 'https://api-timesheet.kiotviet.vn', 'zone14': 'ht...</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=https://api-man.kiotviet.vn/api</arg>
+<arg>zone13=https://api-man.kiotviet.vn/api</arg>
+<arg>zone12=https://api-man.kiotviet.vn/api</arg>
+<arg>zone1=https://api-man.kiotviet.vn/api</arg>
+<arg>zone14=https://api-man.kiotviet.vn/api</arg>
+<arg>zone61=https://api-man3.kiotviet.vn/api</arg>
+<arg>zone9=https://api-man3.kiotviet.vn/api</arg>
+<arg>zone59902=https://kvpos.com:59932/api</arg>
+<arg>zone59903=https://kvpos.com:59933/api</arg>
+<arg>fnb59508=https://kvpos.com:59508/api</arg>
+<arg>booking=https://bookinghcm.kvpos.com:9009/api</arg>
+<arg>fnb15=https://fnb.kiotviet.vn/api</arg>
+</arguments>
+<assign>
+<var>${dict_url_man}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${dict_url_man} = {'zone5': 'https://api-man.kiotviet.vn/api', 'zone13': 'https://api-man.kiotviet.vn/api', 'zone12': 'https://api-man.kiotviet.vn/api', 'zone1': 'https://api-man.kiotviet.vn/api', 'zone14': 'https://ap...</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=admin</arg>
+<arg>zone13=admin</arg>
+<arg>zone12=admin</arg>
+<arg>zone14=admin</arg>
+<arg>zone1=admin</arg>
+<arg>zone9=taphoa</arg>
+<arg>zone61=admin</arg>
+<arg>zone59902=1</arg>
+<arg>zone59903=1</arg>
+<arg>fnb59508=1</arg>
+<arg>booking=1</arg>
+<arg>fnb15=admin</arg>
+</arguments>
+<assign>
+<var>${dict_username}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${dict_username} = {'zone5': 'admin', 'zone13': 'admin', 'zone12': 'admin', 'zone14': 'admin', 'zone1': 'admin', 'zone9': 'taphoa', 'zone61': 'admin', 'zone59902': '1', 'zone59903': '1', 'fnb59508': '1', 'booking': '1',...</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=123</arg>
+<arg>zone13=123456</arg>
+<arg>zone12=123456</arg>
+<arg>zone14=123</arg>
+<arg>zone1=123</arg>
+<arg>zone9=123456</arg>
+<arg>zone61=123456</arg>
+<arg>zone59902=1</arg>
+<arg>zone59903=1</arg>
+<arg>fnb59508=1</arg>
+<arg>booking=1</arg>
+<arg>fnb15=123</arg>
+</arguments>
+<assign>
+<var>${dict_password}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${dict_password} = {'zone5': '123', 'zone13': '123456', 'zone12': '123456', 'zone14': '123', 'zone1': '123', 'zone9': '123456', 'zone61': '123456', 'zone59902': '1', 'zone59903': '1', 'fnb59508': '1', 'booking': '1', 'f...</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>zone5=auto5</arg>
+<arg>zone13=testz13</arg>
+<arg>zone12=testz12</arg>
+<arg>zone14=auto14</arg>
+<arg>zone1=testz1</arg>
+<arg>zone9=taphoa</arg>
+<arg>zone61=testz61</arg>
+<arg>zone59902=phuoc902</arg>
+<arg>zone59903=phuoc903</arg>
+<arg>fnb59508=phuoc59508</arg>
+<arg>booking=phuoc009</arg>
+<arg>fnb15=testfnbz15a</arg>
+</arguments>
+<assign>
+<var>${dict_retailer}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${dict_retailer} = {'zone5': 'auto5', 'zone13': 'testz13', 'zone12': 'testz12', 'zone14': 'auto14', 'zone1': 'testz1', 'zone9': 'taphoa', 'zone61': 'testz61', 'zone59902': 'phuoc902', 'zone59903': 'phuoc903', 'fnb59508'...</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_username}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${username} = admin</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_password}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${password} = 123456</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_retailer}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${retailer}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${retailer} = testz61</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url_saleLogin}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url_saleLogin}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${url_saleLogin} = https://testz61.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_enp_saleLogin}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${enp_saleLogin}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${enp_saleLogin} = /auth/salelogin</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${url} = https://api-timesheet.kiotviet.vn</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${dict_url_man}</arg>
+<arg>${env}</arg>
+</arguments>
+<assign>
+<var>${url_man}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${url_man} = https://api-man3.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${username} = admin</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${password} = 123456</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${retailer}</arg>
+<arg>${retailer}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${retailer} = testz61</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url_saleLogin}</arg>
+<arg>${url_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${url_saleLogin} = https://testz61.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${enp_saleLogin}</arg>
+<arg>${enp_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${enp_saleLogin} = /auth/salelogin</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${url} = https://api-timesheet.kiotviet.vn</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${url_man}</arg>
+<arg>${url_man}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${url_man} = https://api-man3.kiotviet.vn/api</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${header} = {'retailer': 'testz61', 'Content-Type': 'application/json;charset=utf-8'}</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>UserName=${username}</arg>
+<arg>Password=${password}</arg>
+</arguments>
+<assign>
+<var>${data_saleLogin}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.135" level="INFO">${data_saleLogin} = {'UserName': 'admin', 'Password': '123456'}</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>sessionLogin</arg>
+<arg>${url_saleLogin}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.135" level="INFO">Creating Session using : alias=sessionLogin, url=https://testz61.kiotviet.vn/api, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.135"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>sessionLogin</arg>
+<arg>${enp_saleLogin}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_saleLogin}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.419" level="INFO">Post Request using : alias=sessionLogin, uri=/auth/salelogin, data={"UserName": "admin", "Password": "123456"}, headers={'retailer': 'testz61', 'Content-Type': 'application/json;charset=utf-8'}, files=None, allow_redirects=True </msg>
+<msg timestamp="20220228 13:51:42.419" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'testz61.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220228 13:51:42.419" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.419"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.419" level="INFO">{'UserId': 59211, 'UserName': 'admin', 'SessionId': 'qTiRKutkOOJBCfWsTMik', 'BearerToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0NTAzMDMsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsiVXNlciJdLCJrdnNlcyI6ImY2MmM5NWM1OWM5NDRjNDc5ODQ2NGFlZGYxYTA0ODJjIiwia3Z1aWQiOjU5MjExLCJrdmxhbmciOiJ2aS1WTiIsImt2dXR5cGUiOjAsImt2dWxpbWl0IjoiRmFsc2UiLCJrdnVhZG1pbiI6IlRydWUiLCJrdnVhY3QiOiJUcnVlIiwia3Z1bGltaXR0cmFucyI6IkZhbHNlIiwia3Z1c2hvd3N1bSI6IlRydWUiLCJrdmJpZCI6MzQ0MjgsImt2cmluZGlkIjoyLCJrdnJjb2RlIjoidGVzdHo2MSIsImt2cmlkIjoxMjI3OTYsImt2dXJpZCI6MTIyNzk2LCJrdnJnaWQiOjYsInBlcm1zIjoiIn0.fmMJLC8c2R4AUUIFaqvGylwo25QvFQRad9uwsDHMwvUxXif6_h9z03aguDyw_xd0Xg4R0mmGWkgPyOM6tbK4IdJtRo-4SDNVnt3-8YKjeCvKId1-kIJE4P4x3skH_07sBF13mzsDav6EIBhOMCDTQ-oc99KmGG7lLVa-yX6L9AUI_shHe9wOQ9VdhuxNo6Ydc4RCQYv_OCEKHXRRsiLTK8E07NJoxilEqQbU95t8oOH9N_qd2hh4ua3BwMcf_skxYQf-YAnVKLmRSqvedVzhxRDUr4BEaSAeI1mcOIRvTvj1qWSsNsVXroY91S5ZXp_beAxX0AKX2kmQWkMxS8RTBQ', 'CurrentBranchId': 34428, 'IsShowNotificationPopupDr': True, 'IsOTPVerifcationRequired': False}</msg>
+<status status="PASS" starttime="20220228 13:51:42.419" endtime="20220228 13:51:42.419"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.BearerToken</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.451" level="INFO">${result} = ['eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0NTAzMDMsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsiVXNlciJdL...</msg>
+<status status="PASS" starttime="20220228 13:51:42.419" endtime="20220228 13:51:42.451"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.451" level="INFO">Length is 1</msg>
+<msg timestamp="20220228 13:51:42.451" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20220228 13:51:42.451" endtime="20220228 13:51:42.451"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} != 0</arg>
+<arg>Get From List</arg>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20220228 13:51:42.451" endtime="20220228 13:51:42.451"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.451" level="INFO">${result} = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0NTAzMDMsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsiVXNlciJdLCJ...</msg>
+<status status="PASS" starttime="20220228 13:51:42.451" endtime="20220228 13:51:42.451"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${result}'=='None'</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.451" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:42.451" endtime="20220228 13:51:42.451"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:42.451" endtime="20220228 13:51:42.451"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.451" level="INFO">${token} = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0NTAzMDMsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsiVXNlciJdLCJ...</msg>
+<status status="PASS" starttime="20220228 13:51:42.419" endtime="20220228 13:51:42.451"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>Bearer</arg>
+<arg>${token}</arg>
+</arguments>
+<assign>
+<var>${token}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.451" level="INFO">${token} = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0NTAzMDMsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsiVXNl...</msg>
+<status status="PASS" starttime="20220228 13:51:42.451" endtime="20220228 13:51:42.451"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.UserId</arg>
+</arguments>
+<assign>
+<var>${user_login}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${result} = [59211]</msg>
+<status status="PASS" starttime="20220228 13:51:42.451" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.466" level="INFO">Length is 1</msg>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} != 0</arg>
+<arg>Get From List</arg>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${result} = 59211</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${result}'=='None'</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.466" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${user_login} = 59211</msg>
+<status status="PASS" starttime="20220228 13:51:42.451" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${user_login}</arg>
+<arg>${user_login}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${user_login} = 59211</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${token}</arg>
+<arg>${token}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${token} = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0NTAzMDMsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsiVXNl...</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Random a String Letter" library="share_random">
+<arguments>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${random_str}</var>
+</assign>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>[LETTERS]</arg>
+</arguments>
+<assign>
+<var>${random_str}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${random_str} = Pvlr</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${random_str}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.466" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${random_str} = Pvlr</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${random_str}</arg>
+<arg>${random_str}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${random_str} = Pvlr</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Random a Number" library="share_random">
+<arguments>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${random_number}</var>
+</assign>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>[NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${random_number}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${random_number} = 82137177</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${random_number}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.466" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${random_number} = 82137177</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${random_number}</arg>
+<arg>${random_number}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.466" level="INFO">${random_number} = 82137177</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.466"></status>
+</kw>
+<kw name="Get Value From Json KV" library="share">
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.CurrentBranchId</arg>
+</arguments>
+<assign>
+<var>${branchId}</var>
+</assign>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp_json}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${result} = [34428]</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.482" level="INFO">Length is 1</msg>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${length} != 0</arg>
+<arg>Get From List</arg>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>0</arg>
+</arguments>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${result} = 34428</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${result}'=='None'</arg>
+<arg>Return From Keyword</arg>
+<arg>${0}</arg>
+<arg>ELSE</arg>
+<arg>Return From Keyword</arg>
+<arg>${result}</arg>
+</arguments>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.482" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${branchId} = 34428</msg>
+<status status="PASS" starttime="20220228 13:51:42.466" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${branchId}</arg>
+<arg>${branchId}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${branchId} = 34428</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${env}</arg>
+<arg>zone</arg>
+</arguments>
+<assign>
+<var>${is_run_retail}</var>
+<var>${value}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${env}</arg>
+<arg>zone</arg>
+</arguments>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${is_run_retail} = PASS</msg>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${is_run_retail}' == 'PASS'</arg>
+<arg>${true}</arg>
+<arg>${false}</arg>
+</arguments>
+<assign>
+<var>${run}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${run} = True</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${run}'=='True'</arg>
+<arg>Log</arg>
+<arg>RunRetail</arg>
+<arg>ELSE</arg>
+<arg>Run Fnb Or Booking</arg>
+<arg>${resp.json()}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>RunRetail</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.482" level="INFO">RunRetail</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Set Header" library="enviroment">
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${branchId}</arg>
+</arguments>
+<assign>
+<var>${branchId}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${branchId} = 34428</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>Content-Type=application/json;charset=utf-8</arg>
+<arg>branchid=${branchId}</arg>
+<arg>Authorization=${token}</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${header} = {'retailer': 'testz61', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '34428', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3V...</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>retailer=${retailer}</arg>
+<arg>branchid=${branchId}</arg>
+<arg>Authorization=${token}</arg>
+</arguments>
+<assign>
+<var>${headers_not_contenType}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${headers_not_contenType} = {'retailer': 'testz61', 'branchid': '34428', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0N...</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${header}</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${header} = {'retailer': 'testz61', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '34428', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3V...</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${headers_not_contenType}</arg>
+<arg>${headers_not_contenType}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.482" level="INFO">${headers_not_contenType} = {'retailer': 'testz61', 'branchid': '34428', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0N...</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>session</arg>
+<arg>${url}</arg>
+<arg>${headers_not_contenType}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.482" level="INFO">Creating Session using : alias=session, url=https://api-timesheet.kiotviet.vn, headers={'retailer': 'testz61', 'branchid': '34428', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0NTAzMDMsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsiVXNlciJdLCJrdnNlcyI6ImY2MmM5NWM1OWM5NDRjNDc5ODQ2NGFlZGYxYTA0ODJjIiwia3Z1aWQiOjU5MjExLCJrdmxhbmciOiJ2aS1WTiIsImt2dXR5cGUiOjAsImt2dWxpbWl0IjoiRmFsc2UiLCJrdnVhZG1pbiI6IlRydWUiLCJrdnVhY3QiOiJUcnVlIiwia3Z1bGltaXR0cmFucyI6IkZhbHNlIiwia3Z1c2hvd3N1bSI6IlRydWUiLCJrdmJpZCI6MzQ0MjgsImt2cmluZGlkIjoyLCJrdnJjb2RlIjoidGVzdHo2MSIsImt2cmlkIjoxMjI3OTYsImt2dXJpZCI6MTIyNzk2LCJrdnJnaWQiOjYsInBlcm1zIjoiIn0.fmMJLC8c2R4AUUIFaqvGylwo25QvFQRad9uwsDHMwvUxXif6_h9z03aguDyw_xd0Xg4R0mmGWkgPyOM6tbK4IdJtRo-4SDNVnt3-8YKjeCvKId1-kIJE4P4x3skH_07sBF13mzsDav6EIBhOMCDTQ-oc99KmGG7lLVa-yX6L9AUI_shHe9wOQ9VdhuxNo6Ydc4RCQYv_OCEKHXRRsiLTK8E07NJoxilEqQbU95t8oOH9N_qd2hh4ua3BwMcf_skxYQf-YAnVKLmRSqvedVzhxRDUr4BEaSAeI1mcOIRvTvj1qWSsNsVXroY91S5ZXp_beAxX0AKX2kmQWkMxS8RTBQ'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>sessionMan</arg>
+<arg>${url_man}</arg>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.482" level="INFO">Creating Session using : alias=sessionMan, url=https://api-man3.kiotviet.vn/api, headers={'retailer': 'testz61', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '34428', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0NTAzMDMsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsiVXNlciJdLCJrdnNlcyI6ImY2MmM5NWM1OWM5NDRjNDc5ODQ2NGFlZGYxYTA0ODJjIiwia3Z1aWQiOjU5MjExLCJrdmxhbmciOiJ2aS1WTiIsImt2dXR5cGUiOjAsImt2dWxpbWl0IjoiRmFsc2UiLCJrdnVhZG1pbiI6IlRydWUiLCJrdnVhY3QiOiJUcnVlIiwia3Z1bGltaXR0cmFucyI6IkZhbHNlIiwia3Z1c2hvd3N1bSI6IlRydWUiLCJrdmJpZCI6MzQ0MjgsImt2cmluZGlkIjoyLCJrdnJjb2RlIjoidGVzdHo2MSIsImt2cmlkIjoxMjI3OTYsImt2dXJpZCI6MTIyNzk2LCJrdnJnaWQiOjYsInBlcm1zIjoiIn0.fmMJLC8c2R4AUUIFaqvGylwo25QvFQRad9uwsDHMwvUxXif6_h9z03aguDyw_xd0Xg4R0mmGWkgPyOM6tbK4IdJtRo-4SDNVnt3-8YKjeCvKId1-kIJE4P4x3skH_07sBF13mzsDav6EIBhOMCDTQ-oc99KmGG7lLVa-yX6L9AUI_shHe9wOQ9VdhuxNo6Ydc4RCQYv_OCEKHXRRsiLTK8E07NJoxilEqQbU95t8oOH9N_qd2hh4ua3BwMcf_skxYQf-YAnVKLmRSqvedVzhxRDUr4BEaSAeI1mcOIRvTvj1qWSsNsVXroY91S5ZXp_beAxX0AKX2kmQWkMxS8RTBQ'},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.482"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>session</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.498" level="INFO">${session} = session</msg>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.498"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${session_man}</arg>
+<arg>sessionMan</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.498" level="INFO">${session_man} = sessionMan</msg>
+<status status="PASS" starttime="20220228 13:51:42.498" endtime="20220228 13:51:42.498"></status>
+</kw>
+<kw name="Get Name Branch From Id" library="branch">
+<arguments>
+<arg>${branchId}</arg>
+</arguments>
+<assign>
+<var>${name_branch}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session_man}</arg>
+<arg>${enp_branch}/${branchId}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.640" level="INFO">Get Request using : alias=sessionMan, uri=/branchs/34428, headers=None json=None</msg>
+<msg timestamp="20220228 13:51:42.640" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-man3.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220228 13:51:42.640" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220228 13:51:42.498" endtime="20220228 13:51:42.640"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.640" level="INFO">{'Id': 34428, 'Name': 'Chi nhánh B', 'Type': 0, 'Address': '434 trần Khát chân', 'Province': 'Hà Giang', 'District': 'Huyện Bắc Quang', 'ContactNumber': '0912345678', 'IsActive': True, 'RetailerId': 122796, 'CreatedBy': 0, 'LimitAccess': False, 'LocationName': 'Hà Giang - Huyện Bắc Quang', 'WardName': 'Xã Tân Lập', 'GmbStatus': 1, 'Orders': [], 'Transfers1': [], 'DamageItems': [], 'SurchargeBranches': [], 'AdrApplications': [], 'Customers': [], 'Suppliers': [], 'ExpensesOtherBranches': [], 'OrderSuppliers': [], 'WarrantyBranchGroups': [], 'BranchTakingAddresses': [], 'Patients': [], 'Clinics': [], 'Doctors': [], 'DoctorQualifications': [], 'DoctorSpecialities': [], 'Prescriptions': [], 'PayslipPayments': [], 'PayslipPaymentAllocations': [], 'IdOld': 0, 'TotalUser': 0, 'CompareBranchName': 'Chi nhánh B', 'StatusGmbValue': 'Chưa đăng ký', 'IsTimeSheetException': False, 'LocationId': 0, 'WardId': 0, 'SyncProductSearchEventId': 0}</msg>
+<status status="PASS" starttime="20220228 13:51:42.640" endtime="20220228 13:51:42.640"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>$.Name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.666" level="INFO">${name} = ['Chi nhánh B']</msg>
+<status status="PASS" starttime="20220228 13:51:42.640" endtime="20220228 13:51:42.666"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.666" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:42.666" endtime="20220228 13:51:42.666"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.666" level="INFO">${name_branch} = ['Chi nhánh B']</msg>
+<status status="PASS" starttime="20220228 13:51:42.498" endtime="20220228 13:51:42.666"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:42.482" endtime="20220228 13:51:42.666"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:42.135" endtime="20220228 13:51:42.666"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="Payment not distributed to payslip">
+<kw name="Get Random ID Employee" library="employee">
+<assign>
+<var>${id_employee}</var>
+</assign>
+<kw name="Format Enp Filter_enp_employee" library="employee">
+<assign>
+<var>${filter_enp_employee}</var>
+</assign>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${branchId}</arg>
+</arguments>
+<assign>
+<var>${list_format}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.666" level="INFO">${list_format} = [34428]</msg>
+<status status="PASS" starttime="20220228 13:51:42.666" endtime="20220228 13:51:42.666"></status>
+</kw>
+<kw name="Format String Use [D0] [D1] [D2]" library="share">
+<arguments>
+<arg>${filter_enp_employee}</arg>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${filter_enp_employee}</var>
+</assign>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.666" level="INFO">Length is 1</msg>
+<msg timestamp="20220228 13:51:42.666" level="INFO">${length} = 1</msg>
+<status status="PASS" starttime="20220228 13:51:42.666" endtime="20220228 13:51:42.666"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.672" level="INFO">${value_temp} = 34428</msg>
+<status status="PASS" starttime="20220228 13:51:42.672" endtime="20220228 13:51:42.672"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.672" level="INFO">${value_temp} = 34428</msg>
+<status status="PASS" starttime="20220228 13:51:42.672" endtime="20220228 13:51:42.672"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.672" level="INFO">${data_format} = /employees?skip=0&amp;take=100&amp;OrderByDesc=id&amp;includeFingerPrint=true&amp;BranchIds=34428</msg>
+<status status="PASS" starttime="20220228 13:51:42.672" endtime="20220228 13:51:42.672"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:42.672" endtime="20220228 13:51:42.672"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:42.666" endtime="20220228 13:51:42.672"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${data_format}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.672" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:42.672" endtime="20220228 13:51:42.672"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.672" level="INFO">${filter_enp_employee} = /employees?skip=0&amp;take=100&amp;OrderByDesc=id&amp;includeFingerPrint=true&amp;BranchIds=34428</msg>
+<status status="PASS" starttime="20220228 13:51:42.666" endtime="20220228 13:51:42.672"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${filter_enp_employee}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.672" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:42.672" endtime="20220228 13:51:42.672"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.672" level="INFO">${filter_enp_employee} = /employees?skip=0&amp;take=100&amp;OrderByDesc=id&amp;includeFingerPrint=true&amp;BranchIds=34428</msg>
+<status status="PASS" starttime="20220228 13:51:42.666" endtime="20220228 13:51:42.672"></status>
+</kw>
+<kw name="Get Value In List KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${filter_enp_employee}</arg>
+<arg>$.result.data[?(@.id)].id</arg>
+</arguments>
+<assign>
+<var>${id_employee}</var>
+</assign>
+<kw name="Get Request From KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.886" level="INFO">Get Request using : alias=session, uri=/employees?skip=0&amp;take=100&amp;OrderByDesc=id&amp;includeFingerPrint=true&amp;BranchIds=34428, headers=None json=None</msg>
+<msg timestamp="20220228 13:51:42.886" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220228 13:51:42.887" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220228 13:51:42.672" endtime="20220228 13:51:42.887"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.887" level="INFO">{'result': {'total': 12, 'data': [{'id': 60000000180802, 'code': 'NV000004', 'name': 'dfer', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2021-06-15T18:47:18.3500000', 'modifiedBy': 59211, 'modifiedDate': '2021-07-15T09:40:49.3850000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 60000001417302, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 60000000180802}]}, {'id': 100000000003701, 'code': 'NV000003', 'name': 'dffc', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2021-06-15T18:46:43.7070000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 100000000088301, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 100000000003701}]}, {'id': 100000000107402, 'code': 'NV23983364', 'name': 'FTBE', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2022-02-28T13:51:42.0200000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 100000000192102, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 100000000107402}]}, {'id': 170000000116004, 'code': 'NV000015', 'name': 'had', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'userId': 305626, 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2021-09-01T12:33:40.6130000', 'modifiedBy': 59211, 'modifiedDate': '2021-09-01T12:42:03.3430000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 170000000368804, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 170000000116004}]}, {'id': 100000000106203, 'code': 'NV000017', 'name': 'hihi', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2021-12-17T00:50:22.5230000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 100000000190703, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 100000000106203}]}, {'id': 100000000003301, 'code': 'NV000001', 'name': 'ik', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2021-04-20T11:20:27.2270000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 100000000088001, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 100000000003301}]}, {'id': 100000000107401, 'code': 'NV357232', 'name': 'nfPI', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2022-02-28T13:51:36.1970000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 100000000192101, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 100000000107401}]}, {'id': 100000000107301, 'code': 'NV284650', 'name': 'nfPI', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2022-02-28T13:51:33.0030000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 100000000192001, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 100000000107301}]}, {'id': 160000000211319, 'code': 'NV000007', 'name': 'nghĩa', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2021-07-16T15:09:03.9070000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': ['11'], 'employeeBranches': [{'id': 160000000363920, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 160000000211319}]}, {'id': 160000000211318, 'code': 'NV000006', 'name': 'phuoc', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2021-07-16T14:52:02.2270000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': ['2'], 'employeeBranches': [{'id': 160000000363919, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 160000000211318}]}, {'id': 100000000003501, 'code': 'NV000002', 'name': 'rfg', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2021-05-06T09:27:04.9000000', 'modifiedBy': 59211, 'modifiedDate': '2021-06-15T18:46:54.8130000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 100000000088101, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 100000000003501}]}, {'id': 60000000183102, 'code': 'NV000014', 'name': 'Nhân viên', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'userId': 305625, 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2021-09-01T12:26:25.6530000', 'modifiedBy': 59211, 'modifiedDate': '2021-09-01T12:43:49.2970000', 'isDeleted': False, 'profilePictures': [], 'clockings': [], 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'finqerCodes': [], 'employeeBranches': [{'id': 60000001419702, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 60000000183102}]}]}, 'message': ''}</msg>
+<status status="PASS" starttime="20220228 13:51:42.887" endtime="20220228 13:51:42.888"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.888" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220228 13:51:42.888" endtime="20220228 13:51:42.888"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.889" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:42.888" endtime="20220228 13:51:42.889"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.889" level="INFO">${resp} = {'result': {'total': 12, 'data': [{'id': 60000000180802, 'code': 'NV000004', 'name': 'dfer', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'loc...</msg>
+<status status="PASS" starttime="20220228 13:51:42.672" endtime="20220228 13:51:42.889"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.905" level="INFO">${list} = [60000000180802, 100000000003701, 100000000107402, 170000000116004, 100000000106203, 100000000003301, 100000000107401, 100000000107301, 160000000211319, 160000000211318, 100000000003501, 6000000018310...</msg>
+<status status="PASS" starttime="20220228 13:51:42.889" endtime="20220228 13:51:42.905"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.choice($list)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20220228 13:51:42.905" level="INFO">${value} = 160000000211319</msg>
+<status status="PASS" starttime="20220228 13:51:42.905" endtime="20220228 13:51:42.905"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:42.905" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:42.905" endtime="20220228 13:51:42.905"></status>
+</kw>
+<msg timestamp="20220228 13:51:42.905" level="INFO">${id_employee} = 160000000211319</msg>
+<status status="PASS" starttime="20220228 13:51:42.672" endtime="20220228 13:51:42.905"></status>
+</kw>
+<kw name="Get Value In List KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enp_employee}/${id_employee}</arg>
+<arg>$..code</arg>
+</arguments>
+<assign>
+<var>${code_employee}</var>
+</assign>
+<kw name="Get Request From KV" library="share">
+<arguments>
+<arg>${session}</arg>
+<arg>${enpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.014" level="INFO">Get Request using : alias=session, uri=/employees/160000000211319, headers=None json=None</msg>
+<msg timestamp="20220228 13:51:43.014" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-timesheet.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220228 13:51:43.014" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220228 13:51:42.905" endtime="20220228 13:51:43.014"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:43.014" level="INFO">{'result': {'id': 160000000211319, 'code': 'NV000007', 'name': 'nghĩa', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'wardName': '', 'note': '', 'tenantId': 122796, 'branchId': 34428, 'createdBy': 59211, 'createdDate': '2021-07-16T15:09:03.9070000', 'isDeleted': False, 'departmentName': '', 'jobTitleName': '', 'isNotUpdateUserId': False, 'debt': 0, 'employeeBranches': [{'id': 160000000363920, 'tenantId': 122796, 'branchId': 34428, 'employeeId': 160000000211319}]}, 'message': ''}</msg>
+<status status="PASS" starttime="20220228 13:51:43.014" endtime="20220228 13:51:43.014"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+</arguments>
+<msg timestamp="20220228 13:51:43.014" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220228 13:51:43.014" endtime="20220228 13:51:43.014"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:43.014" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:43.014" endtime="20220228 13:51:43.014"></status>
+</kw>
+<msg timestamp="20220228 13:51:43.014" level="INFO">${resp} = {'result': {'id': 160000000211319, 'code': 'NV000007', 'name': 'nghĩa', 'isActive': True, 'identityNumber': '', 'mobilePhone': '', 'email': '', 'facebook': '', 'address': '', 'locationName': '', 'ward...</msg>
+<status status="PASS" starttime="20220228 13:51:42.905" endtime="20220228 13:51:43.014"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${resp}</arg>
+<arg>${json_path}</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${list} = ['NV000007']</msg>
+<status status="PASS" starttime="20220228 13:51:43.014" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.choice($list)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value} = NV000007</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:43.030" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${code_employee} = NV000007</msg>
+<status status="PASS" starttime="20220228 13:51:42.905" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${id_employee}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:43.030" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${id_employee} = 160000000211319</msg>
+<status status="PASS" starttime="20220228 13:51:42.666" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${amount}</arg>
+<arg>${id_employee}</arg>
+<arg>${method}</arg>
+<arg>${date}</arg>
+<arg>\ \</arg>
+</arguments>
+<assign>
+<var>${list_format}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${list_format} = ['10000', 160000000211319, 'Cash', '10/01/2022', ' ']</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Format String Use [D0] [D1] [D2]" library="share">
+<arguments>
+<arg>${data_payment}</arg>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${data_payment}</var>
+</assign>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list_format}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">Length is 5</msg>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${length} = 5</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value_temp} = 10000</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value_temp} = 10000</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${data_format} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":[D1],"Method":"[D2]","TransDate":"[D3]"}],"Paysheets":[[D4]]}</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value_temp} = 160000000211319</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value_temp} = 160000000211319</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${data_format} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":160000000211319,"Method":"[D2]","TransDate":"[D3]"}],"Paysheets":[[D4]]}</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value_temp} = Cash</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value_temp} = Cash</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${data_format} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":160000000211319,"Method":"Cash","TransDate":"[D3]"}],"Paysheets":[[D4]]}</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value_temp} = 10/01/2022</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value_temp} = 10/01/2022</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${data_format} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":160000000211319,"Method":"Cash","TransDate":"10/01/2022"}],"Paysheets":[[D4]]}</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list_format}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value_temp} =  </msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${value_temp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${value_temp} =  </msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${data_format}</arg>
+<arg>[D${i}]</arg>
+<arg>${value_temp}</arg>
+</arguments>
+<assign>
+<var>${data_format}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${data_format} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":160000000211319,"Method":"Cash","TransDate":"10/01/2022"}],"Paysheets":[ ]}</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${data_format}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:43.030" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<msg timestamp="20220228 13:51:43.030" level="INFO">${data_payment} = {"PayslipPayments":[{"Amount":10000,"EmployeeId":160000000211319,"Method":"Cash","TransDate":"10/01/2022"}],"Paysheets":[ ]}</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.030"></status>
+</kw>
+<kw name="Post Request Json KV" library="share">
+<arguments>
+<arg>${session_man}</arg>
+<arg>${enp_payment}</arg>
+<arg>${data_payment}</arg>
+<arg>200</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the</doc>
+<arguments>
+<arg>${session}</arg>
+<arg>${endpoint}</arg>
+<arg>headers=${header}</arg>
+<arg>data=${data_func}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20220228 13:51:43.490" level="INFO">Post Request using : alias=sessionMan, uri=/payslip-payments, data={"PayslipPayments":[{"Amount":10000,"EmployeeId":160000000211319,"Method":"Cash","TransDate":"10/01/2022"}],"Paysheets":[ ]}, headers={'retailer': 'testz61', 'Content-Type': 'application/json;charset=utf-8', 'branchid': '34428', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndYYSJ9.eyJpc3MiOiJrdnNzand0Iiwic3ViIjo1OTIxMSwiaWF0IjoxNjQ2MDMxMTAzLCJleHAiOjE2NDg0NTAzMDMsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsiVXNlciJdLCJrdnNlcyI6ImY2MmM5NWM1OWM5NDRjNDc5ODQ2NGFlZGYxYTA0ODJjIiwia3Z1aWQiOjU5MjExLCJrdmxhbmciOiJ2aS1WTiIsImt2dXR5cGUiOjAsImt2dWxpbWl0IjoiRmFsc2UiLCJrdnVhZG1pbiI6IlRydWUiLCJrdnVhY3QiOiJUcnVlIiwia3Z1bGltaXR0cmFucyI6IkZhbHNlIiwia3Z1c2hvd3N1bSI6IlRydWUiLCJrdmJpZCI6MzQ0MjgsImt2cmluZGlkIjoyLCJrdnJjb2RlIjoidGVzdHo2MSIsImt2cmlkIjoxMjI3OTYsImt2dXJpZCI6MTIyNzk2LCJrdnJnaWQiOjYsInBlcm1zIjoiIn0.fmMJLC8c2R4AUUIFaqvGylwo25QvFQRad9uwsDHMwvUxXif6_h9z03aguDyw_xd0Xg4R0mmGWkgPyOM6tbK4IdJtRo-4SDNVnt3-8YKjeCvKId1-kIJE4P4x3skH_07sBF13mzsDav6EIBhOMCDTQ-oc99KmGG7lLVa-yX6L9AUI_shHe9wOQ9VdhuxNo6Ydc4RCQYv_OCEKHXRRsiLTK8E07NJoxilEqQbU95t8oOH9N_qd2hh4ua3BwMcf_skxYQf-YAnVKLmRSqvedVzhxRDUr4BEaSAeI1mcOIRvTvj1qWSsNsVXroY91S5ZXp_beAxX0AKX2kmQWkMxS8RTBQ'}, files=None, allow_redirects=True </msg>
+<msg timestamp="20220228 13:51:43.490" level="INFO">C:\Users\Tester-F1\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-man3.kiotviet.vn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220228 13:51:43.490" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220228 13:51:43.040" endtime="20220228 13:51:43.490"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:43.490" level="INFO">[{'EmployeeIsDeleted': False, 'PayslipValue': 0, 'PaidValue': 0, 'NeedPayValue': 0, 'TargetCode': 'PCL000002', 'UserName': '', 'EventId': 0, 'EventAction': 0, 'RetryCount': 0, 'Id': 1000101569, 'Code': 'PCL000002', 'Amount': 10000, 'AmountOriginal': 10000, 'IsAllowcation': False, 'Method': 'Cash', 'RetailerId': 122796, 'BranchId': 34428, 'PayslipId': 0, 'EmployeeId': 160000000211319, 'TransDate': '2022-01-10T00:00:00.0060000+07:00', 'UserId': 59211, 'Status': 0, 'CreatedDate': '2022-02-28T13:51:44.0714756+07:00', 'CreatedBy': 59211}]</msg>
+<status status="PASS" starttime="20220228 13:51:43.490" endtime="20220228 13:51:43.490"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${resp.status_code}</arg>
+<arg>${expected_status_code}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:43.490" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220228 13:51:43.490" endtime="20220228 13:51:43.490"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+</arguments>
+<msg timestamp="20220228 13:51:43.490" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" starttime="20220228 13:51:43.490" endtime="20220228 13:51:43.490"></status>
+</kw>
+<msg timestamp="20220228 13:51:43.490" level="INFO">${resp} = [{'EmployeeIsDeleted': False, 'PayslipValue': 0, 'PaidValue': 0, 'NeedPayValue': 0, 'TargetCode': 'PCL000002', 'UserName': '', 'EventId': 0, 'EventAction': 0, 'RetryCount': 0, 'Id': 1000101569, 'Code'...</msg>
+<status status="PASS" starttime="20220228 13:51:43.030" endtime="20220228 13:51:43.490"></status>
+</kw>
+<doc>Thanh toán bằng tiền mặt không phân bổ vào phiếu lương</doc>
+<tags>
+<tag>all</tag>
+<tag>payment</tag>
+</tags>
+<status status="PASS" starttime="20220228 13:51:42.666" endtime="20220228 13:51:43.490" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220228 13:51:41.926" endtime="20220228 13:51:43.490"></status>
+</suite>
+<status status="PASS" starttime="20220228 13:51:41.915" endtime="20220228 13:51:43.490"></status>
+</suite>
+<status status="PASS" starttime="20220228 13:51:41.907" endtime="20220228 13:51:43.490"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">all</stat>
+<stat pass="1" fail="0">payment</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="1" fail="0" id="s1-s1" name="NhanVien">Testsuites.NhanVien</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Payment">Testsuites.NhanVien.Payment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

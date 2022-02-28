@@ -56,13 +56,13 @@ Create And Get ID Employee
 
 Format Enp Filter_enp_employee
     ${list_format}                Create List    ${branchId}
-    ${filter_enp_employee}        Format String Use [D0] [D1] [D2]    ${filter_enp_employee}    ${list_format}
+    ${filter_enp_employee}        Format String Use [D0] [D1] [D2]       ${filter_enp_employee}    ${list_format}
     Return From Keyword           ${filter_enp_employee}
 
 Get Random ID Employee
     ${filter_enp_employee}        Format Enp Filter_enp_employee
-    ${id_employee}                Get Value In List KV    ${session}    ${filter_enp_employee}             $.result.data[?(@.id)].id
-    ${code_employee}              Get Value In List KV    ${session}    ${enp_employee}/${id_employee}     $..code
+    ${id_employee}                Get Value In List KV    ${session}     ${filter_enp_employee}             $.result.data[?(@.id)].id
+    ${code_employee}              Get Value In List KV    ${session}     ${enp_employee}/${id_employee}     $..code
     Return From Keyword           ${id_employee}
 
 Create Duplicate Employee
