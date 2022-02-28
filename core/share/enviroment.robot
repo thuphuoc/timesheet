@@ -14,6 +14,7 @@ Fill enviroment and get token
     ...                                                         zone12=https://testz12.kiotviet.vn/api
     ...                                                         zone14=https://auto14.kiotviet.vn/api
     ...                                                         zone61=https://testz61.kiotviet.vn/api
+    ...                                                         zone21=https://testz221.kiotviet.vn/api
     ...                                                         zone9=https://taphoa.kiotviet.vn/api
     ...                                                         zone1=https://testz1.kiotviet.vn/api
     ...                                                         zone59902=https://phuoc902.kvpos.com:59302/api
@@ -28,6 +29,7 @@ Fill enviroment and get token
     ...                                                         zone1=/auth/salelogin
     ...                                                         zone14=/auth/salelogin
     ...                                                         zone61=/auth/salelogin
+    ...                                                         zone21=/auth/salelogin
     ...                                                         zone9=/auth/salelogin
     ...                                                         zone59902=/auth/salelogin
     ...                                                         zone59903=/auth/salelogin
@@ -41,6 +43,7 @@ Fill enviroment and get token
     ...                                                         zone1=https://api-timesheet.kiotviet.vn
     ...                                                         zone14=https://api-timesheet.kiotviet.vn
     ...                                                         zone61=https://api-timesheet.kiotviet.vn
+    ...                                                         zone21=https://api-timesheet.kiotviet.vn
     ...                                                         zone9=https://api-timesheet2.kiotviet.vn
     ...                                                         zone59902=https://kvpos.com:55002
     ...                                                         zone59903=https://kvpos.com:55003
@@ -54,6 +57,7 @@ Fill enviroment and get token
     ...                                                         zone1=https://api-man.kiotviet.vn/api
     ...                                                         zone14=https://api-man.kiotviet.vn/api
     ...                                                         zone61=https://api-man3.kiotviet.vn/api
+    ...                                                         zone21=https://api-man3.kiotviet.vn/api
     ...                                                         zone9=https://api-man3.kiotviet.vn/api
     ...                                                         zone59902=https://kvpos.com:59932/api
     ...                                                         zone59903=https://kvpos.com:59933/api
@@ -62,15 +66,15 @@ Fill enviroment and get token
     ...                                                         fnb15=https://fnb.kiotviet.vn/api
 
     ${dict_username}              Create Dictionary             zone5=admin             zone13=admin            zone12=admin        zone14=admin
-    ...                                                         zone1=admin             zone9=taphoa            zone61=admin
+    ...                                                         zone1=admin             zone9=taphoa            zone61=admin        zone21=admin
     ...                                                         zone59902=1             zone59903=1             fnb59508=1          booking=1
     ...                                                         fnb15=admin
     ${dict_password}              Create Dictionary             zone5=123               zone13=123456           zone12=123456       zone14=123
-    ...                                                         zone1=123               zone9=123456            zone61=123456
+    ...                                                         zone1=123               zone9=123456            zone61=123456       zone21=123456
     ...                                                         zone59902=1             zone59903=1             fnb59508=1         booking=1
     ...                                                         fnb15=123
     ${dict_retailer}              Create Dictionary             zone5=auto5             zone13=testz13          zone12=testz12      zone14=auto14
-    ...                                                         zone1=testz1            zone9=taphoa            zone61=testz61
+    ...                                                         zone1=testz1            zone9=taphoa            zone61=testz61      zone21=testz221
     ...                                                         zone59902=phuoc902      zone59903=phuoc903      fnb59508=phuoc59508                  booking=phuoc009
     ...                                                         fnb15=testfnbz15a
 

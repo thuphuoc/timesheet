@@ -11,19 +11,18 @@ Auto loading paysheet :: T?i l?i b?ng l??ng t?m tính                  | PASS |
 ------------------------------------------------------------------------------
 Cancel paysheet :: Hu? b? b?ng l??ng t?m tính ko h?y phi?u thanh toán | PASS |
 ------------------------------------------------------------------------------
-Cancel paysheet and cancel payment :: Hu? b? b?ng l??ng t?m tính v... | FAIL |
-Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
+Cancel paysheet and cancel payment :: Hu? b? b?ng l??ng t?m tính v... | PASS |
 ------------------------------------------------------------------------------
-Testsuites.BangTinhLuong.Paysheet                                     | FAIL |
-4 critical tests, 3 passed, 1 failed
-4 tests total, 3 passed, 1 failed
+Testsuites.BangTinhLuong.Paysheet                                     | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
 ==============================================================================
-Testsuites.BangTinhLuong                                              | FAIL |
-4 critical tests, 3 passed, 1 failed
-4 tests total, 3 passed, 1 failed
+Testsuites.BangTinhLuong                                              | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
 ==============================================================================
-Testsuites                                                            | FAIL |
-4 critical tests, 3 passed, 1 failed
-4 tests total, 3 passed, 1 failed
+Testsuites                                                            | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.BangTinhLuong.Paysheet\output-20220228-135129.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.BangTinhLuong.Paysheet\output-20220228-141526.xml
