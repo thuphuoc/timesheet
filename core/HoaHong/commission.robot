@@ -60,6 +60,7 @@ Get RanDom a Product
     ${list_format}              Create List                          ${branchId}
     ${enp_product}              Format String Use [D0] [D1] [D2]     ${enp_product}        ${list_format}
     ${id_product}               Get Value In List KV                 ${session_man}        ${enp_product}           $.Data[?(@.Id!=-1)]..Id
+    Get Code Product From ID    ${id_product}
     Return From Keyword         ${id_product}
 
 Get Code Product From ID

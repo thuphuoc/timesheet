@@ -9,29 +9,29 @@ Suite setup  Fill enviroment and get token    ${env}
 *** Variables ***
 *** TestCases ***
 
-Create shift                    [Tags]   all    shift
+Create shift                    [Tags]   allretailer      allfnb          allbooking    shift
     [Documentation]             Thêm mới ca làm việc
     ${resp}                     Create Shift        ${random_number}    ${random_str}       ${branchId}             200
     Get Message Expected        ${resp}             $.message           Tạo ca thành công
 
-Create duplicate shift          [Tags]   all    shift
+Create duplicate shift          [Tags]   allretailer      allfnb          allbooking    shift
     [Documentation]             Thêm mới ca làm việc trùng  tên
     Format enp shift branch
     ${name}                     Get Value In List KV                    ${session}          ${enp_shift_branch}     $.result..name
-    
-Create empty shift              [Tags]   all    shift
+
+Create empty shift              [Tags]   allretailer      allfnb          allbooking    shift
     [Documentation]             Thêm mới ca làm việc rỗng
     Format enp shift branch
     ${resp}                    Create shift        ${random_number}    \ \                 ${branchId}             400
     Get Message Expected       ${resp}             $.errors..message                       Bạn chưa nhập tên ca
 
-Update shift                    [Tags]   all    shift
+Update shift                    [Tags]   allretailer      allfnb          allbooking    shift
     [Documentation]             Cập nhật ca làm việc
     Format enp shift branch
     ${resp}                     Update Shift
     Get Message Expected        ${resp}             $.message                              Cập nhật ca thành công
 # Xóa ca làm việc ko có chi tiết chấm công
-Delete shift                    [Tags]   all    shift
+Delete shift                    [Tags]   allretailer      allfnb          allbooking    shift
     [Documentation]             Xóa ca làm việc
     Format enp shift branch
     Delete Shift

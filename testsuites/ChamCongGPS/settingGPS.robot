@@ -10,7 +10,7 @@ ${enp_settingGPS}         /settings/updateUseClockingGps
 ${data_settingGPS}        {"UseClockingGps":[D0]}
 ${on_off}                 true
 *** TestCases ***
-On setting GPS              [Tags]      all           settingGPS
+On setting GPS              [Tags]      allretailer      allfnb          allbooking           settingGPS
     [Documentation]         Bật thiết lập chấm công GPS
     ${list_format}          Create List    ${on_off}
     ${data_settingGPS}      Format String Use [D0] [D1] [D2]      ${data_settingGPS}    ${list_format}

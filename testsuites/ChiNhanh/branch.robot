@@ -14,12 +14,12 @@ ${name}          Chi nhanh
 ${phonenumber}    0368199698
 ${address}        so 1
 *** TestCases ***
-Create Branch    [Tags]     all    branch
+Create Branch    [Tags]     allretailer      allfnb          allbooking    branch
     [Documentation]       Thêm mới chi nhánh
     ${resp}               Create Branch    ${name} ${random_str}     ${phonenumber}     ${address}
     ${id_branch}          Get Value From Json KV                     ${resp}            $.Id
 
-Update working date of branch        [Tags]     all    branch
+Update working date of branch        [Tags]     allretailer      allfnb          allbooking    branch
       [Documentation]       Update ngày làm việc của chi nhánh đang hoạt động
       ${resp}               Update working date of branch    Update ${random_str}       0    1   2    3    4   5
 *** Keywords ***

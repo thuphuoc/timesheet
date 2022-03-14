@@ -17,7 +17,7 @@ ${LeaveOfAbsence}                false
 # LeaveOfAbsence: nghỉ có phép hoặc ko phép thì biến này bằng true còn lại là false
 # checkOutDateType               2: nghỉ ko phép, 1: nghỉ có phép   null: các trạng thái còn lại
 *** TestCases ***
-Add work-schedule repeat has endDate     [Tags]        all       addschedule
+Add work-schedule repeat has endDate     [Tags]        allretailer      allfnb          allbooking      addschedule
       [Documentation]       Đặt lịch làm việc có ngày kết thúc tại màn hình chấm công
       Format enp shift branch
       ${random_number}      Random a Number    6
@@ -28,7 +28,7 @@ Add work-schedule repeat has endDate     [Tags]        all       addschedule
       Set Suite Variable    ${id_employee}                             ${id_employee}
       Test After            ${id_work_schedule}                        ${id_employee}
 
-Add work-schedule repeat has NOT endDate     [Tags]        all       addschedule
+Add work-schedule repeat has NOT endDate     [Tags]        allretailer      allfnb          allbooking       addschedule
       [Documentation]       Đặt lịch làm việc Không giới hạn tại màn hình chấm công
       Format enp shift branch
       ${random_number}      Random a Number    6
@@ -39,7 +39,7 @@ Add work-schedule repeat has NOT endDate     [Tags]        all       addschedule
       Set Suite Variable    ${id_work_schedule}                        ${id_work_schedule}
 
       # Các trạng thái clocking 1: chưa vào - chưa ra,2: đã vào- chưa ra; 3: đã vào- đã ra, 3: cũng là chưa vào- đã ra; 4: Nghỉ có phép, nghỉ ko phép
-Timekeeping check IN- OUT for employees   [Tags]     all      addschedule      clocking
+Timekeeping check IN- OUT for employees   [Tags]     allretailer      allfnb          allbooking      addschedule      clocking
       [Documentation]       Chấm công VÀO và RA cho nhân viên
       ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
@@ -50,7 +50,7 @@ Timekeeping check IN- OUT for employees   [Tags]     all      addschedule      c
       ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
       Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}        ${startTime}   ${endTime}   ${absenceType}     ${LeaveOfAbsence}
 
-Timekeeping check IN for employees   [Tags]        all        addschedule         clocking
+Timekeeping check IN for employees   [Tags]        allretailer      allfnb          allbooking        addschedule         clocking
       [Documentation]       Chỉ chấm công VÀO cho nhân viên
       ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
@@ -61,7 +61,7 @@ Timekeeping check IN for employees   [Tags]        all        addschedule       
       ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
       Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}     ${checkedInDate}   null    ${absenceType}     ${LeaveOfAbsence}
 
-Timekeeping check OUT for employees   [Tags]        all       addschedule       clocking
+Timekeeping check OUT for employees   [Tags]        allretailer      allfnb          allbooking       addschedule       clocking
       [Documentation]       Chỉ chấm công RA cho nhân viên
       ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
@@ -72,7 +72,7 @@ Timekeeping check OUT for employees   [Tags]        all       addschedule       
       ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
       Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}     null   ${endTime}    ${absenceType}     ${LeaveOfAbsence}
 
-Timekeeping Unpaid for employees   [Tags]     all      addschedule      clocking
+Timekeeping Unpaid for employees   [Tags]     allretailer      allfnb          allbooking      addschedule      clocking
     [Documentation]       Nhân viên NGHỈ KO phép
     ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
     ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
@@ -83,7 +83,7 @@ Timekeeping Unpaid for employees   [Tags]     all      addschedule      clocking
     ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
     Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}        null   null   2      true
 
-Timekeeping Paid for employees   [Tags]     all      addschedule      clocking
+Timekeeping Paid for employees   [Tags]     allretailer      allfnb          allbooking      addschedule      clocking
       [Documentation]       Nhân viên Nghỉ có phép
       ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}

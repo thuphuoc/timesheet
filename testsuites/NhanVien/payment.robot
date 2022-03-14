@@ -15,7 +15,7 @@ ${method}               Cash
 # date không được phép lớn hơn ngày hệ thống
 ${date}                 10/01/2022
 *** TestCases ***
-Payment not distributed to payslip   [Tags]             all            payment
+Payment not distributed to payslip   [Tags]              allretailer      allfnb          allbooking            payment
       [Documentation]             Thanh toán bằng tiền mặt không phân bổ vào phiếu lương
       ${id_employee}              Get Random ID Employee
       ${list_format}              Create List    ${amount}            ${id_employee}          ${method}             ${date}               \ \

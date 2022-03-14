@@ -21,16 +21,18 @@ Delete work schedule :: Xóa l?ch làm vi?c c?a nhân viên t?i tab l?... | PASS |
 ------------------------------------------------------------------------------
 Delete Employee :: Xóa 1 nhân viên                                    | PASS |
 ------------------------------------------------------------------------------
+Delete multiple employee :: Xóa nhi?u nhân viên cùng 1 lúc            | PASS |
+------------------------------------------------------------------------------
 Testsuites.NhanVien.Employee                                          | PASS |
-8 critical tests, 8 passed, 0 failed
-8 tests total, 8 passed, 0 failed
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
 ==============================================================================
 Testsuites.NhanVien                                                   | PASS |
-8 critical tests, 8 passed, 0 failed
-8 tests total, 8 passed, 0 failed
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
 ==============================================================================
 Testsuites                                                            | PASS |
-8 critical tests, 8 passed, 0 failed
-8 tests total, 8 passed, 0 failed
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.NhanVien.Employee\output-20220228-141536.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.NhanVien.Employee\output-20220314-175023.xml

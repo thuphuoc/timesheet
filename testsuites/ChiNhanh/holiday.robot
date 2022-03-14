@@ -16,7 +16,7 @@ ${end_date}                      12/01/2022
 ${ud_start_date}                17/04/1998
 ${ud_end_date}                   17/04/1998
 *** TestCases ***
-Create holiday                  [Tags]      all        holiday
+Create holiday                  [Tags]      allretailer      allfnb          allbooking        holiday
     [Documentation]             Thêm mới ngày lễ
     ${list_format}              Create List                           123456                  ${random_str}                     ${start_date}        ${end_date}
     ${data_holiday}             Format String Use [D0] [D1] [D2]      ${data_holiday}         ${list_format}
@@ -24,24 +24,24 @@ Create holiday                  [Tags]      all        holiday
     ${id_holiday}               Get Value From Json KV                ${resp}                 $.result.id
     Set Suite Variable          ${id_holiday}                         ${id_holiday}
 
-Create duplicate holiday        [Tags]      all        holiday
+Create duplicate holiday        [Tags]      allretailer      allfnb          allbooking        holiday
     [Documentation]             Thêm mới ngày lễ trùng ngày với ngày lễ đã có trước đó
     ${list_format}              Create List                           123456                  ${random_str}                     ${start_date}        ${end_date}
     ${data_holiday}             Format String Use [D0] [D1] [D2]      ${data_holiday}         ${list_format}
     ${resp}                     Create Value Duplicate Emplty          ${session}              ${enp_holiday}                   ${data_holiday}        Kỳ lễ tết đang trùng ngày với kỳ lễ tết khác.
-Create empty holiday            [Tags]      all        holiday
+Create empty holiday            [Tags]      allretailer      allfnb          allbooking        holiday
     [Documentation]             Thêm mới ngày lễ rỗng
     ${list_format}              Create List                           123456                  \ \                               14/01/2022            14/01/2022
     ${data_holiday}             Format String Use [D0] [D1] [D2]      ${data_holiday}         ${list_format}
     ${resp}                     Create Value Duplicate Emplty          ${session}             ${enp_holiday}                    ${data_holiday}       Bạn chưa nhập Tên kỳ lễ tết
 
-Update holiday                  [Tags]      all        holiday
+Update holiday                  [Tags]      allretailer      allfnb          allbooking        holiday
     [Documentation]             Cập nhật ngày lễ
     ${list_format}              Create List                           ${id_holiday}           Update ${random_str}              ${ud_start_date}     ${ud_end_date}
     ${data_holiday}             Format String Use [D0] [D1] [D2]      ${data_holiday}         ${list_format}
     ${resp}                     Update Request Json KV                ${session}              ${enp_holiday}/${id_holiday}      ${data_holiday}       200
 
-Delete holiday                  [Tags]      all        holiday
+Delete holiday                  [Tags]      allretailer      allfnb          allbooking        holiday
     [Documentation]             Xóa ngày lễ
     ${resp}                     Delete Request KV                     ${session}              ${enp_holiday}/${id_holiday}      200
 *** Keywords ***

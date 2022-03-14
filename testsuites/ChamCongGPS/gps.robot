@@ -14,24 +14,24 @@ ${radiusLimit}                  200
 ${address_up}                   số 11
 *** TestCases ***
 
-Create gps    [Tags]            all             gps
+Create gps    [Tags]            allretailer      allfnb          allbooking             gps
     [Documentation]             Thêm mới gps cho 1 chi nhánh để chấm công bằng mobile
     ${id_branch}                Get List Branch Had Not Use GPS
     ${name_branch}              Get Name Branch From Id     ${id_branch}
     Set Suite Variable          ${id_branch}                ${id_branch}
     ${resp}                     Create GPS                  ${random_number}        ${id_branch}      ${address}        ${radiusLimit}
 
-Update gps      [Tags]            all             gps
+Update gps      [Tags]            allretailer      allfnb          allbooking             gps
     [Documentation]             Chỉnh sửa gps cho 1 chi nhánh để chấm công bằng mobile
     ${id_gps}                   Get A GPS In List GPS
     ${resp}                     Update GPS     ${id_gps}               ${id_branch}      ${address_up}      ${radiusLimit}
 
-Change qr      [Tags]            all             gps
+Change qr      [Tags]            allretailer      allfnb          allbooking             gps
     [Documentation]             Đổi mã QR của chi nhánh
     ${id_gps}                   Get A GPS In List GPS
     ${resp}                     Change QR                   ${id_gps}
 
-Delete gps      [Tags]            all             gps1
+Delete gps      [Tags]            allretailer      allfnb          allbooking             gps1
     [Documentation]             Xóa gps của 1 chi nhánh
     ${id_gps}                   Get A GPS In List GPS
     Delete GPS                  ${id_gps}

@@ -10,7 +10,8 @@ Suite setup     Fill enviroment and get token    ${env}
 ${enp_auditlog}            /logs?format=json&$inlinecount=allpages&BranchIds=[D0]&FromDate=[D1]&ToDate=[D2]&$top=10
 ${iso_time}                T17:00:00.000Z
 *** TestCases ***
-Get Audi_log in today       [Tags]              audit
+Get Audit_log in today       [Tags]              audit                  allretailer      allfnb          allbooking
+    [Documentation]         Xem log lịch sử thao tác hôm nay
     ${year}                 Get Time   year
     ${month}                Get Time  month
     ${day}                  Get Time   day
@@ -22,12 +23,5 @@ Get Audi_log in today       [Tags]              audit
     Run Keyword If          ${log_audit}>0          Log                Có log LSTT
     ...                     ELSE                    Log                Không ghi nhận lịch sử thao tác hôm nay
 
-Remove a value          [Tags]              audit1
-    ${list1}            Create List         1   2   3
-    ${list2}            Create List         1   2
-    Remove Values From List    ${list1}     3
-    Should Be Equal     ${list1}             ${list2}
-    Log    ${list1}
-    Log    ${list2}
-    # Log                 ${result2}
+
 *** Keywords ***
