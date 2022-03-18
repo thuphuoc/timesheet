@@ -5,30 +5,34 @@ Testsuites.BangTinhLuong
 ==============================================================================
 Testsuites.BangTinhLuong.Paysheet                                             
 ==============================================================================
+Add employee with fixed salary                                        | PASS |
+------------------------------------------------------------------------------
 Create paysheet :: Thêm m?i b?ng l??ng t?m tính                       | PASS |
 ------------------------------------------------------------------------------
 Auto loading paysheet :: T?i l?i b?ng l??ng t?m tính                  | PASS |
 ------------------------------------------------------------------------------
-Payment Salary At Paysheet :: Thanh toán phi?u l??ng ngoài màn hìn... | FAIL |
-Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
-------------------------------------------------------------------------------
-Cancel paysheet :: Hu? b? b?ng l??ng t?m tính ko h?y phi?u thanh toán | PASS |
-------------------------------------------------------------------------------
-Cancel paysheet and cancel payment :: Hu? b? b?ng l??ng t?m tính v... | PASS |
+Payment Salary At Paysheet :: Thanh toán phi?u l??ng ngoài màn hìn... | PASS |
 ------------------------------------------------------------------------------
 Delete payslip in paysheet :: Xóa phi?u l??ng trong b?ng l??ng nh?... | FAIL |
 Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
 ------------------------------------------------------------------------------
+Cancel paysheet and cancel payment :: Hu? b? b?ng l??ng t?m tính v... | PASS |
+------------------------------------------------------------------------------
+Cancel paysheet :: Hu? b? b?ng l??ng t?m tính ko h?y phi?u thanh toán | PASS |
+------------------------------------------------------------------------------
+Delete employee                                                       | FAIL |
+Evaluating expression 'random .choice (RF_VAR_list )' failed: IndexError: Cannot choose from an empty sequence
+------------------------------------------------------------------------------
 Testsuites.BangTinhLuong.Paysheet                                     | FAIL |
-6 critical tests, 4 passed, 2 failed
-6 tests total, 4 passed, 2 failed
+8 critical tests, 6 passed, 2 failed
+8 tests total, 6 passed, 2 failed
 ==============================================================================
 Testsuites.BangTinhLuong                                              | FAIL |
-6 critical tests, 4 passed, 2 failed
-6 tests total, 4 passed, 2 failed
+8 critical tests, 6 passed, 2 failed
+8 tests total, 6 passed, 2 failed
 ==============================================================================
 Testsuites                                                            | FAIL |
-6 critical tests, 4 passed, 2 failed
-6 tests total, 4 passed, 2 failed
+8 critical tests, 6 passed, 2 failed
+8 tests total, 6 passed, 2 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.BangTinhLuong.Paysheet\output-20220314-175007.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.BangTinhLuong.Paysheet\output-20220318-144243.xml

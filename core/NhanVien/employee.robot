@@ -20,6 +20,7 @@ ${data_employee}                  {"id":[D0],"code":"[D1]","name":"[D2]","branch
 ${data_mutiple_employee}          {"employeeIds":[[D0],[D1]]}
 ${data_add_work_schedule}         {"TimeSheet":{"startDate":"[D0]","endDate":"[D1]","employeeId":[D2],"isRepeat":true,"hasEndDate":false,"repeatType":1,"repeatEachDay":1,"branchId":[D3],"branchIds":[[D4]],"timeSheetShifts":[{"shiftIds":"[D5]","repeatDaysOfWeek":null}]}}
 ${data_set_salary}         {"salaryPeriod":1,"mainSalaryRuleValue":{"mainSalaryValueDetails":[{"default":[D0],"mainSalaryHolidays":[{"moneyTypes":2,"type":8,"value":[D1],"isApply":true,"sort":2},{"moneyTypes":2,"type":9,"value":[D2],"isApply":true,"sort":3}]}],"type":2},"overtimeSalaryRuleValue":{"overtimeSalaryDays":[{"value":150,"moneyTypes":2,"type":7,"isApply":true,"sort":0},{"value":200,"moneyTypes":2,"type":6,"isApply":true,"sort":1},{"value":200,"moneyTypes":2,"type":0,"isApply":true,"sort":2},{"value":200,"moneyTypes":2,"type":8,"isApply":true,"sort":3},{"value":300,"moneyTypes":2,"type":9,"isApply":true,"sort":4}]}}
+${data_fixed_salary}              {"salaryPeriod":1,"mainSalaryRuleValue":{"mainSalaryValueDetails":[{"default":1500000}],"type":4}}
 ${data_del_work_schedule}         {"Id":[D0]}
 ${enp_delete_work_schedule}       /timesheets/cancelTimeSheet
 
@@ -145,3 +146,13 @@ Verify Input And Output Employee
     ${list_input}       Create List                        ${code_input}                     ${name_input}                           ${branch_input}
     ${list_output}      Create List                        ${code_output}                    ${name_output}                          ${branch_output}
     Verify List Input And Output                           ${list_input}                     ${list_output}
+
+Create Employee Fixed Salary
+    [Arguments]          ${id_employee}            ${code_employee}          ${name_employee}      ${branchId_salary}    ${branchId_work}
+    ${list_format}       Create List               ${id_employee}            ${code_employee}      ${name_employee}      ${branchId_salary}    ${branchId_work}
+    ${data_employee}     Format String Use [D0] [D1] [D2]                    ${data_employee}      ${list_format}
+    ${data_employee}     Evaluate                                            (None,'${data_employee}')
+    ${data_fixed_salary}            Evaluate                                (None,'${data_fixed_salary}')
+    ${formdata}          Create Dictionary                                   employee=${data_employee}                   payRate=${data_fixed_salary}
+    ${resp}              Post Request Use Formdata KV                        ${session}            ${enp_employee}       ${formdata}            200
+    Return From Keyword    ${resp}

@@ -43,7 +43,7 @@ Delete Employee                   [Tags]    allretailer      allfnb          all
     Get Random ID Employee
     Delete Request KV             ${session}                          ${enp_employee}/${id_employee}    200
 
-Delete multiple employee          [Tags]    allretailer      allfnb          allbooking    employee1
+Delete multiple employee          [Tags]    allretailer      allfnb          allbooking    employee2
     [Documentation]               Xóa nhiều nhân viên cùng 1 lúc
     ${EmployeeId1}                Get Value In List KV                ${session}                      ${enp_employee}                 $.result.data[?(@.id)].id
     ${code_employee1}             Get Detail From Id KV               ${session}                      ${enp_employee}/${EmployeeId1}  $.result.code

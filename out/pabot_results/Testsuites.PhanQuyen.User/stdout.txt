@@ -1,0 +1,26 @@
+==============================================================================
+Testsuites                                                                    
+==============================================================================
+Testsuites.PhanQuyen                                                          
+==============================================================================
+Testsuites.PhanQuyen.User                                                     
+==============================================================================
+Format enp_user_branch                                                | PASS |
+------------------------------------------------------------------------------
+Add permission timesheet :: Thêm quy?n timesheet cho user             | PASS |
+------------------------------------------------------------------------------
+Login by user for add schedule work :: Login b?ng quy?n user ?? ch... | PASS |
+------------------------------------------------------------------------------
+Testsuites.PhanQuyen.User                                             | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Testsuites.PhanQuyen                                                  | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Testsuites                                                            | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Output:  D:\timesheet\out\pabot_results\Testsuites.PhanQuyen.User\output-20220318-144254.xml

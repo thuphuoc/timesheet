@@ -28,11 +28,11 @@ Add work-schedule repeat has endDate     [Tags]        allretailer      allfnb  
       Set Suite Variable    ${id_employee}                             ${id_employee}
       Test After            ${id_work_schedule}                        ${id_employee}
 
-Add work-schedule repeat has NOT endDate     [Tags]        allretailer      allfnb          allbooking       addschedule
+Add work-schedule repeat has NOT endDate     [Tags]        allretailer      allfnb      allbooking       addschedule
       [Documentation]       Đặt lịch làm việc Không giới hạn tại màn hình chấm công
       Format enp shift branch
       ${random_number}      Random a Number    6
-      ${id_employee}        Create And Get ID Employee    1235698                   NV${random_number}            ${random_str}         ${branchId}           ${branchId}    100000    300    300
+      ${id_employee}        Create And Get ID Employee    1235698      NV${random_number}            ${random_str}         ${branchId}           ${branchId}    100000    300    300
       ${id_shift}           Get RanDom ID Shift And Get Name From ID
       ${resp}               Add Work-schedule Repeat Or Not_Repeate    ${startDate}      ${endDate}       ${id_employee}        true        false   ${branchId}    ${id_shift}
       ${id_work_schedule}   Get Value From Json KV    ${resp}          $.result[?(@.id)].id
@@ -50,7 +50,7 @@ Timekeeping check IN- OUT for employees   [Tags]     allretailer      allfnb    
       ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
       Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}        ${startTime}   ${endTime}   ${absenceType}     ${LeaveOfAbsence}
 
-Timekeeping check IN for employees   [Tags]        allretailer      allfnb          allbooking        addschedule         clocking
+Timekeeping check IN for employees   [Tags]        allretailer      allfnb      allbooking        addschedule         clocking
       [Documentation]       Chỉ chấm công VÀO cho nhân viên
       ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
@@ -74,16 +74,16 @@ Timekeeping check OUT for employees   [Tags]        allretailer      allfnb     
 
 Timekeeping Unpaid for employees   [Tags]     allretailer      allfnb          allbooking      addschedule      clocking
     [Documentation]       Nhân viên NGHỈ KO phép
-    ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
-    ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
-    ${name_shift}         Get Value In List KV              ${session}        ${enp_shift}/${id_shift}           $..name
-    ${startTime}          Get StartTime From Id Clocking    ${id_clocking}
-    ${endTime}            Get EndTime From Id Clocking      ${id_clocking}
-    ${id_employee}        Get employeeId From Id Clocking   ${id_clocking}
-    ${name_employee}      Get Value In List KV              ${session}        ${enp_employee}/${id_employee}     $..name
-    Timekeeping for employees     ${id_clocking}            ${id_shift}       ${id_employee}    ${startTime}     ${endTime}        null   null   2      true
+    ${id_clocking}        Get Id Clocking                     2022-02-02        2022-04-30                        ${branchId}             1
+    ${id_shift}           Get ShiftId From Id Clocking        ${id_clocking}
+    ${name_shift}         Get Value In List KV                ${session}        ${enp_shift}/${id_shift}           $..name
+    ${startTime}          Get StartTime From Id Clocking      ${id_clocking}
+    ${endTime}            Get EndTime From Id Clocking        ${id_clocking}
+    ${id_employee}        Get employeeId From Id Clocking     ${id_clocking}
+    ${name_employee}      Get Value In List KV                ${session}        ${enp_employee}/${id_employee}     $..name
+    Timekeeping for employees     ${id_clocking}              ${id_shift}       ${id_employee}    ${startTime}     ${endTime}        null   null   2      true
 
-Timekeeping Paid for employees   [Tags]     allretailer      allfnb          allbooking      addschedule      clocking
+Timekeeping Paid for employees   [Tags]     allretailer      allfnb             allbooking      addschedule      clocking
       [Documentation]       Nhân viên Nghỉ có phép
       ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}

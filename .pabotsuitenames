@@ -1,7 +1,7 @@
-datasources:0aaa98971275dd3cc6ff79cf3ea49dd002114094
-commandlineoptions:007a6e2dc926b7c3a6a3f540787454f3bd2b0bd4
+datasources:c2b57588fbf8e3a168588c3a8036f1e1ff5cdb17
+commandlineoptions:b43b698b31832eb8691b2dc65ece26f149c9e387
 suitesfrom:no-suites-from-option
-file:f9dedd0ffe83af0285dac4bc12a062859e1efadc
+file:195fff19c0f95a3035111e88e757ad55efb515c8
 Testsuites.BangTinhLuong.Paysheet
 Testsuites.BangChamCong.Addwork Schedule
 Testsuites.BangChamCong.Shift
@@ -18,4 +18,5 @@ Testsuites.NhanVien.Employee
 Testsuites.NhanVien.Jobtiltle
 Testsuites.NhanVien.Payment
 Testsuites.NhanVien.Payrate
+Testsuites.PhanQuyen.User
 Testsuites.ThietLap.Setting Timesheet Payroll

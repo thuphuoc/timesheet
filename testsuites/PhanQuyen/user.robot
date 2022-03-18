@@ -15,12 +15,12 @@ ${data_add_perm_user}        {"UserId":[D0],"BranchId":[D1],"RoleId":[D2],"Data"
 ${enp_update_user}          /users/usersupdate
 ${data_update_user}         {"User":{"Id":[D0],"IsActive":true,"GivenName":"[D1]","UserName":"[D2]","IsActiveStatus":"Đang hoạt động","LanguageSelected":{"Name":"vi-VN","Value":"Tiếng Việt"},"PlainPassword":"2","RetypePassword":"2"}}
 *** TestCases ***
-Format enp_user_branch      [Tags]       allretailer      allfnb               permission
+Format enp_user_branch      [Tags]       allretailer      allfnb     allbooking          permission
     ${list_format}          Create List                           ${branchId}
     ${enp_user_branch}      Format String Use [D0] [D1] [D2]      ${enp_user_branch}      ${list_format}
     Set Suite Variable      ${enp_user_branch}                    ${enp_user_branch}
 
-Add permission timesheet      [Tags]    allretailer      allfnb               permission
+Add permission timesheet      [Tags]    allretailer      allfnb                permission1
     [Documentation]         Thêm quyền timesheet cho user
     ${id_user}              Get Value In List KV                  ${session_man}          ${enp_user_branch}      $..Id
     ${name_user}            Get Name User                         ${id_user}
@@ -33,7 +33,20 @@ Add permission timesheet      [Tags]    allretailer      allfnb               pe
     ${resp}                 Post Request Json KV                  ${session_man}          ${enp_add_perm_user}    ${data_add_perm_user}    200
     ${resp}                 Update User For Login Auto By Use account                     ${id_user}
 
-Login by user for add schedule work     [Tags]    allretailer      allfnb               permission
+Add permission timesheet for booking      [Tags]          allbooking        permission
+    [Documentation]         Thêm quyền timesheet cho user booking
+    ${id_user}              Get Value In List KV                  ${session_man}          ${enp_user_branch}      $..Id
+    ${name_user}            Get Name User                         ${id_user}
+    Set Suite Variable      ${name_user}                          ${name_user}
+    ${id_role}              Get Value In List KV                  ${session_man}          ${enp_role}             $..Id
+    ${list_format_enp}      Create List                           ${id_user}
+    ${enp_add_perm_user}    Format String Use [D0] [D1] [D2]      ${enp_add_perm_user}    ${list_format_enp}
+    ${list_format}          Create List                           ${id_user}              ${branchId}             ${id_role}
+    ${data_add_perm_user}   Format String Use [D0] [D1] [D2]      ${data_add_perm_user}                           ${list_format}
+    ${resp}                 Post Request Json KV                  ${session_man}          ${enp_add_perm_user}    ${data_add_perm_user}    200
+    ${resp}                 Update User For Login Auto By Use Account For Booking         ${id_user}
+
+Login by user for add schedule work     [Tags]    allretailer      allfnb          allbooking     permission
     [Documentation]         Login bằng quyền user để chấm công cho nhân viên
     ${resp}                 Login By User                         ${name_user}             2
     ${resp}                 Create Shift                          123                      Auto${random_str}      ${branchId}             200
@@ -49,4 +62,11 @@ Update User For Login Auto By Use account
     ${list_format}          Create List                           ${id_user}              ${name_user}           ${name_user}
     ${data_update_user}     Format String Use [D0] [D1] [D2]      ${data_update_user}     ${list_format}
     ${resp}                 Post Request Json KV                  ${session_man}          ${enp_update_user}      ${data_update_user}     200
+    Return From Keyword     ${resp}
+
+Update User For Login Auto By Use Account For Booking
+    [Arguments]             ${id_user}
+    ${list_format}          Create List                           ${id_user}              ${name_user}           ${name_user}
+    ${data_update_user}     Format String Use [D0] [D1] [D2]      ${data_update_user}     ${list_format}
+    ${resp}                 Post Request Json KV                  ${session_man}          ${enp_user}                 ${data_update_user}     200
     Return From Keyword     ${resp}
