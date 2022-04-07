@@ -2,6 +2,7 @@
 Library     JSONLibrary
 Library     RequestsLibrary
 Library     Collections
+Library     String
 Resource        ../../core/share/enviroment.robot
 Resource        ../../core/share/share.robot
 Resource        ../../core/bangchamcong/shift.robot
@@ -23,9 +24,18 @@ ${data_set_salary}         {"salaryPeriod":1,"mainSalaryRuleValue":{"mainSalaryV
 ${data_fixed_salary}              {"salaryPeriod":1,"mainSalaryRuleValue":{"mainSalaryValueDetails":[{"default":1500000}],"type":4}}
 ${data_del_work_schedule}         {"Id":[D0]}
 ${enp_delete_work_schedule}       /timesheets/cancelTimeSheet
+${enp_total_employee}            /employees/check-block-employee
 
 ***Keywords***
 # Tạo mới nhân viên có thiết lập lương nhưng ko có mẫu lương
+Check Total Employee
+    ${resp}                       Get Request                             ${session}                ${enp_total_employee}
+    ${resp.status_code}           Convert To String                       ${resp.status_code}
+    ${status_check_total}=        Evaluate                                ${resp.status_code}
+    Set Global Variable           ${status_check_total}                   ${status_check_total}
+    Return From Keyword           ${status_check_total}
+
+
 Create Employee
     [Arguments]                   ${id_employee}                          ${code_employee}          ${name_employee}              ${branchId_salary}    ${branchId_work}      ${default}      ${value_holiday}      ${value}
     ${list_format}                Create List                             ${id_employee}            ${code_employee}              ${name_employee}      ${branchId_salary}    ${branchId_work}
@@ -76,7 +86,8 @@ Create Duplicate Employee
     Log    ${formdata}
     ${resp}                       Post Request Use Formdata KV            ${session}                ${enp_employee}                ${formdata}          400
     ${mess_err}                   Get Value From Json KV                  ${resp}                   $.errors..message
-    Should Be Equal               ${mess_err}                             Mã nhân viên đã tồn tại trong cửa hàng
+    ${result}=                    Replace String                          ${mess_err}               ${space}${space}               ${space}
+    Should Be Equal               ${result}                               Mã nhân viên đã tồn tại trong cửa hàng
 
 Create Empty Employee
     ${list_format}                Create List                            1235698                    NV${random_number}              \ \                  ${branchId}           ${branchId}
@@ -106,6 +117,7 @@ Get Pin Code
 
 Add Work Schedule
     Format enp shift branch
+    ${id_employee}                Create And Get ID Employee          1235698                         NV40${random_number}       ${random_str}                 ${branchId}      ${branchId}    100000    200    300
     ${resp_shift}                 Create Shift                        123456                          ${random_str}              ${branchId}                   200
     ${id_shift}                   Get RanDom ID Shift And Get Name From ID
     ${list_format}                Create List                         12-12-2021                      12-01-2022                 ${id_employee}                ${branchId}     ${branchId}    ${id_shift}
@@ -113,7 +125,8 @@ Add Work Schedule
     ${resp}                       Post Request Json KV                ${session}                      ${enp_add_work_schedule}   ${data}                       200
     ${id_work_schedule}           Get Value From Json KV              ${resp}                         $.result.id
     Set Suite Variable            ${id_work_schedule}                 ${id_work_schedule}
-# case: xóa lịch làm việc nhân viên nếu nv có lịch làm việc
+    Return From Keyword           ${id_work_schedule}
+
 Delete Work Schedule
     [Arguments]                   ${id_work_schedule}
     ${list_format}                Create List                         ${id_work_schedule}
@@ -126,15 +139,6 @@ Delete Employee
     [Arguments]                   ${id_employee}
     ${id_employee}                Get Random ID Employee
     Delete Request KV             ${session}                          ${enp_employee}/${id_employee}    200
-
-Delete multiple employee
-    ${EmployeeId1}                Get Value In List KV                ${session}                      ${enp_employee}                 $.result.data[?(@.id)].id
-    ${code_employee1}             Get Detail From Id KV               ${session}                      ${enp_employee}/${EmployeeId1}  $.result.code
-    ${EmployeeId2}                Get Value In List KV                ${session}                      ${enp_employee}                 $.result.data[?(@.id)].id
-    ${code_employee2}             Get Detail From Id KV               ${session}                      ${enp_employee}/${EmployeeId2}  $.result.code
-    ${list}                       Create List                         ${EmployeeId1}                  ${EmployeeId2}
-    ${data_mutiple_employee}      Format String Use [D0] [D1] [D2]    ${data_mutiple_employee}        ${list}
-    ${resp}                       Delete Multiple Request KV          ${session}                      ${enp_multiple_employee}        ${data_mutiple_employee}    Xóa nhân viên thành công
 
 Verify Input And Output Employee
     [Arguments]         ${code_input}                      ${name_input}                     ${branch_input}
@@ -156,3 +160,12 @@ Create Employee Fixed Salary
     ${formdata}          Create Dictionary                                   employee=${data_employee}                   payRate=${data_fixed_salary}
     ${resp}              Post Request Use Formdata KV                        ${session}            ${enp_employee}       ${formdata}            200
     Return From Keyword    ${resp}
+
+Delete Multiple Employee
+    ${EmployeeId1}                Get Value In List KV                ${session}                      ${enp_employee}                 $.result.data[?(@.id)].id
+    ${code_employee1}             Get Detail From Id KV               ${session}                      ${enp_employee}/${EmployeeId1}  $.result.code
+    ${EmployeeId2}                Get Value In List KV                ${session}                      ${enp_employee}                 $.result.data[?(@.id)].id
+    ${code_employee2}             Get Detail From Id KV               ${session}                      ${enp_employee}/${EmployeeId2}  $.result.code
+    ${list}                       Create List                         ${EmployeeId1}                  ${EmployeeId2}
+    ${data_mutiple_employee}      Format String Use [D0] [D1] [D2]    ${data_mutiple_employee}        ${list}
+    ${resp}                       Delete Multiple Request KV          ${session}                      ${enp_multiple_employee}        ${data_mutiple_employee}    Xóa nhân viên thành công

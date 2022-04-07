@@ -9,7 +9,7 @@ ${data_gps}             {"id":[D0],"branchId":[D1],"coordinate":"21.0379972,105.
 ${enp_change_qr}        /gpsinfos/changeQrKey
 *** Keywords ***
 Get A GPS In List GPS
-    ${id_gps}              Get Value In List KV            ${session}          ${enp_gps}          $..id
+    ${id_gps}              Get Value In List KV            ${session}          ${enp_gps}          $.result.data[?(@.id)].id
     Return From Keyword    ${id_gps}
 
 Get List Branch Had Used GPS

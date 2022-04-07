@@ -63,16 +63,14 @@ Update The Roses For All Product        [Tags]                         allretail
     ${id_product}               Get Random a Product In a Commission                    ${id_commmission}
     ${code_product}             Get Code Product From ID    ${id_product}
     ${resp}                     Update The Roses For Each Product Sold  ${id_product}   ${id_commmission}        ${id_commmission}    ${value_update}    ${is_update_all}
-    Delete A Product Into Commission                                                    ${id_commmission}        ${id_product}
+    # Delete A Product Into Commission                                                    ${id_commmission}        ${id_product}
 
 Update The Roses For A Product  [Tags]                         allretailer      allfnb          allbooking                       commission
     [Documentation]             Cập nhật mức áp dụng hoa hồng cho MỘT sản phẩm bán ra
     Log                         ${name_commmission}
-    ${id_product}               Get RanDom a Product
-    Add Product Into Commission    ${id_commmission}                                    ${id_product}
-    ${id_product}               Get Random a Product In a Commission   ${id_commmission}
+    ${id_product}               Get Random a Product In a Commission                 ${id_commmission}
     ${code_product}             Get Code Product From ID    ${id_product}
-    ${resp}                     Update The Roses For Each Product Sold                  ${id_product}           ${id_commmission}         ${id_commmission}         777         false
+    ${resp}                     Update The Roses For Each Product Sold               ${id_product}           ${id_commmission}         ${id_commmission}         777         false
 
 Delete commission               [Tags]                         allretailer      allfnb          allbooking                      commission
     [Documentation]             Xóa hoa hồng

@@ -38,7 +38,7 @@ Update department                     [Tags]    allretailer      allfnb         
     ${data}                           Format String Use [D0] [D1] [D2]      ${data_department}      ${list_format}
     ${resp}                           Update Request Json KV                ${session}              ${enp_department}/${id_department}    ${data}        200
 
-Delete department                     [Tags]    allretailer      allfnb          allbooking  department
+Delete department                     [Tags]    allretailer      allfnb          allbooking         department
   [Documentation]                     Xóa phòng ban
   Delete Request KV                   ${session}                            ${enp_department}/${id_department}              200
 ***Keywords***

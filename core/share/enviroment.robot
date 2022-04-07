@@ -9,11 +9,12 @@ Resource   ../../core/ChiNhanh/branch.robot
 *** Keywords ***
 Fill enviroment and get token
     [Arguments]                   ${env}
-    ${dict_url_saleLogin}         Create Dictionary             zone5=https://auto5.kiotviet.vn/api
+    ${dict_url_saleLogin}         Create Dictionary             zone5=https://testz5.kiotviet.vn/api
     ...                                                         zone13=https://testz13.kiotviet.vn/api
     ...                                                         zone12=https://testz12.kiotviet.vn/api
     ...                                                         zone14=https://auto14.kiotviet.vn/api
     ...                                                         zone61=https://testz61.kiotviet.vn/api
+    ...                                                         zone66=https://testz66.kiotviet.vn/api
     ...                                                         zone21=https://testz221.kiotviet.vn/api
     ...                                                         zone8=https://testz8.kiotviet.vn/api
     ...                                                         zone9=https://taphoa.kiotviet.vn/api
@@ -35,6 +36,7 @@ Fill enviroment and get token
     ...                                                         zone1=/auth/salelogin
     ...                                                         zone14=/auth/salelogin
     ...                                                         zone61=/auth/salelogin
+    ...                                                         zone66=/auth/salelogin
     ...                                                         zone21=/auth/salelogin
     ...                                                         zone24=/auth/salelogin
     ...                                                         zone28=/auth/salelogin
@@ -57,6 +59,7 @@ Fill enviroment and get token
     ...                                                         zone28=https://api-timesheet.kiotviet.vn
     ...                                                         zone14=https://api-timesheet.kiotviet.vn
     ...                                                         zone61=https://api-timesheet.kiotviet.vn
+    ...                                                         zone66=https://api-timesheet.kiotviet.vn
     ...                                                         zone21=https://api-timesheet.kiotviet.vn
     ...                                                         zone8=https://api-timesheet.kiotviet.vn
     ...                                                         zone9=https://api-timesheet.kiotviet.vn
@@ -69,12 +72,13 @@ Fill enviroment and get token
     ...                                                         bookinglive=https://api-timesheet-booking.kiotviet.vn
     ...                                                         fnb15=https://api-fnbtimesheet.kiotviet.vn
 
-    ${dict_url_man}               Create Dictionary             zone5=https://api-man.kiotviet.vn/api
+    ${dict_url_man}               Create Dictionary             zone5=https://api-man3.kiotviet.vn/api
     ...                                                         zone13=https://api-man.kiotviet.vn/api
     ...                                                         zone12=https://api-man.kiotviet.vn/api
     ...                                                         zone1=https://api-man3.kiotviet.vn/api
     ...                                                         zone14=https://api-man.kiotviet.vn/api
     ...                                                         zone61=https://api-man3.kiotviet.vn/api
+    ...                                                         zone66=https://api-man3.kiotviet.vn/api
     ...                                                         zone21=https://api-man3.kiotviet.vn/api
     ...                                                         zone24=https://api-man.kiotviet.vn/api
     ...                                                         zone28=https://api-man.kiotviet.vn/api
@@ -90,20 +94,20 @@ Fill enviroment and get token
     ...                                                         fnb15=https://fnb.kiotviet.vn/api
 
     ${dict_username}              Create Dictionary             zone5=admin             zone13=admin            zone12=admin        zone14=admin
-    ...                                                         zone1=admin             zone9=taphoa            zone61=admin        zone21=admin
+    ...                                                         zone1=admin             zone9=taphoa            zone61=admin        zone21=admin    zone66=admin
     ...                                                         zone8=admin             zone24=admin            zone28=admin
     ...                                                         zone59902=1             zone59903=1             fnb59508=1
     ...                                                         booking9009=1           booking543=1            booking541=1        bookinglive=1
     ...                                                         fnb15=admin
-    ${dict_password}              Create Dictionary             zone5=123               zone13=123456           zone12=123456       zone14=123
+    ${dict_password}              Create Dictionary             zone5=123456            zone13=123456           zone12=123456       zone14=123
     ...                                                         zone1=123               zone9=123456            zone61=123456       zone21=123456
-    ...                                                         zone8=123               zone24=123              zone28=123
+    ...                                                         zone8=123               zone24=123              zone28=123          zone66=123456
     ...                                                         zone59902=1             zone59903=1             fnb59508=1
     ...                                                         booking9009=1           booking541=1            booking543=1        bookinglive=1
     ...                                                         fnb15=123
-    ${dict_retailer}              Create Dictionary             zone5=auto5             zone13=testz13          zone12=testz12      zone14=auto14
+    ${dict_retailer}              Create Dictionary             zone5=testz5            zone13=testz13          zone12=testz12      zone14=auto14
     ...                                                         zone1=testz1            zone9=taphoa            zone61=testz61      zone21=testz221
-    ...                                                         zone8=testz82           zone24=testzone24       zone28=testz28
+    ...                                                         zone8=testz82           zone24=testzone24       zone28=testz28      zone66=testz66
     ...                                                         zone59902=phuoc902      zone59903=phuoc903      fnb59508=phuoc59508
     ...                                                         booking9009=phuoc009    booking543=phuoc443     booking541=phuocnew441      bookinglive=phuocliveb
     ...                                                         fnb15=testfnbz15a
@@ -137,7 +141,7 @@ Fill enviroment and get token
     Set Suite Variable            ${token}                      ${token}
     ${random_str}=                Random a String Letter        4
     Set Global Variable           ${random_str}                 ${random_str}
-    ${random_number}=             Random a Number               8
+    ${random_number}=             Random a Number               5
     Set Global Variable           ${random_number}              ${random_number}
     ${branchId}                   Get Value From Json KV        ${resp.json()}          $.CurrentBranchId
     Set Global Variable           ${branchId}                   ${branchId}
@@ -161,8 +165,10 @@ Set Header
     Set Global Variable           ${headers_not_contenType}     ${headers_not_contenType}
     Create Session                session    ${url}             ${headers_not_contenType}
     Create Session                sessionMan                    ${url_man}              ${header}
+    Create Session                sessionman_not_contentType     ${url_man}              ${headers_not_contenType}
     Set Global Variable           ${session}                    session
     Set Global Variable           ${session_man}                sessionMan
+    Set Global Variable           ${sessionman_not_contenType}                         sessionman_not_contentType
     ${name_branch}                Get Name Branch From Id       ${branchId}
 ########################################################################################################################################################
 Login By User

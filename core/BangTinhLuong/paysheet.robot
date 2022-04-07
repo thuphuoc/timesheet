@@ -45,31 +45,12 @@ Payment Salary At Paysheet
       ${data_payment_paysheet}  Format String Use [D0] [D1] [D2]                             ${data_payment_paysheet}             ${list_format}
       ${resp}                   Post Request Json KV               ${session_man}            ${enp_payment_paysheet}              ${data_payment_paysheet}    200
 
-Delete Payslip In Paysheet
-      Log                        Điều kiện phải có phiếu thanh toán cho phiếu lương
-      ${id_paysheet}             Get Value In List KV              ${session}                ${enp_filter_sheets}                 $..data[?(@.totalPayment >0)]..id
-      ${code_paysheet}           Get Value In List KV              ${session}                ${enp_paysheet}/${id_paysheet}       $.result.code
-      ${list_format}             Create List                       ${id_paysheet}
-      ${enp_payslip}             Format String Use [D0] [D1] [D2]                            ${enp_payslip}                       ${list_format}
-      ${id_payslip}              Get Value In List KV              ${session}                ${enp_payslip}                       $.result.data[?(@.id)].id
-      ${list_format}             Create List                       ${id_payslip}             false
-      ${data_cancel_payslip}     Format String Use [D0] [D1] [D2]                            ${data_cancel_payslip}               ${list_format}
-      ${resp}                    Update Request Json KV            ${session}                  ${enp_cancel_payslip}              ${data_cancel_payslip}          200
-
 Cancel Paysheet
       ${id_paysheet}             Get Id In List Paysheets
       ${code_paysheet}           Get Value In List KV                ${session}                ${enp_paysheet}/${id_paysheet}      $.result.code
       ${list_format}             Create List                         ${id_paysheet}            false
       ${data_cancel_paysheet}    Format String Use [D0] [D1] [D2]    ${data_cancel_paysheet}   ${list_format}
       ${resp}                    Update Request Json KV              ${session}                ${enp_cancel_paysheet}              ${data_cancel_paysheet}    200
-
-Cancel Paysheet And Cancel Payment
-     Log                       Điều kiện phải có bảng lương có phiếu thanh toán
-     ${id_paysheet}            Get Value In List KV               ${session}                ${enp_filter_sheets}                 $..data[?(@.totalPayment >0)]..id
-     ${code_paysheet}          Get Value In List KV               ${session}                ${enp_paysheet}/${id_paysheet}       $.result.code
-     ${list_format}            Create List                        ${id_paysheet}            true
-     ${data_cancel_paysheet}   Format String Use [D0] [D1] [D2]   ${data_cancel_paysheet}   ${list_format}
-     ${resp}                   Update Request Json KV             ${session}                ${enp_cancel_paysheet}               ${data_cancel_paysheet}    200
 
 Get Id In List Paysheets
     Format enpoint enp_filter_sheets                                1

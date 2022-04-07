@@ -6,10 +6,10 @@ Resource   ../../core/bangchamcong/shift.robot
 Resource   ../../core/bangchamcong/addwork_schedule.robot
 Resource   ../../core/NhanVien/employee.robot
 Suite setup  Fill enviroment and get token    ${env}
-Suite Teardown  Test After     ${id_work_schedule}      ${id_employee}
+
 *** Variables ***
-${startDate}                     2022-02-02
-${endDate}                       2022-04-30
+${startDate}                     2022-03-01
+${endDate}                       2022-05-30
 ${checkedInDate}                 2022-02-06T00:26:00.000Z
 ${checkedOutDate}                2022-02-06T07:15:00.000Z
 ${absenceType}                   null
@@ -21,18 +21,26 @@ Add work-schedule repeat has endDate     [Tags]        allretailer      allfnb  
       [Documentation]       Đặt lịch làm việc có ngày kết thúc tại màn hình chấm công
       Format enp shift branch
       ${random_number}      Random a Number    6
-      ${id_employee}        Create And Get ID Employee                 1235698           NV${random_number}            ${random_str}         ${branchId}           ${branchId}    100000    300    300
+      ${resp}                       Check Total Employee
+      Run Keyword If                ${resp}==400              Delete Multiple Employee
+      ...                           ELSE                      Log             Gian hàng vẫn có thể thêm mới nhân viên
+      ${id_employee}        Create And Get ID Employee                 1235698           NV36${random_number}            ${random_str}         ${branchId}           ${branchId}    100000    300    300
+      ${resp}               Create Shift          12356    Ca2${random_str}    ${branchId}    200
       ${id_shift}           Get RanDom ID Shift And Get Name From ID
       ${resp}               Add Work-schedule Repeat Or Not_Repeate    ${startDate}      ${endDate}       ${id_employee}        true        true   ${branchId}    ${id_shift}
       ${id_work_schedule}   Get Value From Json KV                     ${resp}           $.result[?(@.id)].id
-      Set Suite Variable    ${id_employee}                             ${id_employee}
-      Test After            ${id_work_schedule}                        ${id_employee}
+      Delete Work Schedule     ${id_work_schedule}
+
 
 Add work-schedule repeat has NOT endDate     [Tags]        allretailer      allfnb      allbooking       addschedule
       [Documentation]       Đặt lịch làm việc Không giới hạn tại màn hình chấm công
       Format enp shift branch
       ${random_number}      Random a Number    6
+      ${resp}                       Check Total Employee
+      Run Keyword If                ${resp}==400              Delete Multiple Employee
+      ...                           ELSE                      Log             Gian hàng vẫn có thể thêm mới nhân viên
       ${id_employee}        Create And Get ID Employee    1235698      NV${random_number}            ${random_str}         ${branchId}           ${branchId}    100000    300    300
+      ${resp}               Create Shift          12356    Ca1${random_str}    ${branchId}    200
       ${id_shift}           Get RanDom ID Shift And Get Name From ID
       ${resp}               Add Work-schedule Repeat Or Not_Repeate    ${startDate}      ${endDate}       ${id_employee}        true        false   ${branchId}    ${id_shift}
       ${id_work_schedule}   Get Value From Json KV    ${resp}          $.result[?(@.id)].id
@@ -41,7 +49,7 @@ Add work-schedule repeat has NOT endDate     [Tags]        allretailer      allf
       # Các trạng thái clocking 1: chưa vào - chưa ra,2: đã vào- chưa ra; 3: đã vào- đã ra, 3: cũng là chưa vào- đã ra; 4: Nghỉ có phép, nghỉ ko phép
 Timekeeping check IN- OUT for employees   [Tags]     allretailer      allfnb          allbooking      addschedule      clocking
       [Documentation]       Chấm công VÀO và RA cho nhân viên
-      ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
+      ${id_clocking}        Get Id Clocking                   ${startDate}        ${endDate}                      ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
       ${name_shift}         Get Value In List KV              ${session}        ${enp_shift}/${id_shift}           $..name
       ${startTime}          Get StartTime From Id Clocking    ${id_clocking}
@@ -52,7 +60,7 @@ Timekeeping check IN- OUT for employees   [Tags]     allretailer      allfnb    
 
 Timekeeping check IN for employees   [Tags]        allretailer      allfnb      allbooking        addschedule         clocking
       [Documentation]       Chỉ chấm công VÀO cho nhân viên
-      ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
+      ${id_clocking}        Get Id Clocking                   ${startDate}        ${endDate}                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
       ${name_shift}         Get Value In List KV              ${session}        ${enp_shift}/${id_shift}           $..name
       ${startTime}          Get StartTime From Id Clocking    ${id_clocking}
@@ -63,7 +71,7 @@ Timekeeping check IN for employees   [Tags]        allretailer      allfnb      
 
 Timekeeping check OUT for employees   [Tags]        allretailer      allfnb          allbooking       addschedule       clocking
       [Documentation]       Chỉ chấm công RA cho nhân viên
-      ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
+      ${id_clocking}        Get Id Clocking                   ${startDate}        ${endDate}                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
       ${name_shift}         Get Value In List KV              ${session}        ${enp_shift}/${id_shift}           $..name
       ${startTime}          Get StartTime From Id Clocking    ${id_clocking}
@@ -74,7 +82,7 @@ Timekeeping check OUT for employees   [Tags]        allretailer      allfnb     
 
 Timekeeping Unpaid for employees   [Tags]     allretailer      allfnb          allbooking      addschedule      clocking
     [Documentation]       Nhân viên NGHỈ KO phép
-    ${id_clocking}        Get Id Clocking                     2022-02-02        2022-04-30                        ${branchId}             1
+    ${id_clocking}        Get Id Clocking                     ${startDate}        ${endDate}                        ${branchId}             1
     ${id_shift}           Get ShiftId From Id Clocking        ${id_clocking}
     ${name_shift}         Get Value In List KV                ${session}        ${enp_shift}/${id_shift}           $..name
     ${startTime}          Get StartTime From Id Clocking      ${id_clocking}
@@ -85,7 +93,7 @@ Timekeeping Unpaid for employees   [Tags]     allretailer      allfnb          a
 
 Timekeeping Paid for employees   [Tags]     allretailer      allfnb             allbooking      addschedule      clocking
       [Documentation]       Nhân viên Nghỉ có phép
-      ${id_clocking}        Get Id Clocking                   2022-02-02        2022-04-30                        ${branchId}             1
+      ${id_clocking}        Get Id Clocking                   ${startDate}        ${endDate}                        ${branchId}             1
       ${id_shift}           Get ShiftId From Id Clocking      ${id_clocking}
       ${name_shift}         Get Value In List KV              ${session}        ${enp_shift}/${id_shift}           $..name
       ${startTime}          Get StartTime From Id Clocking    ${id_clocking}

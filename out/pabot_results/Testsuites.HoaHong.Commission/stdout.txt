@@ -19,21 +19,20 @@ Add Category Of Product Into Commission :: Thêm nhóm hàng hóa vào ... | PASS |
 ------------------------------------------------------------------------------
 Update The Roses For All Product :: C?p nh?t T?T C? m?c áp d?ng ho... | PASS |
 ------------------------------------------------------------------------------
-Update The Roses For A Product :: C?p nh?t m?c áp d?ng hoa h?ng ch... | FAIL |
-400 != 200
+Update The Roses For A Product :: C?p nh?t m?c áp d?ng hoa h?ng ch... | PASS |
 ------------------------------------------------------------------------------
 Delete commission :: Xóa hoa h?ng                                     | PASS |
 ------------------------------------------------------------------------------
-Testsuites.HoaHong.Commission                                         | FAIL |
-9 critical tests, 8 passed, 1 failed
-9 tests total, 8 passed, 1 failed
+Testsuites.HoaHong.Commission                                         | PASS |
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
 ==============================================================================
-Testsuites.HoaHong                                                    | FAIL |
-9 critical tests, 8 passed, 1 failed
-9 tests total, 8 passed, 1 failed
+Testsuites.HoaHong                                                    | PASS |
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
 ==============================================================================
-Testsuites                                                            | FAIL |
-9 critical tests, 8 passed, 1 failed
-9 tests total, 8 passed, 1 failed
+Testsuites                                                            | PASS |
+9 critical tests, 9 passed, 0 failed
+9 tests total, 9 passed, 0 failed
 ==============================================================================
-Output:  D:\timesheet\out\pabot_results\Testsuites.HoaHong.Commission\output-20220318-144246.xml
+Output:  D:\timesheet\out\pabot_results\Testsuites.HoaHong.Commission\output-20220407-114742.xml

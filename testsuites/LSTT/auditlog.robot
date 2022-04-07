@@ -15,7 +15,9 @@ Get Audit_log in today       [Tags]              audit                  allretai
     ${year}                 Get Time   year
     ${month}                Get Time  month
     ${day}                  Get Time   day
-    ${day_before}=          Evaluate                ${day}-1
+    ${day}                 Convert To Integer       ${day}
+    ${day_before}=          Evaluate                ${day} -1
+
     ${list_format}          Create List             ${branchId}        ${year}-${month}-${day_before}${iso_time}          ${year}-${month}-${day}${iso_time}
     ${enp_auditlog}         Format String Use [D0] [D1] [D2]           ${enp_auditlog}                                    ${list_format}
     ${resp}                 Get Request From KV     ${session_man}     ${enp_auditlog}
