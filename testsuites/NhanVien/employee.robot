@@ -39,7 +39,7 @@ Get pin code                      [Tags]    allretailer      allfnb          all
     ${id_employee}                Get Random ID Employee
     Get Pin Code                  ${id_employee}
 
-Add work schedule                 [Tags]    allretailer      allfnb          allbooking    employee
+Add work schedule                 [Tags]    allretailer      allfnb          allbooking    employee  
     [Documentation]               Thêm lịch làm việc cho nhân viên tại MH nhân viên
     ${id_work_schedule}           Add Work Schedule
 

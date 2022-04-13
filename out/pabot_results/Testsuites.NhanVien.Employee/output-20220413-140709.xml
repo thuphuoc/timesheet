@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 3.0.4 (Python 3.8.8 on win32)" generated="20220413 14:07:16.697">
+<robot generator="Robot 3.0.4 (Python 3.8.8 on win32)" generated="20220413 14:07:09.289">
 <suite id="s1" name="Testsuites" source="N:\timesheet\testsuites">
 <suite id="s1-s1" name="NhanVien" source="N:\timesheet\testsuites\NhanVien">
 <suite id="s1-s1-s1" name="Employee" source="N:\timesheet\testsuites\NhanVien\employee.robot">
