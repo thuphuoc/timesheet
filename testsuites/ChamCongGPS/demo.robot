@@ -9,16 +9,9 @@ Resource        ../../core/ChamCongGPS/gps.robot
 Resource        ../../core/ChiNhanh/branch.robot
 Suite setup  Fill enviroment and get token    ${env}
 *** Variables ***
-${a}                      Mã nhân viên     đã tồn tại trong cửa hàng
-@{address}                      1               2           3
-*** TestCases ***
-Get kkkk      [Tags]            demo
-    ${list}                 Create List    1     2    3
-    ${length}                   Get Length           ${list}
-    :FOR                    ${i}    IN RANGE        ${length}
-    \                       Log                     @{list}[${i}]
+${result}                3.14
 
-Replace String With Empty String        [Tags]            demo1
-    ${result} =    Replace String       ${a}    Framework   ${EMPTY}
-    log                     ${result}
-    Should be equal    ${result}    Mã nhân viên đã tồn tại trong cửa hàng
+*** TestCases ***
+ddd    [Tags]               demo
+    # ${status} =   Should Be True    ${result}>3.14
+    Should Be Equal    ${result}    3.14            ko ok

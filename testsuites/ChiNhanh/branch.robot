@@ -18,14 +18,6 @@ Create Branch    [Tags]     allretailer      allfnb          allbooking    branc
     ${id_branch}           Get A Branch In Active Branchs
     ${resp}                Create Branch     Chi nhánh ${random_str}     ${phonenumber}     ${address}
     Run Keyword If         ${resp}==420                        Delete Branch      ${id_branch}
-    ...         ELSE       Log                                 Thêm mới chi nhánh thành công
-
-#ko cần chạy case này vì case này phục vụ cho việc tạo mới cùng lúc nhiều chi nhánh
-Create Branch    [Tags]    branch1
-    [Documentation]       Thêm mới 5 chi nhánh
-    :FOR  ${i}  IN RANGE        5
-    \                          ${random_number}=             Random a Number               5
-    \                          Wait Until Keyword Succeeds    3x    3    Create Branch    Chinhanh ${random_number}        ${phonenumber}     ${address}
 
 Update working date of branch        [Tags]     allretailer      allfnb          allbooking    branch
       [Documentation]       Update ngày làm việc của chi nhánh đang hoạt động

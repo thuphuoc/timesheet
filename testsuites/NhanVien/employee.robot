@@ -27,6 +27,9 @@ Create duplicate employee         [Tags]    allretailer      allfnb          all
 
 Create empty employee             [Tags]    allretailer      allfnb          allbooking    employee
     [Documentation]               Tạo mới nhân viên rỗng
+    ${resp}                       Check Total Employee
+    Run Keyword If                ${resp}==400              Delete Multiple Employee
+    ...                           ELSE                      Log             Gian hàng vẫn có thể thêm mới nhân viên
     Create Empty Employee
 
 Update employee                   [Tags]    allretailer      allfnb          allbooking    employee

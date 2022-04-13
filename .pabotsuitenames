@@ -1,13 +1,13 @@
-datasources:69cb6e400dcca59fd7769ca8b797e9b90a467ee9
-commandlineoptions:0a209e027b207c52eaaa1c178bf18e7dae177019
+datasources:542d297a35d0d21ba39c50c79682439ae995f161
+commandlineoptions:3083a609ace3c5a0ba70cf06b7bdd9fd7381557e
 suitesfrom:no-suites-from-option
-file:0f9b93c586e24ac51b84b864793be85a9d1d9d08
-Testsuites.BangTinhLuong.Paysheet
+file:2e679090cfe1d260e11de6e8e00b71b3db541c1c
+Testsuites.ChiNhanh.Branch
 Testsuites.BangChamCong.Addwork Schedule
 Testsuites.BangChamCong.Shift
+Testsuites.BangTinhLuong.Paysheet
 Testsuites.ChamCongGPS.Gps
 Testsuites.ChamCongGPS.settingGPS
-Testsuites.ChiNhanh.Branch
 Testsuites.ChiNhanh.Holiday
 Testsuites.HoaHong.Commission
 Testsuites.LSTT.Auditlog

@@ -33,7 +33,7 @@ Create Branch
     ${list_format}              Create List             ${name}              ${phonenumber}            ${address}
     ${data_create_branch}       Format String Use [D0] [D1] [D2]             ${data_create_branch}     ${list_format}
     ${resp}                     Post Request            ${session_man}       ${enp_branch}             ${data_create_branch}
-    Log                         ${resp.json()}   
+    Log                         ${resp.json()}
     ${resp.status_code}         Convert To String       ${resp.status_code}
     ${status_check_brach}=      Evaluate                ${resp.status_code}
     Return From Keyword         ${status_check_brach}
@@ -55,5 +55,3 @@ Delete Branch
     Log                         ${resp.json()}
     ${resp.status_code}         Convert To String                            ${resp.status_code}
     ${status_check_brach}=      Evaluate                                     ${resp.status_code}
-    Run Keyword If              ${status_check_brach}==200    Log    ok
-    ...                         Log      fail

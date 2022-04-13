@@ -15,11 +15,6 @@ ${data_add_perm_user}        {"UserId":[D0],"BranchId":[D1],"RoleId":[D2],"Data"
 ${enp_update_user}          /users/usersupdate
 ${data_update_user}         {"User":{"Id":[D0],"IsActive":true,"GivenName":"[D1]","UserName":"[D2]","IsActiveStatus":"Đang hoạt động","LanguageSelected":{"Name":"vi-VN","Value":"Tiếng Việt"},"PlainPassword":"2","RetypePassword":"2"}}
 *** TestCases ***
-# Format enp_user_branch      [Tags]       allretailer      allfnb     allbooking          permission
-#     ${list_format}          Create List                           ${branchId}
-#     ${enp_user_branch}      Format String Use [D0] [D1] [D2]      ${enp_user_branch}      ${list_format}
-#     Set Suite Variable      ${enp_user_branch}                    ${enp_user_branch}
-
 Add permission timesheet      [Tags]    allretailer                      permission
     [Documentation]         Thêm quyền timesheet cho user
     ${id_user}              Get Value In List KV                  ${session_man}          ${enp_user_branch}      $..Id
@@ -68,5 +63,5 @@ Update User For Login Auto By Use Account For Booking
     [Arguments]             ${id_user}
     ${list_format}          Create List                           ${id_user}              ${name_user}           ${name_user}
     ${data_update_user}     Format String Use [D0] [D1] [D2]      ${data_update_user}     ${list_format}
-    ${resp}                 Post Request Json KV                  ${session_man}          ${enp_user}                 ${data_update_user}     200
+    ${resp}                 Post Request Json KV                  ${session_man}          ${enp_user}            ${data_update_user}     200
     Return From Keyword     ${resp}
