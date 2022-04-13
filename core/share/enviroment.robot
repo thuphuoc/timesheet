@@ -9,16 +9,16 @@ Resource   ../../core/ChiNhanh/branch.robot
 *** Keywords ***
 Fill enviroment and get token
     [Arguments]                   ${env}
-    ${dict_url_saleLogin}         Create Dictionary             zone5=https://testz5.kiotviet.vn/api
-    ...                                                         zone13=https://testz13.kiotviet.vn/api
+    ${dict_url_saleLogin}         Create Dictionary             zone5=https://testautots5.kiotviet.vn/api
+    ...                                                         zone13=https://testautots13.kiotviet.vn/api
     ...                                                         zone12=https://testz12.kiotviet.vn/api
-    ...                                                         zone14=https://auto14.kiotviet.vn/api
+    ...                                                         zone14=https://testautots14.kiotviet.vn/api
     ...                                                         zone61=https://testz61.kiotviet.vn/api
     ...                                                         zone66=https://testz66.kiotviet.vn/api
     ...                                                         zone21=https://testz221.kiotviet.vn/api
     ...                                                         zone8=https://testz8.kiotviet.vn/api
-    ...                                                         zone9=https://taphoa.kiotviet.vn/api
-    ...                                                         zone1=https://testz1.kiotviet.vn/api
+    ...                                                         zone9=https://testautots9.kiotviet.vn/api
+    ...                                                         zone1=https://testautots1.kiotviet.vn/api
     ...                                                         zone28=https://testz28.kiotviet.vn/api
     ...                                                         zone24=https://testzone24.kiotviet.vn/api
     ...                                                         zone59902=https://phuoc902.kvpos.com:59302/api
@@ -29,6 +29,7 @@ Fill enviroment and get token
     ...                                                         booking543=https://booking.kvpos.com:59543/api
     ...                                                         bookinglive=https://booking.kiotviet.vn/api
     ...                                                         fnb15=https://fnb.kiotviet.vn/api
+    ...                                                         fnb15b=https://fnb.kiotviet.vn/api
 
     ${dict_enp_saleLogin}         Create Dictionary             zone5=/auth/salelogin
     ...                                                         zone13=/auth/salelogin
@@ -50,6 +51,7 @@ Fill enviroment and get token
     ...                                                         booking543=/auth/salelogin
     ...                                                         bookinglive=/auth/salelogin
     ...                                                         fnb15=/auth/salelogin
+    ...                                                         fnb15b=/auth/salelogin
 
     ${dict_url}                   Create Dictionary             zone5=https://api-timesheet.kiotviet.vn
     ...                                                         zone13=https://api-timesheet.kiotviet.vn
@@ -71,6 +73,7 @@ Fill enviroment and get token
     ...                                                         booking543=https://kvpos.com:55043
     ...                                                         bookinglive=https://api-timesheet-booking.kiotviet.vn
     ...                                                         fnb15=https://api-fnbtimesheet.kiotviet.vn
+    ...                                                         fnb15b=https://api-fnbtimesheet.kiotviet.vn
 
     ${dict_url_man}               Create Dictionary             zone5=https://api-man3.kiotviet.vn/api
     ...                                                         zone13=https://api-man.kiotviet.vn/api
@@ -92,25 +95,26 @@ Fill enviroment and get token
     ...                                                         booking543=https://booking.kvpos.com:59543/api
     ...                                                         bookinglive=https://booking.kiotviet.vn/api
     ...                                                         fnb15=https://fnb.kiotviet.vn/api
+    ...                                                         fnb15b=https://fnb.kiotviet.vn/api
 
     ${dict_username}              Create Dictionary             zone5=admin             zone13=admin            zone12=admin        zone14=admin
-    ...                                                         zone1=admin             zone9=taphoa            zone61=admin        zone21=admin    zone66=admin
+    ...                                                         zone1=admin             zone9=admin            zone61=admin        zone21=admin    zone66=admin
     ...                                                         zone8=admin             zone24=admin            zone28=admin
     ...                                                         zone59902=1             zone59903=1             fnb59508=1
     ...                                                         booking9009=1           booking543=1            booking541=1        bookinglive=1
-    ...                                                         fnb15=admin
-    ${dict_password}              Create Dictionary             zone5=123456            zone13=123456           zone12=123456       zone14=123
-    ...                                                         zone1=123               zone9=123456            zone61=123456       zone21=123456
+    ...                                                         fnb15=admin             fnb15b=admin
+    ${dict_password}              Create Dictionary             zone5=123456            zone13=123456           zone12=123456       zone14=123456
+    ...                                                         zone1=123456               zone9=123456            zone61=123456       zone21=123456
     ...                                                         zone8=123               zone24=123              zone28=123          zone66=123456
     ...                                                         zone59902=1             zone59903=1             fnb59508=1
     ...                                                         booking9009=1           booking541=1            booking543=1        bookinglive=1
-    ...                                                         fnb15=123
-    ${dict_retailer}              Create Dictionary             zone5=testz5            zone13=testz13          zone12=testz12      zone14=auto14
-    ...                                                         zone1=testz1            zone9=taphoa            zone61=testz61      zone21=testz221
+    ...                                                         fnb15=123               fnb15b=123
+    ${dict_retailer}              Create Dictionary             zone5=testautots5            zone13=testautots13          zone12=testz12      zone14=testautots14
+    ...                                                         zone1=testautots1            zone9=testautots9            zone61=testz61      zone21=testz221
     ...                                                         zone8=testz82           zone24=testzone24       zone28=testz28      zone66=testz66
     ...                                                         zone59902=phuoc902      zone59903=phuoc903      fnb59508=phuoc59508
     ...                                                         booking9009=phuoc009    booking543=phuoc443     booking541=phuocnew441      bookinglive=phuocliveb
-    ...                                                         fnb15=testfnbz15a
+    ...                                                         fnb15=testfnbz15a       fnb15b=testfnbz15b
 
     ###################################################################################################################################################################################
     ${username}                   get From Dictionary           ${dict_username}        ${env}
