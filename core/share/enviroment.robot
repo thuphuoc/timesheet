@@ -4,7 +4,7 @@ Library   JSONLibrary
 Library   Collections
 Library   String
 Resource   share.robot
-Resource   ../../core/ChiNhanh/branch.robot
+Resource   ../../core/6ChiNhanh/branch.robot
 ***Variables***
 *** Keywords ***
 Fill enviroment and get token
@@ -75,7 +75,7 @@ Fill enviroment and get token
     ...                                                         fnb15=https://api-fnbtimesheet.kiotviet.vn
     ...                                                         fnb15b=https://api-fnbtimesheet.kiotviet.vn
 
-    ${dict_url_man}               Create Dictionary             zone5=https://api-man3.kiotviet.vn/api
+    ${dict_url_man}               Create Dictionary             zone5=https://api-man.kiotviet.vn/api
     ...                                                         zone13=https://api-man.kiotviet.vn/api
     ...                                                         zone12=https://api-man.kiotviet.vn/api
     ...                                                         zone1=https://api-man3.kiotviet.vn/api
@@ -98,19 +98,19 @@ Fill enviroment and get token
     ...                                                         fnb15b=https://fnb.kiotviet.vn/api
 
     ${dict_username}              Create Dictionary             zone5=admin             zone13=admin            zone12=admin        zone14=admin
-    ...                                                         zone1=admin             zone9=admin            zone61=admin        zone21=admin    zone66=admin
+    ...                                                         zone1=admin             zone9=admin             zone61=admin        zone21=admin    zone66=admin
     ...                                                         zone8=admin             zone24=admin            zone28=admin
     ...                                                         zone59902=1             zone59903=1             fnb59508=1
     ...                                                         booking9009=1           booking543=1            booking541=1        bookinglive=1
     ...                                                         fnb15=admin             fnb15b=admin
     ${dict_password}              Create Dictionary             zone5=123456            zone13=123456           zone12=123456       zone14=123456
-    ...                                                         zone1=123456               zone9=123456            zone61=123456       zone21=123456
+    ...                                                         zone1=123456            zone9=123456            zone61=123456       zone21=123456
     ...                                                         zone8=123               zone24=123              zone28=123          zone66=123456
     ...                                                         zone59902=1             zone59903=1             fnb59508=1
     ...                                                         booking9009=1           booking541=1            booking543=1        bookinglive=1
     ...                                                         fnb15=123               fnb15b=123
-    ${dict_retailer}              Create Dictionary             zone5=testautots5            zone13=testautots13          zone12=testz12      zone14=testautots14
-    ...                                                         zone1=testautots1            zone9=testautots9            zone61=testz61      zone21=testz221
+    ${dict_retailer}              Create Dictionary             zone5=testautots5       zone13=testautots13          zone12=testz12      zone14=testautots14
+    ...                                                         zone1=testautots1       zone9=testautots9            zone61=testz61      zone21=testz221
     ...                                                         zone8=testz82           zone24=testzone24       zone28=testz28      zone66=testz66
     ...                                                         zone59902=phuoc902      zone59903=phuoc903      fnb59508=phuoc59508
     ...                                                         booking9009=phuoc009    booking543=phuoc443     booking541=phuocnew441      bookinglive=phuocliveb

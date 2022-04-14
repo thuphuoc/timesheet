@@ -1,22 +1,5 @@
-datasources:542d297a35d0d21ba39c50c79682439ae995f161
-commandlineoptions:3083a609ace3c5a0ba70cf06b7bdd9fd7381557e
+datasources:d8dd45cc8f7be68a4036e72b14243f02725f3818
+commandlineoptions:bd26050c604680f951ed32a252c1dcaa6d2166b4
 suitesfrom:no-suites-from-option
-file:2e679090cfe1d260e11de6e8e00b71b3db541c1c
-Testsuites.ChiNhanh.Branch
-Testsuites.BangChamCong.Addwork Schedule
-Testsuites.BangChamCong.Shift
-Testsuites.BangTinhLuong.Paysheet
-Testsuites.ChamCongGPS.Gps
-Testsuites.ChamCongGPS.settingGPS
-Testsuites.ChiNhanh.Holiday
-Testsuites.HoaHong.Commission
-Testsuites.LSTT.Auditlog
-Testsuites.NhanVien.Allowance
-Testsuites.NhanVien.Deduction
-Testsuites.NhanVien.Department
-Testsuites.NhanVien.Employee
-Testsuites.NhanVien.Jobtiltle
-Testsuites.NhanVien.Payment
-Testsuites.NhanVien.Payrate
-Testsuites.PhanQuyen.User
-Testsuites.ThietLap.Setting Timesheet Payroll
+file:acd39465539c1982a4bcec786bbaa8035b99d2c4
+Testsuites.4HangHoa.Hanghoa
