@@ -1,7 +1,7 @@
 datasources:c7a8aea2819edc6739f6f6722ce51f1c96da8de7
-commandlineoptions:349138af271ce81992f8640b9e28605a46cf3d97
+commandlineoptions:95f62e642cc0b9bb34da0e2f148128f46286c97a
 suitesfrom:no-suites-from-option
-file:bab6bb67bfccf6e402e96f70016b3844d7ad420a
+file:5f1fb9d6fae0c6dcfc2cb0efa0da2082ee0e217c
 Testsuites.3BangTinhLuong.Paysheet
 Testsuites.1NhanVien.Allowance
 Testsuites.1NhanVien.Deduction
