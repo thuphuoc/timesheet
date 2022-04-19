@@ -53,9 +53,9 @@ Update allowance                    [Tags]    allretailer      allfnb          a
     [Documentation]                 Update phụ cấp
     ${resp}                         Update Allowance                    Update ${random_str}                       ${type}            ${value}      ${valueRadio}        ${is_checked}
 
-# Delete allowance                    [Tags]   all    allowance
-#     [Documentation]                 Xóa phụ cấp
-#     Delete Allowance
+Delete allowance                    [Tags]   all    allowance
+    [Documentation]                 Xóa phụ cấp
+    Delete Allowance
 
 *** Keywords ***
 Test After

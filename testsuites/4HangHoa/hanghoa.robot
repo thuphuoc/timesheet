@@ -25,7 +25,7 @@ Add product                     [Tags]              allretailer    allfnb       
     Log                         ${formdata}
     ${resp}                     Post Request Use Formdata KV              ${sessionman_not_contenType}            ${enp_add_product}               ${formdata}            200
 
-Delete product                  [Tags]              allretailer    allfnb       allbooking    product
-    ${id_product}               Get RanDom a Product
-    ${resp}                     Delete Request KV                        ${sessionman_not_contenType}                           ${enp_del_product}/${id_product}    200
+# Delete product                  [Tags]              allretailer    allfnb       allbooking    product
+#     ${id_product}               Get RanDom a Product
+#     ${resp}                     Delete Request KV                        ${sessionman_not_contenType}                           ${enp_del_product}/${id_product}    200
 *** Keywords ***

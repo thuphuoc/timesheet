@@ -31,7 +31,6 @@ Create Paysheet
      ${resp}                    Post Request Json KV                ${session}                ${enp_paysheet}                     ${data_paysheet}            200
      Return From Keyword        ${resp}
 
-
 Payment Salary At Paysheet
       Format enpoint enp_filter_sheets                        1
       Log                       Điều kiện phải có bảng lương tạm tính có tổng tiền cần trả lớn hơn 0

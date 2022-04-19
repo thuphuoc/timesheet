@@ -17,14 +17,15 @@ Create paysheet                 [Tags]        allretailer      allfnb          a
      [Documentation]            Thêm mới bảng lương tạm tính
      ${resp}                    Create Paysheet
 
+ Payment Salary At Paysheet      [Tags]             allretailer      allfnb          allbooking              paysheet
+       [Documentation]           Thanh toán phiếu lương ngoài màn hình bảng lương
+       Format enpoint enp_filter_sheets                        1
+       ${resp}                   Payment Salary At Paysheet
+
 Auto loading paysheet           [Tags]        allretailer      allfnb          allbooking    paysheet
      [Documentation]            Tải lại bảng lương tạm tính
      ${resp}                    Auto Loading Paysheet
 
-Payment Salary At Paysheet      [Tags]             allretailer      allfnb          allbooking              paysheet
-      [Documentation]           Thanh toán phiếu lương ngoài màn hình bảng lương
-      Format enpoint enp_filter_sheets                        1
-      ${resp}                   Payment Salary At Paysheet
 
 Cancel paysheet                 [Tags]             allretailer     allfnb                    allbooking                           paysheet
    [Documentation]             Huỷ bỏ bảng lương tạm tính ko hủy phiếu thanh toán

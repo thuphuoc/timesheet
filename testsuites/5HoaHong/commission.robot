@@ -58,8 +58,6 @@ Add Category Of Product Into Commission    [Tags]                         allret
 Update The Roses For All Product        [Tags]                         allretailer      allfnb          allbooking               commission
     [Documentation]             Cập nhật TẤT CẢ mức áp dụng hoa hồng cho CÁC sản phẩm bán ra
     Log                         ${name_commmission}
-    ${id_product}               Get RanDom a Product
-    Add Product Into Commission    ${id_commmission}                                    ${id_product}
     ${id_product}               Get Random a Product In a Commission                    ${id_commmission}
     ${code_product}             Get Code Product From ID    ${id_product}
     ${resp}                     Update The Roses For Each Product Sold  ${id_product}   ${id_commmission}        ${id_commmission}    ${value_update}    ${is_update_all}
@@ -76,5 +74,6 @@ Delete commission               [Tags]                         allretailer      
     [Documentation]             Xóa hoa hồng
     ${id_commmission}           Get Random ID Commission
     Delete Commission           ${id_commmission}
+
 
 *** Keywords ***

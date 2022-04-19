@@ -36,6 +36,7 @@ Delete shift                    [Tags]   allretailer      allfnb          allboo
     Format enp shift branch
     Delete Shift
 
+
 *** Keywords ***
 Check duplicate shift
     [Arguments]                 ${name}
